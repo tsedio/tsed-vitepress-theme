@@ -1,0 +1,43 @@
+[0;32m?[0m Choose the target platform: (Use arrow keys)
+[0;36m❯ Express.js[0m
+  Koa.js
+
+[0;32m?[0m Choose the architecture for your project: (Use arrow keys)
+[0;36m❯ Ts.ED[0m
+  Feature
+
+[0;32m?[0m Choose the convention file styling: (Use arrow keys)
+[0;36m❯ Ts.ED[0m
+  Angular
+
+[0;32m?[0m Check the features needed for your project (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+  [0;32m◉[0m Swagger
+  ◯ OpenID Connect provider
+  [0;32m◉[0m Testing
+[0;36m❯[0m [0;32m◉[0m Linter
+  ◯ Commands
+  ◯ TypeGraphQL
+  ◯ Database
+
+[0;32m?[0m Choose unit framework (Use arrow keys)
+[0;36m❯ Jest[0m
+  Mocha + Chai + Sinon
+
+[0;32m?[0m Choose linter tools framework (Use arrow keys)
+[0;36m❯ EsLint[0m
+
+[0;32m?[0m Choose extra linter tools (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+  [0;32m◉[0m Prettier
+[0;36m❯[0m [0;32m◉[0m Lint on commit
+
+[0;32m?[0m Choose the runtime:
+[0;36m❯ Node.js[0m
+  Node.js + Babel
+  Node.js + Webpack
+  Node.js + SWC
+  Bun.js (experimental)
+
+[0;32m?[0m Choose the package manager:
+  NPM
+  Yarn
+[0;36m❯ Yarn Berry[0m

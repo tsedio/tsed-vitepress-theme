@@ -4,12 +4,12 @@ layout: home
 
 hero:
   name: "Ts.ED"
-  text: "Ts.ED description"
-  tagline: My great project tagline
+  text: "A TypeScript Framework on top of Express/Koa.js."
+  tagline: "Build your awesome server-side application"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Getting Started
+      link: /introduction/getting-started
     - theme: alt
       text: API Examples
       link: /api-examples

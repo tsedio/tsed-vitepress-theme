@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Ts.ED",
-  description: "Ts.ED description",
   themeConfig: {
     search: {
       provider: 'algolia',
@@ -16,21 +15,22 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Getting started', link: '/introduction/getting-started' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Introduction',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'What is Ts.ED?', link: '/introduction/what-is-tsed' },
+          { text: 'Capabilities', link: '/introduction/capabilities' },
+          { text: 'Installation', link: '/introduction/getting-started' },
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/tsedio/tsed' }
     ]
   }
 })
