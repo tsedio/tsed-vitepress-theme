@@ -25,38 +25,18 @@ The default configuration is as follows:
 
 You can customize your configuration as follows on `Server.ts`level:
 
-<<< @/docs/snippets/configuration/server.ts
+<<< @/docs/configuration/snippets/server.ts
 
 or when you bootstrap your Server (e.g. `index.ts`):
 
-<<< @/docs/snippets/configuration/bootstrap.ts
+<<< @/docs/configuration/snippets/bootstrap.ts
 
 ::: tip Note
 Ts.ED supports [ts-node](https://github.com/TypeStrong/ts-node). Ts extension will be replaced by a Js extension if
 ts-node isn't the runtime.
 :::
 
-## Load configuration from file
 
-Ts.ED doesn't provide solution to load configuration from files. Because, there is many solution to achieve this,
-we consider this part as the developer responsibility.
-
-By using [node-config](https://www.npmjs.com/package/config) or [dotenv](https://www.npmjs.com/package/dotenv), it's
-possible to load your configuration from file
-as following:
-
-<Tabs class="-code">
-  <Tab label="node-config">
-
-<<< @/docs/snippets/configuration/bootstrap-with-node-config.ts
-
-  </Tab>
-  <Tab label="dotenv">
-
-<<< @/docs/snippets/configuration/bootstrap-with-dotenv.ts
-
-  </Tab>  
-</Tabs>
 
 ## Options
 
@@ -142,24 +122,24 @@ Ts.ED provides the possibility to mount multiple Rest paths instead of the defau
 This option will allow you to define a version for an endpoint and select which controllers you want to associate with
 the given path.
 
-<<< @/docs/snippets/configuration/server-endpoint-versionning.ts
+<<< @/docs/configuration/snippets/server-endpoint-versionning.ts
 
 It is also possible to split the configuration by using the @@Module@@:
 
 <Tabs class="-code">
   <Tab label="Server.ts">
 
-<<< @/docs/snippets/configuration/server-endpoint-versionning-with-module.ts
+<<< @/docs/configuration/snippets/server-endpoint-versionning-with-module.ts
 
   </Tab>
   <Tab label="ModuleV1.ts">
 
-<<< @/docs/snippets/configuration/modulev1-endpoint-versionning.ts
+<<< @/docs/configuration/snippets/modulev1-endpoint-versionning.ts
 
   </Tab>  
   <Tab label="ModuleV0.ts">
 
-<<< @/docs/snippets/configuration/modulev0-endpoint-versionning.ts
+<<< @/docs/configuration/snippets/modulev0-endpoint-versionning.ts
 
   </Tab>    
 </Tabs>
@@ -277,12 +257,12 @@ Add providers or modules here. These modules or provider will be built before th
 <Tabs class="-code">
   <Tab label="Server.ts">
 
-<<< @/docs/snippets/configuration/server-options-imports.ts
+<<< @/docs/configuration/snippets/server-options-imports.ts
 
   </Tab>
   <Tab label="MyModule.ts">
 
-<<< @/docs/snippets/configuration/module-options-imports.ts
+<<< @/docs/configuration/snippets/module-options-imports.ts
 
   </Tab>
 </Tabs>
@@ -320,11 +300,11 @@ now allows you to configure multiple external DI by using the `resolvers` option
 
 The resolvers options can be configured as following:
 
-<<< @/docs/snippets/configuration/server-resolvers.ts
+<<< @/docs/configuration/snippets/server-resolvers.ts
 
 It's also possible to register resolvers with the @@Module@@ decorator:
 
-<<< @/docs/snippets/configuration/module-resolvers.ts
+<<< @/docs/configuration/snippets/module-resolvers.ts
 
 ### views
 
@@ -382,125 +362,11 @@ In v7 this option will be set to true by default.
 
 ## Platform Options
 
-These options are specific for each framework (Express.js, Koa.js, etc...):
-
-<Tabs>
-  <Tab label="Express.js">
-
-### express.bodyParser <Badge text="6.111.0+"/>
-
-This option let you configure the default bodyParser used by Ts.ED to parse the body request:
-
-```typescript
-@Configuration({
-  express: {
-    bodyParser: {
-      text: {},
-      json: {},
-      urlencoded: {
-        extended: true // required
-      }
-    }
-  }
-})
-```
-
-### express.router
-
-The global configuration for the `Express.Router`. See
-express [documentation](http://expressjs.com/en/api.html#express.router).
-
-### statics
-
-- type: @@PlatformStaticsOptions@@
-
-Object to mount all directories under an endpoint.
-
-[//]: # (<<< @/../packages/platform/platform-express/src/interfaces/PlatformExpressStaticsOptions.ts)
-
-  </Tab>
-  <Tab label="Koa.js">
-
-### koa.bodyParser <Badge text="6.111.0+"/>
-
-This option let you configure the default bodyParser used by Ts.ED to parse the body request:
-
-```typescript
-@Configuration({
-  koa: {
-    bodyParser: {
-      // See koa-bodyparser options
-    }
-  }
-})
-```
-
-### koa.router
-
-The global configuration for the Koa.Router.
-
-```typescript
-interface KoaRouterOptions {
-  /**
-   * Prefix for all routes.
-   */
-  prefix?: string;
-  /**
-   * Methods which should be supported by the router.
-   */
-  methods?: string[];
-  routerPath?: string;
-  /**
-   * Whether or not routing should be case-sensitive.
-   */
-  sensitive?: boolean;
-  /**
-   * Whether or not routes should matched strictly.
-   *
-   * If strict matching is enabled, the trailing slash is taken into
-   * account when matching routes.
-   */
-  strict?: boolean;
-}
-```
-
-### statics
-
-- type: @@PlatformStaticsOptions@@
-
-Object to mount all directories under an endpoint.
-
-```typescript
-interface KoaStaticsOptions {
-  /** Browser cache max-age in milliseconds. (defaults to 0) */
-  maxage?: number;
-  maxAge?: SendOptions["maxage"];
-  /** Tell the browser the resource is immutable and can be cached indefinitely. (defaults to false) */
-  immutable?: boolean;
-  /** Allow transfer of hidden files. (defaults to false) */
-  hidden?: boolean;
-  /** Root directory to restrict file access. (defaults to '') */
-  root?: string;
-  /** Name of the index file to serve automatically when visiting the root location. (defaults to none) */
-  index?: string | false;
-  /** Try to serve the gzipped version of a file automatically when gzip is supported by a client and if the requested file with .gz extension exists. (defaults to true). */
-  gzip?: boolean;
-  /** Try to serve the brotli version of a file automatically when brotli is supported by a client and if the requested file with .br extension exists. (defaults to true). */
-  brotli?: boolean;
-  /** If not false (defaults to true), format the path to serve static file servers and not require a trailing slash for directories, so that you can do both /directory and /directory/. */
-  format?: boolean;
-  /** Function to set custom headers on response. */
-  setHeaders?: SetHeaders;
-  /** Try to match extensions from passed array to search for file when no extension is sufficed in URL. First found is served. (defaults to false) */
-  extensions?: string[] | false;
-}
-```
-
-  </Tab>
-</Tabs>
+See specific platform options for:
+- [Express.js](/docs/configuration/express)
+- [Koa.js](/docs/configuration/koa)
 
 ## HTTP & HTTPs server
-
 ### Change address
 
 It's possible to change the HTTP and HTTPS server address as follows:
@@ -594,7 +460,7 @@ Decorators @@Constant@@ and @@Value@@ can be used in all classes including:
 
 @@Constant@@ and @@Value@@ accepts an expression as parameters to inspect the configuration object and return the value.
 
-<<< @/docs/snippets/providers/binding-configuration.ts
+<<< @/docs/configuration/snippets/binding-configuration.ts
 
 ::: warning
 @@Constant@@ returns an Object.freeze() value.

@@ -21,7 +21,7 @@ export default defineConfig({
         items: [
           {
             text: "Configuration",
-            link: `/docs/configuration`
+            link: `/docs/configuration/`
           },
           {
             text: "Controllers",
@@ -212,6 +212,15 @@ export default defineConfig({
           {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
           {text: "Capabilities", link: "/introduction/capabilities"},
           {text: "Installation", link: "/introduction/getting-started"}
+        ]
+      },
+      {
+        text: "Configuration",
+        items: [
+          {text: "Options", link: "/docs/configuration/"},
+          {text: "Load config from file", link: "/docs/configuration/load-configuration-from-file"},
+          {text: "Express.js", link: "/docs/configuration/express"},
+          {text: "Koa.js", link: "/docs/configuration/koa"}
         ]
       }
     ],
