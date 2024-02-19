@@ -95,14 +95,18 @@ Alternatively, you can check out one of these projects:
 
 If none of previous solutions are satisfying maybe you are in these cases:
 
-- [I want to migrate my application from Ts.ED v6](/getting-started/migration-from-v6.md)
-- [I want to migrate my application from Express.js](/getting-started/migrate-from-express.md)
+[//]: # (- [I want to migrate my application from Ts.ED v6]&#40;/getting-started/migration-from-v6.md&#41;)
+
+[//]: # (- [I want to migrate my application from Express.js]&#40;/getting-started/migrate-from-express.md&#41;)
 
 ## What's next?
 
 Now you can follow one of these links to develop your new application:
 
-- [Create your first controller](/getting-started/create-your-first-controller.md)
-- [Change server configuration](/docs/configuration.md)
-- [Load configuration from files](/docs/configuration.md)
-- [What is the Platform API](/docs/platform-api.md)
+[//]: # (- [Create your first controller]&#40;/getting-started/create-your-first-controller.md&#41;)
+
+[//]: # (- [Change server configuration]&#40;/docs/configuration.md&#41;)
+
+[//]: # (- [Load configuration from files]&#40;/docs/configuration.md&#41;)
+
+[//]: # (- [What is the Platform API]&#40;/docs/platform-api.md&#41;)
