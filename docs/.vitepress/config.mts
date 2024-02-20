@@ -3,6 +3,32 @@ import {defineConfig} from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Ts.ED",
+  lastUpdated: true,
+
+  sitemap: {
+    hostname: "https://tsed.io"
+    // transformItems(items) {
+    //   return items.filter((item) => !item.url.includes('migration'))
+    // }
+  },
+
+  head: [
+    // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/tsed.svg' }],
+    ["link", {rel: "icon", type: "image/png", href: "/tsed-og.png"}],
+    ["link", {rel: "shortcut icon", href: "/favicon.ico", type: "image/x-icon"}],
+    ["link", {rel: "icon", href: "/favicon.ico", type: "apple-touch-icon"}],
+    ["link", {rel: "icon", href: "/apple-touch-icon.png", type: "image/x-icon", sizes: "180x180"}],
+    ["link", {rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32"}],
+    ["link", {rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16"}],
+    ["meta", {name: "theme-color", content: "#5f67ee"}],
+    ["meta", {property: "og:type", content: "website"}],
+    ["meta", {property: "og:locale", content: "en"}],
+    ["meta", {property: "og:title", content: "Ts.ED - A Node.js and TypeScript Framework on top of Express/Koa.js."}],
+    ["meta", {property: "og:site_name", content: "Ts.ED"}],
+    ["meta", {property: "og:image", content: "https://tsed.io/vitepress-og.jpg"}],
+    ["meta", {property: "og:url", content: "https://vitepress.dev/"}]
+  ],
+
   themeConfig: {
     search: {
       provider: "algolia",
@@ -230,6 +256,10 @@ export default defineConfig({
       {icon: "slack", link: "https://slack.tsed.io"},
       {icon: "twitter", link: "https://x.com/TsED_io"}
       // { icon: '', link: 'https://stackoverflow.com/search?q=tsed' },
-    ]
+    ],
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2019-present Romain Lenzotti"
+    }
   }
 });
