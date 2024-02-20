@@ -7,9 +7,6 @@ export default defineConfig({
 
   sitemap: {
     hostname: "https://tsed.io"
-    // transformItems(items) {
-    //   return items.filter((item) => !item.url.includes('migration'))
-    // }
   },
 
   head: [
@@ -40,8 +37,17 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      {text: "Home", link: "/"},
-      {text: "Getting started", link: "/introduction/getting-started"},
+      // {text: "Home", link: "/"},
+      {
+        text: "Getting started",
+        items: [
+          {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
+          {text: "Capabilities", link: "/introduction/capabilities"},
+          {text: "Installation", link: "/introduction/getting-started"},
+          {text: "Migrate from v6", link: "/introduction/migrate-from-v6"},
+          {text: "Migrate from Express", link: "/introduction/migrate-from-express"}
+        ]
+      },
       {
         text: "Documentation",
         items: [
@@ -230,27 +236,42 @@ export default defineConfig({
         ]
       }
     ],
-
-    sidebar: [
-      {
-        text: "Introduction",
-        items: [
-          {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
-          {text: "Capabilities", link: "/introduction/capabilities"},
-          {text: "Installation", link: "/introduction/getting-started"}
-        ]
-      },
-      {
-        text: "Configuration",
-        items: [
-          {text: "Options", link: "/docs/configuration/"},
-          {text: "Load config from file", link: "/docs/configuration/load-configuration-from-file"},
-          {text: "Express.js", link: "/docs/configuration/express"},
-          {text: "Koa.js", link: "/docs/configuration/koa"}
-        ]
-      }
-    ],
-
+    sidebar: {
+      "/introduction/": [
+        {
+          text: "Introduction",
+          items:
+            [
+              {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
+              {text: "Capabilities", link: "/introduction/capabilities"},
+              {text: "Installation", link: "/introduction/getting-started"}
+            ]
+        },
+        {
+          text: "Migration",
+          items: [
+            {text: "Migrate from v6", link: "/introduction/migrate-from-v6"},
+            {text: "Migrate from Express", link: "/introduction/migrate-from-express"}
+          ]
+        }
+      ],
+      "/docs/": [
+        {
+          text: "Configuration",
+          items:
+            [
+              {text: "Options", link: "/docs/configuration/"},
+              {text: "Load config from file", link: "/docs/configuration/load-configuration-from-file"},
+              {text: "Express.js", link: "/docs/configuration/express"},
+              {text: "Koa.js", link: "/docs/configuration/koa"}
+            ]
+        },
+        {
+          text: "Controllers",
+          link: "/docs/controllers"
+        }
+      ]
+    },
     socialLinks: [
       {icon: "github", link: "https://github.com/tsedio/tsed"},
       {icon: "slack", link: "https://slack.tsed.io"},
@@ -260,6 +281,11 @@ export default defineConfig({
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2019-present Romain Lenzotti"
+    }
+  },
+  markdown: {
+    image: {
+      lazyLoading: true
     }
   }
 });

@@ -1,3 +1,8 @@
+---
+next: 
+  text: Controllers
+  link: /docs/controllers
+---
 # Getting Started
 ## Try it online
 
@@ -95,9 +100,8 @@ Alternatively, you can check out one of these projects:
 
 If none of previous solutions are satisfying maybe you are in these cases:
 
-[//]: # (- [I want to migrate my application from Ts.ED v6]&#40;/getting-started/migration-from-v6.md&#41;)
-
-[//]: # (- [I want to migrate my application from Express.js]&#40;/getting-started/migrate-from-express.md&#41;)
+- [I want to migrate my application from Ts.ED v6](/introduction/migrate-from-v6)
+- [I want to migrate my application from Express.js](/introduction/migrate-from-express)
 
 ## What's next?
 
