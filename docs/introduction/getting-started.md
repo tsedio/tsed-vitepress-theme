@@ -1,8 +1,3 @@
----
-next: 
-  text: Controllers
-  link: /docs/controllers
----
 # Getting Started
 ## Try it online
 

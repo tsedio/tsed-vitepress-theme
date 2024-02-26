@@ -41,11 +41,22 @@ export default defineConfig({
       {
         text: "Getting started",
         items: [
-          {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
-          {text: "Capabilities", link: "/introduction/capabilities"},
-          {text: "Installation", link: "/introduction/getting-started"},
-          {text: "Migrate from v6", link: "/introduction/migrate-from-v6"},
-          {text: "Migrate from Express", link: "/introduction/migrate-from-express"}
+          {
+            text: "Introduction",
+            items: [
+              {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
+              {text: "Capabilities", link: "/introduction/capabilities"},
+              {text: "Installation", link: "/introduction/getting-started"},
+              {text: "Create your first controller", link: "/introduction/create-your-first-controller"},
+            ]
+          },
+          {
+            text: "Migration",
+            items: [
+              {text: "Migrate from v6", link: "/introduction/migrate-from-v6"},
+              {text: "Migrate from Express", link: "/introduction/migrate-from-express"}
+            ]
+          }
         ]
       },
       {
@@ -244,7 +255,8 @@ export default defineConfig({
             [
               {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
               {text: "Capabilities", link: "/introduction/capabilities"},
-              {text: "Installation", link: "/introduction/getting-started"}
+              {text: "Installation", link: "/introduction/getting-started"},
+              {text: "Create your first controller", link: "/introduction/create-your-first-controller"}
             ]
         },
         {
