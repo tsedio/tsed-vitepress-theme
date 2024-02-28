@@ -87,7 +87,7 @@ The last step is to regenerate the barrels files using the following command:
 ::: code-group
 
 ```sh [npm]
-npm run barrels
+npm run barrels (test)
 ```
 
 ```sh [yarn]
