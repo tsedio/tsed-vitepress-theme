@@ -7,84 +7,8 @@
 Ts.ED support officially two unit test frameworks: Jest, Mocha and Vitest. It's also possible to use your
 preferred frameworks. Your feedback are welcome.
 
-- [Jest](#jest)
-
-<Tabs>
-  <Tab label="Jest">
-
-See the dedicated guide installation for Jest [here](/tutorials/jest.md).
-
-  </Tab>
-
-  <Tab label="Vitest">
-
-See the dedicated guide installation for Vitest [here](/tutorials/vitest.md).
-
-  </Tab>
-  <Tab label="Mocha + chai (deprecated)">
-
-Run these commands to install mocha chai and sinon:
-
-```bash
-$ yarn add -D nyc mocha chai chai-as-promised @types/mocha @types/chai @types/chai-as-promised
-$ yarn add -D sinon sinon-chai @types/sinon @types/sinon-chai
-// OR
-$ npm install --save-dev nyc mocha chai chai-as-promised @types/mocha @types/chai @types/chai-as-promised
-$ npm install --save-dev sinon sinon-chai @types/sinon @types/sinon-chai
-```
-
-Add in your package.json the following task:
-
-```json
-{
-  "test:unit": "cross-env NODE_ENV=test mocha",
-  "test:coverage": "cross-env NODE_ENV=test nyc mocha"
-}
-```
-
-Then create a new `.mocharc.js` on your root project and the following content:
-
-```javascript
-module.exports = {
-  require: ["ts-node/register/transpile-only", "tsconfig-paths/register", "scripts/mocha/register"],
-  recursive: true,
-  reporter: "dot",
-  spec: ["src/**/*.spec.ts", "test/**/*.spec.ts"]
-};
-```
-
-Then create a new `.nycrc` on your root project and the following content:
-
-```json
-{
-  "include": ["src/**/*.ts"],
-  "exclude": ["**/*.d.ts", "node_modules", "**/index.ts", "**/interfaces/**", "**/*.spec.ts"],
-  "reporter": ["text-summary", "html", "lcov"],
-  "extension": [".ts"],
-  "check-coverage": true,
-  "all": true
-}
-```
-
-And finally, create a mocha setup file `scripts/mocha/register.js`, to configure mocha with chai and sinon:
-
-```javascript
-const Chai = require("chai");
-const ChaiAsPromised = require("chai-as-promised");
-const SinonChai = require("sinon-chai");
-
-Chai.should();
-Chai.use(SinonChai);
-Chai.use(ChaiAsPromised);
-
-process.on("unhandledRejection", (reason, p) => {
-  console.log("Unhandled Rejection at: Promise", p, "reason:", reason);
-  // application specific logging, throwing an error, or other logic here
-});
-```
-
-  </Tab>
-</Tabs>
+- Installation guide for [Jest](/tutorials/jest)
+- Installation guide for [Vitest](/tutorials/vitest)
 
 ### Usage
 
@@ -99,72 +23,39 @@ The process to test any components is the same thing:
 
 Here is an example to test the ParseService:
 
-<Tabs class="-code">
-  <Tab label="Jest">
+::: code-group
 
-<<< @/docs/snippets/testing/parse-service.jest.spec.ts
+<<< @/docs/snippets/testing/parse-service.jest.spec.ts [jest]
 
-  </Tab>
-  <Tab label="Vitest">
+<<< @/docs/snippets/testing/parse-service.vitest.spec.ts [vitest]
 
-<<< @/docs/snippets/testing/parse-service.vitest.spec.ts
+<<< @/docs/snippets/testing/parse-service.ts [ParserService.ts]
 
-  </Tab>
-  <Tab label="Mocha">
-
-<<< @/docs/snippets/testing/parse-service.mocha.spec.ts
-
-  </Tab>
-  <Tab label="ParseService.ts">
-
-<<< @/docs/snippets/testing/parse-service.ts
-
-  </Tab>  
-</Tabs>
+:::
 
 ### Async / Await
 
 Testing asynchronous method is also possible using `Promises` (`async`/`await`):
 
-<Tabs class="-code">
-  <Tab label="Jest">
+::: code-group
 
-<<< @/docs/snippets/testing/db-service-async-await.jest.ts
+<<< @/docs/snippets/testing/db-service-async-await.jest.ts [jest]
 
-  </Tab>
-  <Tab label="Vitest">
+<<< @/docs/snippets/testing/db-service-async-await.vitest.ts [vitest]
 
-<<< @/docs/snippets/testing/db-service-async-await.vitest.ts
-
-  </Tab>
-  <Tab label="Mocha">
-
-<<< @/docs/snippets/testing/db-service-async-await.mocha.ts
-
-  </Tab>
-</Tabs>
+:::
 
 ### Mock dependencies
 
 PlatformTest API provides an `invoke` method to create a new instance of your component with mocked dependencies.
 
-<Tabs class="-code">
-  <Tab label="Jest">
+::: code-group
 
-<<< @/docs/snippets/testing/db-service-mock-dependencies.jest.ts
+<<< @/docs/snippets/testing/db-service-mock-dependencies.jest.ts [jest]
 
-  </Tab>
-  <Tab label="Vitest">
+<<< @/docs/snippets/testing/db-service-mock-dependencies.vitest.ts [vitest]
 
-<<< @/docs/snippets/testing/db-service-mock-dependencies.vitest.ts
-
-  </Tab>
-  <Tab label="Mocha">
-
-<<< @/docs/snippets/testing/db-service-mock-dependencies.mocha.ts
-
-  </Tab> 
-</Tabs>
+:::
 
 ::: tip
 `PlatformTest.invoke()` executes automatically the `$onInit` hook!
@@ -178,29 +69,31 @@ To test your API, I recommend you to use the [`supertest`](https://github.com/vi
 
 To install supertest just run these commands:
 
-<Tabs class="-code">
-  <Tab label="Yarn">
+::: code-group
 
-```bash
-$ yarn add -D supertest @types/supertest
-```
-
-  </Tab>
-  <Tab label="Npm">
-
-```bash
+```sh [npm]
 $ npm install --save-dev supertest @types/supertest
 ```
 
-  </Tab>
-</Tabs>
+```sh [yarn]
+$ yarn add -D supertest @types/supertest
+```
+
+```sh [pnpm]
+$ pnpm add -D supertest @types/supertest
+```
+
+```sh [bun]
+$ pnpm add -D supertest @types/supertest
+```
+
+:::
 
 ### Example
 
-<Tabs class="-code">
-  <Tab label="Jest">
+::: code-group
 
-```ts
+```ts [jest]
 import {PlatformTest} from "@tsed/common";
 import * as SuperTest from "supertest";
 import {Server} from "../Server";
@@ -220,10 +113,7 @@ describe("Rest", () => {
 });
 ```
 
-  </Tab>
-  <Tab label="Vitest">
-
-```ts
+```ts [vitest]
 import {it, expect, describe, beforeAll, afterAll} from "vitest";
 import {PlatformTest} from "@tsed/common";
 import * as SuperTest from "supertest";
@@ -244,34 +134,7 @@ describe("Rest", () => {
 });
 ```
 
-  </Tab>
-  <Tab label="Mocha">
-
-```ts
-import {PlatformTest} from "@tsed/common";
-import {expect} from "chai";
-import * as SuperTest from "supertest";
-import {Server} from "../Server";
-import TestAgent = require("supertest/lib/agent");
-
-describe("Rest", () => {
-  before(PlatformTest.bootstrap(Server));
-  after(PlatformTest.reset);
-
-  describe("GET /rest/calendars", () => {
-    it("should do something", async () => {
-      const request = SuperTest.agent(PlatformTest.callback());
-
-      const response = await request.get("/rest/calendars").expect(200);
-
-      expect(response.body).to.be.an("array");
-    });
-  });
-});
-```
-
-  </Tab> 
-</Tabs>
+:::
 
 ::: warning
 If you use the PlatformTest, you'll probably get an error when you'll run the unit test:
@@ -305,10 +168,9 @@ When you're testing your API, you have sometimes to stub a method of a service.
 
 Here is an example to do that:
 
-<Tabs class="-code">
-  <Tab label="Jest">
+::: code-group
 
-```typescript
+```typescript [jest]
 import {PlatformTest} from "@tsed/common";
 import SuperTest from "supertest";
 import {Server} from "../../Server";
@@ -341,10 +203,7 @@ describe("ChapterController", () => {
 });
 ```
 
-  </Tab>
-  <Tab label="Vitest">
-
-```typescript
+```typescript [vitest]
 import {it, expect, describe, beforeAll, afterAll} from "vitest";
 import {PlatformTest} from "@tsed/common";
 import SuperTest from "supertest";
@@ -378,46 +237,7 @@ describe("ChapterController", () => {
 });
 ```
 
-  </Tab>
-  <Tab label="Mocha">
-
-```typescript
-import {PlatformTest} from "@tsed/common";
-import SuperTest from "supertest";
-import Sinon from "sinon";
-import {Server} from "../../Server";
-import {Chapter} from "../../entity/Chapter";
-
-const entity = new Chapter();
-Object.assign(entity, {
-  id: 2,
-  bookId: 4,
-  timestamp: 1650996201,
-  name: "First Day At Work"
-});
-
-const sandbox = Sinon.createSandbox();
-describe("ChapterController", () => {
-  beforeAll(PlatformTest.bootstrap(Server));
-  afterAll(PlatformTest.reset);
-  afterAll(() => sandbox.restore());
-
-  describe("GET /rest/chapter", () => {
-    it("Get All Chapters", async () => {
-      const service = PlatformTest.get(ChapterService);
-
-      sandbox.stub(service, "findChapters").resolves([entity]);
-      request = SuperTest(PlatformTest.callback());
-
-      const response = await request.get("/rest/chapter").expect(200);
-      expect(typeof response.body).to.eq("object");
-    });
-  });
-});
-```
-
-  </Tab>
-</Tabs>
+:::
 
 ### Stub a middleware method <Badge text="6.114.3+" />
 
@@ -425,10 +245,9 @@ When you're testing your API, you have sometimes to stub middleware to disable a
 
 Here is an example to do that:
 
-<Tabs class="-code">
-  <Tab label="Jest">
+::: code-group
 
-```typescript
+```typescript [jest]
 import {PlatformTest} from "@tsed/common";
 import SuperTest from "supertest";
 import {TestMongooseContext} from "@tsed/testing-mongoose";
@@ -456,10 +275,7 @@ describe("HelloWorldController", () => {
 });
 ```
 
-</Tab>
-  <Tab label="Vitest">
-
-```typescript
+```typescript [vitest]
 import {it, expect, describe, beforeAll, afterAll, beforeEach} from "vitest";
 import {PlatformTest} from "@tsed/common";
 import SuperTest from "supertest";
@@ -488,63 +304,19 @@ describe("HelloWorldController", () => {
 });
 ```
 
-</Tab>
-<Tab label="Mocha">
-
-```typescript
-import {PlatformTest} from "@tsed/common";
-import SuperTest from "supertest";
-import Sinon from "sinon";
-import {HelloWorldController} from "./HelloWorldController";
-import {Server} from "../../Server";
-import {TestMongooseContext} from "@tsed/testing-mongoose";
-import {AuthMiddleware} from "../../middlewares/auth.middleware";
-
-const sandbox = Sinon.createSandbox();
-
-describe("HelloWorldController", () => {
-  beforeAll(TestMongooseContext.bootstrap(Server));
-  beforeAll(() => {
-    const authMiddleware = PlatformTest.get<AuthMiddleware>(AuthMiddleware);
-    sandbox.stub(authMiddleware, "use").resolves(true);
-  });
-  beforeEach(() => {
-    sandbox.restore();
-  });
-  afterAll(TestMongooseContext.reset);
-
-  it("should return value", async () => {
-    const request = SuperTest(PlatformTest.callback());
-    const response = await request.get("/rest/hello-world").expect(200);
-    expect(response.text).to.equal("hello");
-  });
-});
-```
-
-</Tab>
-</Tabs>
+:::
 
 ## Testing session
 
 To install session with Ts.ED see our [tutorial](/tutorials/session.md).
 
-<Tabs class="-code">
-<Tab label="Jest">
+::: code-group
 
-<<< @/tutorials/snippets/session/example-test.jest.ts
+<<< @/docs/snippets/testing/session.jest.ts [jest]
 
-</Tab>
-<Tab label="Vitest">
+<<< @/docs/snippets/testing/session.vitest.ts [vitest]
 
-<<< @/tutorials/snippets/session/example-test.vitest.ts
-
-</Tab>
-<Tab label="Mocha">
-
-<<< @/tutorials/snippets/session/example-test.mocha.ts
-
-</Tab>
-</Tabs>
+:::
 
 ## Testing with mocked service <Badge text="v7.4.0" />
 
