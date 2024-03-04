@@ -234,6 +234,14 @@ export default defineConfig({
           {
             text: "Vike",
             link: `/tutorials/vike`
+          },
+          {
+            text: "Jest",
+            link: `/tutorials/jest`
+          },
+          {
+            text: "Vitest",
+            link: `/tutorials/vitest`
           }
         ].sort((a, b) => (a.text < b.text ? -1 : 1))
       },
