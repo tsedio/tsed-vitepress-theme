@@ -79,7 +79,7 @@ To prevent errors, fix the version for each Ts.ED packages:
     "@tsed/di": "7.53.0",
     "@tsed/core": "7.53.0",
     "@tsed/exceptions": "7.53.0",
-    "@tsed/plaftorm-express": "7.53.0",
+    "@tsed/platform-express": "7.53.0",
     "@tsed/swagger": "7.53.0"
   }
 }
