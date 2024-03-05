@@ -54,7 +54,7 @@ Initially, we'll have it simply take an input value and immediately return the s
 <<< @/docs/snippets/pipes/validation-pipe-identity.ts
 
 ::: tip
-`IPipe<T, R>` is a generic interface in which `T` indicates the type of the input value, and `R` indicates the return type of the `transform()` method.
+`PipeMethods<T, R>` is a generic interface in which `T` indicates the type of the input value, and `R` indicates the return type of the `transform()` method.
 :::
 
 Every pipe has to provide the `transform()` method. This method has two parameters:
@@ -104,13 +104,13 @@ The goal of validation use case is to ensure that the input parameter is valid b
 
 Officially, Ts.ED has two way to declare a @@JsonShema@@ validation:
 
-- With [model](/docs/model.html) decorators,
+- With [model](/doc/model.html) decorators,
 - With @@UseSchema@@ decorator, it's a decorator Pipe provided by @tsed/ajv package.
 
 We'll take the model declaration to explain the Validation pipe use case. Let's focus on the `PersonModel`:
 
 ```typescript
-import { MinLength, Required } from "@tsed/common";
+import { MinLength, Required } from "@tsed/schema";
 
 class PersonModel {
   @MinLength(3)
@@ -187,7 +187,6 @@ Given this `PersonModel`:
 
 ```typescript
 import { MinLength, Required } from "@tsed/common";
-import { Property } from "./property";
 
 class PersonModel {
   @Property()
@@ -256,7 +255,10 @@ Now, we can retrieve the options by using the `metadata.store`:
 And finally, we can use our new decorator on a parameter:
 
 ```typescript
-import { Controller, Put, RawPathParams, UsePipe } from "@tsed/common";
+import { Controller } from "@tsed/di";
+import { UsePipe } from "@tsed/common";
+import { Put } from "@tsed/schema";
+import { RawPathParams, UsePipe } from "@tsed/platform-params";
 import { PersonModel } from "../models/PersonModel";
 import { PersonPipe } from "../services/PersonPipe";
 
