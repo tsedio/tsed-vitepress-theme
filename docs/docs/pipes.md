@@ -104,7 +104,7 @@ The goal of validation use case is to ensure that the input parameter is valid b
 
 Officially, Ts.ED has two way to declare a @@JsonShema@@ validation:
 
-- With [model](/doc/model.html) decorators,
+- With [model](/docs/model) decorators,
 - With @@UseSchema@@ decorator, it's a decorator Pipe provided by @tsed/ajv package.
 
 We'll take the model declaration to explain the Validation pipe use case. Let's focus on the `PersonModel`:
@@ -155,7 +155,7 @@ and throw an exception when the payload is not valid.
 The validation pipe is a very specific use case because Ts.ED uses it automatically when a parameter is handled
 by the **routing request**. The previous pipe example, in order to work, needs to be registered with the @@OverrideProvider@@ decorator instead of @@Injectable@@.
 
-See more details on the [validation page](/docs/validation.html).
+See more details on the [validation page](/docs/validation).
 
 ## Transformation use case
 
@@ -186,7 +186,7 @@ This is useful when you have to get data from **database** based on an input dat
 Given this `PersonModel`:
 
 ```typescript
-import { MinLength, Required } from "@tsed/common";
+import { MinLength, Required, Property } from "@tsed/common";
 
 class PersonModel {
   @Property()
