@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "**/*",
+    ".eslintrc.cjs",
+    "docs/.vitepress/theme/config.ts",
+    "docs/.vitepress/theme/**/*",
+    "docs/.vitepress/theme/**/*.vue",
+    ".storybook/**/*"
+  ],
+  "exclude": ["node_modules"]
+}
