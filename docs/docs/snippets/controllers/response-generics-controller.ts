@@ -13,7 +13,7 @@ export class ProductsCtrl {
   @Returns(200, Document).Of(Product).Description("A product")
   @Returns(404, NotFound).Description("Product not found")
   @Summary("Return a product from the given Id")
-  async geProduct(@PathParams("id") id: string): Promise<Document<Product>> {
+  geProduct(@PathParams("id") id: string): Document<Product> {
     if (id === "AGAC") {
       const product = new Product({
         id: "AGAC",

@@ -24,7 +24,7 @@ export class CalendarsController {
       throw new NotFound("Calendar not found");
     }
 
-    return calendar
+    return calendar;
   }
 
   @Post("/")

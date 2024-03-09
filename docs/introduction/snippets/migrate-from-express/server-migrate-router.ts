@@ -22,8 +22,8 @@ import {expressRouter} from "../legacy/server.js"; // import the router from the
     "compression",
     "method-override",
     "json-parser",
-    { use: "urlencoded-parser", options: { extended: true }},
-    { use: expressRouter, hook: "$beforeRoutesInit"} // add the router here as middleware
+    {use: "urlencoded-parser", options: {extended: true}},
+    {use: expressRouter, hook: "$beforeRoutesInit"} // add the router here as middleware
   ]
 })
 export class Server {

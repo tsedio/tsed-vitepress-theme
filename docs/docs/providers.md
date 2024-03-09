@@ -62,7 +62,7 @@ Ts.ED is built around the **dependency injection** pattern. TypeScript emits typ
 be exploited by the @@InjectorService@@ to resolve dependencies automatically.
 
 ```typescript
-import { Injectable } from "@tsed/di";
+import {Injectable} from "@tsed/di";
 
 @Injectable()
 class MyInjectable {
@@ -73,7 +73,7 @@ class MyInjectable {
 It's also possible to inject a service on a property by using @@Inject@@ decorator:
 
 ```typescript
-import { Injectable, Inject } from "@tsed/di";
+import {Injectable, Inject} from "@tsed/di";
 
 @Injectable()
 class MyInjectable {
@@ -154,12 +154,12 @@ interface Bar {
 
 const Bar: unique symbol = Symbol("Bar");
 
-@Injectable({ type: Bar })
+@Injectable({type: Bar})
 class Foo implements Bar {
   private readonly type = "foo";
 }
 
-@Injectable({ type: Bar })
+@Injectable({type: Bar})
 class Baz implements Bar {
   private readonly type = "baz";
 }

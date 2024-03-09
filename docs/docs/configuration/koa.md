@@ -1,4 +1,5 @@
 # Koa.js
+
 ## koa.bodyParser <Badge text="6.111.0+"/>
 
 This option let you configure the default bodyParser used by Ts.ED to parse the body request:

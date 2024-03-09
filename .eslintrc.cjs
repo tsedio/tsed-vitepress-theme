@@ -19,7 +19,7 @@ module.exports = {
     "no-empty": "off",
     "prefer-const": "off",
     "no-fallthrough": "off",
-    "quotes": "double"
+    quotes: "double"
   },
   overrides: [
     {

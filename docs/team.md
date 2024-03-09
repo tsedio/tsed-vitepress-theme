@@ -5,6 +5,7 @@ hero:
   tagline: "The development of Ts.ED and its ecosystem is guided by an international team (it's our goal).
 We have a very active and engaged team that is constantly striving to push Ts.ED forward."
 ---
+
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
 import team from './team.json'

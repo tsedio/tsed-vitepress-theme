@@ -24,8 +24,8 @@ To load a provider on-demand, Ts.ED provide decorators @@LazyInject@@ and @@Opti
 with a @@PlatformExceptions@@:
 
 ```typescript
-import { Injectable, LazyInject } from "@tsed/di";
-import type { PlatformExceptions } from "@tsed/platform-exceptions";
+import {Injectable, LazyInject} from "@tsed/di";
+import type {PlatformExceptions} from "@tsed/platform-exceptions";
 
 @Injectable()
 class MyInjectable {
@@ -56,11 +56,11 @@ That means, each consecutive call will be very fast and will return a cached ins
 Create you own lazy injectable doesn't require special things, just declare a module or an injectable service is enough:
 
 ```typescript
-import { Module } from "@tsed/di";
+import {Module} from "@tsed/di";
 
 @Module({
   // works also with @Injectable
-  imports: [], // Use the imports field if you have services to build
+  imports: [] // Use the imports field if you have services to build
 })
 export class MyModule {
   $onInit() {
@@ -72,8 +72,8 @@ export class MyModule {
 Then use it:
 
 ```typescript
-import { Injectable, LazyInject } from "@tsed/di";
-import type { MyModule } from "../MyModule.ts";
+import {Injectable, LazyInject} from "@tsed/di";
+import type {MyModule} from "../MyModule.ts";
 
 @Injectable()
 class MyInjectable {
@@ -108,7 +108,7 @@ If you use Webpack, make sure to update your `tsconfig.json` file - setting `com
 Ts.ED provide also a way to lazy load a provider programmatically. You just need to inject the @@InjectorService@@ in service:
 
 ```typescript
-import { Injectable, Inject, InjectorService } from "@tsed/di";
+import {Injectable, Inject, InjectorService} from "@tsed/di";
 
 @Injectable()
 class MyService {
@@ -116,7 +116,7 @@ class MyService {
   protected injector: InjectorService;
 
   async load() {
-    const { MyModule } = await import("../lazy/my-module.ts");
+    const {MyModule} = await import("../lazy/my-module.ts");
     const myModule = await this.injector.lazyInvoke(MyModule);
 
     myModule.doSomething();

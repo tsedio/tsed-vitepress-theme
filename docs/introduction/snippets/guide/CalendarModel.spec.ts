@@ -7,12 +7,12 @@ function validate(model: CalendarModel) {
 
   const ajv = new Ajv();
 
-  const isValid= ajv.validate(schema, model);
+  const isValid = ajv.validate(schema, model);
 
   return {
     isValid,
     errors: ajv.errors
-  }
+  };
 }
 
 describe("CalendarModel", () => {
@@ -59,7 +59,7 @@ describe("CalendarModel", () => {
     });
   });
 
-  it("should validate model", async () => {
+  it("should validate model", () => {
     const model = new CalendarModel();
     model.id = "1";
     model.name = "My calendar";
@@ -70,7 +70,7 @@ describe("CalendarModel", () => {
     expect(isValid).toEqual(true);
   });
 
-  it("should not validate the model if description is missing", async () => {
+  it("should not validate the model if description is missing", () => {
     const model = new CalendarModel();
     model.id = "1";
     model.name = "My calendar";
@@ -81,14 +81,14 @@ describe("CalendarModel", () => {
     expect(isValid).toEqual(false);
     expect(errors).toEqual([
       {
-        "instancePath": "/description",
-        "keyword": "minLength",
-        "message": "must NOT have fewer than 1 characters",
-        "params": {
-          "limit": 1
+        instancePath: "/description",
+        keyword: "minLength",
+        message: "must NOT have fewer than 1 characters",
+        params: {
+          limit: 1
         },
-        "schemaPath": "#/properties/description/minLength"
+        schemaPath: "#/properties/description/minLength"
       }
-    ])
+    ]);
   });
 });

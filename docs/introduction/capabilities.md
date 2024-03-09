@@ -14,8 +14,8 @@ Here are the runtime support provided by Ts.ED:
 
 <div class="table-features">
 
-| Runtime           |                                                     |
-| ----------------- |-----------------------------------------------------|
+| Runtime           |                                                    |
+| ----------------- | -------------------------------------------------- |
 | Node.js           | <img src="/icons/valid.svg" width="15" alt="yes"/> |
 | Node.js + Babel   | <img src="/icons/valid.svg" width="15" alt="yes"/> |
 | Node.js + Webpack | <img src="/icons/valid.svg" width="15" alt="yes"/> |
@@ -30,8 +30,8 @@ Here are the features list provided by Ts.ED and the compatibility with the diff
 
 <div class="table-features">
 
-| Features                                                                                                                                                                                            | Express.js                                            | Koa.js                                                | [Serverless λ](/tutorials/serverless.md)               | [CLI](/docs/command.md)                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
+| Features                                                                                                                                                                                            | Express.js                                         | Koa.js                                             | [Serverless λ](/tutorials/serverless.md)            | [CLI](/docs/command.md)                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
 | [Controllers](/docs/controllers.md) <br /> <small>([routing](/docs/controllers.md), [nested](/docs/controllers.html#nested-controllers), [inheritance](/docs/controllers.html#inheritance))</small> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 | [Providers](/docs/providers.md)                                                                                                                                                                     | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/valid.svg" width="15" alt="yes"/>  |
 | [Model & JsonSchema](/docs/model.md)                                                                                                                                                                | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/valid.svg" width="15" alt="yes"/>  |
@@ -48,7 +48,7 @@ Here are the features list provided by Ts.ED and the compatibility with the diff
 | [Templating](/docs/templating.md)                                                                                                                                                                   | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 | [Validation](/docs/validation.md)                                                                                                                                                                   | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 | [Response Filters](/docs/response-filter.md)                                                                                                                                                        | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/invalid.svg" width="15" alt="no"/> |
-| [Cache](/docs/cache.md)                                                                                                                                                                             | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <center>?</center>                                     | <img src="/icons/invalid.svg" width="15" alt="no"/> |
+| [Cache](/docs/cache.md)                                                                                                                                                                             | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/> | <center>?</center>                                  | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 
 </div>
 
@@ -58,8 +58,8 @@ Here are the plugins provided by Ts.ED and the compatibility with the different 
 
 <div class="table-features">
 
-| Features                                | Express.js                                            | Koa.js                                                 | [Serverless λ](/tutorials/serverless.md)               | [CLI](/docs/command.md)                                |
-|-----------------------------------------| ----------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| Features                                | Express.js                                         | Koa.js                                              | [Serverless λ](/tutorials/serverless.md)            | [CLI](/docs/command.md)                             |
+| --------------------------------------- | -------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
 | [Passport.js](/tutorials/passport.md)   | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/invalid.svg" width="15" alt="no"/> | <img src="/icons/invalid.svg" width="15" alt="no"/> | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 | [Prisma](/tutorials/prisma.md)          | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/valid.svg" width="15" alt="yes"/>  |
 | [TypeORM](/tutorials/typeorm.md)        | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/valid.svg" width="15" alt="yes"/>  |
@@ -69,6 +69,6 @@ Here are the plugins provided by Ts.ED and the compatibility with the different 
 | [GraphQL](/tutorials/graphql.md)        | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="no"/>   | <img src="/icons/invalid.svg" width="15" alt="no"/> | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 | [Socket.io](/tutorials/socket-io.md)    | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/invalid.svg" width="15" alt="no"/> | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 | [OIDC](/tutorials/oidc.md)              | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <img src="/icons/invalid.svg" width="15" alt="no"/> | <img src="/icons/invalid.svg" width="15" alt="no"/> |
-| [Stripe](/tutorials/stripe.md)          | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <center>?</center>                                     | <img src="/icons/invalid.svg" width="15" alt="no"/> |
+| [Stripe](/tutorials/stripe.md)          | <img src="/icons/valid.svg" width="15" alt="yes"/> | <img src="/icons/valid.svg" width="15" alt="yes"/>  | <center>?</center>                                  | <img src="/icons/invalid.svg" width="15" alt="no"/> |
 
 </div>

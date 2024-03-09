@@ -1,5 +1,5 @@
 ---
-next: 
+next:
   text: Controllers
   link: /docs/controllers
 head:
@@ -12,10 +12,11 @@ head:
 ---
 
 # Migrate from v6
+
 ## What's new ?
 
 | Topics                                                                        | Migration note                                    | Issue                                               |
-|-------------------------------------------------------------------------------|---------------------------------------------------|-----------------------------------------------------|
+| ----------------------------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------- |
 | Use virtual router instead of Express or Koa router                           | [See](#virtual-router)                            | [#1987](https://github.com/tsedio/tsed/pull/1987)   |
 | Remove componentsScan options and any glob pattern to discover services       | [See](#components-scan)                           | [#1503](https://github.com/tsedio/tsed/issues/1503) |
 | Use [@tsed/engines](/docs/templating) instead of Consolidate                  | [See](#template-engines)                          | [#1503](https://github.com/tsedio/tsed/issues/1503) |

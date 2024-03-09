@@ -3,7 +3,7 @@ import {BodyParams} from "@tsed/platform-params";
 
 class MyController {
   @Post()
-  async create(@BodyParams({expression: "user", useMapper: false}) body: T): Promise<T> {
+  create(@BodyParams({expression: "user", useMapper: false}) body: T): T {
     console.log("payload", body);
 
     return body;

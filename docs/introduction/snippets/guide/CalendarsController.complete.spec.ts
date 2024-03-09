@@ -5,7 +5,10 @@ import {CalendarModel} from "../../models/CalendarModel";
 
 async function getControllerFixture() {
   const controller = await PlatformTest.invoke<CalendarsController>(CalendarsController);
-  const calendar = deserialize<CalendarModel>({name: "name", description: "description"}, {type: CalendarModel, groups: ["creation"]});
+  const calendar = deserialize<CalendarModel>(
+    {name: "name", description: "description"},
+    {type: CalendarModel, groups: ["creation"]}
+  );
 
   controller.create(calendar);
 
@@ -23,9 +26,7 @@ describe("CalendarsController", () => {
     it("should return all calendars", async () => {
       const {controller, calendar} = await getControllerFixture();
 
-      expect(controller.getAll()).toEqual([
-        calendar
-      ]);
+      expect(controller.getAll()).toEqual([calendar]);
     });
   });
 
@@ -48,10 +49,13 @@ describe("CalendarsController", () => {
     it("should create a calendar", async () => {
       const {controller} = await getControllerFixture();
 
-      const calendar = deserialize({name: "name", description: "description"}, {
-        type: CalendarModel,
-        groups: ["creation"]
-      });
+      const calendar = deserialize(
+        {name: "name", description: "description"},
+        {
+          type: CalendarModel,
+          groups: ["creation"]
+        }
+      );
 
       expect(calendar.id).toBeUndefined();
 
@@ -63,9 +67,12 @@ describe("CalendarsController", () => {
   });
 
   describe("update()", () => {
-    it('should update a calendar', async () => {
+    it("should update a calendar", async () => {
       const {controller, calendar} = await getControllerFixture();
-      const updateCalendar = deserialize<CalendarModel>({name: "new name", description: "new description"}, {type: CalendarModel, groups: ["update"]});
+      const updateCalendar = deserialize<CalendarModel>(
+        {name: "new name", description: "new description"},
+        {type: CalendarModel, groups: ["update"]}
+      );
 
       const updated = controller.update(calendar.id, updateCalendar);
 
@@ -73,30 +80,32 @@ describe("CalendarsController", () => {
       expect(updated.description).toEqual(updateCalendar.description);
 
       expect(controller.getAll()).toHaveLength(1);
-    })
+    });
 
     it("should throw an error if the calendar isn't found", async () => {
       const {controller} = await getControllerFixture();
-      const updateCalendar = deserialize<CalendarModel>({name: "new name", description: "new description"}, {type: CalendarModel, groups: ["update"]});
-
+      const updateCalendar = deserialize<CalendarModel>(
+        {name: "new name", description: "new description"},
+        {type: CalendarModel, groups: ["update"]}
+      );
 
       expect(() => controller.update("not-found", updateCalendar)).toThrow("Calendar not found");
     });
   });
 
   describe("remove()", () => {
-    it('should remove a calendar', async () => {
+    it("should remove a calendar", async () => {
       const {controller, calendar} = await getControllerFixture();
 
       controller.remove(calendar.id);
 
       expect(controller.getAll()).toHaveLength(0);
-    })
+    });
 
     it("should throw an error if the calendar isn't found", async () => {
       const {controller} = await getControllerFixture();
 
       expect(() => controller.remove("not-found")).toThrow("Calendar not found");
     });
-  })
+  });
 });

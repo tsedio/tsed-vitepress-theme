@@ -36,7 +36,7 @@ will map every `GET /calendars` request to this method.
 
 Ts.ED provides a decorator for each HTTP verb which can be used to handle a request:
 
-<ApiList query="tags:decorator AND tags:httpMethod" />
+<ApiList query="tags.includes('decorator') && tags.includes('httpMethod')" />
 
 Other decorators are provided to describe your route with OpenSpec, adding middlewares, adding some constraints or
 adding headers:
@@ -117,7 +117,7 @@ In order to avoid such side effects, simply move `findAll()` method above `findO
 Getting parameters from Request can be done by using the following decorators:
 
 | Decorator      | Validation | Json Mapper | Configurable |
-|----------------|------------|-------------|--------------|
+| -------------- | ---------- | ----------- | ------------ |
 | HeaderParams   | no         | no          | yes          |
 | BodyParams     | yes        | yes         | yes          |
 | RawBodyParams  | no         | no          | no           |
@@ -315,6 +315,7 @@ pnpm add @tsed/ajv
 ```sh [bun]
 bun add @tsed/ajv
 ```
+
 :::
 
 **Supported decorators:**
@@ -609,7 +610,7 @@ One controller can be added to multiple controllers, so you can easily reuse the
 This example will produce these following routes:
 
 | Verb | Route                    | Method               |
-|------|--------------------------|----------------------|
+| ---- | ------------------------ | -------------------- |
 | GET  | `/rest`                  | `RestCtrl.get()`     |
 | GET  | `/rest/calendars`        | `CalendarCtrl.get()` |
 | GET  | `/rest/calendars/events` | `EventCtrl.get()`    |
@@ -627,7 +628,3 @@ To do that just declare a parent controller without the @@Controller@@ decorator
 Then, on your child controller:
 
 <<< @/docs/snippets/controllers/inheritance-child-controller.ts
-
-## Decorators
-
-<ApiList query="tags: decorator AND operation OR controller"/>

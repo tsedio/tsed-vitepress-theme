@@ -1,4 +1,5 @@
 # Getting Started
+
 ## Try it online
 
 You can try VitePress directly in your browser on [CodeSandbox](https://codesandbox.io/p/devbox/tsed-mongoose-example-omkbm).
@@ -29,6 +30,7 @@ pnpx -p @tsed/cli tsed init .
 ```sh [bun]
 bnx -p @tsed/cli tsed init .
 ```
+
 :::
 
 You will be greeted with a few simple questions:
@@ -91,7 +93,7 @@ To prevent errors, fix the version for each Ts.ED packages:
 
 Alternatively, you can check out one of these projects:
 
-[//]: # (<Projects type="projects" />)
+[//]: # '<Projects type="projects" />'
 
 If none of previous solutions are satisfying maybe you are in these cases:
 
@@ -102,10 +104,7 @@ If none of previous solutions are satisfying maybe you are in these cases:
 
 Now you can follow one of these links to develop your new application:
 
-[//]: # (- [Create your first controller]&#40;/getting-started/create-your-first-controller.md&#41;)
-
-[//]: # (- [Change server configuration]&#40;/docs/configuration.md&#41;)
-
-[//]: # (- [Load configuration from files]&#40;/docs/configuration.md&#41;)
-
-[//]: # (- [What is the Platform API]&#40;/docs/platform-api.md&#41;)
+[//]: # "- [Create your first controller](/getting-started/create-your-first-controller.md)"
+[//]: # "- [Change server configuration](/docs/configuration.md)"
+[//]: # "- [Load configuration from files](/docs/configuration.md)"
+[//]: # "- [What is the Platform API](/docs/platform-api.md)"
