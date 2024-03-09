@@ -1,0 +1,73 @@
+[data-name="ApiIcon"] {
+  @apply hidden font-source rounded-xs text-white text-xxs text-center mr-2;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1.1rem;
+  box-shadow: 0 1px 2px rgba(10, 16, 20, 0.24);
+
+  &[data-type="class"] {
+    @apply bg-blue-900 inline-block;
+
+    &:before {
+      content: "C";
+    }
+  }
+
+  &[data-type="interface"] {
+    @apply bg-teal-500 inline-block;
+
+    &:before {
+      content: "I";
+    }
+  }
+
+  &[data-type="decorator"] {
+    @apply bg-blue-600 inline-block;
+    line-height: 1rem;
+
+    &:before {
+      content: "@";
+    }
+  }
+
+  &[data-type="type"] {
+    @apply bg-emerald-300 inline-block;
+
+    &:before {
+      content: "T";
+    }
+  }
+
+  &[data-type="service"],
+  &[data-type="provider"] {
+    @apply bg-pink-600 inline-block;
+
+    &:before {
+      content: "S";
+    }
+  }
+
+  &[data-type="function"] {
+    @apply bg-emerald-600 inline-block;
+
+    &:before {
+      content: "F";
+    }
+  }
+
+  &[data-type="const"] {
+    @apply bg-gray-800 inline-block;
+
+    &:before {
+      content: "K";
+    }
+  }
+
+  &[data-type="enum"] {
+    @apply bg-amber-600 inline-block;
+
+    &:before {
+      content: "E";
+    }
+  }
+}
