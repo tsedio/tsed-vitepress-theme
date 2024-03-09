@@ -9,12 +9,12 @@ export class CalendarsController {
   constructor(private readonly calendarsService: CalendarsService) {}
 
   @Post()
-  async create(@BodyParams() calendar: Calendar) {
-    this.calendarsService.create(calendar);
+  create(@BodyParams() calendar: Calendar) {
+    return this.calendarsService.create(calendar);
   }
 
   @Get()
-  async findAll(): Promise<Calendar[]> {
+  findAll(): Promise<Calendar[]> {
     return this.calendarsService.findAll();
   }
 }

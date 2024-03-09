@@ -10,7 +10,7 @@ export class PersonsController {
   private personsService: PersonsService;
 
   @Get(":id")
-  async findOne(
+  findOne(
     @RawPathParams("id")
     @UsePipe(ParseIntPipe)
     id: number

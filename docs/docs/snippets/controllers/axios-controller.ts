@@ -21,9 +21,6 @@ export class ProxyCtrl {
       responseType: "stream"
     });
 
-    return $ctx.response
-      .setHeaders(response.headers)
-      .status(response.status)
-      .body(response.data);
+    return $ctx.response.setHeaders(response.headers).status(response.status).body(response.data);
   }
 }

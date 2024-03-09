@@ -13,7 +13,7 @@ export class MyController {
   constructor(private myService: MyService) {}
 
   @Get("/random")
-  async getValue() {
+  getValue() {
     return this.myService.rand;
   }
 }

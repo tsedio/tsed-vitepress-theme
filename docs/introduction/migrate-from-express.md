@@ -1,5 +1,5 @@
 ---
-next: 
+next:
   text: Controllers
   link: /docs/controllers
 head:
@@ -12,6 +12,7 @@ head:
 ---
 
 # Migrate from Express.js
+
 ## Installation
 
 You can generate a Ts.ED project over an existing project using the Ts.ED CLI.
@@ -62,6 +63,7 @@ pnpx -p @tsed/cli tsed init .
 ```sh [bun]
 bnx -p @tsed/cli tsed init .
 ```
+
 :::
 
 ::: info
@@ -91,16 +93,16 @@ Here is an example:
 
 ```ts
 import {MyService} from "./services/MyService";
-import {Router}  from "express";
+import {Router} from "express";
 
 const router = Router({mergeParams: true});
 
 router.get("/:id", (req, res) => {
   const $ctx = getContext();
   const service = $ctx.injector.get(MyService);
-  
+
   service.doSomething();
-  
+
   res.send("Hello");
-})
+});
 ```

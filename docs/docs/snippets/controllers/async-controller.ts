@@ -10,7 +10,7 @@ interface Calendar {
 @Controller("/calendars")
 export class CalendarCtrl {
   @Get("/:id")
-  async get(@PathParams("id") id: string): Promise<Calendar> {
+  get(@PathParams("id") id: string): Calendar {
     return {
       id,
       name: "test"

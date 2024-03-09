@@ -110,7 +110,7 @@ Officially, Ts.ED has two way to declare a @@JsonShema@@ validation:
 We'll take the model declaration to explain the Validation pipe use case. Let's focus on the `PersonModel`:
 
 ```typescript
-import { MinLength, Required } from "@tsed/schema";
+import {MinLength, Required} from "@tsed/schema";
 
 class PersonModel {
   @MinLength(3)
@@ -186,7 +186,7 @@ This is useful when you have to get data from **database** based on an input dat
 Given this `PersonModel`:
 
 ```typescript
-import { MinLength, Required, Property } from "@tsed/common";
+import {MinLength, Required, Property} from "@tsed/common";
 
 class PersonModel {
   @Property()
@@ -225,9 +225,9 @@ To avoid future mistakes, it could be a good idea to summarize these two decorat
 Now, we can use our custom decorator on parameter:
 
 ```typescript
-import { Controller, Put, RawPathParams, UsePipe } from "@tsed/common";
-import { PersonModel } from "../models/PersonModel";
-import { PersonPipe } from "../services/PersonPipe";
+import {Controller, Put, RawPathParams, UsePipe} from "@tsed/common";
+import {PersonModel} from "../models/PersonModel";
+import {PersonPipe} from "../services/PersonPipe";
 
 @Controller("/persons")
 export class PersonsController {
@@ -255,17 +255,17 @@ Now, we can retrieve the options by using the `metadata.store`:
 And finally, we can use our new decorator on a parameter:
 
 ```typescript
-import { Controller } from "@tsed/di";
-import { UsePipe } from "@tsed/common";
-import { Put } from "@tsed/schema";
-import { RawPathParams, UsePipe } from "@tsed/platform-params";
-import { PersonModel } from "../models/PersonModel";
-import { PersonPipe } from "../services/PersonPipe";
+import {Controller} from "@tsed/di";
+import {UsePipe} from "@tsed/common";
+import {Put} from "@tsed/schema";
+import {RawPathParams, UsePipe} from "@tsed/platform-params";
+import {PersonModel} from "../models/PersonModel";
+import {PersonPipe} from "../services/PersonPipe";
 
 @Controller("/persons")
 export class PersonsController {
   @Put("/:id")
-  async update(@UsePersonParam("id", { optional: true }) person: PersonModel) {
+  async update(@UsePersonParam("id", {optional: true}) person: PersonModel) {
     // do something
 
     return person;

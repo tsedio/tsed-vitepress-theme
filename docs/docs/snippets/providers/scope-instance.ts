@@ -7,7 +7,7 @@ export class MyInstanceService {
   private rand = Math.random() * 100;
 
   @Get("/random")
-  async getValue() {
+  getValue() {
     return this.rand;
   }
 }

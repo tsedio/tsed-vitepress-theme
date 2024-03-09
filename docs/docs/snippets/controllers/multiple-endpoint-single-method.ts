@@ -6,7 +6,7 @@ export class CalendarCtrl {
   @Get("/:id")
   @Get("/alias/:id")
   @Post("/:id/complexAlias")
-  async get(): Promise<any> {
+  get() {
     return "Return something";
   }
 }

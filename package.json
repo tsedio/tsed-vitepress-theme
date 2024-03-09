@@ -1,6 +1,18 @@
 {
   "name": "@clubmed/root",
   "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "typescript": "tsc --init",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix",
+    "postlint:fix": "prettier . --write",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
+  },
   "dependencies": {
     "@vueuse/core": "^10.9.0"
   },
@@ -55,18 +67,6 @@
     "vitepress": "^1.0.0-rc.44",
     "vitest": "1.3.1",
     "vue": "^3.4.19"
-  },
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "typescript": "tsc --init",
-    "test": "vitest run",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix",
-    "postlint:fix": "prettier . --write",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
   },
   "lint-staged": {
     "docs/.vitepress/theme/**/*.{ts,tsx,js,jsx,vue}": [

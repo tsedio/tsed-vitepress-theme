@@ -69,12 +69,11 @@ import * as pages from "./controllers/pages/index";
 @Configuration({
   ...config,
   mount: {
-    "/rest": [// [!code focus]
-      ...Object.values(rest)// [!code focus]
-    ],// [!code focus]
-    "/": [
-      ...Object.values(pages)
-    ]
+    "/rest": [
+      // [!code focus]
+      ...Object.values(rest) // [!code focus]
+    ], // [!code focus]
+    "/": [...Object.values(pages)]
   }
 })
 export class Server {}
@@ -149,6 +148,7 @@ hello%
 Before we continue, let's create a simple [model](/docs/model.md) to use in our controller.
 
 Run the following command to create a new `Calendar` model:
+
 ```sh
 # npm -g @tsed/cli
 tsed g model Calendar
@@ -166,7 +166,7 @@ export class CalendarModel {
 ```
 
 ::: tip
-Model feature provided by Ts.ED is a simple way to define a data structure. 
+Model feature provided by Ts.ED is a simple way to define a data structure.
 It's based on the `@tsed/schema` package and can be used to validate incoming data, serialize outgoing data, and generate OpenAPI documentation.
 :::
 
@@ -188,7 +188,7 @@ Our `CalendarModel` now has three properties: `id`, `name`, and `description`. W
 - `@Groups("!creation")` to exclude the `id` property from the serialization when the `creation` group is used.
 
 ::: tip
-This model will produce a JSON schema that can be tested using the [Swagger UI](/tutorials/swagger.md) or 
+This model will produce a JSON schema that can be tested using the [Swagger UI](/tutorials/swagger.md) or
 in a unit test using the `@tsed/schema` package. See the `CalendarModel.spec.ts` tab for an example.
 :::
 
@@ -207,7 +207,7 @@ export class CalendarsController {
     model.id = "1";
     model.name = "My calendar";
     model.description = "My calendar description";
-    
+
     return [model];
   }
 }
@@ -219,7 +219,7 @@ Now, if we run our server and test our endpoint, we should see the following out
 curl --location 'http://localhost:8083/rest/calendars'
 
 # Output
-[{"id":"1","name":"My calendar","description":"My calendar description"}]% 
+[{"id":"1","name":"My calendar","description":"My calendar description"}]%
 ```
 
 ## Create a CRUD
@@ -230,11 +230,11 @@ We'll start by adding a `Post` method to create a new `Calendar`:
 
 <<< @/introduction/snippets/guide/CalendarsController.ts
 
-As we can see on our `CalendarsController`, we added a new method `create` decorated with `@Post("/")`. 
+As we can see on our `CalendarsController`, we added a new method `create` decorated with `@Post("/")`.
 This method will be called when a `POST` request is sent to the `/rest/calendars` endpoint.
 
 We also added a `@BodyParams` decorator to the `create` method. This decorator is used to inject the request body into the method.
-`Groups` is used to specify which group should be used to validate the incoming payload. 
+`Groups` is used to specify which group should be used to validate the incoming payload.
 Here we need to exclude the `id` property from the validation. This is why we use `@Groups("creation")`.
 
 ```sh
@@ -254,7 +254,7 @@ curl --location 'http://localhost:8083/rest/calendars'
 [{"id":"50de4b10-792e-44d5-9f61-56b3898ebf34","name":"My calendar","description":"My calendar description"}]%
 ```
 
-To complete our CRUD, we need to add a `Get` method to retrieve a `Calendar` by its `id`, 
+To complete our CRUD, we need to add a `Get` method to retrieve a `Calendar` by its `id`,
 a `Put` method to update a `Calendar` by its `id`, and a `Delete` method to remove a `Calendar` by its `id`.
 
 Here is the complete `CalendarsController`:
@@ -269,5 +269,3 @@ Here is the complete `CalendarsController`:
 
 Our CRUD is ready to use. But the logic is entirely implemented in our controller. Ts.ED provide a way to separate the business logic from the controller logic using [Services](/docs/services.md).
 So, the next step is to use DI to create and inject a service in our controller.
-
-

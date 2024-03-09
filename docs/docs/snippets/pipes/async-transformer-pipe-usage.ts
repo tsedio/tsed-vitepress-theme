@@ -7,7 +7,7 @@ import {PersonPipe} from "../services/PersonPipe";
 @Controller("/persons")
 export class PersonsController {
   @Put("/:id")
-  async update(
+  update(
     @RawPathParams("id")
     @UsePipe(PersonPipe)
     person: PersonModel

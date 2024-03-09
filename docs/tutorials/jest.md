@@ -28,6 +28,7 @@ $ pnpm add -D jest ts-jest @types/jest
 ```bash [bun]
 $ bun add -D jest ts-jest @types/jest
 ```
+
 :::
 
 This command installs Jest, the TypeScript Jest transformer (`ts-jest`), and the Jest TypeScript types.

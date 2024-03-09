@@ -23,5 +23,3 @@ all the right tools to developers so that they are quickly productive.
 
 Ts.ED tends towards the same objective which is to achieve better productivity while remaining easy to understand.
 To achieve this, Ts.ED provides out-of-the-box an application architecture, highly testable, scalable and maintainable.
-
-
