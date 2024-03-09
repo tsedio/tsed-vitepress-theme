@@ -1,4 +1,5 @@
 import {defineConfig} from "vitepress";
+import {apiAnchor} from "./theme/markdown/api-anchor/api-anchor.js";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,6 +28,8 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    apiUrl: "https://tsed.io/api.json",
+    apiRedirectUrl: "https://api-docs.tsed.io",
     search: {
       provider: "algolia",
       options: {
@@ -47,7 +50,7 @@ export default defineConfig({
               {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
               {text: "Capabilities", link: "/introduction/capabilities"},
               {text: "Installation", link: "/introduction/getting-started"},
-              {text: "Create your first controller", link: "/introduction/create-your-first-controller"},
+              {text: "Create your first controller", link: "/introduction/create-your-first-controller"}
             ]
           },
           {
@@ -259,13 +262,12 @@ export default defineConfig({
       "/introduction/": [
         {
           text: "Introduction",
-          items:
-            [
-              {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
-              {text: "Capabilities", link: "/introduction/capabilities"},
-              {text: "Installation", link: "/introduction/getting-started"},
-              {text: "Create your first controller", link: "/introduction/create-your-first-controller"}
-            ]
+          items: [
+            {text: "What is Ts.ED?", link: "/introduction/what-is-tsed"},
+            {text: "Capabilities", link: "/introduction/capabilities"},
+            {text: "Installation", link: "/introduction/getting-started"},
+            {text: "Create your first controller", link: "/introduction/create-your-first-controller"}
+          ]
         },
         {
           text: "Migration",
@@ -278,13 +280,12 @@ export default defineConfig({
       "/docs/": [
         {
           text: "Configuration",
-          items:
-            [
-              {text: "Options", link: "/docs/configuration/"},
-              {text: "Load config from file", link: "/docs/configuration/load-configuration-from-file"},
-              {text: "Express.js", link: "/docs/configuration/express"},
-              {text: "Koa.js", link: "/docs/configuration/koa"}
-            ]
+          items: [
+            {text: "Options", link: "/docs/configuration/"},
+            {text: "Load config from file", link: "/docs/configuration/load-configuration-from-file"},
+            {text: "Express.js", link: "/docs/configuration/express"},
+            {text: "Koa.js", link: "/docs/configuration/koa"}
+          ]
         },
         {
           text: "Controllers",
@@ -306,6 +307,9 @@ export default defineConfig({
   markdown: {
     image: {
       lazyLoading: true
+    },
+    config: (md) => {
+      md.use(apiAnchor);
     }
   }
 });
