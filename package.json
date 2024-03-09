@@ -1,12 +1,83 @@
 {
+  "name": "@clubmed/root",
+  "type": "module",
+  "dependencies": {
+    "@vueuse/core": "^10.9.0"
+  },
   "devDependencies": {
+    "@commitlint/cli": "19.0.3",
+    "@commitlint/config-conventional": "19.0.3",
+    "@storybook/addon-a11y": "^7.6.17",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-storysource": "^7.6.17",
+    "@storybook/addon-themes": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@storybook/vue3": "^7.6.17",
+    "@storybook/vue3-vite": "^7.6.17",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/vue": "8.0.2",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "7.1.1",
+    "@typescript-eslint/parser": "7.1.1",
+    "@vitejs/plugin-vue": "4.6.2",
+    "@vitest/coverage-v8": "^1.3.1",
+    "@vue/eslint-config-prettier": "9.0.0",
+    "@vue/eslint-config-typescript": "13.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-simple-import-sort": "12.0.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-tailwindcss": "3.14.3",
+    "eslint-plugin-vitest": "0.3.22",
+    "eslint-plugin-vue": "9.22.0",
+    "husky": "9.0.11",
+    "install": "^0.13.0",
+    "jsdom": "^24.0.0",
+    "lint-staged": "^15.2.2",
+    "npm": "^10.5.0",
+    "postcss": "^8.4.20",
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "0.5.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.17",
+    "storybook-addon-manual-mocks": "^1.0.4",
+    "tailwindcss": "3.4.1",
+    "ts-node": "10.9.2",
+    "typescript": "^5.3.3",
+    "vite": "5.1.5",
     "vitepress": "^1.0.0-rc.44",
+    "vitest": "1.3.1",
     "vue": "^3.4.19"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "typescript": "tsc --init",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix",
+    "postlint:fix": "prettier . --write",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
+  },
+  "lint-staged": {
+    "docs/.vitepress/theme/**/*.{ts,tsx,js,jsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "docs/**/*.{ts,tsx,js,jsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,json,md,yml,yaml}": "prettier --write"
   },
   "packageManager": "yarn@4.1.0"
 }
