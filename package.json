@@ -8,8 +8,8 @@
     "typescript": "tsc --init",
     "test": "vitest run",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix",
-    "postlint:fix": "prettier . --write",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix && yarn run prettier:fix",
+    "prettier:fix": "prettier . --write",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
