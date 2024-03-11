@@ -1,5 +1,5 @@
 import {beforeEach} from "vitest";
-import {useFavicon, useFetch} from "@vueuse/core";
+import {useFetch} from "@vueuse/core";
 import {useApiContent} from "./useApiContent.js";
 
 vi.mock("@vueuse/core");

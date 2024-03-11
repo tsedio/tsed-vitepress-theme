@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import {computed} from "vue";
 import ApiAnchor from "../api-anchor/ApiAnchor.vue";
 import {useApiContent} from "../../composables/api/useApiContent.js";
 import type {ApiSymbol} from "../../composables/api/interfaces/Api";
-import {computed} from "vue";
 import {useFilter} from "../../composables/filters/useFilter.js";
 import {mapSymbols} from "../../composables/api/mapSymbols.js";
 

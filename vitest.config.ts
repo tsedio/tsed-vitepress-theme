@@ -19,10 +19,10 @@ export default defineConfig({
       enabled: true,
       thresholds: {
         autoUpdate: true,
-        statements: 40.89,
-        branches: 66.66,
-        functions: 50,
-        lines: 40.89
+        statements: 78.6,
+        branches: 85.29,
+        functions: 87.5,
+        lines: 78.6
       },
       include: ["docs/.vitepress/theme/**/*.{ts,vue}"],
       exclude: [
