@@ -4,13 +4,14 @@ function createRegExp(item: any) {
 }
 
 function getCustomFilter<Data = unknown>(query: string) {
-  let q = null;
+  let q: string | null = null;
+
   return (scope: Data) => {
     try {
       q = q || query.replace(createRegExp(scope), `scope.$1`);
       return eval(q);
     } catch (er) {
-      throw new Error("CustomFilterError:" + query);
+      throw new Error("CustomFilterError: " + query);
     }
   };
 }

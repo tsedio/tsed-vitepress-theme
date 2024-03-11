@@ -24,14 +24,9 @@ const link = computed(() => {
 });
 </script>
 <template>
-  <a
-    :href="link"
-    data-name="ApiAnchor"
-    :class="`reset-link -${theme} ${deprecated ? 'opacity-50' : ''}`"
-    :title="props.symbolName"
-  >
+  <a :href="link" data-name="ApiAnchor" :class="`reset-link -${theme} ${deprecated ? 'opacity-50' : ''}`" :title="props.symbolName">
     <span><ApiIcon :type="props.symbolType" /></span>
-    <span :class="`${deprecated ? 'line-through' : ''}`">
+    <span data-testid="ApiAnchorText" :class="`${deprecated ? 'line-through' : ''}`">
       {{ props.symbolName }}
     </span>
   </a>
