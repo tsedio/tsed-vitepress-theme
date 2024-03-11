@@ -4,12 +4,11 @@ module.exports = {
     "plugin:vue/vue3-recommended",
     "plugin:storybook/recommended",
     "@vue/eslint-config-typescript",
-    "prettier"
+    "@vue/eslint-config-prettier/skip-formatting"
   ],
   parserOptions: {
     ecmaVersion: "latest"
   },
-  plugins: ["prettier"],
   rules: {
     "prettier/prettier": "error",
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
@@ -18,7 +17,7 @@ module.exports = {
     "no-case-declarations": "off",
     "no-empty": "off",
     "prefer-const": "off",
-    "no-fallthrough": "off",
+    "no-fallthrough": "off"
   },
   overrides: [
     {
