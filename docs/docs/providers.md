@@ -12,7 +12,7 @@ Basically, almost everything may be considered as a provider – service, factor
 can inject dependencies, meaning, they can create various relationships with each other. But in fact, a provider is
 nothing else than just a simple class annotated with an `@Injectable()` decorator.
 
-<figure><img src="../docs/assets/providers.png" style="max-height: 300px; padding: 5px"></figure>
+<figure><img src="../docs/assets/providers.png" style="max-height: 300px; padding: 5px; background-color: #fff"></figure>
 
 In controllers chapter, we've seen how to build a Controller, handle a request and create a response. Controllers shall
 handle HTTP requests and delegate complex tasks to the **providers**.
