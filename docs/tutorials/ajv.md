@@ -74,8 +74,7 @@ Ts.ED gives some decorators to write your validation model:
 
 #### Model validation
 
-A model can be used on a method controller along with [BodyParams]() =>
-@@BodyParams@@
+A model can be used on a method controller along with @@BodyParams@@
 or other decorators, and will
 be validated by Ajv.
 
