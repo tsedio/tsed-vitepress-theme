@@ -1,9 +1,8 @@
-import {useFetch} from "@vueuse/core";
 import {useApiLink} from "./useApiLink.js";
 
-vi.mock("./useApiConfig.js", () => {
+vi.mock("../config/useThemeConfig.js", () => {
   return {
-    useApiConfig: () => ({
+    useThemeConfig: () => ({
       value: {
         apiRedirectUrl: "https://api-docs.tsed.io",
         apiUrl: "https://tsed.io/api.json"

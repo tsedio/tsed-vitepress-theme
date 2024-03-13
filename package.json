@@ -11,7 +11,8 @@
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix && yarn run prettier:fix",
     "prettier:fix": "prettier . --write",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "prepare": "is-ci && husky install"
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0"
@@ -50,6 +51,7 @@
     "eslint-plugin-vue": "9.22.0",
     "husky": "9.0.11",
     "install": "^0.13.0",
+    "is-ci": "^3.0.1",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
     "npm": "^10.5.0",

@@ -1,7 +1,7 @@
 import {defineConfig} from "vitest/config";
 import vue from "@vitejs/plugin-vue";
 import {fileURLToPath} from "node:url";
-
+// configuration for vite
 export default defineConfig({
   plugins: [vue()],
   resolve: {
@@ -10,30 +10,31 @@ export default defineConfig({
     }
   },
   test: {
-    root: fileURLToPath(new URL("./", import.meta.url)),
+    root: fileURLToPath(new URL("./docs/.vitepress/theme", import.meta.url)),
     environment: "jsdom",
-    exclude: ["**/docs/docs/**", "**/introduction/**", "**/tutorials/**", "**/node_modules/**", "**/snippets/**"],
+    exclude: ["**/node_modules/**"],
     globals: true,
-    setupFiles: ["test/setup.ts"],
+    setupFiles: [fileURLToPath(new URL("./test/setup.ts", import.meta.url))],
     coverage: {
       enabled: true,
       thresholds: {
         autoUpdate: true,
-        statements: 78.6,
+        statements: 79.03,
         branches: 85.29,
         functions: 87.5,
-        lines: 78.6
+        lines: 79.03
       },
-      include: ["docs/.vitepress/theme/**/*.{ts,vue}"],
+      include: ["**/*.{ts,vue}"],
       exclude: [
-        "docs/.vitepress/theme/index.ts",
+        "index.ts",
         "**/markdown/**",
         "**/interfaces/**",
         "**/__mocks__/**",
         "**/node_modules/**",
         "**/*.spec.ts",
         "**/*.stories.ts"
-      ]
+      ],
+      reportsDirectory: fileURLToPath(new URL("./coverage", import.meta.url))
     }
   }
 });

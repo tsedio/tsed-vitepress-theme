@@ -1,7 +1,5 @@
-console.log("====> useApiConfig.ts <====");
-
-export function useApiConfig() {
-  const ref = {
+export function useThemeConfig() {
+  const ref: any = {
     apiUrl: "https://tsed.io/api.json",
     apiRedirectUrl: "https://api-docs.tsed.io",
     value: undefined
