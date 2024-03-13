@@ -12,7 +12,7 @@ export default defineConfig({
   test: {
     root: fileURLToPath(new URL("./", import.meta.url)),
     environment: "jsdom",
-    exclude: ["**/node_modules/**", "**/snippets/**"],
+    exclude: ["**/docs/docs/**", "**/introduction/**", "**/tutorials/**", "**/node_modules/**", "**/snippets/**"],
     globals: true,
     setupFiles: ["test/setup.ts"],
     coverage: {
