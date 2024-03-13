@@ -77,19 +77,18 @@ Database connection can be performed with Asynchronous Provider. See [custom pro
 Ts.ED provide a way to intercept the request and response event. You can listen these hooks by implementing a `$onRequest` and `$onResponse` methods
 on an injectable service:
 
-
 ```typescript
 import {Module} from "@tsed/di";
 import {PlatformContext} from "@tsed/common";
 
 @Module()
 class CustomContextModule {
-   $onRequest($ctx: PlatformContext) {
-     // do something
-   }
-   $onResponse($ctx: PlatformContext) {
-     // do something
-   }
+  $onRequest($ctx: PlatformContext) {
+    // do something
+  }
+  $onResponse($ctx: PlatformContext) {
+    // do something
+  }
 }
 ```
 
