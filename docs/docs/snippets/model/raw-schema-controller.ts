@@ -20,7 +20,7 @@ export class MyModel {
 class MyController {
   @Post("/")
   @Returns(200).Description("description").Schema(ProductSchema)
-  async method(@BodyParams() @Schema(ProductSchema) product: any): Promise<null> {
-    return null;
+  method(@BodyParams() @Schema(ProductSchema) product: any): Promise<null> {
+    return Promise.resolve(null);
   }
 }

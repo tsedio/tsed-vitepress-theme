@@ -11,7 +11,7 @@ export class UsersCtrl {
 
   @Post("/")
   @Returns(201, User).Groups("group.*")
-  async post(@BodyParams() @Groups("creation") user: User) {
+  post(@BodyParams() @Groups("creation") user: User) {
     console.log(user); // User {firstName, lastName, email, password}
     user.id = uuid();
 
