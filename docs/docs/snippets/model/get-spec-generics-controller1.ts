@@ -7,8 +7,8 @@ import {Product} from "../models/Product";
 class MyController {
   @Post("/")
   @Returns(200, Pagination).Of(Product).Description("description")
-  async method(): Promise<Pagination<Product> | null> {
-    return null;
+  method(): Promise<Pagination<Product> | null> {
+    return Promise.resolve(null);
   }
 }
 

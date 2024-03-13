@@ -898,79 +898,110 @@ class MyController {
 
 The AllowedGroups is enabled while `includes` query params is given in the request. Here the different scenario with this parameter:
 
-:::code-group
-
-```[Basic usage]
-
-Request:
-
-GET http://host/rest/controllers/1?includes=summary
-
-The response will be:
-
-{
-  "id": "id",
-  "description": "description",
-  "prop1": "prop1"
-}
-```
-
-```[Multiple includes]
-
-Request:
-
-GET http://host/rest/controllers/1?includes=summary&includes=details
-
-OR
-
-GET http://host/rest/controllers/1?includes=summary,details
-
-Expected json:
-
-{
-  "id": "id",
-  "description": "description",
-  "prop1": "prop1",
-  "prop2": "prop2"
-}
-```
-
-```[Without includes]
-Request:
-
-GET http://host/rest/controllers/1
-
-Expected json:
-
-{
-  "id": "id",
-  "description": "description",
-  "prop1": "prop1",
-  "prop2": "prop2"
-}
-
-```
-
-```[Unexpected includes]
-If a given value isn't listed in the allowed groups, the value will be ignored!
-
-Request:
-
-GET http://host/rest/controllers/1?includes=admin
-
-
-Expected json:
-
-{
-  "id": "id",
-  "description": "description",
-  "prop1": "prop1",
-  "prop2": "prop2"
-}
-
-```
-
-:::
+<div class="vp-code-group vp-adaptive-theme">
+  <div class="tabs">
+    <input type="radio" name="allowed-groups" id="tab-basic-usage" checked="checked">
+    <label for="tab-basic-usage">Basic usage</label>
+    <input type="radio" name="allowed-groups" id="tab-multiple-includes">
+    <label for="tab-multiple-includes">Multiple includes</label>
+    <input type="radio" name="allowed-groups" id="tab-without-includes">
+    <label for="tab-without-includes">Without includes</label>
+    <input type="radio" name="allowed-groups" id="tab-unexpected-includes">
+    <label for="tab-unexpected-includes">Unexpected includes</label>
+  </div>
+  <div class="blocks">
+    <div class="language-http vp-adaptive-theme active">
+      <p>Request:</p>
+        <pre>
+          <code>
+            <span class="line">GET http://host/rest/controllers/1?includes=summary</span>
+          </code>
+        </pre>
+      <p>The response will be:</p>
+      <blockquote>
+        <pre>
+          <code>
+          {
+            "id": "id",
+            "description": "description",
+            "prop1": "prop1"
+          }
+          </code>
+        </pre>
+      </blockquote>
+    </div>
+    <div class="language-json vp-adaptive-theme">
+      <p>Request:</p>
+      <pre>
+        <code>
+          GET http://host/rest/controllers/1?includes=summary&includes=details
+        </code>
+      </pre>
+      <p>OR</p>
+      <pre>
+        <code>
+          GET http://host/rest/controllers/1?includes=summary,details
+        </code>
+      </pre>
+      <p>Expected JSON:</p>
+      <blockquote>
+        <pre>
+          <code>
+          {
+            "id": "id",
+            "description": "description",
+            "prop1": "prop1",
+            "prop2": "prop2"
+          }
+          </code>
+        </pre>
+      </blockquote>
+    </div>
+    <div class="language-json vp-adaptive-theme">
+      <p>Request:</p>
+      <pre>
+        <code>
+          GET http://host/rest/controllers/1
+        </code>
+      </pre>
+      <p>Expected JSON:</p>
+      <blockquote>
+        <pre>
+          <code>
+          {
+            "id": "id",
+            "description": "description",
+            "prop1": "prop1",
+            "prop2": "prop2"
+          }
+          </code>
+        </pre>
+      </blockquote>
+    </div>
+    <div class="language-json vp-adaptive-theme">
+      <p>If a given value isn't listed in the allowed groups, the value will be ignored!</p>
+      <p>Request:</p>
+      <pre>
+        <code>
+          GET http://host/rest/controllers/1?includes=admin
+        </code>
+      </pre>
+      <p>Expected JSON:</p>
+      <blockquote>
+        <pre>
+          <code>
+          {
+            "id": "id",
+            "description": "description",
+            "prop1": "prop1",
+            "prop2": "prop2"
+          }
+          </code>
+        </pre>
+      </blockquote>
+    </div>
+  </div>
+</div>
 
 ## Partial
 

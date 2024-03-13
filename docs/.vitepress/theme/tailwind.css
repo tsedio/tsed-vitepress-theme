@@ -18,3 +18,39 @@
   text-decoration: none;
   color: inherit;
 }
+
+.vp-doc p {
+  margin: 16px;
+}
+
+/* .vp-doc [class*='language-'] pre {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0 !important;
+  background: transparent;
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+.vp-doc [class*='language-'] code {
+  display: block;
+  padding: 0 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100%;
+  line-height: var(--vp-code-line-height);
+  font-size: var(--vp-code-font-size);
+  color: var(--vp-code-block-color);
+  transition: color 0.5s;
+} */

@@ -11,7 +11,7 @@ export class UsersCtrl {
 
   @Post("/")
   @Returns(201, User).Groups("update")
-  async post(@BodyParams() @Groups("creation") user: User) {
+  post(@BodyParams() @Groups("creation") user: User) {
     console.log(user);
     user.id = uuid();
 
@@ -20,7 +20,7 @@ export class UsersCtrl {
 
   @Post("/change-password")
   @Returns(204)
-  async changePassword(@BodyParams() @Groups("changePassword") user: User) {
+  changePassword(@BodyParams() @Groups("changePassword") user: User) {
     console.log(user);
   }
 }

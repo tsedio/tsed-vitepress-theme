@@ -10,7 +10,7 @@ class ProductsCtrl {
   @Get("/")
   @Returns(206, Pagination).Of(Product).Title("PaginatedProduct")
   @Returns(200, Pagination).Of(Product).Title("PaginatedProduct")
-  async get(@QueryParams() pageableOptions: Pageable, @QueryParams("all") all: boolean) {
+  get(@QueryParams() pageableOptions: Pageable, @QueryParams("all") all: boolean) {
     return new Pagination<Product>({
       data: [
         new Product({
