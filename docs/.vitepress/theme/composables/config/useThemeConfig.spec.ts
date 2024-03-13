@@ -1,6 +1,6 @@
-import {useApiConfig} from "./useApiConfig.js";
+import {useThemeConfig} from "./useThemeConfig.js";
 
-describe("useApiConfig", () => {
+describe("useThemeConfig", () => {
   it("should return the correct api config", () => {
     const ref: any = {
       apiRedirectUrl: "https://api-docs.tsed.io",
@@ -9,6 +9,6 @@ describe("useApiConfig", () => {
     };
     ref.value = ref;
 
-    expect(useApiConfig()).toEqual(ref);
+    expect(useThemeConfig()).toEqual(ref);
   });
 });

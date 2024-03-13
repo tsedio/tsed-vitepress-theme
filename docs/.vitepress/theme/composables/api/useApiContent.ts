@@ -1,9 +1,9 @@
 import {useFetch} from "@vueuse/core";
 import type {ApiResponse} from "./interfaces/Api";
-import {useApiConfig} from "./useApiConfig.js";
+import {useThemeConfig} from "../config/useThemeConfig.js";
 
 export function useApiContent() {
-  const theme = useApiConfig();
+  const theme = useThemeConfig();
 
   const apiUrl = theme.value.apiUrl;
 

@@ -1688,6 +1688,7 @@ __metadata:
     eslint-plugin-vue: "npm:9.22.0"
     husky: "npm:9.0.11"
     install: "npm:^0.13.0"
+    is-ci: "npm:^3.0.1"
     jsdom: "npm:^24.0.0"
     lint-staged: "npm:^15.2.2"
     npm: "npm:^10.5.0"
@@ -9145,6 +9146,17 @@ __metadata:
   version: 1.2.7
   resolution: "is-callable@npm:1.2.7"
   checksum: 10c0/ceebaeb9d92e8adee604076971dd6000d38d6afc40bb843ea8e45c5579b57671c3f3b50d7f04869618242c6cee08d1b67806a8cb8edaaaf7c0748b3720d6066f
+  languageName: node
+  linkType: hard
+
+"is-ci@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "is-ci@npm:3.0.1"
+  dependencies:
+    ci-info: "npm:^3.2.0"
+  bin:
+    is-ci: bin.js
+  checksum: 10c0/0e81caa62f4520d4088a5bef6d6337d773828a88610346c4b1119fb50c842587ed8bef1e5d9a656835a599e7209405b5761ddf2339668f2d0f4e889a92fe6051
   languageName: node
   linkType: hard
 
