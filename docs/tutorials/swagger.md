@@ -147,7 +147,7 @@ export class Server {}
 One of the feature of Ts.ED is the model definition to serialize or deserialize a
 JSON Object based on JsonSchema (See [model documentation](/docs/model.md)).
 
-A model can be used on a method controller along with [@BodyParams](/api/common/filters/decorators/BodyParams.md) or other decorators.
+A model can be used on a method controller along with @@BodyParams@@ or other decorators.
 
 <<< @/tutorials/snippets/swagger/model.ts
 
