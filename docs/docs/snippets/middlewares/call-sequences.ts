@@ -1,4 +1,3 @@
-import {Next} from "@tsed/common";
 import {Use, UseAfter, UseBefore, UseBeforeEach} from "@tsed/platform-middlewares";
 import {Get} from "@tsed/schema";
 import {Controller} from "@tsed/di";
@@ -13,9 +12,8 @@ export class MyCtrl {
   @UseBefore(MdlwBefore)
   @Use(Mdlw)
   @UseAfter(MdlwAfter)
-  endpointA(@Next() next: Next) {
-    console.log("EndpointA");
-    next();
+  endpointA() {
+
   }
 
   @Get("/")
