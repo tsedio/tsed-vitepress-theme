@@ -1,0 +1,22 @@
+{
+  "login": "Romakita",
+  "id": 1763311,
+  "node_id": "MDQ6VXNlcjE3NjMzMTE=",
+  "avatar_url": "https://avatars.githubusercontent.com/u/1763311?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/Romakita",
+  "html_url": "https://github.com/Romakita",
+  "src": "https://github.com/Romakita",
+  "followers_url": "https://api.github.com/users/Romakita/followers",
+  "following_url": "https://api.github.com/users/Romakita/following{/other_user}",
+  "gists_url": "https://api.github.com/users/Romakita/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/Romakita/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/Romakita/subscriptions",
+  "organizations_url": "https://api.github.com/users/Romakita/orgs",
+  "repos_url": "https://api.github.com/users/Romakita/repos",
+  "events_url": "https://api.github.com/users/Romakita/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/Romakita/received_events",
+  "type": "User",
+  "site_admin": false,
+  "contributions": 3045
+}
