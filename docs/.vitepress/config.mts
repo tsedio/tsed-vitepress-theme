@@ -30,6 +30,8 @@ export default defineConfig({
   themeConfig: {
     apiUrl: "https://tsed.io/api.json",
     apiRedirectUrl: "https://api-docs.tsed.io",
+    repo: "tsedio/tsed",
+    githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
     search: {
       provider: "algolia",
       options: {
@@ -408,7 +410,7 @@ export default defineConfig({
               text: "IORedis",
               link: `/tutorials/ioredis`
             }
-          ].sort((a,b) => a.text > b.text)
+          ].sort((a, b) => a.text > b.text)
         },
         {
           text: "Recipes",
@@ -486,8 +488,8 @@ export default defineConfig({
               text: "Vike",
               link: `/tutorials/vike`
             }
-          ].sort((a,b) => a.text > b.text)
-        },
+          ].sort((a, b) => a.text > b.text)
+        }
       ]
     },
     socialLinks: [

@@ -17,7 +17,9 @@
     "chromatic": "npx chromatic"
   },
   "dependencies": {
-    "@vueuse/core": "^10.9.0"
+    "@storybook/addon-knobs": "^7.0.2",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.5",
@@ -81,6 +83,6 @@
     ],
     "**/*.{css,json,md,yml,yaml}": "prettier --write"
   },
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.1.1",
   "version": ""
 }

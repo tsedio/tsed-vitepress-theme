@@ -43,7 +43,8 @@ export const tailwindPreset: Partial<Config> = {
         xs: ".75rem" // 12px
       },
       borderRadius: {
-        xs: ".15rem" // 5px
+        xs: ".15rem", // 5px
+        md: "1rem"
       },
       fontFamily: {
         brand: ["Source Sans Pro", "sans-serif"],

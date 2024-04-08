@@ -10,7 +10,7 @@ This method can use all parameter decorators as you could see with the [Controll
 
 ## Configuration
 
-Create a new `middleware` directory then create a new file named `CustomMiddleware.ts` in your `middlewares` folder. 
+Create a new `middleware` directory then create a new file named `CustomMiddleware.ts` in your `middlewares` folder.
 Create a new Class definition then add the @@Middleware@@ decorator.
 
 <<< @/docs/snippets/middlewares/middleware-example.ts
@@ -59,7 +59,7 @@ export class Server {}
 The middlewares added through `middlewares` options will always be registered after the middleware instances registered through the hook methods!
 
 ::: warn
-Only Express/Koa middlewares can be added on `$beforeInit`, `$onInit` and `$afterInit` hooks. 
+Only Express/Koa middlewares can be added on `$beforeInit`, `$onInit` and `$afterInit` hooks.
 
 During `$beforeInit`, `$onInit` and `$afterInit` steps the PlatformContext is not available. Injectable Ts.ED middleware won't work as expected.
 
@@ -72,7 +72,6 @@ Endpoint middleware isn't really different from global middleware, but its goal 
 It knows which endpoint is executed by using the @@EndpointInfo@@ decorator.
 
 The following example, show you how to implement the middleware and use it with a custom decorator.
-
 
 ::: code-group
 
@@ -113,6 +112,7 @@ Error middleware is a specific implementation of Express.js. The Error middlewar
 in Koa.js framework to reach the cross compatibility.
 
 But Ts.ED provide many other way to catch error properly:
+
 - [Exception filters](/docs/exceptions)
 - [Interceptors](/docs/interceptors)
 
@@ -143,7 +143,7 @@ If you plan to catch errors globally see our [Exception filter](/docs/exceptions
 In addition, you have these specifics parameters decorators for the middlewares:
 
 | Signature   | Description                                       |
-| ----------- |---------------------------------------------------|
+| ----------- | ------------------------------------------------- |
 | @@Err@@     | Inject the `Express.Err` service. (deprecated)    |
 | @@Context@@ | Provide all information about the called endpoint |
 

@@ -19,13 +19,12 @@ export class FailSilently implements InterceptorMethods {
         args: context.args,
         target_name: nameOf(context.target),
         property_key: context.propertyKey
-      })
+      });
 
       return context.options.fallback || [];
     }
   }
 }
-
 
 @Controller("/")
 class MyController {

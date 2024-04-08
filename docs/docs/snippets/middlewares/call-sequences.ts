@@ -12,9 +12,7 @@ export class MyCtrl {
   @UseBefore(MdlwBefore)
   @Use(Mdlw)
   @UseAfter(MdlwAfter)
-  endpointA() {
-
-  }
+  endpointA() {}
 
   @Get("/")
   endpointB() {
