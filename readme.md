@@ -63,11 +63,11 @@ So right now, we migrate the content without all custom components.
 ### How to migrate a content (PR)
 
 1. Ask me to be added to the migration team (it gives you access to this repo)
-1. Go to this link to pick and assign you a task: https://github.com/tsedio/tsed-website/issues/14
-1. Start PR
-1. Get the legacy content from https://github.com/tsedio/tsed/tree/production/docs
-1. Review the content and migrate syntax that must me converted (see [syntax migration](#syntax-migration))
-1. Submit PR
+2. Go to this link to pick and assign you a task: https://github.com/tsedio/tsed-website/issues/14
+3. Start PR
+4. Get the legacy content from https://github.com/tsedio/tsed/tree/production/docs
+5. Review the content and migrate syntax that must me converted (see [syntax migration](#syntax-migration))
+6. Submit PR
 
 Migrate page per page is really fast and you should take very little time but will enormously advance migration. So thank you for your help!!
 
