@@ -143,7 +143,7 @@ export default defineConfig({
           },
           {
             text: "Session & Cookies",
-            link: `/tutorials/session`
+            link: `/docs/session`
           },
           {
             text: "Testing",
@@ -288,8 +288,94 @@ export default defineConfig({
           ]
         },
         {
-          text: "Controllers",
-          link: "/docs/controllers"
+          test: "Fundamentals",
+          items: [
+            {
+              text: "Controllers",
+              link: "/docs/controllers"
+            },
+            {
+              text: "Providers",
+              link: `/docs/providers`
+            },
+            {
+              text: "Models",
+              link: `/docs/model`
+            },
+            {
+              text: "Json Mapper",
+              link: `/docs/json-mapper`
+            },
+            {
+              text: "Middlewares",
+              link: `/docs/middlewares`
+            },
+            {
+              text: "Pipes",
+              link: `/docs/pipes`
+            },
+            {
+              text: "Interceptors",
+              link: `/docs/interceptors`
+            },
+            {
+              text: "Authentication",
+              link: `/docs/authentication`
+            },
+            {
+              text: "Hooks",
+              link: `/docs/hooks`
+            },
+            {
+              text: "Response filter",
+              link: `/docs/response-filter`
+            },
+            {
+              text: "Exceptions",
+              link: `/docs/exceptions`
+            },
+            {
+              text: "Logger",
+              link: `/docs/logger`
+            },
+            {
+              text: "Context",
+              link: `/docs/request-context`
+            },
+            {
+              text: "Testing",
+              link: `/docs/testing`
+            }
+          ]
+        },
+        {
+          text: "Advanced",
+          items: [
+            {
+              text: "Cache",
+              link: `/docs/cache`
+            },
+            {
+              text: "Platform API",
+              link: `/docs/platform-api`
+            },
+            {
+              text: "Command",
+              link: `/docs/command`
+            },
+            {
+              text: "Templating",
+              link: `/docs/templating`
+            },
+            {
+              text: "Validation",
+              link: `/docs/validation`
+            },
+            {
+              text: "Session & Cookies",
+              link: `/docs/session`
+            }
+          ]
         }
       ]
     },
