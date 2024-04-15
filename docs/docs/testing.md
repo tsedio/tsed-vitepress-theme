@@ -308,7 +308,7 @@ describe("HelloWorldController", () => {
 
 ## Testing session
 
-To install session with Ts.ED see our [tutorial](/tutorials/session.md).
+To install session with Ts.ED see our [documentation page](/docs/session.md).
 
 ::: code-group
 
