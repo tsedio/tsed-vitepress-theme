@@ -1,7 +1,7 @@
 # Pipes
 
 A pipe is a class annotated with the @@Injectable@@ decorator.
-Pipes should implement the @@IPipe@@ interface.
+Pipes should implement the @@PipeMethods@@ interface.
 
 Pipes have two typical use cases:
 
