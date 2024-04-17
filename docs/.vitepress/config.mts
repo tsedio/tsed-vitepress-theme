@@ -98,6 +98,10 @@ export default defineConfig({
             link: `/docs/interceptors`
           },
           {
+            text: "Validation",
+            link: `/docs/validation`
+          },
+          {
             text: "Authentication",
             link: `/docs/authentication`
           },
@@ -137,10 +141,7 @@ export default defineConfig({
             text: "Templating",
             link: `/docs/templating`
           },
-          {
-            text: "Validation",
-            link: `/docs/validation`
-          },
+
           {
             text: "Session & Cookies",
             link: `/docs/session`
@@ -288,7 +289,7 @@ export default defineConfig({
           ]
         },
         {
-          test: "Fundamentals",
+          text: "Fundamentals",
           items: [
             {
               text: "Controllers",
@@ -317,6 +318,10 @@ export default defineConfig({
             {
               text: "Interceptors",
               link: `/docs/interceptors`
+            },
+            {
+              text: "Validation",
+              link: `/docs/validation`
             },
             {
               text: "Authentication",
@@ -367,10 +372,7 @@ export default defineConfig({
               text: "Templating",
               link: `/docs/templating`
             },
-            {
-              text: "Validation",
-              link: `/docs/validation`
-            },
+
             {
               text: "Session & Cookies",
               link: `/docs/session`

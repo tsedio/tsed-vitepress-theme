@@ -30,8 +30,9 @@ import "@tsed/ajv";
 @Configuration()
 class Server {}
 ```
-
 Without this package, decorators like @@Email@@ won't have any effect.
+
+See [Validation](/docs/validation) for more information. By default, Ts.ED CLI install `@tsed/ajv` module.
 :::
 
 ## Example
