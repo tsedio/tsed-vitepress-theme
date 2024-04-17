@@ -5,8 +5,9 @@ import type {ApiSymbol} from "../../composables/api/interfaces/Api";
 import "./ApiAnchor.css";
 import ApiIcon from "../../atoms/api-icon/ApiIcon.vue";
 
-interface Props extends ApiSymbol {
+interface Props extends Partial<ApiSymbol> {
   theme?: "bubble" | "list";
+  symbolName: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -24,8 +25,9 @@ const link = computed(() => {
 });
 </script>
 <template>
-  <a
-    :href="link"
+  <component
+    :is="link ? 'a' : 'span'"
+    v-bind="link ? {href: link} : {}"
     data-name="ApiAnchor"
     :class="`reset-link -${theme} ${deprecated ? 'opacity-50' : ''}`"
     :title="props.symbolName"
@@ -34,5 +36,5 @@ const link = computed(() => {
     <span data-testid="ApiAnchorText" :class="`${deprecated ? 'line-through' : ''}`">
       {{ props.symbolName }}
     </span>
-  </a>
+  </component>
 </template>

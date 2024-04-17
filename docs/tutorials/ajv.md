@@ -25,10 +25,24 @@ and [json-schema](http://json-schema.org/latest/json-schema-validation.html) to 
 
 Before using the validation decorators, we need to install the [ajv](https://www.npmjs.com/package/ajv) module.
 
-```bash
-npm install --save ajv
-npm install --save @tsed/ajv
+::: code-group
+
+```sh [npm]
+npm install --save ajv @tsed/ajv
 ```
+
+```sh [yarn]
+yarn add ajv @tsed/ajv
+```
+
+```sh [pnpm]
+pnpm add ajv @tsed/ajv
+```
+
+```sh [bun]
+bun add ajv @tsed/ajv
+```
+:::
 
 Then import `@tsed/ajv` in your Server:
 
@@ -290,7 +304,7 @@ console.log(validate(3)) // false
   </Tab>
 </Tabs>
 
-## Formats <Badge text="v6.36.0+" />
+## Formats
 
 You can add and replace any format using @@Formats@@ decorator. For example, the current format validator for `uri` doesn't allow
 empty string. So, with this decorator you can create or override an existing [ajv-formats](https://github.com/ajv-validator/ajv-formats) validator.
