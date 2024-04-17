@@ -57,4 +57,15 @@ describe("<ApiAnchorQuery>", () => {
 
     expect(screen.getByTestId("ApiAnchorText")).toHaveTextContent("Configurable2");
   });
+
+  it("should render the ApiAnchorQuery (not found name + inline meta)", () => {
+    render(ApiAnchorQuery, {
+      props: {
+        name: "function:Configurable2"
+      }
+    });
+
+    expect(screen.getByTestId("ApiAnchorText")).toHaveTextContent("Configurable2");
+    expect(screen.getByTestId("ApiIcon")).toHaveAttribute("data-type", "function");
+  });
 });

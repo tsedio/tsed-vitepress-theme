@@ -10,7 +10,7 @@ meta:
 
 The `@tsed/json-mapper` package is responsible to map a plain object to a model and a model to a plain object.
 
-It provides two functions @@serialize@@ and @@deserialize@@ to transform object depending on which operation you want to perform.
+It provides two functions @@function:serialize@@ and @@function:deserialize@@ to transform object depending on which operation you want to perform.
 It uses all decorators from `@tsed/schema` package and TypeScript metadata to work.
 
 Ts.ED use this package to transform any input parameters sent by your consumer to a class and transform returned value by your endpoint
@@ -29,7 +29,11 @@ to a plain javascript object to your consumer.
 
 ### jsonMapper.additionalProperties
 
-Enable additional properties on model. By default, `false`. Enable this option is dangerous and may be a potential security issue.
+Enable additional properties on model. By default, `false`.
+
+::: warning 
+Enable this option is dangerous and may be a potential security issue.
+:::
 
 ### jsonMapper.disableUnsecureConstructor
 
@@ -56,7 +60,7 @@ JsonMapper works with a class and decorators. Use decorators on properties to de
 :::
 
 ::: tip Note
-Take a look on Jest/Mocha tabs to see @@serialize@@ and @@deserialize@@ functions usage.
+Take a look on Jest/Mocha tabs to see @@function:serialize@@ and @@function:deserialize@@ functions usage.
 :::
 
 Now we can use the `Person` model on a controller:
@@ -83,11 +87,10 @@ It means, if you missed decorating one or more properties on your model, these p
 
 > Note: Result is displayed in Jest/Mocha tabs.
 
-:::
 
 ## Ignore properties (deprecated)
 
-::: warn deprecated
+::: warning deprecated
 This decorator is deprecated. Use @@Groups@@ decorator instead of.
 :::
 
@@ -347,7 +350,3 @@ export class Person {
 ```
 
 :::
-
-```
-
-```

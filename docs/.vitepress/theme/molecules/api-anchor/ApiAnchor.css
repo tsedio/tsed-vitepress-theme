@@ -1,6 +1,14 @@
-a[href][data-name="ApiAnchor"] {
-  @apply text-api-default relative no-underline overflow-hidden truncate whitespace-nowrap cursor-pointer px-2 rounded-xs inline-flex items-center;
+[data-name="ApiAnchor"] {
+  @apply text-api-default relative no-underline overflow-hidden truncate whitespace-nowrap px-2 rounded-xs inline-flex items-center;
   transition: all ease-in var(--theme-transition-duration);
+
+  &a {
+    @apply cursor-pointer;
+
+    &:hover {
+      @apply text-blue-600 bg-white;
+    }
+  }
 
   > span {
     @apply flex;
@@ -8,10 +16,6 @@ a[href][data-name="ApiAnchor"] {
 
   &.-list {
     @apply text-sm;
-
-    &:hover {
-      @apply text-blue-600 bg-white;
-    }
   }
 
   .symbol {
@@ -24,7 +28,7 @@ a[href][data-name="ApiAnchor"] {
     padding-top: 1px;
     padding-bottom: 1px;
 
-    &:hover {
+    &a:hover {
       @apply text-blue-active;
     }
 
