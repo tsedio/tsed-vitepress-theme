@@ -45,9 +45,11 @@ Testing asynchronous method is also possible using `Promises` (`async`/`await`):
 
 :::
 
-### Mock dependencies
+## Mock dependencies
+### Using PlatformTest.invoke
 
-PlatformTest API provides an `invoke` method to create a new instance of your component with mocked dependencies.
+PlatformTest API provides an `PlatformTest.invoke` method to create a new instance of your component with mocked dependencies during a test context created with `PlatformTest.create()`.
+This method is useful when you want to mock dependencies for a specific test.
 
 ::: code-group
 
@@ -59,6 +61,19 @@ PlatformTest API provides an `invoke` method to create a new instance of your co
 
 ::: tip
 `PlatformTest.invoke()` executes automatically the `$onInit` hook!
+:::
+
+### Using PlatformTest.create
+
+If you want to mock dependencies for all your tests, you can use the `PlatformTest.create()` method.
+it useful if you have a service that execute a code in his constructor.
+
+::: code-group
+
+<<< @/docs/snippets/testing/db-service-mock-dependencies-create.jest.ts [jest]
+
+<<< @/docs/snippets/testing/db-service-mock-dependencies-create.vitest.ts [vitest]
+
 :::
 
 ## Test your Rest API
