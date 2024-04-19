@@ -379,6 +379,115 @@ export default defineConfig({
             }
           ]
         }
+      ],
+      "/tutorials/": [
+        {
+          text: "ORM",
+          items: [
+            {
+              text: "Prisma",
+              link: `/tutorials/prisma`
+            },
+            {
+              text: "MikroORM",
+              link: `/tutorials/mikroorm`
+            },
+            {
+              text: "TypeORM",
+              link: `/tutorials/typeorm`
+            },
+            {
+              text: "Mongoose",
+              link: `/tutorials/mongoose`
+            },
+            {
+              text: "Objection.js",
+              link: `/tutorials/objection`
+            },
+            {
+              text: "IORedis",
+              link: `/tutorials/ioredis`
+            }
+          ].sort((a,b) => a.text > b.text)
+        },
+        {
+          text: "Recipes",
+          items: [
+            {
+              text: "Keycloak",
+              link: `/tutorials/keycloak`
+            },
+            {
+              text: "Jest",
+              link: `/tutorials/jest`
+            },
+            {
+              text: "Vitest",
+              link: `/tutorials/vitest`
+            }
+          ]
+        },
+        {
+          text: "Plugins",
+          items: [
+            {
+              text: "AJV",
+              link: `/tutorials/ajv`
+            },
+            {
+              text: "AWS",
+              link: `/tutorials/aws`
+            },
+            {
+              text: "Passport.js",
+              link: `/tutorials/passport`
+            },
+            {
+              text: "GraphQL",
+              link: `/tutorials/graphql`
+            },
+            {
+              text: "Socket.io",
+              link: `/tutorials/socket-io`
+            },
+            {
+              text: "Swagger",
+              link: `/tutorials/swagger`
+            },
+            {
+              text: "OIDC",
+              link: `/tutorials/oidc`
+            },
+            {
+              text: "Stripe",
+              link: `/tutorials/stripe`
+            },
+            {
+              text: "Agenda",
+              link: `/tutorials/agenda`
+            },
+            {
+              text: "Serverless",
+              link: `/tutorials/serverless`
+            },
+            {
+              text: "Temporal",
+              link: `/tutorials/temporal`
+            },
+            {
+              text: "BullMQ",
+              link: `/tutorials/bullmq`
+            },
+            {
+              text: "Terminus",
+              link: `/tutorials/terminus`
+            },
+            {
+              text: "Vike",
+              link: `/tutorials/vike`
+            }
+          ].sort((a,b) => a.text > b.text)
+        },
       ]
     },
     socialLinks: [
