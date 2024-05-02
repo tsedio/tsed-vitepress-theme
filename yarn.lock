@@ -1692,6 +1692,7 @@ __metadata:
     "@vue/eslint-config-typescript": "npm:13.0.0"
     "@vueuse/core": "npm:^10.9.0"
     autoprefixer: "npm:^10.4.13"
+    chromatic: "npm:^11.3.0"
     eslint: "npm:8.57.0"
     eslint-config-prettier: "npm:9.1.0"
     eslint-plugin-prettier: "npm:5.1.3"
