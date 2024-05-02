@@ -2,7 +2,7 @@ import type {StorybookConfig} from "@storybook/vue3-vite";
 
 const config: StorybookConfig = {
   stories: [
-    "../doc/**/*.stories.mdx",
+    "../doc/**/*.mdx",
     {
       directory: "../docs/.vitepress/theme/atoms",
       titlePrefix: "Atoms"
@@ -29,7 +29,8 @@ const config: StorybookConfig = {
       options: {
         mocksFolder: "__mocks__"
       }
-    }
+    },
+    "@chromatic-com/storybook"
   ],
   framework: {
     name: "@storybook/vue3-vite",
