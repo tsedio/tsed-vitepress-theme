@@ -129,6 +129,7 @@
     "tailwind.preset.ts",
     "tailwind.config.ts",
     "vitest.config.ts",
-    "vitest.setup.ts"
+    "vitest.setup.ts",
+    ".storybook/**/*.ts",
   ]
 }

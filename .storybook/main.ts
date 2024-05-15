@@ -1,4 +1,6 @@
 import type {StorybookConfig} from "@storybook/vue3-vite";
+import {fileURLToPath} from "node:url";
+import vuePlugin from "@vitejs/plugin-vue";
 
 const config: StorybookConfig = {
   stories: [
@@ -23,24 +25,30 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/addon-storysource",
     "@storybook/addon-themes",
-    {
-      // eslint-disable-next-line storybook/no-uninstalled-addons
-      name: "storybook-addon-manual-mocks/vite",
-      options: {
-        mocksFolder: "__mocks__"
-      }
-    },
     "@chromatic-com/storybook"
   ],
   framework: {
     name: "@storybook/vue3-vite",
-    options: {}
+    options: {
+      docgen: "vue-component-meta"
+    }
   },
-  docs: {
-    autodocs: "tag"
-  },
-  viteFinal: (config) => {
-    config.optimizeDeps = {exclude: ["fsevents"]};
+  viteFinal(config) {
+    // @ts-ignore
+    config.plugins.push(vuePlugin());
+
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve!.alias,
+        "vitepress/client": fileURLToPath(new URL("../test/vitepress.client.ts", import.meta.url))
+      }
+    };
+
+    config.define = {
+      "process.env": {}
+    };
+
     return config;
   }
 };
