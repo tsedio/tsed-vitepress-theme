@@ -37,9 +37,9 @@ const props = withDefaults(defineProps<Props>(), {
 const contributors = ref<GitHubUser[]>([]);
 
 const theme = useThemeConfig();
-const {repo, githubProxyUrl} = theme.value;
+const {githubProxyUrl} = theme.value;
 
-const {fetchContributors} = useGithubContributors(githubProxyUrl || repo);
+const {fetchContributors} = useGithubContributors(githubProxyUrl);
 onMounted(async () => {
   let fetchedContributorsRef = await fetchContributors();
   let fetchedContributors = fetchedContributorsRef?.value;

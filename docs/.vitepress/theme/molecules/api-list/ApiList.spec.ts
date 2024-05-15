@@ -1,6 +1,8 @@
 import {render, screen, waitFor} from "@testing-library/vue";
 import ApiList from "./ApiList.vue";
 import {beforeEach} from "vitest";
+import {mount} from "@vue/test-utils";
+
 import {useFetch} from "@vueuse/core";
 
 vi.mock("@vueuse/core");
@@ -73,6 +75,36 @@ describe("<ApiList>", () => {
 
       expect(screen.queryByText("Configurable")).not.toBeInTheDocument();
     });
+
+    it("should compute symbols correctly", () => {
+      const wrapper = mount(ApiList, {
+        props: {
+          items: [
+            {
+              path: "/api/core/types/decorators/ITEM",
+              symbolName: "ITEM",
+              module: "@tsed/core",
+              symbolType: "decorator",
+              symbolLabel: "Decorator",
+              symbolCode: "@",
+              status: ["stable"]
+            }
+          ]
+        }
+      });
+
+      expect(wrapper.vm.symbols).toStrictEqual([
+        {
+          path: "/api/core/types/decorators/ITEM",
+          symbolName: "ITEM",
+          module: "@tsed/core",
+          symbolType: "decorator",
+          symbolLabel: "Decorator",
+          symbolCode: "@",
+          status: ["stable"]
+        }
+      ]);
+    });
   });
   describe("when loading", () => {
     beforeEach(() => {
@@ -130,6 +162,36 @@ describe("<ApiList>", () => {
       waitFor(() => {
         expect(screen.getByText("Error loading symbols")).toBeInTheDocument();
       });
+    });
+
+    it("should compute symbols as an empty array if there is no value or an error occurs in fetching", () => {
+      const wrapper = mount(ApiList, {
+        props: {
+          items: []
+        }
+      });
+
+      expect(wrapper.vm.symbols).toStrictEqual([]);
+    });
+    it("should compute symbols as an empty array when error occurs or data is not available", () => {
+      vi.mocked(useFetch).mockReturnValue({
+        get: vi.fn().mockReturnThis(),
+        json: vi.fn().mockReturnValue({
+          data: {
+            value: null
+          },
+          error: {
+            value: "Error"
+          },
+          isFetching: {
+            value: false
+          }
+        })
+      } as any);
+
+      const wrapper = mount(ApiList);
+
+      expect(wrapper.vm.symbols).toStrictEqual([]);
     });
   });
 });

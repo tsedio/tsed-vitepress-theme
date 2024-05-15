@@ -63,6 +63,7 @@ const item = computed(() => {
     symbolType: type?.value
   } as ApiSymbol;
 });
+defineExpose({name, code});
 </script>
 <template>
   <ApiAnchor v-bind="item" />
