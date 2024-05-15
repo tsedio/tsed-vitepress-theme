@@ -41,7 +41,7 @@ describe("<ButtonBadges>", () => {
     });
     const listElements = screen.getAllByRole("listitem");
     listElements.forEach((element) => {
-      expect(element.className).toContain(`p-${padding}`);
+      expect(element.className).toContain(`px-${padding}`);
     });
   });
 });

@@ -30,6 +30,7 @@ const symbols = computed(() => {
 
   return filter(mapSymbols(data.value));
 });
+defineExpose({symbols});
 </script>
 
 <template>

@@ -2,6 +2,7 @@ import {render, screen} from "@testing-library/vue";
 import {beforeEach} from "vitest";
 import {useFetch} from "@vueuse/core";
 import ApiAnchorQuery from "./ApiAnchorQuery.vue";
+import {mount} from "@vue/test-utils";
 
 vi.mock("@vueuse/core");
 
@@ -67,5 +68,37 @@ describe("<ApiAnchorQuery>", () => {
 
     expect(screen.getByTestId("ApiAnchorText")).toHaveTextContent("Configurable2");
     expect(screen.getByTestId("ApiIcon")).toHaveAttribute("data-type", "function");
+  });
+
+  it("should compute name correctly from props", () => {
+    const wrapper = mount(ApiAnchorQuery, {
+      props: {
+        name: "John"
+      }
+    });
+
+    expect(wrapper.vm.name).toBe("John");
+  });
+
+  it("should compute code correctly from props", () => {
+    const wrapper = mount(ApiAnchorQuery, {
+      props: {
+        name: "John"
+      }
+    });
+
+    expect(wrapper.vm.code).toBe("");
+  });
+
+  it("should compute code correctly from default slot", () => {
+    const slots = {
+      default: () => ["<span>John: Code</span>"]
+    };
+
+    const wrapper = mount(ApiAnchorQuery, {
+      slots
+    });
+
+    expect(wrapper.vm.code).toBe("<span>John");
   });
 });
