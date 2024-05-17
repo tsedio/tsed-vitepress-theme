@@ -24,5 +24,16 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <ButtonBadges v-if="items.length" v-bind="props" :items="items" />
+  <ButtonBadges
+    v-if="items.length"
+    v-bind="props"
+    :items="
+      items.map((item) => ({
+        ...item,
+        href: item.html_url || item.href,
+        src: item.avatar_url || item.src,
+        title: item.login
+      }))
+    "
+  />
 </template>

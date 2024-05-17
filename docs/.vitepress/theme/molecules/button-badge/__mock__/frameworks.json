@@ -1,0 +1,62 @@
+[
+  {
+    "title": "TypeScript",
+    "href": "https://www.typescriptlang.org/",
+    "src": "https://tsed.io/typescript.png"
+  },
+  {
+    "title": "Express.js",
+    "href": "https://expressjs.com/",
+    "src": "https://tsed.io/expressjs.svg"
+  },
+  {
+    "title": "Koa.js",
+    "href": "https://koajs.com/",
+    "src": "https://tsed.io/koa.svg"
+  },
+  {
+    "title": "Jest",
+    "href": "https://jestjs.io/",
+    "src": "https://tsed.io/jest.svg"
+  },
+  {
+    "title": "Mocha",
+    "href": "https://mochajs.org/",
+    "src": "https://tsed.io/mochajs.svg"
+  },
+  {
+    "title": "AJV",
+    "href": "/tutorials/ajv.html",
+    "src": "https://ajv.js.org/img/ajv.svg"
+  },
+  {
+    "title": "Swagger",
+    "href": "/tutorials/swagger.html",
+    "src": "https://tsed.io/swagger.svg"
+  },
+  {
+    "title": "Passport",
+    "href": "/tutorials/passport.html",
+    "src": "https://tsed.io/passportjs.png"
+  },
+  {
+    "title": "Mongoose",
+    "href": "/tutorials/mongoose.html",
+    "src": "https://tsed.io/mongoose.png"
+  },
+  {
+    "title": "TypeORM",
+    "href": "/tutorials/typeorm.html",
+    "src": "https://tsed.io/typeorm.png"
+  },
+  {
+    "title": "TypeGraphQL",
+    "href": "/tutorials/graphql.html",
+    "src": "https://tsed.io/typegraphql.png"
+  },
+  {
+    "title": "Socket.io",
+    "href": "/tutorials/socketio.html",
+    "src": "https://tsed.io/socketio.svg"
+  }
+]

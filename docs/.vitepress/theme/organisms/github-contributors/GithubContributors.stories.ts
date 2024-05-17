@@ -40,7 +40,7 @@ const meta = {
     },
     padding: {
       control: "number",
-      default: 3
+      default: 0
     },
     innerPadding: {
       control: "number",
@@ -61,7 +61,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    users: ["Romakita", "LorianeE"]
+    users: []
   }
 };
 

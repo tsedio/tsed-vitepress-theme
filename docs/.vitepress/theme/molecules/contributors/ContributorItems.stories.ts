@@ -1,24 +1,15 @@
-import type {Meta, StoryObj} from "@storybook/vue3";
+import contributors from "./contributors.json";
+import ContributorItems from "./ContributorItems.vue";
+import type {Meta} from "@storybook/vue3";
 import {COLORS_LIST} from "../../utils/colors";
-import ButtonBadge from "./ButtonBadge.vue";
 
 const meta = {
-  title: "ButtonBadge",
-  component: ButtonBadge,
-  tags: ["autodocs"],
+  title: "ContributorItems",
+  component: ContributorItems,
   parameters: {
     layout: "centered"
   },
   argTypes: {
-    title: {
-      control: "text"
-    },
-    src: {
-      control: "text"
-    },
-    href: {
-      control: "text"
-    },
     bgColor: {
       control: "select",
       options: COLORS_LIST,
@@ -26,12 +17,12 @@ const meta = {
     },
     width: {
       control: "number",
-      default: 60
+      default: 80
     },
     textSize: {
       control: "select",
       options: ["micro", "xxs", "xs", "sm", "base", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "7xl", "11xl"],
-      default: "xxs"
+      default: "sm"
     },
     blur: {
       control: "number",
@@ -40,32 +31,36 @@ const meta = {
     fontWeight: {
       control: "select",
       options: ["hairline", "thin", "light", "normal", "medium", "semibold", "bold", "extrabold", "black"],
-      default: "normal"
+      default: "bold"
     },
     padding: {
       control: "number",
-      default: 0
+      default: 3
+    },
+    innerPadding: {
+      control: "number",
+      default: 5
     },
     shadow: {
       control: "select",
       options: ["default", "sm", "strong", "md", "lg", "top", "inner", "outline", "none"],
-      default: "normal"
+      default: "lg"
     }
   }
-} satisfies Meta<typeof ButtonBadge>;
+} satisfies Meta<typeof ContributorItems>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/api/csf
- * to learn how to use render functions.
- */
-export const Default: Story = {
+export const Default = {
   args: {
-    title: "Romakita",
-    src: "https://avatars3.githubusercontent.com/u/1763311?v=4",
-    href: "https://api.github.com/users/Romakita"
+    showTitle: false,
+    width: 60,
+    items: contributors,
+    bgColor: "gray-lighter",
+    textSize: "sm",
+    blur: 0,
+    padding: 5,
+    innerPadding: 0,
+    shadow: "lg"
   }
 };

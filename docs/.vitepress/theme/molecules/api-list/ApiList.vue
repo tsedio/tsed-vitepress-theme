@@ -34,7 +34,7 @@ defineExpose({symbols});
 </script>
 
 <template>
-  <div class="bg-gray-100 dark:bg-gray-900 pb-4 p-5 mb-10 rounded-small">
+  <div class="bg-gray-100 dark:bg-gray-900 pb-4 p-5 mb-10 rounded-sm">
     <div v-if="data && !isFetching" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       <div v-for="item in symbols" :key="item.symbolName">
         <ApiAnchor class="w-full px-2 py-1" v-bind="item" theme="list" />

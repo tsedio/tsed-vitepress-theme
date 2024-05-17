@@ -3,8 +3,8 @@ import ButtonBadges from "./ButtonBadges.vue";
 
 function getFixture(props: any = {}) {
   const items = [
-    {login: "user1", href: "http://example.com/1", src: "http://example.com/img1.jpg"},
-    {login: "user2", href: "http://example.com/2", src: "http://example.com/img2.jpg"}
+    {title: "user1", href: "http://example.com/1", src: "http://example.com/img1.jpg"},
+    {title: "user2", href: "http://example.com/2", src: "http://example.com/img2.jpg"}
   ];
 
   return render(ButtonBadges, {
@@ -39,13 +39,10 @@ describe("<ButtonBadges>", () => {
   });
 
   it("applies padding correctly", () => {
-    const padding = "3";
+    const padding = 3;
 
     getFixture({padding});
 
-    const listElements = screen.getAllByRole("listitem");
-    listElements.forEach((element) => {
-      expect(element.className).toContain(`px-${padding}`);
-    });
+    expect(screen.getByRole("list")).toHaveClass(`gap-${padding}`);
   });
 });
