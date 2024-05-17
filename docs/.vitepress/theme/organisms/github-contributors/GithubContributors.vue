@@ -52,20 +52,10 @@ onMounted(async () => {
     contributors.value = fetchedContributors;
   }
 });
+
+const {users, ...otherProps} = props;
 </script>
 
 <template>
-  <ContributorItems
-    :blur="blur"
-    :text-size="textSize"
-    :bg-color="bgColor"
-    :color="color"
-    :width="width"
-    :padding="padding"
-    :inner-padding="innerPadding"
-    :font-weight="fontWeight"
-    :shadow="shadow"
-    :show-title="showTitle"
-    :items="contributors"
-  ></ContributorItems>
+  <ContributorItems v-bind="otherProps" :items="contributors"></ContributorItems>
 </template>

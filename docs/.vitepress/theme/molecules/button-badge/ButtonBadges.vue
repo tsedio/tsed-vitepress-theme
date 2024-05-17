@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import ButtonBadge, {type ButtonBadgeProps} from "./ButtonBadge.vue";
-import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
 
 interface Props extends ButtonBadgeProps {
-  items: GitHubUser[];
+  items: {title?: string; href?: string; src?: string}[];
   innerPadding?: number;
   liClass?: string;
 }
@@ -18,20 +17,19 @@ const props = withDefaults(defineProps<Props>(), {
   color: "blue",
   blur: 0,
   textSize: "xxs",
-  shadow: "",
+  shadow: "none",
   padding: 5,
-  fontWeight: "400"
+  fontWeight: "normal"
 });
 
-const {padding, liClass, items} = props;
+const {items, ...otherProps} = props;
+const {padding, liClass} = props;
 </script>
 
 <template>
-  <div :class="`-m-${padding} mb-5`">
-    <ul class="reset-list flex flex-wrap items-center">
-      <li v-for="item in items" :key="item.login" :class="['px-' + padding, liClass]">
-        <ButtonBadge v-bind="props" :item="item" />
-      </li>
-    </ul>
-  </div>
+  <ul class="mb-5 reset-list flex flex-wrap items-center" :class="[padding && `gap-${padding}`]">
+    <li v-for="item in items" :key="item.title" :class="[liClass]">
+      <ButtonBadge v-bind="otherProps" :title="item.title" :href="item.href" :src="item.src" :padding="innerPadding" />
+    </li>
+  </ul>
 </template>

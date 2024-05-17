@@ -1,45 +1,54 @@
 <script setup lang="ts">
 import Link from "../link/ExternalLink.vue";
-import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
 import {computed} from "vue";
+import {FILTER_BLURS, FONT_WEIGHT, TEXT_SIZES} from "../../atoms/tailwind.constants";
 
 export interface ButtonBadgeProps {
   showTitle?: boolean;
   width?: string | number;
   bgColor?: string;
-  color?: string;
-  blur?: number;
-  textSize?: string;
-  shadow?: string;
-  padding?: string | number;
-  fontWeight?: string;
+  blur?: keyof typeof FILTER_BLURS;
+  textSize?: keyof typeof TEXT_SIZES;
+  shadow?:
+    | "none"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "2xl"
+    | "inner"
+    | "outline"
+    | "dark-lg"
+    | "dark-xl"
+    | "dark-2xl"
+    | "dark-inner"
+    | "dark-outline"
+    | "dark-none"
+    | "dark-sm"
+    | "dark-md";
+  padding?: number;
+  fontWeight?: keyof typeof FONT_WEIGHT;
 }
 
-const props = withDefaults(
-  defineProps<{
-    item: GitHubUser;
-    showTitle: boolean;
-    width: string | number;
-    bgColor: string;
-    color: string;
-    blur: number;
-    textSize: string;
-    shadow: string;
-    padding: string | number;
-    fontWeight: string;
-  }>(),
-  {
-    showTitle: true,
-    width: 60,
-    bgColor: "gray-lighter",
-    color: "blue",
-    blur: 0,
-    textSize: "xxs",
-    shadow: "",
-    padding: 5,
-    fontWeight: "400"
-  }
-);
+export interface Props extends ButtonBadgeProps {
+  title?: string;
+  src?: string;
+  href?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  showTitle: true,
+  width: 60,
+  bgColor: "gray-lighter",
+  blur: 0,
+  textSize: "xxs",
+  shadow: "none",
+  padding: 0,
+  fontWeight: "normal",
+  title: "",
+  src: "",
+  href: ""
+});
 
 const imageContainerStyle = computed(() => ({
   width: `${props.width}px`,
@@ -51,41 +60,53 @@ const overlayStyle = computed(() => ({
   top: "5px",
   height: `${props.width}px`
 }));
+
+const initial = (text = "") => {
+  return text
+    .split(" ")
+    .map((text) => text.slice(0, 1))
+    .join("");
+};
+const overflow = (text = "") => {
+  return text.slice(0, 12) + (text.length > 12 ? "..." : "");
+};
 </script>
 
 <template>
-  <Link
-    :href="item?.href"
-    outbound="false"
-    :title="item?.login"
-    class="flex flex-col reset-link transition-all duration-500 ease-in-out relative no-underline hover:scale-110"
-    :class="[`text-${textSize}`, `text-${color}`, `hover:text-${color}-active`]"
-  >
-    <figure
-      v-lazyload-observer
-      class="flex items-center justify-center relative z-2 rounded-medium overflow-hidden mb-2"
-      :class="[`bg-${bgColor}`, `shadow-${shadow}`, `p-${padding}`]"
-      :style="imageContainerStyle"
-    >
-      <img v-if="item?.src" :data-url="item.src" class="w-full opacity-0 transition-all no-shadow" />
-    </figure>
+  <Link :href="href" outbound="false" :title="title" class="block reset-link">
     <span
-      v-if="blur > 0 && item?.src"
-      v-lazyload-observer
-      class="overflow-hidden z-1 rounded-medium absolute left-0 opacity-50"
-      :class="`filter-blur-${blur}`"
-      :style="overlayStyle"
-      data-testid="blurred-overlay"
+      class="flex flex-col transition-all relative no-underline scale-100 hover:scale-110"
+      :class="[textSize && `text-${textSize}`]"
     >
-      <img :data-url="item?.src" :alt="item?.login" class="w-full opacity-0 transition-all" />
-    </span>
-    <span
-      v-show="showTitle"
-      class="flex items-center justify-center whitespace-pre"
-      :class="`font-${fontWeight}`"
-      :style="{width: `${width}px`}"
-    >
-      {{ item?.login }}
+      <figure
+        v-lazyload-observer
+        class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2"
+        :class="[bgColor && `bg-${bgColor}`, shadow && `shadow-${shadow}`, padding && `p-${padding}`]"
+        :style="imageContainerStyle"
+      >
+        <img v-if="src" :data-url="src" class="w-full opacity-0 rounded-2xl transition-all no-shadow" />
+        <span v-else class="flex items-center justify-center font-bold uppercase text-2xl h-full">{{
+          initial(title)
+        }}</span>
+      </figure>
+      <span
+        v-if="blur > 0 && src"
+        v-lazyload-observer
+        class="overflow-hidden z-1 rounded-2xl absolute left-0 opacity-50"
+        :class="FILTER_BLURS[blur]"
+        :style="overlayStyle"
+        data-testid="blurred-overlay"
+      >
+        <img :data-url="src" :alt="initial(title)" class="w-full opacity-0 transition-all" />
+      </span>
+      <span
+        v-show="showTitle"
+        class="flex items-center justify-center whitespace-pre"
+        :class="FONT_WEIGHT[fontWeight]"
+        :style="{width: `${width}px`}"
+      >
+        {{ overflow(title) }}
+      </span>
     </span>
   </Link>
 </template>

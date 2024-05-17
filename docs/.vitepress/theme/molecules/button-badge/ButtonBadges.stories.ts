@@ -1,11 +1,12 @@
 import {COLORS_LIST} from "../../utils/colors";
-
+import frameworks from "./__mock__/frameworks.json";
 import ButtonBadges from "./ButtonBadges.vue";
 import type {Meta} from "@storybook/vue3";
 
 const meta = {
   title: "ButtonBadges",
   component: ButtonBadges,
+  tags: ["autodocs"],
   parameters: {
     layout: "centered"
   },
@@ -14,11 +15,6 @@ const meta = {
       control: "select",
       options: COLORS_LIST,
       default: "gray-lighter"
-    },
-    color: {
-      control: "select",
-      options: COLORS_LIST,
-      default: "platinium"
     },
     width: {
       control: "number",
@@ -57,5 +53,9 @@ const meta = {
 export default meta;
 
 export const Default = {
-  args: {}
+  args: {
+    width: 60,
+    padding: 10,
+    items: frameworks
+  }
 };
