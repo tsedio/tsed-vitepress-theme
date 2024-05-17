@@ -64,7 +64,7 @@ export interface PlatformViewsSettings {
 ## Supported template engines
 
 Some package has the same key name, `@tsed/engines` will load them according to the order number.
-For example with dust, @tsed/engines will try to use in this order: `dustjs-helpers` and `dustjs-linkedin`.
+For example, with dust, @tsed/engines will try to use in this order: `dustjs-helpers` and `dustjs-linkedin`.
 
 | Name                                                      | Package Name / Order                                                                                                                                                      | Website / State                                                       |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
