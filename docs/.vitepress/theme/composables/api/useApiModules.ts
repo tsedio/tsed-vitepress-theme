@@ -1,4 +1,5 @@
 import {useApiContent} from "./useApiContent.js";
+import type {ApiSymbol, ApiSymbolStatus} from "./interfaces/Api";
 
 export interface UseApiModulesOptions {
   currentType?: string;
@@ -17,13 +18,13 @@ export function useApiModules({currentType, currentStatus, keyword}: UseApiModul
 
   return Object.keys(modules)
     .sort((a, b) => (a < b ? -1 : 1))
-    .reduce((acc, key) => {
-      const symbols = modules[key].symbols.filter((symbol) => {
+    .reduce((acc: Record<string, any>, key) => {
+      const symbols = modules[key].symbols.filter((symbol: ApiSymbol) => {
         if (currentType && symbol.symbolType !== currentType) {
           return false;
         }
 
-        if (currentStatus && symbol.status.indexOf(currentStatus)) {
+        if (currentStatus && symbol.status.indexOf(currentStatus as unknown as ApiSymbolStatus)) {
           return false;
         }
 

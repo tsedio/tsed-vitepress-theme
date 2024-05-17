@@ -10,6 +10,8 @@ export interface GitHubUser {
   login: string;
   node_id: string;
   organizations_url: string;
+  avatar_url: string;
+  html_url: string;
   received_events_url: string;
   repos_url: string;
   site_admin: boolean;

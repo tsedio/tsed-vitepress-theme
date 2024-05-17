@@ -1,4 +1,3 @@
-
 # Authentication
 
 Ts.ED uses middlewares to protect your route with your own strategy. To handle correctly a request and protect your endpoints,

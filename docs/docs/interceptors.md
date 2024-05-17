@@ -32,7 +32,7 @@ Inside your `src/interceptors/MyInterceptor.ts` file, create the following simpl
 
 ## Use the interceptor
 
-Now that your interceptor logic is in place, you can use it in any other service. You need to use the `@Intercept(InterceptorClass, opts)` annotation to register which interceptor should be used for the specific method you want to intercept. 
+Now that your interceptor logic is in place, you can use it in any other service. You need to use the `@Intercept(InterceptorClass, opts)` annotation to register which interceptor should be used for the specific method you want to intercept.
 An example service in `src/services/MyService.ts`:
 
 <<< @/docs/snippets/interceptors/interceptor-usage.ts
@@ -47,7 +47,7 @@ the method was executed, and returned undefined
 
 ## Catch error with Interceptor
 
-You can also catch errors with an interceptor. 
+You can also catch errors with an interceptor.
 To do this, you need to implement the `intercept` method in your interceptor class:
 
 <<< @/docs/snippets/interceptors/interceptor-catch-error.ts

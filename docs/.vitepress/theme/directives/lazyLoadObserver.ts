@@ -9,7 +9,6 @@ export default {
             imgEl.classList.remove("opacity-0");
           }, 100);
         });
-        imgEl.addEventListener("error", () => console.log("error"));
         imgEl.src = imgEl.dataset.url || "";
       } else {
         const iframe = el.querySelector("iframe");

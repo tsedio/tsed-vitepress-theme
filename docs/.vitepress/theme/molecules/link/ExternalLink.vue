@@ -1,9 +1,11 @@
 <script setup lang="ts">
 interface Props {
-  href: string;
+  href?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {});
+const props = withDefaults(defineProps<Props>(), {
+  href: ""
+});
 </script>
 <template>
   <a :href="props.href"><slot /></a>

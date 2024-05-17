@@ -5,7 +5,6 @@ This decorator will use the data returned by the method, and the configured view
 
 <figure class="flex items-center justify-center"><img src="./assets/templating-engine.png" alt="template engine" style="max-height: 500px; padding:20px; background: white"></figure>
 
-
 ## Configuration
 
 Install the Ts.ED engines:
@@ -68,7 +67,7 @@ Some package has the same key name, `@tsed/engines` will load them according to 
 For example with dust, @tsed/engines will try to use in this order: `dustjs-helpers` and `dustjs-linkedin`.
 
 | Name                                                      | Package Name / Order                                                                                                                                                      | Website / State                                                       |
-|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | [atpl](https://github.com/soywiz/atpl.js)                 | [`npm install atpl`](https://www.npmjs.com/package/atpl)                                                                                                                  | -                                                                     |
 | [bracket](https://github.com/danlevan/bracket-template)   | [`npm install bracket-template`](https://www.npmjs.com/package/bracket-template)                                                                                          | -                                                                     |
 | [dot](https://github.com/olado/doT)                       | [`npm install dot`](https://www.npmjs.com/package/dot)                                                                                                                    | [(website)](http://olado.github.io/doT/)                              |
@@ -181,6 +180,7 @@ It's also possible to render a view by injecting and using @@PlatformResponse@@ 
 <h1><%- name %></h1>
 <div>Start: <%- startDate %></div>
 ```
+
 :::
 
 ### With PlatformViews

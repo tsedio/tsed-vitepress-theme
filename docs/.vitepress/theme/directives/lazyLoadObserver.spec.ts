@@ -33,6 +33,7 @@ describe("LazyLoadObserver Directive", () => {
 
   it("creates an IntersectionObserver on mount if it is available", () => {
     expect(IntersectionObserverMock).toHaveBeenCalledTimes(1);
+    // @ts-expect-error
     expect(IntersectionObserverMock.mock.calls[0][0]).toBeInstanceOf(Function);
     expect(IntersectionObserverMock.mock.results[0].value.observe).toHaveBeenCalledOnce();
   });
@@ -41,7 +42,9 @@ describe("LazyLoadObserver Directive", () => {
     const img = wrapper.find("img").element as HTMLImageElement;
 
     // Simulate the IntersectionObserver callback
-    const handleIntersect = IntersectionObserverMock.mock.calls[0][0];
+    // @ts-expect-error
+    const handleIntersect: any = IntersectionObserverMock.mock.calls[0][0];
+
     handleIntersect([{isIntersecting: true, target: img}], IntersectionObserverMock.mock.results[0].value);
 
     await new Promise((resolve) => setTimeout(resolve, 200));
@@ -54,7 +57,9 @@ describe("LazyLoadObserver Directive", () => {
   it("does not load image if not intersecting", () => {
     const img = wrapper.find("img").element as HTMLImageElement;
 
-    const handleIntersect = IntersectionObserverMock.mock.calls[0][0];
+    // @ts-expect-error
+    const handleIntersect: any = IntersectionObserverMock.mock.calls[0][0]!;
+
     handleIntersect([{isIntersecting: false, target: img}], IntersectionObserverMock.mock.results[0].value);
 
     expect(img.src).toBe("");

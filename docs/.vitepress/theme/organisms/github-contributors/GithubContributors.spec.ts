@@ -36,7 +36,7 @@ describe("<GithubContributors>", () => {
       }
     ];
 
-    fetchContributors.mockResolvedValue({value: mockContributors});
+    vi.mocked(fetchContributors).mockResolvedValue({value: mockContributors} as any);
 
     const wrapper = mount(GithubContributors, {
       props: {

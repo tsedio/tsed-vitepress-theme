@@ -7,11 +7,12 @@ There are some changes between ServerLoader API (v4/v5) and Platform API (v5.56.
 This page will describe how you can get these instances with the new API.
 
 ## Platform classes
+
 ### Abstraction
 
 <ApiList query="status.includes('platform') && ['@tsed/common', '@tsed/platform-views', '@tsed/platform-params', '@tsed/platform-response-filter', '@tsed/platform-exceptions'].includes(module)" />
 
-### Express.js 
+### Express.js
 
 <ApiList query="status.includes('platform') && module.includes('@tsed/platform-express')" />
 
@@ -50,7 +51,8 @@ export class Server {
   }
 }
 ```
-We can see that the middlewares and views are configured through the `@Configuration` decorator. 
+
+We can see that the middlewares and views are configured through the `@Configuration` decorator.
 
 With Platform API, the Server class is considered as a @@Provider@@.
 It means that you can use decorators like @@Constant@@ and @@Inject@@ to get any configuration, provider or service from the DI registry.
@@ -60,14 +62,14 @@ By this way, we can decouple the configuration from the code and make it more te
 
 ## Bootstrap application
 
-Ts.ED need a Platform Adapter to work. It means that you have to install `@tsed/platform-express` (or `@tsed/platform-koa`) and 
+Ts.ED need a Platform Adapter to work. It means that you have to install `@tsed/platform-express` (or `@tsed/platform-koa`) and
 import the adapter to the `index.ts` or `server.ts`:
 
 ::: code-group
 
 ```typescript [Express.js]
 import {$log} from "@tsed/common";
-import {PlatformExpress} from "@tsed/platform-express"; 
+import {PlatformExpress} from "@tsed/platform-express";
 import {Server} from "./server";
 
 async function bootstrap() {
@@ -89,7 +91,7 @@ bootstrap();
 
 ```typescript [Koa.js]
 import {$log} from "@tsed/common";
-import {PlatformKoa} from "@tsed/platform-koa"; 
+import {PlatformKoa} from "@tsed/platform-koa";
 import {Server} from "./server";
 
 async function bootstrap() {
@@ -170,7 +172,7 @@ See [Request Context](/docs/request-context.md#request-and-response-abstraction)
 
 ## Statics files
 
-To serve static files, you can use the  `@Configuration` decorator:
+To serve static files, you can use the `@Configuration` decorator:
 
 ```typescript
 @Configuration({

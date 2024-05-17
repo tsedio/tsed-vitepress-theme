@@ -1,15 +1,6 @@
 import {ref} from "vue";
 import axios from "axios";
-
-type User = {
-  title: string;
-  login: string;
-};
-
-type User = {
-  title: string;
-  login: string;
-};
+import type {GitHubUser} from "./interfaces/GithubUser";
 
 const outboundRE = /^[a-z]+:/i;
 
@@ -20,7 +11,7 @@ function getHost(docsRepo: string) {
 }
 
 export function useGithubContributors(docsRepo: string) {
-  const contributors = ref<User[]>([]);
+  const contributors = ref<GitHubUser[]>([]);
 
   const fetchContributors = async (page: number = 1, per_page: number = 100) => {
     const endpoint = `${getHost(docsRepo)}/contributors`;
@@ -31,11 +22,11 @@ export function useGithubContributors(docsRepo: string) {
         .filter(
           (contributor: {login: string}) => !["semantic-release-bot", "dependabot[bot]"].includes(contributor.login)
         )
-        .map(({avatar_url, html_url, login, ...rest}) => ({
-          src: avatar_url,
-          href: html_url,
+        .map(({avatar_url, html_url, login, ...rest}: GitHubUser) => ({
           login,
-          ...rest
+          ...rest,
+          src: avatar_url,
+          href: html_url
         }));
 
       return contributors;
