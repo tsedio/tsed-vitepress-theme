@@ -42,6 +42,7 @@ pnpm add ajv @tsed/ajv
 ```sh [bun]
 bun add ajv @tsed/ajv
 ```
+
 :::
 
 Then import `@tsed/ajv` in your Server:

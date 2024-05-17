@@ -9,5 +9,10 @@ export interface AuthOpts extends Record<string, unknown> {
 }
 
 export function CustomAuth(options: AuthOpts = {}): Function {
-  return useDecorators(UseAuth(CustomAuthMiddleware, options), Security("oauth", ...(options.scopes || [])), Returns(401), Returns(403));
+  return useDecorators(
+    UseAuth(CustomAuthMiddleware, options),
+    Security("oauth", ...(options.scopes || [])),
+    Returns(401),
+    Returns(403)
+  );
 }

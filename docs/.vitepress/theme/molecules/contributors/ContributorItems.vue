@@ -2,7 +2,12 @@
 import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
 import ButtonBadges from "../button-badge/ButtonBadges.vue";
 
-const props = withDefaults(defineProps<{items: GitHubUser[]; liClass: string}>(), {
+interface Props {
+  items: GitHubUser[];
+  liClass?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
   items: () => [],
   showTitle: true,
   width: 60,

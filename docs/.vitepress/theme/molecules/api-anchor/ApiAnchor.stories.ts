@@ -27,9 +27,6 @@ const meta = {
       control: "multi-select",
       options: ["stable", "deprecated", "experimental", "private", "public"]
     },
-    tags: {
-      control: "array"
-    },
     theme: {
       control: "radio",
       options: ["bubble", "list"],
@@ -41,8 +38,6 @@ const meta = {
     symbolName: "Symbol name",
     symbolType: "class",
     status: ["public"],
-    description: "description",
-    tags: ["tag1"],
     theme: "bubble"
   } // default value,
 } satisfies Meta<ApiSymbol & {theme?: string}>;

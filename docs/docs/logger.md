@@ -29,7 +29,7 @@ bun add @tsed/logger
 Ts.ED logger supports many features, and is optimized to be used in production:
 
 - @@ContextLogger@@, in **production** mode, caches all request logs until the response is sent to your consumer.
-  See [request logger](/docs/logger.html#request-logger) section bellow. 
+  See [request logger](/docs/logger.html#request-logger) section bellow.
 - [Layouts](https://logger.tsed.io/layouts) support,
 - [Appenders](https://logger.tsed.io/appenders) support;
 
@@ -40,7 +40,7 @@ Logger can be configured through the @@Configuration@@ decorator:
 <div class="table-features">
 
 | Props                         | Description                                                                                                                                                                        |
-|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `logger.level`                | Change the default log level displayed in the terminal. Values: `debug`, `info`, `warn` or `error`. By default: `info`.                                                            |
 | `logger.logRequest`           | Log all incoming requests. By default, it's true and prints the configured `logger.requestFields`.                                                                                 |
 | `logger.requestFields`        | Fields displayed when a request is logged. Possible values: `reqId`, `method`, `url`, `headers`, `body`, `query`,`params`, `duration`. This option have only effect on info level. |
@@ -57,27 +57,28 @@ It's recommended to disable logRequest in production. Logger has a cost on the p
 :::
 
 ## Layouts and Appenders
+
 ### Layouts
 
 You can configure a [layout](https://logger.tsed.io/layouts) to format the log output. The following layouts are available:
 
 | Name                                                                       | Description                                                                                                                        |
-|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [Basic layout](https://logger.tsed.io/layouts/basic.html)                  | Basic layout will output the timestamp, level, category, followed by the formatted log event data.                                 |
 | [Colored layout](https://logger.tsed.io/layouts/colored.html)              | This layout is the same as basic, except that the timestamp, level and category will be colored according to the log event's level |
 | [Dummy layout](https://logger.tsed.io/layouts/dummy.html)                  | This layout only outputs the first value in the log event's data.                                                                  |
 | [Message layout](https://logger.tsed.io/layouts/message-pass-through.html) | Use a simple message format to display log                                                                                         |
 | [Json layout](https://logger.tsed.io/layouts/json.html)                    | Display log to JSON format                                                                                                         |
 | [Pattern layout](https://logger.tsed.io/layouts/pattern.html)              | Use custom pattern to format log                                                                                                   |
-| [Custom layout](https://logger.tsed.io/layouts/custom.html)                | logging to stdout or stderr with a custom layout.                                                                                  | 
+| [Custom layout](https://logger.tsed.io/layouts/custom.html)                | logging to stdout or stderr with a custom layout.                                                                                  |
 
 ### Appenders
 
-You can configure an [appender](https://logger.tsed.io/appenders) to send log events to a destination. 
+You can configure an [appender](https://logger.tsed.io/appenders) to send log events to a destination.
 The following appenders are available:
 
 | Name                                                                 | Description                                                                 |
-|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | [Connect](https://logger.tsed.io/appenders/connect.html)             | allow to connect Ts.ED logger with another logger.                          |
 | [Console](https://logger.tsed.io/appenders/console.html)             | log to the console.                                                         |
 | [File](https://logger.tsed.io/appenders/file.html)                   | log to a file.                                                              |
@@ -94,7 +95,6 @@ The following appenders are available:
 | [Slack](https://logger.tsed.io/appenders/slack.html)                 | log to [Slack](https://slack.com/).                                         |
 | [Smtp](https://logger.tsed.io/appenders/smtp.html)                   | log to [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol). |
 
-
 ::: tip
 You can create your own layout/appender:
 
@@ -102,7 +102,6 @@ You can create your own layout/appender:
 - [Customize layout](https://logger.tsed.io/layouts/custom.html)
 
 :::
-
 
 ## Use Json Layout in production
 
@@ -137,8 +136,7 @@ if (isProduction) {
     disableRoutesSummary: isProduction // remove table with routes summary
   }
 })
-export class Server {
-}
+export class Server {}
 ```
 
 This configuration will display the log as following:
@@ -255,8 +253,7 @@ import {Configuration} from "@tsed/common";
     requestFields: ["reqId", "method", "url", "headers", "body", "query", "params", "duration"]
   }
 })
-export class Server {
-}
+export class Server {}
 ```
 
 or you can override the middleware with @@OverrideProvider@@.

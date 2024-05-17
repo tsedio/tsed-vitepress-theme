@@ -46,6 +46,7 @@ Testing asynchronous method is also possible using `Promises` (`async`/`await`):
 :::
 
 ## Mock dependencies
+
 ### Using PlatformTest.invoke
 
 PlatformTest API provides an `PlatformTest.invoke` method to create a new instance of your component with mocked dependencies during a test context created with `PlatformTest.create()`.

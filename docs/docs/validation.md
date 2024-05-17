@@ -25,6 +25,7 @@ pnpm add ajv @tsed/ajv
 ```sh [bun]
 bun add ajv @tsed/ajv
 ```
+
 :::
 
 Then import `@tsed/ajv` in your Server:
@@ -122,6 +123,7 @@ When a validation error occurs, AJV generates a list of errors with a full descr
 ```
 
 ## Custom validators
+
 ### User defined keywords
 
 Ajv allows you to define custom keywords to validate a property.
@@ -165,14 +167,13 @@ export class Product {
   @CustomKey("range", [10, 100])
   @CustomKey("exclusiveRange", true)
   price: number;
-  
+
   // OR
-  
+
   @Range(10, 100)
   @ExclusiveRange(true)
   price2: number;
 }
-
 ```
 
 ```ts [Range.ts]
@@ -230,7 +231,6 @@ describe("Product", () => {
 If you planed to create keyword that transform the data, you have to set `returnsCoercedValues` to `true` in your configuration.
 :::
 
-
 ### With "code" function
 
 Starting from v7 Ajv uses [CodeGen module](https://github.com/ajv-validator/ajv/blob/master/lib/compile/codegen/index.ts) for all pre-defined keywords - see [codegen.md](https://ajv.js.org/codegen.html) for details.
@@ -267,16 +267,16 @@ ajv.addKeyword({
   schemaType: "boolean",
   // $data: true // to support [$data reference](./validation.html#data-reference), ...
   code(cxt: KeywordCxt) {
-    const {data, schema} = cxt
-    const op = schema ? _`!==` : _`===`
-    cxt.fail(_`${data} %2 ${op} 0`) // ... the only code change needed is to use `cxt.fail$data` here
-  },
-})
+    const {data, schema} = cxt;
+    const op = schema ? _`!==` : _`===`;
+    cxt.fail(_`${data} %2 ${op} 0`); // ... the only code change needed is to use `cxt.fail$data` here
+  }
+});
 
-const schema = {even: true}
-const validate = ajv.compile(schema)
-console.log(validate(2)) // true
-console.log(validate(3)) // false
+const schema = {even: true};
+const validate = ajv.compile(schema);
+console.log(validate(2)); // true
+console.log(validate(3)); // false
 ```
 
 :::
@@ -353,7 +353,6 @@ describe("UriFormat", () => {
   });
 });
 ```
-
 
 ## Override default validation pipe
 

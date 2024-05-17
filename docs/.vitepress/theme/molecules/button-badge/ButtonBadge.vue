@@ -4,15 +4,15 @@ import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
 import {computed} from "vue";
 
 export interface ButtonBadgeProps {
-  showTitle: boolean;
-  width: string | number;
-  bgColor: string;
-  color: string;
-  blur: number;
-  textSize: string;
-  shadow: string;
-  padding: string | number;
-  fontWeight: string;
+  showTitle?: boolean;
+  width?: string | number;
+  bgColor?: string;
+  color?: string;
+  blur?: number;
+  textSize?: string;
+  shadow?: string;
+  padding?: string | number;
+  fontWeight?: string;
 }
 
 const props = withDefaults(

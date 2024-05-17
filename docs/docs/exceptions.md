@@ -29,7 +29,6 @@ bun add @tsed/exceptions
 
 :::
 
-
 ## Throwing standard exceptions
 
 Here is two examples to throw exceptions based on this package in Ts.ED context or Express.js context:

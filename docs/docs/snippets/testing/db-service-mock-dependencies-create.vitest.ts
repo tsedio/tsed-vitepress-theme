@@ -5,18 +5,20 @@ import {DbService} from "../services/DbService";
 
 describe("MyCtrl", () => {
   // bootstrap your Server to load all endpoints before run your test
-  beforeEach(() => PlatformTest.create({
-    imports: [
-      {
-        provide: DbService,
-        use: {
-          getData: () => {
-            return "test";
+  beforeEach(() =>
+    PlatformTest.create({
+      imports: [
+        {
+          provide: DbService,
+          use: {
+            getData: () => {
+              return "test";
+            }
           }
         }
-      }
-    ]
-  }));
+      ]
+    })
+  );
   afterEach(PlatformTest.reset);
 
   it("should do something", () => {

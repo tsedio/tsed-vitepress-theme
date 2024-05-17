@@ -38,7 +38,7 @@
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
-    "types": ["node", "vitest/globals", "jsdom", "@testing-library/jest-dom", "@testing-library/jest-dom/vitest"],
+    "types": ["node", "vitest/globals", "@testing-library/jest-dom", "@testing-library/jest-dom/vitest"],
     /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
@@ -130,6 +130,6 @@
     "tailwind.config.ts",
     "vitest.config.ts",
     "vitest.setup.ts",
-    ".storybook/**/*.ts",
+    ".storybook/**/*.ts"
   ]
 }

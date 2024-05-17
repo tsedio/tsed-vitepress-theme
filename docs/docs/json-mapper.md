@@ -31,7 +31,7 @@ to a plain javascript object to your consumer.
 
 Enable additional properties on model. By default, `false`.
 
-::: warning 
+::: warning
 Enable this option is dangerous and may be a potential security issue.
 :::
 
@@ -86,7 +86,6 @@ It means, if you missed decorating one or more properties on your model, these p
 :::
 
 > Note: Result is displayed in Jest/Mocha tabs.
-
 
 ## Ignore properties (deprecated)
 

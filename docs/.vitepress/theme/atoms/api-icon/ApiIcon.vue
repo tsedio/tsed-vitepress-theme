@@ -3,7 +3,7 @@ import type {ApiSymbolType} from "../../composables/api/interfaces/Api.js";
 import "./ApiIcon.css";
 
 interface Props {
-  type: ApiSymbolType;
+  type?: ApiSymbolType;
 }
 
 const props = withDefaults(defineProps<Props>(), {
