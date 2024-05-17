@@ -124,7 +124,7 @@ When a validation error occurs, AJV generates a list of errors with a full descr
 
 ## Custom validators
 
-### User defined keywords
+### User-defined keywords
 
 Ajv allows you to define custom keywords to validate a property.
 
@@ -233,7 +233,7 @@ If you planed to create keyword that transform the data, you have to set `return
 
 ### With "code" function
 
-Starting from v7 Ajv uses [CodeGen module](https://github.com/ajv-validator/ajv/blob/master/lib/compile/codegen/index.ts) for all pre-defined keywords - see [codegen.md](https://ajv.js.org/codegen.html) for details.
+Starting from v7, Ajv uses [CodeGen module](https://github.com/ajv-validator/ajv/blob/master/lib/compile/codegen/index.ts) for all pre-defined keywords - see [codegen.md](https://ajv.js.org/codegen.html) for details.
 
 Example `even` keyword:
 
