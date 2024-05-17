@@ -43,7 +43,7 @@ Logger can be configured through the @@Configuration@@ decorator:
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `logger.level`                | Change the default log level displayed in the terminal. Values: `debug`, `info`, `warn` or `error`. By default: `info`.                                                            |
 | `logger.logRequest`           | Log all incoming requests. By default, it's true and prints the configured `logger.requestFields`.                                                                                 |
-| `logger.requestFields`        | Fields displayed when a request is logged. Possible values: `reqId`, `method`, `url`, `headers`, `body`, `query`,`params`, `duration`. This option have only effect on info level. |
+| `logger.requestFields`        | Fields displayed when a request is logged. Possible values: `reqId`, `method`, `url`, `headers`, `body`, `query`,`params`, `duration`. This option has effect only on the info level. |
 | `logger.reqIdBuilder`         | A function called for each incoming request to create a request id.                                                                                                                |
 | `logger.jsonIndentation`      | The number of space characters to use as white space in JSON output. Default is 2 (0 in production).                                                                               |
 | `logger.disableRoutesSummary` | Disable routes table displayed in the logger.                                                                                                                                      |
@@ -79,7 +79,7 @@ The following appenders are available:
 
 | Name                                                                 | Description                                                                 |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [Connect](https://logger.tsed.io/appenders/connect.html)             | allow to connect Ts.ED logger with another logger.                          |
+| [Connect](https://logger.tsed.io/appenders/connect.html)             | allows connecting Ts.ED logger with another logger.                          |
 | [Console](https://logger.tsed.io/appenders/console.html)             | log to the console.                                                         |
 | [File](https://logger.tsed.io/appenders/file.html)                   | log to a file.                                                              |
 | [File date](https://logger.tsed.io/appenders/file-date.html)         | log to a file with configurable log rolling based on file size or date.     |
