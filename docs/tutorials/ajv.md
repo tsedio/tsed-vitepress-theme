@@ -45,7 +45,7 @@ bun add ajv @tsed/ajv
 
 :::
 
-Then import `@tsed/ajv` in your Server:
+Then import `@tsed/ajv` into your Server:
 
 ```typescript
 import {Configuration} from "@tsed/common";
