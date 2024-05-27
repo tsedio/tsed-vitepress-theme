@@ -342,7 +342,7 @@ export class MyController {
 }
 ```
 
-In this case, the UseCache interceptor will ignore result that `undefined` or `null`.
+In this case, the UseCache interceptor will ignore the result that `undefined` or `null`.
 
 You can also provide a custom function to ignore the result:
 
