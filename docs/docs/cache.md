@@ -397,7 +397,7 @@ background if current `ttl` is under 45 minutes.
 
 ## Refresh cached value <Badge text="7.9.0+" />
 
-A service method response can be cached by using the `@UseCache` decorator. Sometimes, we need to explicitly refresh the cached data,
+A service method response can be cached by using the `@UseCache` decorator. Sometimes, we need to explicitly refresh the cached data because the consumed data backend state has changed.
 because the consumed data backend state has changed. By implementing a notifications service, the backend data can trigger an event to tell your API that
 the data has changed.
 
