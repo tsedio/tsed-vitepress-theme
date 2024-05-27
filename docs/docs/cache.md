@@ -377,7 +377,7 @@ if (currentTTL < ttl - refreshThreshold) {
   refresh();
 }
 ```
-
+Meanwhile, the system will return the old value until expiration.
 In the meantime, the system will return the old value until expiration.
 
 ```typescript
