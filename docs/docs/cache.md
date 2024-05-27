@@ -1,7 +1,7 @@
 # Cache
 
 Caching is a great and simple technique that helps improve your app's performance.
-It acts as a temporary data store providing high performance data access.
+It acts as a temporary data store providing high-performance data access.
 
 Ts.ED provides a unified system for caching by using the
 popular [`cache-manager`](https://www.npmjs.com/package/cache-manager) Node.js module.
