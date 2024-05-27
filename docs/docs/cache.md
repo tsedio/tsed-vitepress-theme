@@ -344,7 +344,7 @@ export class MyController {
 
 In this case, the UseCache interceptor will ignore result that `undefined` or `null`.
 
-You can also provide a custom function to ignore result:
+You can also provide a custom function to ignore the result:
 
 ```typescript
 import {Controller, UseCache, Get, PathParams, PlatformContext} from "@tsed/common";
