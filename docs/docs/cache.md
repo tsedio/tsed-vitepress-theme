@@ -1,9 +1,9 @@
 # Cache
 
 Caching is a great and simple technique that helps improve your app's performance.
-It acts as a temporary data store providing high performance data access.
+It acts as a temporary data store providing high-performance data access.
 
-Ts.ED provides a unified system caching by using the
+Ts.ED provides a unified system for caching by using the
 popular [`cache-manager`](https://www.npmjs.com/package/cache-manager) Node.js module.
 Cache-manager provides various storage to cache content like Redis, MongoDB, etc... and multi caching!
 
@@ -343,9 +343,9 @@ export class MyController {
 }
 ```
 
-In this case, the UseCache interceptor will ignore result that `undefined` or `null`.
+In this case, the UseCache interceptor will ignore the result that `undefined` or `null`.
 
-You can also provide a custom function to ignore result:
+You can also provide a custom function to ignore the result:
 
 ```typescript
 import {Controller, UseCache, Get, PathParams, PlatformContext} from "@tsed/common";
@@ -378,7 +378,7 @@ if (currentTTL < ttl - refreshThreshold) {
   refresh();
 }
 ```
-
+Meanwhile, the system will return the old value until expiration.
 In the meantime, the system will return the old value until expiration.
 
 ```typescript
@@ -398,7 +398,7 @@ background if current `ttl` is under 45 minutes.
 
 ## Refresh cached value <Badge text="7.9.0+" />
 
-A service method response can be cached by using the `@UseCache` decorator. Sometimes, we need to explicitly refresh the cached data,
+A service method response can be cached by using the `@UseCache` decorator. Sometimes, we need to explicitly refresh the cached data because the consumed data backend state has changed.
 because the consumed data backend state has changed. By implementing a notifications service, the backend data can trigger an event to tell your API that
 the data has changed.
 
