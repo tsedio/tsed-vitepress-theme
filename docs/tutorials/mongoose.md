@@ -52,7 +52,7 @@ Then import `@tsed/mongoose` in your [Configuration](/docs/configuration.md):
 
 ## MongooseService
 
-@@MongooseService@@ lets you to retrieve an instance of Mongoose.Connection.
+@@MongooseService@@ lets you retrieve an instance of Mongoose.Connection.
 
 ```typescript
 import {Service} from "@tsed/common";
