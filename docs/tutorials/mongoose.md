@@ -40,7 +40,7 @@ yarn add --dev @tsed/testing-mongoose
 ```
 
 ::: warning
-Since mongoose v5.11.0, the module expose his own file definition and can broke your build!
+Since mongoose v5.11.0, the module exposes its own file definition and can break your build!
 To solve it, install @tsed/mongoose v6.14.1 and remove the `@types/mongoose` dependencies.
 :::
 
