@@ -138,7 +138,7 @@ Mongoose and `@tsed/mongoose` support both lists and maps.
 `@tsed/mongoose` supports `mongoose` circular references between defined models.
 When you have models that either both refer to each other, or refer to themselves there is a slightly different way to declare this inside those models.
 
-In this example a **Customer** has many **Contracts** and each **Contract** has a reference back to the **Customer**. This is declared using an arrow function.
+In this example, a **Customer** has many **Contracts** and each **Contract** has a reference back to the **Customer**. This is declared using an arrow function.
 
 ```
 () => ModelName
