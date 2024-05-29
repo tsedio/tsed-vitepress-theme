@@ -123,7 +123,7 @@ Mongoose and `@tsed/mongoose` support both lists and maps.
 
 ### Subdocuments
 
-`@tsed/mongoose` supports `mongoose` subdocuments as long as they are defined schemas. Therefore, subdocuments must be decorated by `@Schema()`.
+`@tsed/mongoose` supports `mongoose` subdocuments as long as they are defined as schemas. Therefore, subdocuments must be decorated by `@Schema()`.
 
 <<< @/tutorials/snippets/mongoose/subdocuments.ts
 
