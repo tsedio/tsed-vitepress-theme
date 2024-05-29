@@ -159,6 +159,7 @@ Here is the corresponding Facebook protocol:
 <<< @/tutorials/snippets/passport/FacebookProtocol.ts
 
 ::: tip Note
+To use Facebook authentication, first create an app at Facebook Developers.
 In order to use Facebook authentication, you must first create an app at Facebook Developers. When created, an app is assigned an App ID and an App Secret. Your application must also implement a redirect URL, to which Facebook will redirect users after they have approved access for your application.
 
 The verify callback for Facebook authentication accepts `accessToken`, `refreshToken`, and `profile` arguments. `profile` will contain user profile information provided by Facebook; refer to User [Profile](http://www.passportjs.org/guide/profile/) for additional information.
