@@ -216,7 +216,7 @@ Multiple `plugin` decorator can be used for a single model class.
 
 Set the `@DiscriminatorKey` decorator on a property in the parent class to define the name of the field for the discriminator value.
 
-Extend the child model classes from the parent class. By default the value for the discriminator field is the class name but it can be overwritten via the `discriminatorValue` option on the model.
+Extend the child model classes from the parent class. By default, the value for the discriminator field is the class name, but it can be overwritten via the `discriminatorValue` option on the model.
 
 <<< @/tutorials/snippets/mongoose/discriminator.ts
 
