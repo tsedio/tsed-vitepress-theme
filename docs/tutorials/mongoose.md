@@ -361,7 +361,7 @@ describe("Rest", () => {
 
 ### Jest additional setup
 
-Add a script to close connection after all unit test. In your jest configuration file add the following line:
+Add a script to close connection after all unit test. In your jest configuration file, add the following line:
 
 ```json
 {
