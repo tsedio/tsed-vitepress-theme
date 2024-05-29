@@ -33,7 +33,6 @@ Add this configuration to your server:
 
 ### UserInfo
 By default, Ts.ED uses a UserInfo model to serialize and deserialize users in sessions:
-By default Ts.ED use a UserInfo model to serialize and deserialize user in session:
 
 ```typescript
 import {Format, Property} from "@tsed/schema";
