@@ -140,7 +140,7 @@ Azure bearer uses another scenario which requires to return multiple arguments. 
 
 ### Discord Auth
 
-Discord passport gives an example to refresh the token. To do that you have to create a new Strategy and register with the refresh function from `passport-oauth2-refresh` module.
+Discord passport gives an example to refresh the token. To do that, you have to create a new Strategy and register with the refresh function from `passport-oauth2-refresh` module.
 
 Here is the JavaScript code:
 
