@@ -315,7 +315,7 @@ This example shows you how you can test your Rest API with superagent and a mock
 :::
 
 ::: tip
-To increase mocha timeout from 2000ms to 10000ms use option `--timeout 10000`.
+To increase mocha timeout from 2000ms to 10000ms, use option `--timeout 10000`.
 :::
 
 ### Testing API with ReplicaSet
