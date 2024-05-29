@@ -86,7 +86,7 @@ Here is an example with the PassportLocal:
 :::
 
 ::: tip
-For signup and basic flow you can checkout one of our examples:
+For signup and basic flow, you can check out one of our examples:
 
 <Projects type="projects"/>
 :::
