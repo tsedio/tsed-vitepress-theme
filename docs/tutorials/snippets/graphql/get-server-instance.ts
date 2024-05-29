@@ -12,6 +12,9 @@ export class UsersService implements AfterRoutesInit {
   private server: ApolloServer;
 
   $afterRoutesInit() {
-    this.server = this.apolloService.get("server1")!;
+    this.server = this.apolloService.get("server1");
+    if (!this.server) {
+      throw new Error("Server instance 'server1' not found");
+    }
   }
 }
