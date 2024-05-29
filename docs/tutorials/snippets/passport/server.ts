@@ -38,7 +38,7 @@ export class Server {
       // @ts-ignore
       .use(
         session({
-          secret: "mysecretkey",
+          secret: process.env.SESSION_SECRET,
           resave: true,
           saveUninitialized: true,
           // maxAge: 36000,
