@@ -184,7 +184,7 @@ Optionally a custom decimal type implementation, such as [big.js](https://www.np
 Mongoose allows the developer to add pre and post [hooks / middlewares](http://mongoosejs.com/docs/middleware.html) to the schema.
 With this it is possible to add document transformations and observations before or after validation, save and more.
 
-Ts.ED provides class decorator to register middlewares on the pre and post hook.
+Ts.ED provides class decorators to register middlewares on the pre- and post-hook.
 
 ### Pre hook
 
