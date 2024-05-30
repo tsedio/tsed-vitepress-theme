@@ -17,6 +17,9 @@ export class CarModel {
   @Required()
   isFast: boolean;
 
+  @Property()
+  topSpeedInKmH: number;  // Define the property used in hooks
+
   // or Prehook on static method
   @PostHook("save")
   static postSave(car: CarModel) {
