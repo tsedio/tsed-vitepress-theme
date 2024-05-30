@@ -10,9 +10,8 @@ describe("Rest", () => {
   let request: SuperTest.Agent;
 
   before(TestMongooseContext.bootstrap(Server, {platform: PlatformExpress})); // Create a server with mocked database
-  before((done) => {
+  before(async () => {
     request = SuperTest(PlatformTest.callback());
-    done();
   });
 
   after(TestMongooseContext.reset); // reset database and injector
