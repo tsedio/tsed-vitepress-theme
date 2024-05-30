@@ -16,7 +16,7 @@ import {AuthService} from "../services/auth/AuthService";
 export class DiscordProtocol implements OnVerify, OnInstall {
   constructor(private authService: AuthService) {}
 
-  async $onVerify(@Req() req: Req, @Args() [accessToken, refreshToken, profile]: any) {
+  async $onVerify(@Req() req: Req, @Args() [accessToken, refreshToken, profile]: [string, string, DiscordProfile]) {
     profile.refreshToken = refreshToken;
 
     const user = await this.authService.findOne({discordId: profile.id});
