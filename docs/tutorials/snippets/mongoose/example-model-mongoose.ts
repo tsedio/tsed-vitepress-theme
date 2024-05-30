@@ -26,7 +26,8 @@ export class MyModel {
   @Minimum(0)
   @Maximum(100)
   @Default(0)
-  rate: Number = 0;
+  rate: number = 0;
+  pattern: string;
 
   @Enum(Categories)
   // or @Enum("type1", "type2")
