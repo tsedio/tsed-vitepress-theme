@@ -13,7 +13,8 @@ const config = {
     {pattern: /^p-/},
     {pattern: /^px-/},
     {pattern: /^gap-/},
-    {pattern: /^shadow-/}
+    {pattern: /^shadow-/},
+    {pattern: /^rounded-/}
   ]
 } satisfies Config;
 

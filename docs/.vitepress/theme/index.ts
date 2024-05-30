@@ -8,6 +8,7 @@ import ApiAnchorQuery from "./molecules/api-anchor/ApiAnchorQuery.vue";
 import ApiList from "./molecules/api-list/ApiList.vue";
 import GithubContributors from "./organisms/github-contributors/GithubContributors.vue";
 import LazyLoadObserver from "./directives/lazyLoadObserver";
+import Banner from "./molecules/banner/Banner.vue";
 
 export default {
   extends: DefaultTheme,
@@ -20,6 +21,7 @@ export default {
     app.component("ApiList", ApiList);
     app.component("ApiAnchorQuery", ApiAnchorQuery);
     app.component("GithubContributors", GithubContributors);
+    app.component("Banner", Banner);
     app.directive("lazyload-observer", LazyLoadObserver);
   }
 } satisfies Theme;

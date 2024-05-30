@@ -12,6 +12,9 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ["Banner"]
+    }],
     "require-await": "error",
     "no-return-await": "error",
     "no-case-declarations": "off",
