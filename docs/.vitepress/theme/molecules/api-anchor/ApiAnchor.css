@@ -1,14 +1,15 @@
+a[data-name="ApiAnchor"] {
+
+  @apply cursor-pointer;
+
+  &:hover {
+    @apply text-blue-600 bg-white;
+  }
+}
+
 [data-name="ApiAnchor"] {
   @apply text-api-default relative no-underline overflow-hidden truncate whitespace-nowrap px-2 rounded-xs inline-flex items-center;
   transition: all ease-in var(--theme-transition-duration);
-
-  &a {
-    @apply cursor-pointer;
-
-    &:hover {
-      @apply text-blue-600 bg-white;
-    }
-  }
 
   > span {
     @apply flex;
@@ -28,7 +29,7 @@
     padding-top: 1px;
     padding-bottom: 1px;
 
-    &a:hover {
+    & a:hover {
       @apply text-blue-active;
     }
 
