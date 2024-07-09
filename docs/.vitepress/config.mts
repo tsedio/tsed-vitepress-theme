@@ -156,7 +156,8 @@ export default defineConfig({
             text: "Testing",
             link: `/docs/testing`
           },
-          {text: "Upload files", link: "/docs/upload-files"}
+          {text: "Upload files", link: "/docs/upload-files"},
+          {text: "Customize 404", link: "/docs/not-found-page"}
         ]
       },
       {
@@ -394,6 +395,10 @@ export default defineConfig({
             {
               text: "Upload files",
               link: "/docs/upload-files"
+            },
+            {
+              text: "Customize 404",
+              link: "/docs/not-found-page"
             }
           ]
         }
