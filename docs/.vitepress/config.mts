@@ -140,6 +140,10 @@ export default defineConfig({
             link: `/docs/command`
           },
           {
+            text: "Custom decorators",
+            link: "/docs/custom-endpoint-decorators"
+          },
+          {
             text: "Templating",
             link: `/docs/templating`
           },
@@ -373,6 +377,10 @@ export default defineConfig({
             {
               text: "Templating",
               link: `/docs/templating`
+            },
+            {
+              text: "Custom decorators",
+              link: "/docs/custom-endpoint-decorators"
             },
             {
               text: "Session & Cookies",
