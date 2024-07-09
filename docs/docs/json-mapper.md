@@ -23,6 +23,7 @@ to a plain javascript object to your consumer.
   jsonMapper: {
     additionalProperties: false,
     disableUnsecureConstructor: false,
+    strictGroups: false
   }
 })
 ```
@@ -48,6 +49,15 @@ class MyModel {
   }
 }
 ```
+
+### jsonMapper.strictGroups
+
+Enable strict mode for `@Groups` decorator. By default, `false`. See [Groups](/docs/model.md#groups-strict-mode) for more information.
+
+::: warning
+The `strictGroups` option is enabled by default in the next major version of Ts.ED.
+:::
+
 
 ## Usage
 

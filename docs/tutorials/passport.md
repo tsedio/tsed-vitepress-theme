@@ -23,6 +23,13 @@ npm install --save passport
 yarn add passport
 ```
 
+```bash [pnpm]
+pnpm add passport
+```
+
+```bash [bun]
+bun add passport
+```
 :::
 
 ## Configure your server
