@@ -155,7 +155,8 @@ export default defineConfig({
           {
             text: "Testing",
             link: `/docs/testing`
-          }
+          },
+          {text: "Upload files", link: "/docs/upload-files"}
         ]
       },
       {
@@ -389,6 +390,10 @@ export default defineConfig({
             {
               text: "Serve files",
               link: `/docs/serve-files`
+            },
+            {
+              text: "Upload files",
+              link: "/docs/upload-files"
             }
           ]
         }
