@@ -1,10 +1,8 @@
 import {$log} from "@tsed/common";
 import {PlatformExpress} from "@tsed/platform-express";
-import filedirname from "filedirname";
 import {Server} from "./server";
 
-// FIXME remove when esm is ready
-const [, rootDir] = filedirname();
+const rootDir = __dirname
 
 // /!\ configuration file must be outside of your src directory
 process.env["NODE_CONFIG_DIR"] = `${rootDir}/../config`;

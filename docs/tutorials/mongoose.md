@@ -44,7 +44,7 @@ Since mongoose v5.11.0, the module exposes its own file definition and can break
 To solve it, install @tsed/mongoose v6.14.1 and remove the `@types/mongoose` dependencies.
 :::
 
-Then import `@tsed/mongoose` in your [Configuration](/docs/configuration.md):
+Then import `@tsed/mongoose` in your [Configuration](/docs/configuration/index.md):
 
 ## Configuration
 

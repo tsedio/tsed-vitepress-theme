@@ -322,13 +322,30 @@ on [Response filters](/docs/response-filter).
 
 Object configure Multer. See more on [Upload file](/docs/upload-files).
 
+## router
+
+```typescript
+@Configuration({
+  router: {
+    appendChildrenRoutesFirst: true
+  }
+})
+```
+
+### router.appendChildrenRoutesFirst
+
+- type: `boolean`
+
+Append children routes before the controller routes itself. Defaults to `false`, but will be deprecated and set to `true` in next major version.
+
 ## jsonMapper
 
 ```typescript
 @Configuration({
   jsonMapper: {
     additionalProperties: false,
-    disableUnsecureConstructor: true
+    disableUnsecureConstructor: true,
+    strictGroups: false
   }
 })
 ```
@@ -352,10 +369,12 @@ class MyModel {
 }
 ```
 
-::: tip Note
-Recommended: Set this options to `true` in your new project.
+### jsonMapper.strictGroups
 
-In v7 this option will be set to true by default.
+Enable strict mode for `@Groups` decorator. By default, `false`. See [Groups](/docs/model.md#groups-strict-mode) for more information.
+
+::: warning
+The `strictGroups` option is enabled by default in the next major version of Ts.ED.
 :::
 
 ## Platform Options
