@@ -338,8 +338,7 @@ export class TimeslotsLambda {
 
 ## Testing
 
-Ts.ED provide a way to test you lambda with mocked Aws event and context by using the @@PlatformServerlessTest@@ util.
-
+Ts.ED provides a way to test your lambda with mocked AWS event and context by using the @@PlatformServerlessTest@@ util.
 Here an example to test a Lambda controller:
 
 ```typescript
