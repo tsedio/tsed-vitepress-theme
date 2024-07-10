@@ -159,96 +159,10 @@ Result:
 
 <figure><img src="/vike-tsed.png" style="max-height: 300px; background: white"></figure>
 
-## Add a controlled page
-
-By default, vike does Filesystem Routing:
-
-```
-FILESYSTEM                        URL
-pages/index.page.js               /
-pages/about.page.js               /about
-pages/faq/index.page.js           /faq
-pages/movies/@id/index.page.js    /movies/1, /movies/2, /movies/3, ...
-```
-
-So if you want to expose a movies page with the url `/movies`, create a new
-file `packages/app/pages/movies/index.page.tsx`:
-
-```tsx
-import React from "react";
-import {PageContext} from "../../renderer/types";
-
-interface Movie {
-  id: string;
-  title: string;
-}
-
-export interface MoviesPageProps {
-  movies: Movie[];
-}
-
-export function Page({movies}: PageContext & MoviesPageProps) {
-  return (
-    <>
-      <h1>Movies</h1>
-
-      <ul>
-        {movies.map((doc) => {
-          return (
-            <li>
-              <a href={"/movies/" + movies.id}>
-                <span>{movies.title}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </>
-  );
-}
-```
-
-::: tip
-You can also define so-called "Route Strings" and "Route Functions".
-
-```tsx
-// /pages/movies.page.route.js
-
-// This file defines the route of `/pages/movies.page.js`
-
-// Route String
-export default "/movies/@movieId";
-```
-
-:::
-
-Then create a new Ts.ED controller `MoviesController` under `packages/server/src/controllers/pages` to handle all
-requests that match the "/movies" route:
-
-```ts
-import {Controller, Get} from "@tsed/common";
-
-class Movie {
-  @Property()
-  id: string;
-
-  @Property()
-  title: string;
-}
-
-@Controller("/movies")
-export class MoviesController {
-  @Get("/")
-  @Returns(200, Array).Of(Movie)
-  @Vite()
-  get() {
-    return [
-      {id: "1", title: "Movie 1"},
-      {id: "2", title: "Movie 2"},
-      {id: "3", title: "Movie 3"}
-    ];
-  }
-}
+  - `packages/server/controllers/pages`: the controllers pages directory
+  - `packages/server/controllers/rest`: the controllers REST directory
+  - `packages/app/pages`: the pages directory
+  - `packages/app/renderer`: the app shell directory (header, footer, layout, etc...)
 ```
 
 ## Author
