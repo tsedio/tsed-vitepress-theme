@@ -37,13 +37,13 @@ Live example:
 - `dest` (`string`): The destination directory for the uploaded files.
 - `storage` (`StoreEngine`): The storage engine to use for uploaded files.
 - `limits` (`Object`): An object specifying the size limits of the following optional properties. This object is passed to busboy directly, and the details of properties can be found on [https://github.com/mscdex/busboy](https://github.com/mscdex/busboy).
-    - `fieldNameSize` (`number`): Max field name size (Default: 100 bytes).
-    - `fieldSize` (`number`): Max field value size (Default: 1MB).
-    - `fields` (`number`): Max number of non- file fields (Default: Infinity).
-    - `fileSize` (`number`): For multipart forms, the max file size (in bytes)(Default: Infinity).
-    - `files` (`number`): For multipart forms, the max number of file fields (Default: Infinity).
-    - `parts` (`number`): For multipart forms, the max number of parts (fields + files)(Default: Infinity).
-    - `headerPairs` (`number`): For multipart forms, the max number of header `key => value` pairs to parse Default: 2000(same as node's http).
+  - `fieldNameSize` (`number`): Max field name size (Default: 100 bytes).
+  - `fieldSize` (`number`): Max field value size (Default: 1MB).
+  - `fields` (`number`): Max number of non- file fields (Default: Infinity).
+  - `fileSize` (`number`): For multipart forms, the max file size (in bytes)(Default: Infinity).
+  - `files` (`number`): For multipart forms, the max number of file fields (Default: Infinity).
+  - `parts` (`number`): For multipart forms, the max number of parts (fields + files)(Default: Infinity).
+  - `headerPairs` (`number`): For multipart forms, the max number of header `key => value` pairs to parse Default: 2000(same as node's http).
 - `preservePath` (`boolean`): Keep the full path of files instead of just the base name (Default: false).
 - `fileFilter` (`Function`): Optional function to control which files are uploaded. This is called for every file that is processed.
 
