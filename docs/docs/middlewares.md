@@ -1,10 +1,10 @@
 # Middlewares
 
-@@Middleware@@ is similar to the Express middleware with the difference that it's a class and you can use the IoC container
+@@Middleware@@ is similar to the Express middleware with the difference that it's a class and you can use the IoC
 to inject other services on its constructor.
 
-All middleware classes decorated by @@Middleware@@ have one method named `use()`.
-This method can use all parameter decorators as you could see with the [Controllers](/docs/controllers) and return a promise.
+All middlewares decorated by @@Middleware@@ have one method named `use()`.
+This method can use all parameters decorators as you could see with the [Controllers](/docs/controllers.md) and return a promise.
 
 ![Middleware](./assets/middleware.png)
 
@@ -15,7 +15,7 @@ Create a new Class definition then add the @@Middleware@@ decorator.
 
 <<< @/docs/snippets/middlewares/middleware-example.ts
 
-You have different use cases to declare and use a middleware as follows:
+You have different usecases to declare and use a middleware as following:
 
 - [Global middleware](/docs/middlewares#global-middleware): this middleware can be used on the Server,
 - [Endpoint middleware](/docs/middlewares#endpoint-middleware): this middleware can be used on a controller method,
@@ -23,12 +23,12 @@ You have different use cases to declare and use a middleware as follows:
 
 ::: tip Note
 Global middleware and endpoint middleware are similar, except that the Endpoint middleware
-can access to the current executed endpoint information.
+can access to the last executed endpoint information.
 :::
 
 ## Global middleware
 
-Global middleware instances are generally used to handle requests before or after controllers.
+Global middlewares are generally used to handle requests before or after controllers.
 
 <<< @/docs/snippets/middlewares/global-middleware.ts
 
@@ -56,7 +56,7 @@ import {Configuration, ProviderScope, ProviderType} from "@tsed/di";
 export class Server {}
 ```
 
-The middlewares added through `middlewares` options will always be registered after the middleware instances registered through the hook methods!
+The middlewares added through `middlewares` options will always be registered after the middlewares registered through the hook methods!
 
 ::: warn
 Only Express/Koa middlewares can be added on `$beforeInit`, `$onInit` and `$afterInit` hooks.
@@ -68,7 +68,7 @@ To add Ts.ED middleware, use the `$beforeRoutesInit` hook (it's the default hook
 
 ## Endpoint middleware
 
-Endpoint middleware isn't really different from global middleware, but its goal is to handle a request before ~~or after~~ endpoint.
+Endpoint middleware is not really different from global middleware, but its goal is to handle a request before or after endpoint.
 It knows which endpoint is executed by using the @@EndpointInfo@@ decorator.
 
 The following example, show you how to implement the middleware and use it with a custom decorator.
@@ -119,13 +119,13 @@ But Ts.ED provide many other way to catch error properly:
 This feature will be deprecated and removed in the future Ts.ED versions.
 :::
 
-Express allows you to handle any error when your middleware has 4 parameters like this:
+Express allows you to handle any error when your middleware have 4 parameters like this:
 
 ```javascript
 function (error, req, res, next){}
 ```
 
-Ts.ED has the same mechanism with the @@Err@@ decorator. Use this decorator on a middleware to create a handler which will only
+Ts.ED has the same mechanism with @@Err@@ decorator. Use this decorator on a middleware to create a handler which will only
 called when an error occurs on th decorated endpoint.
 
 ::: code-group
@@ -136,7 +136,7 @@ called when an error occurs on th decorated endpoint.
 
 :::
 
-If you plan to catch errors globally see our [Exception filter](/docs/exceptions) page.
+If you planed to catch errors globally see our [Exception filter](/docs/exceptions) page.
 
 ## Specifics parameters decorators
 
@@ -158,7 +158,7 @@ As you see in the previous section, a middleware can be used on different contex
 A middleware added to a controller or endpoint level has the same constraint as the endpoint method itself.
 It'll be played only when the url request matches with the path associated to the controller and its endpoint method.
 
-When a request is sent to the server all middlewares added in the server, [Controller](/docs/controllers.md) or Endpoint with decorators
+When a request is sent to the server all middlewares added in the Server, [Controller](/docs/controllers.md) or Endpoint with decorators
 will be called while a response isn't sent by one of the handlers/middlewares in the stack.
 
 ![middleware in sequence](./assets/middleware-in-sequence.svg)
@@ -201,7 +201,7 @@ The decorator @@OverrideProvider@@ gives you the ability to override some intern
 
 <<< @/docs/snippets/middlewares/override-middleware.ts
 
-Here we use the new [Platform API](/docs/platform-api.md) to write our middleware logic.
+Here we use the new [Platform API](/docs/platform-api.md) to write our middleware.
 By using @@Context@@ decorator and @@PlatformContext@@ class we can get some information:
 
 - The data returned by the last executed endpoint,
