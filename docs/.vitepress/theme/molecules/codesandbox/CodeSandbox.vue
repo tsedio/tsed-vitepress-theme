@@ -3,7 +3,7 @@ import {computed, ref} from "vue";
 import Button from "../button/Button.vue";
 
 export interface CodeSandboxProps {
-  sandboxId?: string;
+  sandboxId: string;
   fontSize?: number;
   hideNavigation?: number;
   theme?: string;
@@ -21,8 +21,7 @@ const props = withDefaults(defineProps<CodeSandboxProps>(), {
     "accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking",
   sandbox: "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts",
   height: "500px",
-  title: "",
-  sandboxId: ""
+  title: ""
 });
 const show = ref(false);
 

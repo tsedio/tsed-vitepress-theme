@@ -9,7 +9,34 @@ const meta = {
   parameters: {
     layout: "centered"
   },
-  argTypes: {},
+  argTypes: {
+    sandboxId: {
+      control: {
+        type: "text"
+      }
+    },
+    title: {
+      control: {
+        type: "text"
+      }
+    },
+    fontSize: {
+      control: {
+        type: "number"
+      }
+    },
+    hideNavigation: {
+      control: {
+        type: "number"
+      }
+    },
+    theme: {
+      control: {
+        type: "select",
+        options: ["light", "dark"]
+      }
+    }
+  },
   render: (args) => ({
     components: {CodeSandbox},
     setup() {

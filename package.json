@@ -10,8 +10,10 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix && yarn run prettier:fix",
     "prettier:fix": "prettier . --write",
-    "storybook": "storybook dev -p 6006",
+    "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
+    "storybook:test": "yarn test-storybook",
+    "storybook:test:ci": "yarn test-storybook --maxWorkers=2",
     "build-storybook": "yarn storybook:build",
     "prepare": "is-ci && husky install",
     "chromatic": "npx chromatic"
