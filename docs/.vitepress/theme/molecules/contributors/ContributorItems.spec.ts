@@ -9,7 +9,15 @@ describe("<ContributorItems>", () => {
 
   it("renders ButtonBadges when items are present", () => {
     render(ContributorItems, {
-      props: {items}
+      props: {items},
+      global: {
+        directives: {
+          lazyloadObserver: {
+            mounted() {},
+            updated() {}
+          }
+        }
+      }
     });
     expect(screen.getByText(items[0].login)).toBeInTheDocument();
     expect(screen.getByText(items[1].login)).toBeInTheDocument();
@@ -17,7 +25,15 @@ describe("<ContributorItems>", () => {
 
   it("does not render ButtonBadges when items are empty", () => {
     render(ContributorItems, {
-      props: {items: []}
+      props: {items: []},
+      global: {
+        directives: {
+          lazyloadObserver: {
+            mounted() {},
+            updated() {}
+          }
+        }
+      }
     });
     expect(screen.queryByText(items[0]?.login)).not.toBeInTheDocument();
     expect(screen.queryByText(items[1]?.login)).not.toBeInTheDocument();

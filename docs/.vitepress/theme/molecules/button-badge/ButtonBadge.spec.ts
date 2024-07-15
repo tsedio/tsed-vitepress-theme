@@ -11,12 +11,17 @@ describe("<ButtonBadge>", () => {
         showTitle: true,
         width: 60,
         bgColor: "gray-lighter",
-        color: "blue",
         blur: 0,
         textSize: "xxs",
-        shadow: "",
-        padding: 5,
-        fontWeight: "400"
+        padding: 5
+      },
+      global: {
+        directives: {
+          lazyloadObserver: {
+            mounted() {},
+            updated() {}
+          }
+        }
       }
     });
 
@@ -35,12 +40,17 @@ describe("<ButtonBadge>", () => {
         showTitle: false,
         width: 60,
         bgColor: "gray-lighter",
-        color: "blue",
         blur: 0,
         textSize: "xxs",
-        shadow: "",
-        padding: 5,
-        fontWeight: "400"
+        padding: 5
+      },
+      global: {
+        directives: {
+          lazyloadObserver: {
+            mounted() {},
+            updated() {}
+          }
+        }
       }
     });
 
@@ -56,12 +66,17 @@ describe("<ButtonBadge>", () => {
         showTitle: true,
         width: 60,
         bgColor: "gray-lighter",
-        color: "blue",
         blur: 5,
         textSize: "xxs",
-        shadow: "",
-        padding: 5,
-        fontWeight: "400"
+        padding: 5
+      },
+      global: {
+        directives: {
+          lazyloadObserver: {
+            mounted() {},
+            updated() {}
+          }
+        }
       }
     });
 
