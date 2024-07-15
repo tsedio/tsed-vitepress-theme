@@ -1,7 +1,8 @@
 import contributors from "./contributors.json";
 import ContributorItems from "./ContributorItems.vue";
-import type {Meta} from "@storybook/vue3";
+import type {Meta, StoryObj} from "@storybook/vue3";
 import {COLORS_LIST} from "../../utils/colors";
+import {expect, within} from "@storybook/test";
 
 const meta = {
   title: "ContributorItems",
@@ -50,17 +51,46 @@ const meta = {
 } satisfies Meta<typeof ContributorItems>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = {
+function delay() {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 1000);
+  });
+}
+
+export const Default: Story = {
   args: {
     showTitle: false,
     width: 60,
-    items: contributors,
+    items: contributors as any[],
     bgColor: "gray-lighter",
     textSize: "sm",
     blur: 0,
     padding: 5,
     innerPadding: 0,
     shadow: "lg"
+  },
+  async play({canvasElement}) {
+    const canvas = within(canvasElement);
+    const items = canvas.getAllByRole("listitem");
+
+    await expect(items).toHaveLength(contributors.length);
+
+    let button = within(items[0]).getByRole("link");
+
+    await delay();
+
+    button.focus();
+
+    button = within(items[1]).getByRole("link");
+
+    await delay();
+
+    button.focus();
+
+    await delay();
+
+    button.blur();
   }
 };

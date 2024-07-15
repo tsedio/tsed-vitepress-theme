@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
 import ButtonBadges from "../button-badge/ButtonBadges.vue";
+import type {ButtonBadgeProps} from "../button-badge/ButtonBadge.vue";
 
-interface Props {
+interface Props extends ButtonBadgeProps {
   items: GitHubUser[];
+  innerPadding?: number;
   liClass?: string;
 }
 
@@ -15,10 +17,8 @@ const props = withDefaults(defineProps<Props>(), {
   color: "blue",
   blur: 0,
   textSize: "xxs",
-  shadow: "",
   padding: 5,
   innerPadding: 0,
-  fontWeight: "400",
   liClass: ""
 });
 </script>
