@@ -62,7 +62,7 @@ describe("<GithubContributors>", () => {
             class=""
           >
             <a
-              class="block reset-link"
+              class="button-badge block reset-link"
               href=""
               innerpadding="0"
               liclass=""
@@ -71,7 +71,8 @@ describe("<GithubContributors>", () => {
             >
               
               <span
-                class="flex flex-col transition-all relative no-underline scale-100 hover:scale-110 text-xxs"
+                class="flex flex-col transition-all relative no-underline text-xxs"
+                data-testid="button-badge-content"
               >
                 <figure
                   class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2 bg-gray-lighter"

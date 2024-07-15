@@ -73,9 +73,10 @@ const overflow = (text = "") => {
 </script>
 
 <template>
-  <Link :href="href" outbound="false" :title="title" class="block reset-link">
+  <Link :href="href" outbound="false" :title="title" class="button-badge block reset-link">
     <span
-      class="flex flex-col transition-all relative no-underline scale-100 hover:scale-110"
+      data-testid="button-badge-content"
+      class="flex flex-col transition-all relative no-underline"
       :class="[textSize && `text-${textSize}`]"
     >
       <figure
@@ -110,3 +111,12 @@ const overflow = (text = "") => {
     </span>
   </Link>
 </template>
+<style>
+.vp-doc a.button-badge {
+  @apply transition-all scale-100 hover:scale-110 focus:scale-110;
+  outline: none;
+}
+.vp-doc a.button-badge:focus-visible {
+  outline: none !important;
+}
+</style>
