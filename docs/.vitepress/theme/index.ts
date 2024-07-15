@@ -1,13 +1,15 @@
 // https://vitepress.dev/guide/custom-theme
 import {h} from "vue";
 import type {Theme} from "vitepress";
-import DefaultTheme from "vitepress/theme";
+import DefaultTheme, {VPButton} from "vitepress/theme";
 import "./tailwind.css";
 import "./style.css";
 import ApiAnchorQuery from "./molecules/api-anchor/ApiAnchorQuery.vue";
 import ApiList from "./molecules/api-list/ApiList.vue";
 import GithubContributors from "./organisms/github-contributors/GithubContributors.vue";
 import LazyLoadObserver from "./directives/lazyLoadObserver";
+import Projects from "./organisms/projects/Projects.vue";
+import CodeSandbox from "./molecules/codesandbox/CodeSandbox.vue";
 import Button from "./molecules/button/Button.vue";
 import CodeSandbox from "./molecules/codesandbox/CodeSandbox.vue";
 
@@ -25,6 +27,10 @@ export default {
     app.component("CodeSandbox", CodeSandbox);
     // eslint-disable-next-line vue/no-reserved-component-names
     app.component("Button", Button);
+    app.component("Projects", Projects);
+    app.component("CodeSandbox", CodeSandbox);
+    app.component("VPButton", VPButton);
+    // app.component("Button", Button);
     app.directive("lazyload-observer", LazyLoadObserver);
   }
 } satisfies Theme;
