@@ -30,7 +30,8 @@ export default {
     app.component("Projects", Projects);
     app.component("CodeSandbox", CodeSandbox);
     app.component("VPButton", VPButton);
-    // app.component("Button", Button);
+    // eslint-disable-next-line vue/no-reserved-component-names
+    app.component("Button", Button);
     app.directive("lazyload-observer", LazyLoadObserver);
   }
 } satisfies Theme;

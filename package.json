@@ -7,8 +7,6 @@
     "docs:preview": "vitepress preview docs",
     "typescript": "tsc --init",
     "test": "vitest run",
-    "test:storybook": "yarn test-storybook",
-    "test:storybook:ci": "yarn test-storybook --maxWorkers=2",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix && yarn run prettier:fix",
     "prettier:fix": "prettier . --write",
