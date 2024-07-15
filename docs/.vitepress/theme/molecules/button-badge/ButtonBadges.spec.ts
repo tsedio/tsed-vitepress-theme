@@ -8,7 +8,15 @@ function getFixture(props: any = {}) {
   ];
 
   return render(ButtonBadges, {
-    props: {items, ...props}
+    props: {items, ...props},
+    global: {
+      directives: {
+        lazyloadObserver: {
+          mounted() {},
+          updated() {}
+        }
+      }
+    }
   });
 }
 

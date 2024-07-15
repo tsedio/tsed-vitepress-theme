@@ -14,8 +14,10 @@ import "vitepress/dist/client/theme-default/styles/components/vp-doc.css";
 import "vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
 import "../docs/.vitepress/theme/style.css";
 import LazyLoadObserver from "../docs/.vitepress/theme/directives/lazyLoadObserver";
+import VPButton from "./mock/VPButton.vue";
 
 setup((app) => {
+  app.component("VPButton", VPButton);
   app.directive("lazyload-observer", LazyLoadObserver);
 });
 

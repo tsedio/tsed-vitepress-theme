@@ -1,25 +1,10 @@
-import {describe, it, expect, vi} from "vitest";
-import {mount} from "@vue/test-utils";
+import {describe, expect, it, vi} from "vitest";
 import GithubContributors from "./GithubContributors.vue";
-import ContributorItems from "../../molecules/contributors/ContributorItems.vue";
-import {useGithubContributors} from "../../composables/api/useGithubContributors";
+import {render, screen} from "@testing-library/vue";
 
 vi.mock("../../composables/api/useGithubContributors", () => {
-  const fetchContributors = vi.fn();
-  return {
-    useGithubContributors: () => ({
-      fetchContributors
-    }),
-    fetchContributors
-  };
-});
-
-describe("<GithubContributors>", () => {
-  it("renders ContributorItems with the correct props when fetch is successful and users are filtered", async () => {
-    const {fetchContributors} = useGithubContributors("https://api.tsed.io/rest/github/tsedio/tsed");
-
-    // Mocked data for GitHub contributors
-    const mockContributors = [
+  const fetchContributors = vi.fn().mockResolvedValue({
+    value: [
       {
         login: "Romakita",
         id: 1763311,
@@ -34,20 +19,83 @@ describe("<GithubContributors>", () => {
         avatar_url: "https://avatars.githubusercontent.com/u/123456?v=4",
         contributions: 150
       }
-    ];
+    ]
+  });
 
-    vi.mocked(fetchContributors).mockResolvedValue({value: mockContributors} as any);
+  return {
+    useGithubContributors: () => ({
+      fetchContributors
+    }),
+    fetchContributors
+  };
+});
 
-    const wrapper = mount(GithubContributors, {
+describe("<GithubContributors>", () => {
+  it("renders ContributorItems with the correct props when fetch is successful and users are filtered", async () => {
+    const {container} = render(GithubContributors, {
       props: {
         users: ["Romakita"],
         showTitle: true
+      },
+      global: {
+        directives: {
+          lazyloadObserver: {
+            mounted() {},
+            updated() {}
+          }
+        }
       }
     });
 
-    await wrapper.vm.$nextTick();
+    await vi.waitFor(() => {
+      return expect(screen.queryAllByRole("img")).toHaveLength(1);
+    });
 
-    const contributorItemsWrapper = wrapper.findComponent(ContributorItems);
-    expect(contributorItemsWrapper.exists()).toBe(true);
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <ul
+          class="mb-5 reset-list flex flex-wrap items-center gap-2"
+          color="blue"
+        >
+          
+          <li
+            class=""
+          >
+            <a
+              class="block reset-link"
+              href=""
+              innerpadding="0"
+              liclass=""
+              outbound="false"
+              title="Romakita"
+            >
+              
+              <span
+                class="flex flex-col transition-all relative no-underline scale-100 hover:scale-110 text-xxs"
+              >
+                <figure
+                  class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2 bg-gray-lighter"
+                  style="width: 45px; height: 45px;"
+                >
+                  <img
+                    class="w-full opacity-0 rounded-2xl transition-all no-shadow"
+                    data-url="https://avatars.githubusercontent.com/u/1763311?v=4"
+                  />
+                </figure>
+                <!--v-if-->
+                <span
+                  class="flex items-center justify-center whitespace-pre"
+                  style="width: 45px;"
+                >
+                  Romakita
+                </span>
+              </span>
+              
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    `);
   });
 });
