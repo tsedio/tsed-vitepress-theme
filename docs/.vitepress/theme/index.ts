@@ -10,6 +10,7 @@ import GithubContributors from "./organisms/github-contributors/GithubContributo
 import LazyLoadObserver from "./directives/lazyLoadObserver";
 import Button from "./molecules/button/Button.vue";
 import CodeSandbox from "./molecules/codesandbox/CodeSandbox.vue";
+import Projects from "./organisms/projects/Projects.vue";
 
 export default {
   extends: DefaultTheme,
@@ -23,6 +24,7 @@ export default {
     app.component("ApiAnchorQuery", ApiAnchorQuery);
     app.component("GithubContributors", GithubContributors);
     app.component("CodeSandbox", CodeSandbox);
+    app.component("Projects", Projects);
     // eslint-disable-next-line vue/no-reserved-component-names
     app.component("Button", Button);
     app.directive("lazyload-observer", LazyLoadObserver);

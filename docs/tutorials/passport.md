@@ -1,3 +1,18 @@
+---
+projects:
+- title: Kit Passport.js
+  href: https://github.com/tsedio/tsed-example-passportjs
+  src: /passportjs.png
+- title: Kit JWT
+  href: https://github.com/tsedio/tsed-passport-jwt-example/
+  src: /passportjs.png
+- title: Kit TypeORM
+  href: https://github.com/tsedio/tsed-example-typeorm
+  src: /typeorm.png
+- title: Kit Azure AD
+  href: https://github.com/tsedio/tsed-example-passport-azure-ad
+  src: /azure.png
+---
 # Passport.js
 
 <Banner src="/passportjs.png" height="128" href="http://www.passportjs.org/"></Banner>

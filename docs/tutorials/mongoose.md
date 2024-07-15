@@ -1,3 +1,9 @@
+---
+projects:
+  - title: Kit Mongoose
+    href: https://github.com/tsedio/tsed-example-mongoose
+    src: /mongoose.png
+---
 # Mongoose
 
 <Banner src="/mongoose.png" height="200" href="http://mongoosejs.com/"></Banner>

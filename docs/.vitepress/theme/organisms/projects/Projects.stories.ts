@@ -1,13 +1,11 @@
 import {COLORS_LIST} from "../../utils/colors";
 
-import GithubContributors from "./GithubContributors.vue";
+import Projects from "./Projects.vue";
 import type {Meta, StoryObj} from "@storybook/vue3";
-/**
- * Use to display a basic ***github contributors*** from API.
- */
+
 const meta = {
-  title: "GithubContributors",
-  component: GithubContributors,
+  title: "Projects",
+  component: Projects,
   parameters: {
     layout: "centered"
   },
@@ -16,11 +14,6 @@ const meta = {
       control: "select",
       options: COLORS_LIST,
       default: "gray-lighter"
-    },
-    color: {
-      control: "select",
-      options: COLORS_LIST,
-      default: "platinium"
     },
     width: {
       control: "number",
@@ -34,11 +27,6 @@ const meta = {
     blur: {
       control: "number",
       default: 0
-    },
-    fontWeight: {
-      control: "select",
-      options: ["hairline", "thin", "light", "normal", "medium", "semibold", "bold", "extrabold", "black"],
-      default: "bold"
     },
     padding: {
       control: "number",
@@ -55,24 +43,14 @@ const meta = {
     },
     showTitle: {}
   }
-} satisfies Meta<typeof GithubContributors>;
+} satisfies Meta<typeof Projects>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 /**
- * Use to display a basic ***github contributors*** from API.
+ * Use to display a basic ***projects*** from frontmatter metadata.
  */
 export const Default: Story = {
-  args: {
-    users: []
-  }
-};
-/**
- * Use to display a basic ***github contributors*** from API. Add users props to filter list.
- */
-export const WithFilteredUsers: Story = {
-  args: {
-    users: ["Romakita", "LorianeE"]
-  }
+  args: {}
 };

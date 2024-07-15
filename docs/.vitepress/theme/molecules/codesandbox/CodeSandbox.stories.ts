@@ -48,8 +48,19 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
+/**
+ * Use to display a ***CodeSandbox*** with his initial state.
+ */
 export const Default: Story = {
+  args: {
+    sandboxId: "rough-frost-6bi81",
+    title: "Multer example"
+  }
+};
+/**
+ * Use to display a ***CodeSandbox*** with ***play***.
+ */
+export const WithPlay: Story = {
   args: {
     sandboxId: "rough-frost-6bi81",
     title: "Multer example"

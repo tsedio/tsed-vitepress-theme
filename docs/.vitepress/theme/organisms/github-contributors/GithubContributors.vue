@@ -4,19 +4,13 @@ import {useGithubContributors} from "../../composables/api/useGithubContributors
 import ContributorItems from "../../molecules/contributors/ContributorItems.vue";
 import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
 import {useThemeConfig} from "../../composables/config/__mocks__/useThemeConfig";
+import type {ButtonBadgeProps} from "../../molecules/button-badge/ButtonBadge.vue";
+import {FONT_WEIGHT} from "../../atoms/tailwind.constants";
 
-interface Props {
+interface Props extends ButtonBadgeProps {
   users?: string[];
   showTitle?: boolean;
-  width?: string | number;
-  bgColor?: string;
-  color?: string;
-  blur?: number;
-  textSize?: string;
-  shadow?: string;
-  padding?: string | number;
-  innerPadding?: string | number;
-  fontWeight?: string;
+  innerPadding?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -24,13 +18,11 @@ const props = withDefaults(defineProps<Props>(), {
   showTitle: false,
   width: 45,
   bgColor: "gray-lighter",
-  color: "blue",
   blur: 0,
   textSize: "xxs",
-  shadow: "",
   padding: 2,
   innerPadding: 0,
-  fontWeight: "400",
+  fontWeight: FONT_WEIGHT.normal as "normal",
   liClass: ""
 });
 
