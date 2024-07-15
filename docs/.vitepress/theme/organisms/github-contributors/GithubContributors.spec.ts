@@ -55,7 +55,6 @@ describe("<GithubContributors>", () => {
       <div>
         <ul
           class="mb-5 reset-list flex flex-wrap items-center gap-2"
-          color="blue"
         >
           
           <li
@@ -75,7 +74,7 @@ describe("<GithubContributors>", () => {
                 data-testid="button-badge-content"
               >
                 <figure
-                  class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2 bg-gray-lighter"
+                  class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2 bg-gray-lighter shadow-none"
                   style="width: 45px; height: 45px;"
                 >
                   <img

@@ -14,7 +14,6 @@ const props = withDefaults(defineProps<Props>(), {
   showTitle: true,
   width: 60,
   bgColor: "gray-lighter",
-  color: "blue",
   blur: 0,
   textSize: "xxs",
   padding: 5,

@@ -82,7 +82,13 @@
     "docs/**/*.{ts,tsx,js,jsx,vue}": [
       "eslint --fix"
     ],
+    "*.{ts,tsx,js,jsx,vue}": [
+      "eslint --fix"
+    ],
     "**/*.{css,json,md,yml,yaml}": "prettier --write"
+  },
+  "resolutions": {
+    "vite": "5.3.3"
   },
   "packageManager": "yarn@4.1.1",
   "version": ""
