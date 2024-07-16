@@ -11,6 +11,7 @@ import LazyLoadObserver from "./directives/lazyLoadObserver";
 import Button from "./molecules/button/Button.vue";
 import CodeSandbox from "./molecules/codesandbox/CodeSandbox.vue";
 import Projects from "./organisms/projects/Projects.vue";
+import Banner from "./molecules/banner/Banner.vue";
 
 export default {
   extends: DefaultTheme,
@@ -27,6 +28,7 @@ export default {
     app.component("Projects", Projects);
     // eslint-disable-next-line vue/no-reserved-component-names
     app.component("Button", Button);
+    app.component("Banner", Banner);
     app.directive("lazyload-observer", LazyLoadObserver);
   }
 } satisfies Theme;
