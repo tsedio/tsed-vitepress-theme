@@ -22,14 +22,14 @@ const props = withDefaults(defineProps<Props>(), {
   fontWeight: "normal"
 });
 
-const {items, ...otherProps} = props;
 const {padding, liClass} = props;
+const {items, ...opts} = props;
 </script>
 
 <template>
   <ul class="mb-5 reset-list flex flex-wrap items-center" :class="[padding && `gap-${padding}`]">
-    <li v-for="item in items" :key="item.title" :class="[liClass]">
-      <ButtonBadge v-bind="otherProps" :title="item.title" :href="item.href" :src="item.src" :padding="innerPadding" />
+    <li v-for="item in props.items" :key="item.title" :class="[liClass]">
+      <ButtonBadge v-bind="opts" :title="item.title" :href="item.href" :src="item.src" :padding="innerPadding" />
     </li>
   </ul>
 </template>

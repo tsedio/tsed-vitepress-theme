@@ -28,6 +28,8 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    logo: "/tsed-og-header.png",
+    siteTitle: false,
     apiUrl: "https://tsed.io/api.json",
     apiRedirectUrl: "https://api-docs.tsed.io",
     repo: "tsedio/tsed",
@@ -516,7 +518,7 @@ export default defineConfig({
     socialLinks: [
       {icon: "github", link: "https://github.com/tsedio/tsed"},
       {icon: "slack", link: "https://slack.tsed.io"},
-      {icon: "twitter", link: "https://x.com/TsED_io"}
+      {icon: "twitter", link: "https://x.com/TsED_io"},
       // { icon: '', link: 'https://stackoverflow.com/search?q=tsed' },
     ],
     footer: {

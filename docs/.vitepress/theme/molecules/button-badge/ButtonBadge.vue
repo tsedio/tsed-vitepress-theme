@@ -85,7 +85,12 @@ const overflow = (text = "") => {
         :class="[bgColor && `bg-${bgColor}`, shadow && `shadow-${shadow}`, padding && `p-${padding}`]"
         :style="imageContainerStyle"
       >
-        <img v-if="src" :data-url="src" class="w-full opacity-0 rounded-2xl transition-all no-shadow" />
+        <img
+          v-if="src"
+          :data-url="src"
+          class="w-full opacity-0 transition-all no-shadow"
+          :class="{'rounded-2xl': !padding}"
+        />
         <span v-else class="flex items-center justify-center font-bold uppercase text-2xl h-full">{{
           initial(title)
         }}</span>
