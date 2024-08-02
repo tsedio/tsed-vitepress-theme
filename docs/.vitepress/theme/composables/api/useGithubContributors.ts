@@ -4,7 +4,7 @@ import type {GitHubUser} from "./interfaces/GithubUser";
 
 const outboundRE = /^[a-z]+:/i;
 
-function getHost(docsRepo: string) {
+export function getHost(docsRepo: string) {
   const base = outboundRE.test(docsRepo) ? docsRepo : `https://github.com/${docsRepo}`;
 
   return base.replace("/github.com", "/repos/api.github.com");

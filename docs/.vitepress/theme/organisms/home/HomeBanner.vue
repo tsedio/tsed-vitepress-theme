@@ -2,6 +2,15 @@
 import Tabs from "../../molecules/tabs/Tabs.vue";
 import Tab from "../../molecules/tabs/Tab.vue";
 import ButtonBanner from "./ButtonBanner.vue";
+import {useStargazers} from "../../composables/api/useStargazers";
+import {useThemeConfig} from "../../composables/config/__mocks__/useThemeConfig";
+
+const theme = useThemeConfig();
+const {githubProxyUrl} = theme.value;
+
+const {formattedStargazers, fetchStargazers} = useStargazers(githubProxyUrl, 2800);
+
+fetchStargazers();
 </script>
 <template>
   <div class="vp-doc w-[75%]">
@@ -66,7 +75,9 @@ import ButtonBanner from "./ButtonBanner.vue";
     </Tabs>
 
     <div class="flex justify-between space-x-2">
-      <ButtonBanner href="https://github.com/tsedio/tsed/stargazers" title="stars">2.8k</ButtonBanner>
+      <ButtonBanner href="https://github.com/tsedio/tsed/stargazers" title="stars">{{
+        formattedStargazers
+      }}</ButtonBanner>
       <ButtonBanner href="https://github.com/tsedio/tsed" title="Coverage">98%</ButtonBanner>
       <ButtonBanner href="https://github.com/tsedio/tsed/blob/production/LICENSE" title="License">
         <template #title>License</template>
