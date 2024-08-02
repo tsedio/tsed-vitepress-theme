@@ -60,7 +60,6 @@
     "is-ci": "^3.0.1",
     "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
-    "npm": "^10.8.2",
     "playwright": "1.45.1",
     "postcss": "^8.4.39",
     "prettier": "3.3.3",

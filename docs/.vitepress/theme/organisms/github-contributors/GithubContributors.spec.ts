@@ -78,7 +78,7 @@ describe("<GithubContributors>", () => {
                   style="width: 45px; height: 45px;"
                 >
                   <img
-                    class="w-full opacity-0 rounded-2xl transition-all no-shadow"
+                    class="w-full opacity-0 transition-all no-shadow rounded-2xl"
                     data-url="https://avatars.githubusercontent.com/u/1763311?v=4"
                   />
                 </figure>

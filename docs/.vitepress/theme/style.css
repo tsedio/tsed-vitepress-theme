@@ -93,7 +93,7 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #0075db 30%, #41d1ff);
 
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   --vp-home-hero-image-filter: blur(44px);
@@ -120,6 +120,15 @@
   --vp-custom-block-tip-text: var(--vp-c-text-1);
   --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+.VPHomeHero {
+  @apply bg-gray-100 dark:bg-gray-700 mb-10;
+}
+
+.box .icon {
+  background: var(--vp-c-indigo-1);
+  @apply text-white dark:text-black;
 }
 
 /**

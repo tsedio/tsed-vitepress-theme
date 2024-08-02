@@ -9,9 +9,11 @@ Ts.ED provides a level of abstraction above these common Node.js frameworks (Exp
 but also exposes their APIs directly for the developer. It gives developers the freedom to use the myriad of third-party
 node modules which are available for the underlying platform.
 
-:::
+<div class="tip custom-block" style="padding-top: 8px">
+
 Just want to try it out? Skip to the [Quickstart](/introduction/getting-started).
-:::
+
+</div>
 
 ## Philosophy
 
