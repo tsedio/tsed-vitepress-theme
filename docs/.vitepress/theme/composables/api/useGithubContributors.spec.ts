@@ -16,6 +16,7 @@ describe("useGithubContributors", () => {
 
     expect(contributors.value).toHaveLength(1);
     expect(contributors.value[0].login).toEqual("user1");
+    expect(axios.get).toHaveBeenCalledWith("https://repos/api.github.com/tsedio/tsed/contributors?page=1&per_page=100");
   });
 
   it("should handle errors when fetching Github contributors", async () => {
