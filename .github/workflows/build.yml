@@ -59,10 +59,10 @@ jobs:
         with:
           node-version: 20
           cache: yarn
-      - name: Install Playwright 🚀
-        run: npx playwright install --with-deps
       - name: Install dependencies 🚀
         run: yarn install --immutable
+      - name: Install Playwright 🚀
+        run: yarn playwright install
       - name: Build Storybook
         run: yarn storybook:build --quiet
       - name: Serve Storybook and run tests 🔍

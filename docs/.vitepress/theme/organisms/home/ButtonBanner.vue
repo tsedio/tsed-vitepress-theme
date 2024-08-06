@@ -16,10 +16,10 @@ const props = withDefaults(defineProps<ButtonBannerProps>(), {});
   >
     <div class="absolute flex z-0 p-[6px] h-full w-full">
       <div class="flex-1 bg-white/60 dark:bg-black/40 flex items-center w-full h-full rounded-md">
-        <span class="font-medium text-[13px] px-2 opacity-80 w-full text-center">{{ props.title }}</span>
+        <span class="font-medium text-[11px] sm:text-[13px] px-2 opacity-80 w-full text-center">{{ props.title }}</span>
       </div>
       <div class="flex items-center h-full px-2">
-        <span class="font-medium text-[15px] text-center w-full text-black dark:text-white">
+        <span class="font-medium text-[13px] sm:text-[15px] text-center w-full text-black dark:text-white">
           <slot name="default" />
         </span>
       </div>

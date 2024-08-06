@@ -45,7 +45,7 @@ jobs:
         run: |
           yarn docs:build
           touch docs/.vitepress/dist/.nojekyll
-          echo "beta.tsed.io" > docs/.vitepress/dist/CNAME
+          echo "beta.tsed.dev" > docs/.vitepress/dist/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

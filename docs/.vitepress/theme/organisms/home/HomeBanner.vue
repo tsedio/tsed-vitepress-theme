@@ -13,9 +13,9 @@ const {formattedStargazers, fetchStargazers} = useStargazers(githubProxyUrl, 280
 fetchStargazers();
 </script>
 <template>
-  <div class="vp-doc w-[75%]">
+  <div class="vp-doc m-auto w-[90%] sm:w-full lg:w-[75%] mt-10">
     <Tabs name="oCQs_" class="w-full">
-      <Tab class="language-sh h-[150px]" title="npm" active>
+      <Tab class="language-sh h-[120px] sm:h-[150px]" title="npm" active>
         <button title="Copy Code" class="copy"></button>
         <span class="lang">sh</span>
         <pre
@@ -28,7 +28,7 @@ fetchStargazers();
             style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> init</span><span
             style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> .</span></span></code></pre>
       </Tab>
-      <Tab class="language-sh h-[150px]" title="yarn">
+      <Tab class="language-sh h-[120px] sm:h-[150px]" title="yarn">
         <button title="Copy Code" class="copy"></button>
         <span class="lang">sh</span>
         <pre
@@ -46,7 +46,7 @@ fetchStargazers();
     style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> init</span><span
     style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> .</span></span></code></pre>
       </Tab>
-      <Tab class="language-sh h-[150px]" title="pnpm">
+      <Tab class="language-sh h-[120px] sm:h-[150px]" title="pnpm">
         <button title="Copy Code" class="copy"></button>
         <span class="lang">sh</span>
         <pre
@@ -59,7 +59,7 @@ fetchStargazers();
             style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> init</span><span
             style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> .</span></span></code></pre>
       </Tab>
-      <Tab class="language-sh h-[150px]" title="bun">
+      <Tab class="language-sh h-[120px] sm:h-[150px]" title="bun">
         <button title="Copy Code" class="copy"></button>
         <span class="lang">sh</span>
         <pre
@@ -74,7 +74,7 @@ fetchStargazers();
       </Tab>
     </Tabs>
 
-    <div class="flex justify-between space-x-2">
+    <div class="flex justify-between space-x-2 -mx-[24px] md:mx-0">
       <ButtonBanner href="https://github.com/tsedio/tsed/stargazers" title="stars">{{
         formattedStargazers
       }}</ButtonBanner>
