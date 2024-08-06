@@ -166,14 +166,28 @@ frameworks:
   - title: Pulse
     href: /tutorials/pulse.html
     src: /pulse.png
+partners:
+  - title: eGain
+    href: https://www.egain.com/
+    src: /partners/egain.webp
+  - title: PXR-tech
+    href: https://pxr.homerun.co/
+    src: https://cdn.homerun.co/52878/logo-donker1665669278logo.png
+    class: "max-w-[100px]"
+  - title: Weseek
+    href: https://weseek.co.jp/
+    src: https://avatars.githubusercontent.com/u/6468105?v=4
+    class: "max-w-[100px]"
+  - title: Zenika
+    href: https://www.zenika.com
+    src: /partners/zenika.svg
+  - title: Club Med
+    href: https://clubmed.com/
+    src: /partners/clubmed.svg
+  - title: schnell.digital
+    href: https://schnell.digital/
+    src: /partners/schnell.svg
+    class: "max-w-[120px]"
 ---
 
-[//]: # (## Why Ts.ED?)
 
-[//]: # ()
-[//]: # (Ts.ED is a Node.js Framework on top of Express/Koa.js. Written in Typescript, it helps you build your server-side application easily and quickly. If you want to start a complete out-of-the-box project or fully customize it yourself, Ts.ED will guide you there !)
-
-
-<Frameworks>
-Here are some of the libraries and technologies that we use or support with this framework
-</Frameworks>
