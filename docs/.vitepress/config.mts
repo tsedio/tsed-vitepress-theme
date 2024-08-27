@@ -264,7 +264,11 @@ export default defineConfig({
         items: [
           {
             text: "Team",
-            link: "/team"
+            link: "/more/team"
+          },
+          {
+            text: "Releases",
+            link: "https://github.com/tsedio/tsed/releases"
           }
         ]
       }

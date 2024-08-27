@@ -2,16 +2,22 @@
 import HomeFrameworks from "./HomeFrameworks.vue";
 import HomeContainer from "./HomeContainer.vue";
 import MessageCircleHeart from "../../atoms/svg/MessageCircleHeart.vue";
+import {computed} from "vue";
+import {useRoute} from "vitepress";
+const route = useRoute();
+const isHome = computed(() => {
+  return route.path === "/" || route.path === "";
+});
 </script>
 <template>
-  <HomeContainer :animate="true">
-    <HomeFrameworks>
+  <HomeContainer v-if="isHome" :animate="true">
+    <HomeFrameworks v-if="isHome">
       Here are some of the libraries and technologies that we use or support with this
       <strong>framework</strong>
     </HomeFrameworks>
   </HomeContainer>
 
-  <HomeContainer animate>
+  <HomeContainer v-if="isHome" animate>
     <div class="flex flex-col sm:flex-row pt-10 sm:pt-20 gap-10">
       <GithubContributors />
 

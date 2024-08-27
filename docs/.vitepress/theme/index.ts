@@ -16,6 +16,7 @@ import HomeBanner from "./organisms/home/HomeBanner.vue";
 import HomePartners from "./organisms/home/HomePartners.vue";
 import HomeFrameworks from "./organisms/home/HomeFrameworks.vue";
 import HomeBody from "./organisms/home/HomeBody.vue";
+import MessageCircleHeart from "./atoms/svg/MessageCircleHeart.vue";
 
 export default {
   extends: DefaultTheme,
@@ -34,9 +35,12 @@ export default {
     app.component("CodeSandbox", CodeSandbox);
     app.component("Projects", Projects);
     app.component("HomeFrameworks", HomeFrameworks);
+    app.component("MessageCircleHeart", MessageCircleHeart);
     // eslint-disable-next-line vue/no-reserved-component-names
     app.component("Button", Button);
     app.component("Banner", Banner);
     app.directive("lazyload-observer", LazyLoadObserver);
+
+    // Layouts
   }
 } satisfies Theme;

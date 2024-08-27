@@ -2,13 +2,23 @@
 import Partners, {type Partner} from "../../molecules/partners/Partners.vue";
 import {useFrontMatter} from "../../composables/config/useFrontMatter";
 import HomeContainer from "./HomeContainer.vue";
+import {useRoute} from "vitepress";
+import {computed} from "vue";
+
+const route = useRoute();
+
+const isHome = computed(() => {
+  return route.path === "/" || route.path === "";
+});
 
 const frontmatter = useFrontMatter();
 
-const partners = frontmatter.value.partners as Partner[];
+const partners = computed(() => {
+  return frontmatter.value.partners as Partner[];
+});
 </script>
 <template>
-  <HomeContainer class="mb-16">
+  <HomeContainer v-if="isHome" class="mb-16">
     <Partners :items="partners" />
   </HomeContainer>
 </template>
