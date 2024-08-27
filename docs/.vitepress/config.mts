@@ -23,12 +23,12 @@ export default defineConfig({
     ["meta", {property: "og:locale", content: "en"}],
     ["meta", {property: "og:title", content: "Ts.ED - A Node.js and TypeScript Framework on top of Express/Koa.js."}],
     ["meta", {property: "og:site_name", content: "Ts.ED"}],
-    ["meta", {property: "og:image", content: "https://tsed.io/vitepress-og.jpg"}],
-    ["meta", {property: "og:url", content: "https://vitepress.dev/"}]
+    ["meta", {property: "og:image", content: "https://tsed.dev/tsed-og.png"}],
+    ["meta", {property: "og:url", content: "https://tsed.dev/"}]
   ],
 
   themeConfig: {
-    logo: "/tsed-og-header.png",
+    logo: "/tsed.svg",
     siteTitle: false,
     apiUrl: "https://tsed.io/api.json",
     apiRedirectUrl: "https://api-docs.tsed.io",
@@ -518,7 +518,7 @@ export default defineConfig({
     socialLinks: [
       {icon: "github", link: "https://github.com/tsedio/tsed"},
       {icon: "slack", link: "https://slack.tsed.io"},
-      {icon: "twitter", link: "https://x.com/TsED_io"},
+      {icon: "twitter", link: "https://x.com/TsED_io"}
       // { icon: '', link: 'https://stackoverflow.com/search?q=tsed' },
     ],
     footer: {

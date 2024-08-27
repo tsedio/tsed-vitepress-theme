@@ -72,10 +72,11 @@
     background: rgb(243 244 246 / 1);
   }
 }
+
 .dark {
   .DocSearch-Button .DocSearch-Button-Key + .DocSearch-Button-Key,
   .DocSearch-Button .DocSearch-Button-Key {
-    background: rgb(35 39 47 / 1);
+    background: rgb(35 39 47 / 1) !important;
   }
 }
 
