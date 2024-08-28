@@ -1,6 +1,7 @@
-import {ref, type Ref} from "vue";
+import {ref} from "vue";
 import axios from "axios";
 import {getHost} from "./useGithubContributors";
+import {formatNumber} from "../../utils/format";
 
 export interface GithubRepository {
   id: number;
@@ -9,13 +10,6 @@ export interface GithubRepository {
   watchers_count: 2802;
   forks_count: 284;
   open_issues_count: 47;
-}
-
-function format(stargazers: Ref<number>) {
-  return new Intl.NumberFormat(undefined, {
-    notation: "compact",
-    compactDisplay: "short"
-  }).format(stargazers.value);
 }
 
 export function useStargazers(docsRepo: string, defaultValue = 0) {
@@ -36,5 +30,5 @@ export function useStargazers(docsRepo: string, defaultValue = 0) {
     }
   };
 
-  return {stargazers, formattedStargazers: format(stargazers), fetchStargazers};
+  return {stargazers, formattedStargazers: formatNumber(stargazers.value), fetchStargazers};
 }

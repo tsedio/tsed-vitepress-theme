@@ -1,40 +1,32 @@
 import type {Config} from "tailwindcss";
 import colors from "tailwindcss/colors";
 
-const primary = "hsla(208, 100%, 43%, 1)";
+const primary = "var(--vp-button-brand-bg)";
 
 export const tailwindPreset: Partial<Config> = {
   theme: {
     colors: {
       ...colors,
-
       blue: {
         DEFAULT: primary,
         default: primary,
-        50: "hsla(208, 100%, 91%, 1)",
-        100: "hsla(208, 100%, 83%, 1)",
-        200: "hsla(208, 100%, 75%, 1)",
-        300: "hsla(208, 100%, 67%, 1)",
-        400: "hsla(208, 100%, 59%, 1)",
-        500: "hsla(208, 100%, 51%, 1)",
+        50: "hsla(226, 54.3%, 91%, 1)",
+        100: "hsla(226, 54.3%, 83%, 1)",
+        200: "hsla(226, 54.3%, 75%, 1)",
+        300: "hsla(226, 54.3%, 67%, 1)",
+        400: "hsla(226, 54.3%, 59%, 1)",
+        500: "hsla(226, 54.3%, 61%, 1)",
         600: primary,
-        700: "hsla(208, 100%, 35%, 1)",
-        800: "hsla(208, 100%, 27%, 1)",
-        900: "hsla(208, 100%, 19%, 1)",
-        active: "hsla(190, 81%, 42%, 1)"
+        700: "hsla(226, 54.3%, 31%, 1)",
+        800: "hsla(226, 54.3%, 25%, 1)",
+        900: "hsla(226, 54.3%, 14%, 1)",
+        active: "var(--vp-button-brand-hover-bg)"
       },
-      // white: "hsla(0, 100%, 100%, 1)", // #ffffff
-      // "white-active": "hsla(190, 81%, 42%, 1)",
-      // "white-button": "hsla(0, 100%, 100%, 1)", // #ffffff
-      // "white-button-active": "hsla(0, 100%, 100%, 1)",
-
-      // code: "hsla(245, 17%, 29%, 1)",
-      // "code-active": "hsla(246, 17%, 25%, 1)",
-
-      // api
+      algoliaSearch: {
+        white: "rgb(243 244 246 / 1)",
+        dark: "rgb(28 30 33 / 1)"
+      },
       "api-default": "#507192"
-      // "gray-xxl": "#2c3e50",
-      // "line-even": "hsla(195, 22%, 96%, 1)",
     },
     extend: {
       fontSize: {
