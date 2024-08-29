@@ -267,5 +267,5 @@ Here is the complete `CalendarsController`:
 
 :::
 
-Our CRUD is ready to use. But the logic is entirely implemented in our controller. Ts.ED provide a way to separate the business logic from the controller logic using [Services](/docs/services.md).
+Our CRUD is ready to use. But the logic is entirely implemented in our controller. Ts.ED provide a way to separate the business logic from the controller logic using [Services](/docs/providers.md).
 So, the next step is to use DI to create and inject a service in our controller.
