@@ -101,7 +101,7 @@ techniques [here](/docs/injection-scopes.md).
 All configurations set with @@Module@@ or @@Configuration@@ can be retrieved with @@Constant@@ and @@Value@@ decorators.
 These decorators can be used with:
 
-- [Service](/docs/services.md),
+- [Service](/docs/services.md#services),
 - [Controller](/docs/controllers.md),
 - [Middleware](/docs/middlewares.md),
 - [Pipes](/docs/pipes.md).
