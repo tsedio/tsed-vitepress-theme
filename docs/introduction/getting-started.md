@@ -38,7 +38,7 @@ projects:
 
 ## Try it online
 
-You can try VitePress directly in your browser on [CodeSandbox](https://codesandbox.io/p/devbox/tsed-mongoose-example-omkbm).
+You can try Ts.ED directly in your browser on [CodeSandbox](https://codesandbox.io/p/devbox/tsed-mongoose-example-omkbm).
 
 ## Installation
 
