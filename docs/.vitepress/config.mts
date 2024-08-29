@@ -34,6 +34,9 @@ export default defineConfig({
     apiRedirectUrl: "https://api-docs.tsed.io",
     repo: "tsedio/tsed",
     githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
+    editLink: {
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path'
+    },
     search: {
       provider: "algolia",
       options: {
