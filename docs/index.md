@@ -182,7 +182,7 @@ partners:
     href: https://www.zenika.com
     src: /partners/zenika.svg
   - title: Club Med
-    href: https://clubmed.com/
+    href: https://clubmed.fr/
     src: /partners/clubmed.svg
   - title: schnell.digital
     href: https://schnell.digital/
