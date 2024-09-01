@@ -43,7 +43,7 @@ const choices = computed(() => {
       :class="[
         props.modelValue === choice.value
           ? 'bg-blue-active text-white'
-          : 'text-blue-900 bg-gray-400 hover:bg-gray-300 focus:bg-gray-300'
+          : 'text-blue-900 bg-blueGray-300 hover:bg-gray-300 focus:bg-gray-300'
       ]"
       @click="toggle(choice)"
     >
