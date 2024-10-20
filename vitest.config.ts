@@ -19,10 +19,10 @@ export default defineConfig({
       enabled: true,
       thresholds: {
         autoUpdate: true,
-        statements: 58.84,
-        branches: 77.87,
-        functions: 61.76,
-        lines: 58.84
+        statements: 62.23,
+        branches: 78.28,
+        functions: 66.66,
+        lines: 62.23
       },
       include: ["**/*.{ts,vue}"],
       exclude: [

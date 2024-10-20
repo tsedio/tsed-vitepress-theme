@@ -3,12 +3,6 @@ import SortBy from "./SortBy.vue";
 import {ref, watch} from "vue";
 import {expect, userEvent, waitFor, within} from "@storybook/test";
 
-function delay() {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
-}
-
 const meta = {
   title: "SortBy",
   component: SortBy,

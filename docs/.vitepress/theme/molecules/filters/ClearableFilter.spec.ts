@@ -25,7 +25,7 @@ describe("<ClearableFilter />", () => {
 
     expect(onClear).toHaveBeenCalled();
   });
-  it("should render component with empty keywords and 100 plugins", async () => {
+  it("should render component with empty keywords and 100 plugins", () => {
     const onClear = vi.fn();
 
     render(ClearableFilter, {

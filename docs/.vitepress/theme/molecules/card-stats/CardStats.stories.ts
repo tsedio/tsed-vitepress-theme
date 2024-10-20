@@ -1,6 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/vue3";
 import CardStats from "./CardStats.vue";
 import {within, expect} from "@storybook/test";
+import {formatNumber} from "../../utils/format";
 
 const meta = {
   title: "CardStats",
@@ -25,7 +26,7 @@ export const Default: StoryObj<typeof CardStats> = {
     expect(canvas.getByText("7")).toBeInTheDocument();
     expect(canvas.getByText("downloads last 30 days")).toBeInTheDocument();
 
-    expect(canvas.getByText("20 k")).toBeInTheDocument();
+    expect(canvas.getByText(formatNumber(20000))).toBeInTheDocument();
   },
   args: {
     items: [

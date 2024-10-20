@@ -263,6 +263,10 @@ export default defineConfig({
         ].sort((a, b) => (a.text < b.text ? -1 : 1))
       },
       {
+        text: "Plugins",
+        link: "./plugins"
+      },
+      {
         text: "More",
         items: [
           {
