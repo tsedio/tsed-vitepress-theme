@@ -3,12 +3,6 @@ import FilterBy from "./FilterBy.vue";
 import {ref, watch} from "vue";
 import {within, expect, waitFor, userEvent} from "@storybook/test";
 
-function delay() {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
-}
-
 const meta = {
   title: "FilterBy",
   component: FilterBy,

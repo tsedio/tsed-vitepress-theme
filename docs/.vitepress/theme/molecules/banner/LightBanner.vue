@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineProps, ref} from "vue";
+import {defineProps} from "vue";
 import {withDefaults} from "vue";
 
 interface LightBannerProps {

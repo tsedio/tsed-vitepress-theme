@@ -4,3 +4,5 @@ docs/.vitepress/cache
 !.storybook
 **/snippets/**
 packages
+**/node_modules
+storybook-static

@@ -1,12 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/vue3";
 import {expect, within} from "@storybook/test";
 import CardPackage from "./CardPackage.vue";
-
-function delay() {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
-}
+import {formatNumber} from "../../utils/format";
 
 const meta = {
   title: "CardPackage",
@@ -48,8 +43,8 @@ export const Official: Story = {
     await expect(screen.getByText("A TypeScript Framework on top of Express")).toBeInTheDocument();
     await expect(screen.queryByText("PREMIUM")).not.toBeInTheDocument();
 
-    await expect(screen.getByTestId("downloads-stats")).toHaveTextContent("68 k");
-    await expect(screen.getByTestId("stars-stats")).toHaveTextContent("2,8 k stars");
+    await expect(screen.getByTestId("downloads-stats")).toHaveTextContent(formatNumber(68000));
+    await expect(screen.getByTestId("stars-stats")).toHaveTextContent(formatNumber(2800) + " stars");
     await expect(screen.getByTestId("card-avatar")).toHaveAttribute(
       "src",
       "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573?s=48&d=mp"
@@ -84,8 +79,8 @@ export const Premium: Story = {
     await expect(screen.getByText("A TypeScript Framework on top of Express")).toBeInTheDocument();
     await expect(screen.queryByText("PREMIUM")).toBeInTheDocument();
 
-    await expect(screen.getByTestId("downloads-stats")).toHaveTextContent("68 k");
-    await expect(screen.getByTestId("stars-stats")).toHaveTextContent("2,8 k stars");
+    await expect(screen.getByTestId("downloads-stats")).toHaveTextContent(formatNumber(68000));
+    await expect(screen.getByTestId("stars-stats")).toHaveTextContent(formatNumber(2800) + " stars");
     await expect(screen.getByTestId("card-avatar")).toHaveAttribute(
       "src",
       "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573?s=48&d=mp"
@@ -120,8 +115,8 @@ export const Community: Story = {
     await expect(screen.getByText("A TypeScript Framework on top of Express")).toBeInTheDocument();
     await expect(screen.queryByText("PREMIUM")).not.toBeInTheDocument();
 
-    await expect(screen.getByTestId("downloads-stats")).toHaveTextContent("68 k");
-    await expect(screen.getByTestId("stars-stats")).toHaveTextContent("2,8 k stars");
+    await expect(screen.getByTestId("downloads-stats")).toHaveTextContent(formatNumber(68000));
+    await expect(screen.getByTestId("stars-stats")).toHaveTextContent(formatNumber(2800) + " stars");
     await expect(screen.getByTestId("card-avatar")).toHaveAttribute(
       "src",
       "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573?s=48&d=mp"
