@@ -17,6 +17,7 @@ import HomePartners from "./organisms/home/HomePartners.vue";
 import HomeFrameworks from "./organisms/home/HomeFrameworks.vue";
 import HomeBody from "./organisms/home/HomeBody.vue";
 import MessageCircleHeart from "./atoms/svg/MessageCircleHeart.vue";
+import Warehouse from "./organisms/warehouse/Warehouse.vue";
 
 export default {
   extends: DefaultTheme,
@@ -39,6 +40,7 @@ export default {
     // eslint-disable-next-line vue/no-reserved-component-names
     app.component("Button", Button);
     app.component("Banner", Banner);
+    app.component("Warehouse", Warehouse);
     app.directive("lazyload-observer", LazyLoadObserver);
 
     // Layouts
