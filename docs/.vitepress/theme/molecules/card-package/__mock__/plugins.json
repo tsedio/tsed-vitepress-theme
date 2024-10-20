@@ -1,0 +1,2510 @@
+[
+  {
+    "name": "@tsed/exceptions",
+    "description": "HTTP exceptions module for Ts.ED Framework and other pure Express application",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fexceptions",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/exceptions",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 84355,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/openspec",
+    "description": "OpenSpec2 and OpenSpec3 interfaces declarations for TypeScript application",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fopenspec",
+    "icon": "https://tsed.io/swagger.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/openspec",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 78172,
+    "stars": 2829,
+    "tags": [
+      "openspec"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/logger",
+    "description": "A multi channel logger written in TypeScript.",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/logger",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 71156,
+    "stars": 62,
+    "tags": [],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/platform-express",
+    "description": "A TypeScript Framework on top of Express",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-express",
+    "icon": "https://tsed.io/expressjs.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-express",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 68482,
+    "stars": 2829,
+    "tags": [
+      "platform"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-exceptions",
+    "description": "Platform exceptions module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-exceptions",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-exceptions",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 65948,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-params",
+    "description": "Params module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-params",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-params",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 65933,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-response-filter",
+    "description": "Platform response filter module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-response-filter",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-response-filter",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 65530,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/ajv",
+    "description": "AJV package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fajv",
+    "icon": "https://ajv.js.org/img/ajv.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/ajv",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 65352,
+    "stars": 2829,
+    "tags": [
+      "validation",
+      "jsonschema"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-views",
+    "description": "Views module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-views",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-views",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 64611,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-middlewares",
+    "description": "Middlewares module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-middlewares",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-middlewares",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 64316,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-log-middleware",
+    "description": "Log request middleware module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-log-middleware",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-log-middleware",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 62710,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/swagger",
+    "description": "Swagger package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fswagger",
+    "icon": "https://tsed.io/swagger.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/swagger",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 61007,
+    "stars": 2829,
+    "tags": [
+      "openspec"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/engines",
+    "description": "Template engines library. Provide an API to adding custom engines from decorators.",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fengines",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://tsed.io/docs/templating.html#configuration",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 57393,
+    "stars": 2829,
+    "tags": [
+      "engines"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-cache",
+    "description": "Platform cache module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-cache",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-cache",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 52566,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/logger-file",
+    "description": "File appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-file",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/file",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 44673,
+    "stars": 62,
+    "tags": [],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/components-scan",
+    "description": "Components scan utilities for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcomponents-scan",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/components-scan",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 42457,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-router",
+    "description": "Router",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-router",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-router",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 40893,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/normalize-path",
+    "description": "Utils to normalize path",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fnormalize-path",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/utils/normalize-path",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 40455,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/socketio",
+    "description": "Socket.io package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fsocketio",
+    "icon": "https://tsed.io/socketio.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/socketio",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 37991,
+    "stars": 2829,
+    "tags": [
+      "api"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/perf",
+    "description": "Perf module tool",
+    "version": "7.61.0",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fperf",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/perf",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 36720,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/passport",
+    "description": "Passport package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fpassport",
+    "icon": "https://tsed.io/passportjs.png",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/security/passport",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 35327,
+    "stars": 2829,
+    "tags": [
+      "security"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/typeorm",
+    "description": "TypeORM package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Ftypeorm",
+    "icon": "https://tsed.io/typeorm.png",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/typeorm",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 35114,
+    "stars": 2829,
+    "tags": [
+      "database"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/mongoose",
+    "description": "Mongoose package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fmongoose",
+    "icon": "https://tsed.io/mongoose.png",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/mongoose",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 32745,
+    "stars": 2829,
+    "tags": [
+      "database"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/testing-mongoose",
+    "description": "A TypeScript Framework on top of Express",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Ftesting-mongoose",
+    "icon": "https://tsed.io/mongoose.png",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/testing-mongoose",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 30388,
+    "stars": 2829,
+    "tags": [
+      "devtools",
+      "test"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/oidc-provider",
+    "description": "OIDC provider package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Foidc-provider",
+    "icon": "https://oauth.net/images/oauth-logo-square.png",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/security/oidc-provider",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 29340,
+    "stars": 2829,
+    "tags": [
+      "security",
+      "api"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/terminus",
+    "description": "Adds graceful shutdown and Kubernetes readiness / liveness checks for any HTTP applications.",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fterminus",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/terminus",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 28911,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/adapters",
+    "description": "Database adapters for Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fadapters",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/adapters",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 28434,
+    "stars": 2829,
+    "tags": [
+      "database"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/jwks",
+    "description": "Utils to generate jwks pair keys",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fjwks",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/security/jwks",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 27851,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-koa",
+    "description": "Koa package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-koa",
+    "icon": "https://tsed.io/koa.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-koa",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 27730,
+    "stars": 2829,
+    "tags": [
+      "platform"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/prisma",
+    "description": "Generates models, enums and repositories from the schema.prisma! ",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fprisma",
+    "icon": "https://tsed.io/prisma-2.svg",
+    "homepage": "https://tsed.io/tutorials/prisma.html",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      },
+      {
+        "username": "Romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 27194,
+    "stars": 2829,
+    "tags": [
+      "database",
+      "framework"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-serverless",
+    "description": "Platform serverless module for Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-serverless",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-serverless",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 25807,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/apollo",
+    "description": "Apollo package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fapollo",
+    "icon": "https://tsed.io/apollo-graphql-1.svg",
+    "homepage": "https://tsed.io/tutorials/graphql.html",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 25749,
+    "stars": 2829,
+    "tags": [
+      "graphql"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/adapters-redis",
+    "description": "Redis adapter for Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fadapters-redis",
+    "icon": "https://www.vectorlogo.zone/logos/redis/redis-icon.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/adapters-redis",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 25671,
+    "stars": 2829,
+    "tags": [
+      "database"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/stripe",
+    "description": "Stripe package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fstripe",
+    "icon": "https://tsed.io/stripe.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/stripe",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 25497,
+    "stars": 2829,
+    "tags": [
+      "api",
+      "payment"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/typegraphql",
+    "description": "TypeGraphQL package for Ts.ED framework, based on Apollo-server-core and Type-graphql",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Ftypegraphql",
+    "icon": "https://tsed.io/typegraphql.png",
+    "homepage": "https://tsed.io/tutorials/graphql.html",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 25486,
+    "stars": 2829,
+    "tags": [
+      "graphql"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-serverless-http",
+    "description": "Module to support Serverless HTTP function with Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-serverless-http",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-serverless-http",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 24969,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/objection",
+    "description": "Objection.js package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fobjection",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/objection",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 24849,
+    "stars": 2829,
+    "tags": [
+      "database"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/formio-types",
+    "description": "Formio types definition package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fformio-types",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/formio-types",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 24603,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/socketio-testing",
+    "description": "Socket.io testing package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fsocketio-testing",
+    "icon": "https://tsed.io/socketio.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/socketio-testing",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 24483,
+    "stars": 2829,
+    "tags": [
+      "test"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/agenda",
+    "description": "Agenda package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fagenda",
+    "icon": "https://tsed.io/agenda.svg",
+    "homepage": "https://tsed.io/tutorials/agenda.html",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      },
+      {
+        "username": "ochrstn",
+        "email": "christen@app-logik.de",
+        "avatar": "https://www.gravatar.com/avatar/5c317d510bf3e23cf21742414d35fab6"
+      }
+    ],
+    "downloads": 23998,
+    "stars": 2829,
+    "tags": [
+      "jobs",
+      "api"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/schema-formio",
+    "description": "Transform Ts.ED Schema & JsonSchema to a valid Formio schema",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fschema-formio",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/schema-formio",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 23489,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/mikro-orm",
+    "description": "MikroORM package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fmikro-orm",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/mikro-orm",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 23230,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-serverless-testing",
+    "description": "Module to test Serverless function with Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-serverless-testing",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-serverless-testing",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 23034,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/formio",
+    "description": "Formio package for Ts.ED framework. Add this package to configure a formio server.",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fformio",
+    "icon": "https://avatars.githubusercontent.com/u/11790256?s=400&v=4",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/formio",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 22240,
+    "stars": 2829,
+    "tags": [
+      "formio",
+      "cms"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/ioredis",
+    "description": "IO Redis connection for Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fioredis",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/ioredis",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 21664,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/event-emitter",
+    "description": "EventEmitter package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fevent-emitter",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/event-emitter",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      },
+      {
+        "username": "ochrstn",
+        "email": "christen@app-logik.de",
+        "avatar": "https://www.gravatar.com/avatar/5c317d510bf3e23cf21742414d35fab6"
+      }
+    ],
+    "downloads": 20665,
+    "stars": 2829,
+    "tags": [
+      "api"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/vite-ssr-plugin",
+    "description": "Vite SSR plugin package for the Ts.ED Framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fvite-ssr-plugin",
+    "icon": "https://vitejs.dev/logo.svg",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/vite-ssr-plugin",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 17536,
+    "stars": 2829,
+    "tags": [
+      "frontend",
+      "engines"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli-plugin-eslint",
+    "description": "Ts.ED CLI plugin. Add EsLint support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-eslint",
+    "icon": "https://cli.tsed.io/eslint.svg",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-eslint",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 16027,
+    "stars": 42,
+    "tags": [
+      "devtools"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/oidc-provider-plugin-wildcard-redirect-uri",
+    "description": "A plugin to support wildcard in the redirect uri whitelist",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Foidc-provider-plugin-wildcard-redirect-uri",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/security/oidc-provider-plugin-wildcard-redirect-uri",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 15868,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli-plugin-jest",
+    "description": "Ts.ED CLI plugin. Add Jest support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-jest",
+    "icon": "https://tsed.io/jest.svg",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-jest",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 15297,
+    "stars": 42,
+    "tags": [
+      "test"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/platform-test-sdk",
+    "description": "Package to test platform adapter integration with Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-test-sdk",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-test-sdk",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 13854,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli",
+    "description": "CLI to bootstrap your Ts.ED project",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 10363,
+    "stars": 42,
+    "tags": [],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-plugin-passport",
+    "description": "Ts.ED CLI plugin. Add Passport.js support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-passport",
+    "icon": "https://tsed.io/passportjs.png",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-passport",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 9890,
+    "stars": 42,
+    "tags": [
+      "devtools",
+      "security"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-plugin-mongoose",
+    "description": "Ts.ED CLI plugin. Add Mongoose support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-mongoose",
+    "icon": "https://tsed.io/mongoose.png",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-mongoose",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 9368,
+    "stars": 42,
+    "tags": [
+      "devtools",
+      "database"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/bullmq",
+    "description": "BullMQ integration for Ts.ED",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fbullmq",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/bullmq",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 8855,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli-plugin-typeorm",
+    "description": "Ts.ED CLI plugin. Add TypeORM support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-typeorm",
+    "icon": "https://tsed.io/typeorm.png",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-typeorm",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 8050,
+    "stars": 42,
+    "tags": [
+      "devtools",
+      "database"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/graphql-ws",
+    "description": "An extension to allow GraphQL over WebSockets using graphql-ws protocol",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fgraphql-ws",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/graphql/graphql-ws",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 7875,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/tailwind-formio",
+    "description": "Tailwind templates for form.io forms.",
+    "version": "2.3.1",
+    "repository": "https://github.com/TypedProject/tsed-formio",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Ftailwind-formio",
+    "icon": "https://avatars.githubusercontent.com/u/11790256?s=400&v=4",
+    "homepage": "https://github.com/TypedProject/tsed-formio/tree/master/packages/tailwind-formio",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 7258,
+    "stars": 14,
+    "tags": [
+      "formio",
+      "cms",
+      "tailwind"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/vike",
+    "description": "Vike package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fvike",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/vike",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 7138,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/temporal",
+    "description": "Temporal.io package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Ftemporal",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/temporal",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 6907,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli-plugin-oidc-provider",
+    "description": "Ts.ED CLI plugin. Add OIDC Provider",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-oidc-provider",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-oidc-provider",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 6860,
+    "stars": 42,
+    "tags": [],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-plugin-prisma",
+    "description": "Ts.ED CLI plugin. Extend Ts.ED CLI to generate a Ts.ED prisma project.",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-prisma",
+    "icon": "https://tsed.io/prisma-2.svg",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-prisma",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 6768,
+    "stars": 42,
+    "tags": [
+      "cli"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-plugin-mocha",
+    "description": "Ts.ED CLI plugin. Add Mocha support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-mocha",
+    "icon": "https://tsed.io/mochajs.svg",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-mocha",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 6431,
+    "stars": 42,
+    "tags": [
+      "test"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-generate-http-client",
+    "description": "Ts.ED CLI plugin. Export a command that generate an HTTP Client (axios or fetch) from your Ts.ED controllers and OS3 spec.",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-generate-http-client",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-generate-http-client",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 6237,
+    "stars": 42,
+    "tags": [],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-plugin-typegraphql",
+    "description": "Ts.ED CLI plugin. Add TypeGraphql support.",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-typegraphql",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-typegraphql",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 5553,
+    "stars": 42,
+    "tags": [],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/cli-testing",
+    "description": "Utils to test you CLI based on Ts.ED CLI",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-testing",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-testing",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 5345,
+    "stars": 42,
+    "tags": [
+      "devtools"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/logger-logstash-http",
+    "description": "Logstash HTTP appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-logstash-http",
+    "icon": "https://tsed.io/elastic-logstash.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/logstash-http",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 3202,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-connect",
+    "description": "Connect Ts.ED logger with another logger that implement the expected interface",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-connect",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/connect",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 3105,
+    "stars": 62,
+    "tags": [],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/cli-generate-swagger",
+    "description": "Ts.ED CLI plugin. Export a command that generate the swagger.json from your Ts.ED controllers and OS3 spec.",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-generate-swagger",
+    "icon": "",
+    "homepage": "https://www.npmjs.com/package/@tsed/cli-generate-swagger",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      },
+      {
+        "username": "romakita",
+        "email": "",
+        "avatar": "https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e"
+      }
+    ],
+    "downloads": 3049,
+    "stars": 42,
+    "tags": [
+      "cli",
+      "openspec"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/react-formio",
+    "description": "Package to create formio backoffice with React",
+    "version": "2.3.1",
+    "repository": "https://github.com/TypedProject/tsed-formio",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Freact-formio",
+    "icon": "https://avatars.githubusercontent.com/u/11790256?s=400&v=4",
+    "homepage": "https://github.com/TypedProject/tsed-formio/tree/master/packages/react-formio",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 2901,
+    "stars": 14,
+    "tags": [
+      "formio",
+      "cms"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/logger-loggly",
+    "description": "Loggly appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-loggly",
+    "icon": "https://tsed.io/loggly.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/loggly",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1932,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-insight",
+    "description": "Insight appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-insight",
+    "icon": "https://tsed.io/rapid7.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/insight",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1773,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-smtp",
+    "description": "SMTP appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-smtp",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/smtp",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1674,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-seq",
+    "description": "Seq appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-seq",
+    "icon": "https://blog.datalust.co/content/images/2018/09/Seq-380px-1.png",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/seq",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1656,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-rabbitmq",
+    "description": "RabbitMQ appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-rabbitmq",
+    "icon": "https://tsed.io/rabbitmq.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/rabbitmq",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1608,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-logentries",
+    "description": "LogEntries appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-logentries",
+    "icon": "https://tsed.io/logentries.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/logentries",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1485,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "serverless-tsed-plugin",
+    "description": "This plugin integrates [Ts.ED](https://tsed.io/) with the Serverless Framework, allowing you to automatically generate Serverless functions from your Ts.ED controllers.",
+    "version": "0.2.0",
+    "repository": "https://github.com/mecanizou-eco/serverless-tsed-plugin",
+    "npm": "https://www.npmjs.com/package/serverless-tsed-plugin",
+    "icon": "",
+    "homepage": "https://github.com/mecanizou-eco/serverless-tsed-plugin#readme",
+    "bugs": "https://github.com/mecanizou-eco/serverless-tsed-plugin/issues",
+    "maintainers": [
+      {
+        "username": "mecanizou-engineers",
+        "email": "engineers@mecanizou.com",
+        "avatar": "https://www.gravatar.com/avatar/13acffc1afbd6c47763cb34c1c9e0c84"
+      }
+    ],
+    "downloads": 1440,
+    "stars": 1,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli-plugin-vitest",
+    "description": "Ts.ED CLI plugin. Add Jest support",
+    "version": "5.2.7",
+    "repository": "https://github.com/tsedio/tsed-cli",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-vitest",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-vitest",
+    "bugs": "https://github.com/tsedio/tsed-cli/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1411,
+    "stars": 42,
+    "tags": [],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/logger-logstash-udp",
+    "description": "Logstash UDP appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-logstash-udp",
+    "icon": "https://tsed.io/elastic-logstash.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/logstash-udp",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1398,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/logger-slack",
+    "description": "Slack appender module for @tsed/logger",
+    "version": "6.7.5",
+    "repository": "https://github.com/tsedio/logger",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-slack",
+    "icon": "https://tsed.io/slack.svg",
+    "homepage": "https://github.com/tsedio/logger/tree/production/packages/slack",
+    "bugs": "https://github.com/tsedio/logger/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1295,
+    "stars": 62,
+    "tags": [
+      "monitoring"
+    ],
+    "type": "official",
+    "category": "logger"
+  },
+  {
+    "name": "@tsed/pulse",
+    "description": "@pulsecron/pulse package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fpulse",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/pulse",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 1179,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/sse",
+    "description": "Server-sent events package for Ts.ED framework",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fsse",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/sse",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 818,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/barrels",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fbarrels",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/tools/barrels",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 801,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/redux-utils",
+    "description": "Redux utils",
+    "version": "2.3.1",
+    "repository": "https://github.com/TypedProject/tsed-formio",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fredux-utils",
+    "icon": "https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67",
+    "homepage": "https://github.com/TypedProject/tsed-formio/tree/master/packages/redux-utils",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 371,
+    "stars": 14,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/testcontainers-mongo",
+    "description": "A module to test Ts.ED code that use MongoDB as database using Test Containers",
+    "version": "7.82.1",
+    "repository": "https://github.com/tsedio/tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Ftestcontainers-mongo",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/testcontainers-mongo",
+    "bugs": "https://github.com/tsedio/tsed/issues",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 359,
+    "stars": 2829,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/react-formio-container",
+    "description": "Package to create your formio backoffice with React",
+    "version": "2.3.1",
+    "repository": "https://github.com/TypedProject/tsed-formio",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Freact-formio-container",
+    "icon": "https://avatars.githubusercontent.com/u/11790256?s=400&v=4",
+    "homepage": "https://github.com/TypedProject/tsed-formio/tree/master/packages/react-formio-container",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 181,
+    "stars": 14,
+    "tags": [
+      "formio",
+      "cms"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/eslint-plugin",
+    "description": "Eslint rules for Ts.ED projects",
+    "version": "1.1.11",
+    "repository": "https://github.com/tsedio/eslint-plugin-tsed",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Feslint-plugin",
+    "icon": "",
+    "homepage": "https://github.com/tsedio/eslint-plugin-tsed",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 161,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/yarn-workspaces",
+    "description": "Yarn workspaces utils for CRACO",
+    "version": "1.24.1",
+    "repository": "https://github.com/tsedio/tsed-monorepo-utils",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Fyarn-workspaces",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "homepage": "https://github.com/tsedio/tsed-monorepo-utils#readme",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 99,
+    "stars": 4,
+    "tags": [
+      "devtools"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/react-formio-stores",
+    "description": "Provide redux stores and action around formio.js API. Written in TypeScript.",
+    "version": "2.3.1",
+    "repository": "https://github.com/TypedProject/tsed-formio",
+    "npm": "https://www.npmjs.com/package/%40tsed%2Freact-formio-stores",
+    "icon": "",
+    "homepage": "https://github.com/TypedProject/tsed-formio/tree/master/packages/react-formio-stores",
+    "maintainers": [
+      {
+        "username": "romakita",
+        "email": "rom.lenzotti@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/de3f2df14a0230b7cd6372ed50d93573"
+      }
+    ],
+    "downloads": 40,
+    "stars": 14,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "generator-tsed-backend",
+    "description": "Project generator for backend using express.js, Ts.ED and mocha and chai for testing",
+    "version": "1.0.8",
+    "npm": "https://www.npmjs.com/package/generator-tsed-backend",
+    "icon": "",
+    "homepage": "https://www.npmjs.com/package/generator-tsed-backend",
+    "maintainers": [
+      {
+        "username": "vtc_mri",
+        "email": "mrieger@vortech.io",
+        "avatar": "https://www.gravatar.com/avatar/0e3a29178796a26ceec0f598fe384a00"
+      }
+    ],
+    "downloads": 35,
+    "stars": 0,
+    "tags": [
+      "devtools"
+    ],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@jojoxd/tsed-util",
+    "description": "Generic Ts.ED Utilities",
+    "version": "1.3.2",
+    "npm": "https://www.npmjs.com/package/%40jojoxd%2Ftsed-util",
+    "icon": "",
+    "homepage": "https://www.npmjs.com/package/%40jojoxd%2Ftsed-util",
+    "bugs": "https://github.com/jojoxd/BugTracker/issues",
+    "maintainers": [
+      {
+        "username": "bakaxd",
+        "email": "joeyvos@outlook.com",
+        "avatar": "https://www.gravatar.com/avatar/933f9298e8c813b4208a49854bbca3a7"
+      }
+    ],
+    "downloads": 34,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "tsed-bee-queue",
+    "description": "Bee-queue for Ts.ED framework",
+    "version": "0.2.0",
+    "repository": "https://github.com/alexdonh/tsed-bee-queue",
+    "npm": "https://www.npmjs.com/package/tsed-bee-queue",
+    "icon": "",
+    "homepage": "https://github.com/alexdonh/tsed-bee-queue#readme",
+    "bugs": "https://github.com/alexdonh/tsed-bee-queue/issues",
+    "maintainers": [
+      {
+        "username": "alexdonh",
+        "email": "alex.donh@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/e9f1600ee1519fd73e31973bb3d677d2"
+      }
+    ],
+    "downloads": 17,
+    "stars": 4,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@mongobubble/validator-tsed",
+    "description": "Ts.ED JSON Schema validator for MongoBubble (https://github.com/ggondim/mongobubble.git)",
+    "version": "1.0.2",
+    "repository": "https://github.com/ggondim/mongobubble",
+    "npm": "https://www.npmjs.com/package/%40mongobubble%2Fvalidator-tsed",
+    "icon": "",
+    "homepage": "https://github.com/ggondim/mongobubble#readme",
+    "bugs": "https://github.com/ggondim/mongobubble/issues",
+    "maintainers": [
+      {
+        "username": "ggondim",
+        "email": "gustavospgondim@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/87dc4e90461fc549a5dd6d4467507c0e"
+      }
+    ],
+    "downloads": 14,
+    "stars": 4,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "tsed-redis",
+    "description": "Simple Redis DI factory for Ts.ED framework",
+    "version": "0.2.0",
+    "repository": "https://github.com/alexdonh/tsed-redis",
+    "npm": "https://www.npmjs.com/package/tsed-redis",
+    "icon": "",
+    "homepage": "https://github.com/alexdonh/tsed-redis#readme",
+    "maintainers": [
+      {
+        "username": "alexdonh",
+        "email": "alex.donh@gmail.com",
+        "avatar": "https://www.gravatar.com/avatar/e9f1600ee1519fd73e31973bb3d677d2"
+      }
+    ],
+    "downloads": 11,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@vortech-digital-pioneers/generator-tsed-backend",
+    "description": "Project generator for backend using express.js, Ts.ED and mocha and chai for testing",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "devtools"
+    ],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@clouudsoftware/typeorm",
+    "description": "Wrapper around typeorm and @tsed/typeorm",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "database"
+    ],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@odecon/odecon-server-base",
+    "description": "NPM library for common server functionality, using @tsed, @typegoose and class-validator",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@gearedminds/tsed-api-support",
+    "description": "A couple of handy classes and functions shared across TSED projects",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/cli-plugin-tslint",
+    "description": "Ts.ED CLI plugin. Add TsLint support",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "devtools"
+    ],
+    "type": "official",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/es6-cli",
+    "description": "CLI to migrate a project from require to import/exports",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/gphoto2-driver",
+    "description": "Node.js wrapper of C library libgphoto2 written in TypeScript",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/gphoto2-core",
+    "description": "Node.js wrapper of C library libgphoto2 written in TypeScript",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "tsed-client-api-generator",
+    "description": "Automatically generates Typescript APIs from Ts.ED controllers",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "devtools"
+    ],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@maxio/tsed-mailer",
+    "description": "Npm TypeScript Package Boilerplate",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsrt/tsed",
+    "description": "Common TsED based Application",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "api"
+    ],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/servestatic",
+    "description": "Serve-static package for Ts.ED framework",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@reed-lawrence/mysql-service",
+    "description": "Service to interface with MySQL instances via TS.Ed framework",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/seq",
+    "description": "Seq package for Ts.ED framework",
+    "icon": "https://blog.datalust.co/content/images/2018/09/Seq-380px-1.png",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "devtools"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/async-hook-context",
+    "description": "Add Async Hook context support in Ts.ED",
+    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "devtools",
+      "api"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/platform-aws",
+    "description": "Module to support AWS function with Ts.ED",
+    "icon": "https://tsed.io/aws.png",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "platform"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/testing",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@maxio/tsed-smtp",
+    "description": "Npm TypeScript Package Boilerplate",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/markdown-it-symbols",
+    "description": "Markdown it plugin",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/vuepress-tailwind-config",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "vuepress-theme-tsed",
+    "description": "Vuepress theme for tsed.io",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/monorepo-utils",
+    "description": "Mono repo utils",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/graphql",
+    "description": "GraphQL package for Ts.ED framework, based on Apollo-server-express and Type-graphql",
+    "icon": "https://tsed.io/typegraphql.png",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "platform",
+      "api"
+    ],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/vuepress-common",
+    "description": "Shared components and utils",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@maxio/tsed-configure",
+    "description": "Npm TypeScript Package Boilerplate",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "3rd-party",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/multipartfiles",
+    "description": "Multer package for Ts.ED framework",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "tsed-cli-plugin-serverless",
+    "description": "Ts.ED CLI plugin that adds serverless support.",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [
+      "cli",
+      "devtools"
+    ],
+    "type": "3rd-party",
+    "category": "cli"
+  },
+  {
+    "name": "@tsed/benchmarks",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/benchmarks-apps",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  },
+  {
+    "name": "@tsed/ts-doc",
+    "description": "Generate documentation in markdown for TypeScript API",
+    "maintainers": [],
+    "downloads": 0,
+    "stars": 0,
+    "tags": [],
+    "type": "official",
+    "category": "framework"
+  }
+]
