@@ -1,13 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/vue3";
 import ClearableFilter from "./ClearableFilter.vue";
 import {ref} from "vue";
-import {within, expect, waitFor} from "@storybook/test";
-
-function delay() {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
-}
+import {within, expect, waitFor, userEvent} from "@storybook/test";
 
 const meta = {
   title: "ClearableFilter",
@@ -55,24 +49,20 @@ export const Default: Story = {
     const resetButton = canvas.getByText("Reset");
     const clearButton = canvas.getByText("clear filters");
 
-    expect(clearButton).toBeInTheDocument();
-    expect(canvas.getByText("0 plugin found")).toBeInTheDocument();
-    expect(canvas.getByText("All, Official, Community")).toBeInTheDocument();
+    await expect(clearButton).toBeInTheDocument();
+    await expect(canvas.getByText("0 plugin found")).toBeInTheDocument();
+    await expect(canvas.getByText("All, Official, Community")).toBeInTheDocument();
 
-    await delay();
-
-    clearButton.click();
+    await userEvent.click(clearButton, {delay: 500});
 
     await waitFor(() => {
       expect(canvas.getByText("100 plugins found")).toBeInTheDocument();
     });
 
-    expect(clearButton).not.toBeInTheDocument();
-    expect(canvas.queryByText("All, Official, Community")).not.toBeInTheDocument();
+    await expect(clearButton).not.toBeInTheDocument();
+    await expect(canvas.queryByText("All, Official, Community")).not.toBeInTheDocument();
 
-    await delay();
-
-    resetButton.click();
+    await userEvent.click(resetButton, {delay: 500});
 
     await waitFor(() => {
       expect(canvas.getByText("0 plugin found")).toBeInTheDocument();
