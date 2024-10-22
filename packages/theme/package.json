@@ -1,0 +1,23 @@
+{
+  "name": "@tsed/vitepress-theme",
+  "description": "Shared components for vitepress",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./directives/lazyLoadObserver": {
+      "import": "./directives/lazyLoadObserver.ts",
+      "types": "./directives/lazyLoadObserver.ts"
+    },
+    "./*": {
+      "import": "./*",
+      "types": "./*"
+    }
+  },
+  "dependencies": {
+    "@vueuse/core": "10.11.0",
+    "axios": "1.7.7",
+    "lucide-vue-next": "^0.436.0"
+  }
+}

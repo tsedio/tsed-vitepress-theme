@@ -123,8 +123,10 @@
     "useDefineForClassFields": true
   },
   "include": [
-    "./docs/.vitepress/**/*.ts",
-    "./docs/.vitepress/**/*.vue",
+    "./docs/.vitepress/theme/**/*.ts",
+    "./docs/.vitepress/theme/**/*.vue",
+    "./packages/theme/**/*.ts",
+    "./packages/theme/**/*.vue",
     "postcss.config.ts",
     "tailwind.preset.ts",
     "tailwind.config.ts",

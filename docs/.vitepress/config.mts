@@ -1,5 +1,5 @@
 import {defineConfig} from "vitepress";
-import {apiAnchor} from "./theme/markdown/api-anchor/api-anchor.js";
+import {apiAnchor} from "@tsed/vitepress-theme/markdown/api-anchor/api-anchor.js";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -35,7 +35,7 @@ export default defineConfig({
     repo: "tsedio/tsed",
     githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
     editLink: {
-      pattern: 'https://github.com/tsedio/tsed-website/edit/main/docs/:path'
+      pattern: "https://github.com/tsedio/tsed-website/edit/main/docs/:path"
     },
     search: {
       provider: "algolia",
