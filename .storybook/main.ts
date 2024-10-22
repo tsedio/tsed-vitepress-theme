@@ -6,15 +6,15 @@ const config: StorybookConfig = {
   stories: [
     "../doc/**/*.mdx",
     {
-      directory: "../docs/.vitepress/theme/atoms",
+      directory: "../packages/theme/atoms",
       titlePrefix: "Atoms"
     },
     {
-      directory: "../docs/.vitepress/theme/molecules",
+      directory: "../packages/theme/molecules",
       titlePrefix: "Molecules"
     },
     {
-      directory: "../docs/.vitepress/theme/organisms",
+      directory: "../packages/theme/organisms",
       titlePrefix: "Organisms"
     }
   ],

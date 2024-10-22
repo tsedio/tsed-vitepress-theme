@@ -1,13 +1,6 @@
+@import "@tsed/vitepress-theme/styles/tailwind.css";
 @import "./variables.css";
-@import "./algolia.css";
+@import "@tsed/vitepress-theme/styles/algolia.css";
 
-.VPHomeHero {
-  @apply bg-gray-100 dark:bg-gray-700 mb-10;
-}
-
-.box .icon {
-  background: var(--vp-c-indigo-1);
-  @apply text-white dark:text-black;
-}
 
 

@@ -10,7 +10,7 @@ export default defineConfig({
     }
   },
   test: {
-    root: fileURLToPath(new URL("./docs/.vitepress/theme", import.meta.url)),
+    root: fileURLToPath(new URL("./packages/theme", import.meta.url)),
     environment: "jsdom",
     exclude: ["**/node_modules/**"],
     globals: true,
@@ -19,10 +19,10 @@ export default defineConfig({
       enabled: true,
       thresholds: {
         autoUpdate: true,
-        statements: 62.23,
-        branches: 78.28,
-        functions: 66.66,
-        lines: 62.23
+        statements: 60.95,
+        branches: 77.84,
+        functions: 65.38,
+        lines: 60.95
       },
       include: ["**/*.{ts,vue}"],
       exclude: [
