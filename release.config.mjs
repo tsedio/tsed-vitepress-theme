@@ -3,7 +3,7 @@ process.env.SEMANTIC_RELEASE_PACKAGE = "Ts.ED VitePress Theme";
 
 export default {
   branches: [
-    "production",
+    "main",
     {name: "alpha", prerelease: true, channel: "alpha"},
     {name: "beta", prerelease: true, channel: "beta"},
     {name: "rc", prerelease: true, channel: "rc"}
