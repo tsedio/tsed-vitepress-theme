@@ -1,6 +1,21 @@
 {
-  "name": "@clubmed/root",
+  "name": "@tsed/root",
+  "description": "Shared theme Website for Ts.ED framework",
   "type": "module",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/Romakita"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/tsed"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsedio/tsed-website.git"
+  },
   "scripts": {
     "build": "monorepo build --verbose",
     "docs:dev": "vitepress dev docs",
@@ -103,6 +118,13 @@
   "workspaces": [
     "packages/*"
   ],
+  "monorepo": {
+    "productionBranch": "main",
+    "developBranch": "main",
+    "npmAccess": "public",
+    "ignoreSyncDependencies": [
+    ]
+  },
   "packageManager": "yarn@4.1.1",
   "version": ""
 }
