@@ -6,6 +6,10 @@
   "main": "./index.ts",
   "exports": {
     ".": "./index.ts",
+    "./tailwind.preset": {
+      "import": "./tailwind.preset.ts",
+      "types": "./tailwind.preset.ts"
+    },
     "./directives/lazyLoadObserver": {
       "import": "./directives/lazyLoadObserver.ts",
       "types": "./directives/lazyLoadObserver.ts"

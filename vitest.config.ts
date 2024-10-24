@@ -19,10 +19,10 @@ export default defineConfig({
       enabled: true,
       thresholds: {
         autoUpdate: true,
-        statements: 60.95,
-        branches: 77.84,
-        functions: 65.38,
-        lines: 60.95
+        statements: 62.3,
+        branches: 78.4,
+        functions: 67.3,
+        lines: 62.3
       },
       include: ["**/*.{ts,vue}"],
       exclude: [
@@ -33,7 +33,9 @@ export default defineConfig({
         "**/node_modules/**",
         "**/*.spec.ts",
         "**/*.stories.ts",
-        "**/utils/colors.ts"
+        "**/utils/colors.ts",
+        "tailwind.preset.ts",
+        "DefaultTheme.ts"
       ],
       reportsDirectory: fileURLToPath(new URL("./coverage", import.meta.url))
     }

@@ -1,5 +1,5 @@
 import type {Config} from "tailwindcss";
-import {tailwindPreset} from "./tailwind.preset.js";
+import {tailwindPreset} from "./packages/theme/tailwind.preset.js";
 
 const config = {
   presets: [tailwindPreset as unknown as Config],

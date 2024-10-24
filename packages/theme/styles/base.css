@@ -25,12 +25,4 @@
   @apply text-white dark:text-black;
 }
 
-.VPHomeHero {
-  @apply bg-gray-100 dark:bg-gray-700 mb-10;
-}
-
-.box .icon {
-  background: var(--vp-c-indigo-1);
-  @apply text-white dark:text-black;
-}
 

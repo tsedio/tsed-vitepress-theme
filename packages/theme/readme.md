@@ -38,16 +38,47 @@ yarn add @tsed/vitepress-theme
 
 ## Configuration
 
-In your config.mts file, import the theme as follows:
+In your config.mts file, you can import the theme and extend it:
 
 ```ts
-import type {Theme} from "vitepress";
+import "./style.css";
 import {DefaultTheme} from "@tsed/vitepress-theme";
+import type {Theme} from "vitepress";
 
 export default {
   extends: DefaultTheme,
   enhanceApp() {}
 } satisfies Theme;
+```
+
+Then, create a `tailwind.config.ts` configuration file:
+
+```ts
+import type {Config} from "tailwindcss";
+import {tailwindPreset} from "@tsed/vitepress-theme/tailwind.preset";
+
+const config = {
+  presets: [tailwindPreset as unknown as Config],
+  darkMode: "class",
+  content: [
+    "./docs/.vitepress/**/*.{js,ts,vue}",
+    "./docs/.vitepress/themes/**/*.{js,ts,vue}",
+    "./packages/theme/**/*.{js,ts,vue}",
+    "./docs/**/*.md"
+  ],
+  safelist: [
+    {pattern: /^bg-/},
+    {pattern: /^text-/},
+    {pattern: /^m-/},
+    {pattern: /^mx-/},
+    {pattern: /^p-/},
+    {pattern: /^px-/},
+    {pattern: /^gap-/},
+    {pattern: /^shadow-/}
+  ]
+} satisfies Config;
+
+export default config;
 ```
 
 ## Contributors
