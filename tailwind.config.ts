@@ -6,7 +6,7 @@ const config = {
   darkMode: "class",
   content: [
     "./docs/.vitepress/**/*.{js,ts,vue}",
-    "./docs/.vitepress/theme/**/*.{js,ts,vue}",
+    "./docs/.vitepress/themes/**/*.{js,ts,vue}",
     "./packages/theme/**/*.{js,ts,vue}",
     "./docs/**/*.md"
   ],
