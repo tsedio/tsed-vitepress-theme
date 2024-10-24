@@ -122,9 +122,8 @@
     "productionBranch": "main",
     "developBranch": "main",
     "npmAccess": "public",
-    "ignoreSyncDependencies": [
-    ]
+    "ignoreSyncDependencies": []
   },
   "packageManager": "yarn@4.1.1",
-  "version": ""
+  "version": "1.0.0"
 }
