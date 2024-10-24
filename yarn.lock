@@ -4382,9 +4382,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsed/monorepo-utils@npm:2.3.8":
-  version: 2.3.8
-  resolution: "@tsed/monorepo-utils@npm:2.3.8"
+"@tsed/monorepo-utils@npm:2.3.9":
+  version: 2.3.9
+  resolution: "@tsed/monorepo-utils@npm:2.3.9"
   dependencies:
     "@samverschueren/stream-to-observable": "npm:>=0.3.1"
     "@typescript-eslint/typescript-estree": "npm:>=6.20.0"
@@ -4411,7 +4411,7 @@ __metadata:
     semantic-release: ">=19"
   bin:
     monorepo: bin/monorepo.js
-  checksum: 10c0/8d43a1e0d96e74b413d1fbd7287af6176fb0abad5db192c7b8ac606a7e4fe127ce0109abb4101ab89e63344b71a1871bc49ee4022a2bc8176a7e421094e666d5
+  checksum: 10c0/1313f0655bcbbfaab22195e41ad82bc892514c394701843050b9116c3a0b1564580befadc29c66f1aa5f714b6d45f4ef024fd9e9ea1e98abe127cf3577273245
   languageName: node
   linkType: hard
 
@@ -4439,7 +4439,7 @@ __metadata:
     "@storybook/vue3-vite": "npm:^8.2.2"
     "@testing-library/jest-dom": "npm:6.4.6"
     "@testing-library/vue": "npm:8.1.0"
-    "@tsed/monorepo-utils": "npm:2.3.8"
+    "@tsed/monorepo-utils": "npm:2.3.9"
     "@typescript-eslint/eslint-plugin": "npm:7.16.0"
     "@typescript-eslint/parser": "npm:7.16.0"
     "@vitejs/plugin-vue": "npm:5.0.5"
