@@ -2,6 +2,7 @@
 import {h} from "vue";
 import type {Theme} from "vitepress";
 import DefaultTheme from "vitepress/theme";
+import "./styles/global.css";
 import ApiAnchorQuery from "./molecules/api-anchor/ApiAnchorQuery.vue";
 import ApiList from "./molecules/api-list/ApiList.vue";
 import GithubContributors from "./organisms/github-contributors/GithubContributors.vue";

@@ -11,7 +11,7 @@ import "vitepress/dist/client/theme-default/styles/components/vp-code.css";
 import "vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
 import "vitepress/dist/client/theme-default/styles/components/vp-doc.css";
 import "vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import "../docs/.vitepress/theme/style.css";
+import "@tsed/vitepress-theme/styles/global.css";
 import LazyLoadObserver from "@tsed/vitepress-theme/directives/lazyLoadObserver";
 import VPButton from "./mock/VPButton.vue";
 
