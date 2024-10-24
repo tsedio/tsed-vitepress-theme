@@ -3,7 +3,7 @@ name: Build website
 on:
   push:
   pull_request:
-    branches: [production]
+    branches: [main]
     types: [opened, synchronize, closed]
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -100,7 +100,7 @@ jobs:
     strategy:
       fail-fast: true
     if: github.event_name != 'pull_request' && contains('
-      refs/heads/production
+      refs/heads/main
       refs/heads/alpha
       refs/heads/beta
       refs/heads/rc
