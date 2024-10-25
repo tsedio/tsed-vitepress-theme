@@ -35,7 +35,7 @@ export default defineConfig({
     repo: "tsedio/tsed",
     githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
     editLink: {
-      pattern: "https://github.com/tsedio/tsed-website/edit/main/docs/:path"
+      pattern: "https://github.com/tsedio/tsed-vitepress-theme/edit/main/docs/:path"
     },
     search: {
       provider: "algolia",
@@ -162,7 +162,8 @@ export default defineConfig({
             link: `/docs/testing`
           },
           {text: "Upload files", link: "/docs/upload-files"},
-          {text: "Customize 404", link: "/docs/not-found-page"}
+          {text: "Customize 404", link: "/docs/not-found-page"},
+          {text: "Api references", link: "/api"}
         ]
       },
       {
