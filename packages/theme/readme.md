@@ -6,8 +6,8 @@
    <h1>Ts.ED - VitePress Theme</h1>
    <hr />
 
-[![Build & Release](https://github.com/tsedio/tsed/workflows/Build%20&%20Release/badge.svg)](https://github.com/tsedio/tsed-website/actions?query=workflow%3A%22Build+%26+website%22)
-[![PR Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/tsedio/tsed-website/blob/master/CONTRIBUTING.md)
+[![Build & Release](https://github.com/tsedio/tsed/workflows/Build%20&%20Release/badge.svg)](https://github.com/tsedio/tsed-vitepress-theme/actions?query=workflow%3A%22Build+%26+website%22)
+[![PR Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/tsedio/tsed-vitepress-theme/blob/master/CONTRIBUTING.md)
 [![npm version](https://badge.fury.io/js/%40tsed%2Fcommon.svg)](https://badge.fury.io/js/%40tsed%2Fvitepress-theme)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -83,7 +83,7 @@ export default config;
 
 ## Contributors
 
-Please read [contributing guidelines here](https://github.com/tsedio/tsed-website/CONTRIBUTING.md).
+Please read [contributing guidelines here](https://github.com/tsedio/tsed-vitepress-theme/CONTRIBUTING.md).
 
 <a href="https://github.com/tsedio/tsed/graphs/contributors"><img src="https://opencollective.com/tsed/contributors.svg?width=890" /></a>
 
