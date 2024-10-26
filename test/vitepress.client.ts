@@ -2,6 +2,8 @@ export function useData() {
   const ref = {
     apiUrl: "https://tsed.io/api.json",
     apiRedirectUrl: "https://api-docs.tsed.io",
+    githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
+    repo: "tsedio/tsed",
     value: undefined
   };
 

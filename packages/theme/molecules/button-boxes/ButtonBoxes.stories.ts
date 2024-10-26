@@ -60,15 +60,15 @@ export const Default: Story = {
   async play({canvasElement}) {
     const canvas = within(canvasElement);
 
-    const officialButton = canvas.getByRole("button", {name: "Official"});
-    const AllButton = canvas.getByRole("button", {name: "All"});
+    const officialButton = canvas.getByRole("checkbox", {name: "Official"});
+    const AllButton = canvas.getByRole("checkbox", {name: "All"});
 
-    expect(canvas.getAllByRole("button")).toHaveLength(3);
+    expect(canvas.getAllByRole("checkbox")).toHaveLength(3);
     expect(AllButton).toBeInTheDocument();
     expect(AllButton).toHaveAttribute("aria-checked", "true");
     expect(officialButton).toBeInTheDocument();
     expect(officialButton).toHaveAttribute("aria-checked", "false");
-    expect(canvas.getByRole("button", {name: "Community"})).toBeInTheDocument();
+    expect(canvas.getByRole("checkbox", {name: "Community"})).toBeInTheDocument();
 
     await delay();
 

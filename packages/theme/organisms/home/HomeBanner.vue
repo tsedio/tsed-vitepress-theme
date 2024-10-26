@@ -3,7 +3,7 @@ import Tabs from "../../molecules/tabs/Tabs.vue";
 import Tab from "../../molecules/tabs/Tab.vue";
 import ButtonBanner from "./ButtonBanner.vue";
 import {useStargazers} from "../../composables/api/useStargazers";
-import {useThemeConfig} from "../../composables/config/__mocks__/useThemeConfig";
+import {useThemeConfig} from "../../composables/config/useThemeConfig";
 
 const theme = useThemeConfig();
 const {githubProxyUrl} = theme.value;

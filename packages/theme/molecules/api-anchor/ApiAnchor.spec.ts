@@ -38,6 +38,6 @@ describe("<ApiAnchor>", () => {
     expect(screen.getByText("Symbol name")).toBeTruthy();
     expect(screen.getByText("Symbol name")).toHaveClass("line-through");
     expect(screen.getByRole("link")).toHaveAttribute("href", "https://api-docs.tsed.io/path.html");
-    expect(screen.getByRole("link")).toHaveClass("reset-link -bubble opacity-50");
+    expect(screen.getByRole("link")).toHaveClass("reset-link -bubble");
   });
 });

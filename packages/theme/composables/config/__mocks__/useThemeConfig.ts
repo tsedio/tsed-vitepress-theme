@@ -1,5 +1,5 @@
 export function useThemeConfig() {
-  const ref: {apiUrl: string; apiRedirectUrl: string; repo: string; githubProxyUrl: string; value: any} = {
+  const ref: { apiUrl: string; apiRedirectUrl: string; repo: string; githubProxyUrl: string; value: any } = {
     apiUrl: "https://tsed.io/api.json",
     apiRedirectUrl: "https://api-docs.tsed.io",
     repo: "tsedio/tsed",

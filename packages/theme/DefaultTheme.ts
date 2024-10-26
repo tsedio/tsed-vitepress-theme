@@ -17,6 +17,7 @@ import HomeFrameworks from "./organisms/home/HomeFrameworks.vue";
 import HomeBody from "./organisms/home/HomeBody.vue";
 import MessageCircleHeart from "./atoms/svg/MessageCircleHeart.vue";
 import Warehouse from "./organisms/warehouse/Warehouse.vue";
+import Api from "./organisms/api/Api.vue";
 
 export default {
   extends: DefaultTheme,
@@ -29,6 +30,7 @@ export default {
     });
   },
   enhanceApp({app}) {
+    app.component("Api", Api);
     app.component("ApiList", ApiList);
     app.component("ApiAnchorQuery", ApiAnchorQuery);
     app.component("GithubContributors", GithubContributors);
@@ -41,7 +43,6 @@ export default {
     app.component("Banner", Banner);
     app.component("Warehouse", Warehouse);
     app.directive("lazyload-observer", LazyLoadObserver);
-
     // Layouts
   }
 } satisfies Theme;

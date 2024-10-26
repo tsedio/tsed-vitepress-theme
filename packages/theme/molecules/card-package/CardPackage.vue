@@ -37,7 +37,7 @@ const icon = computed(() => {
     class="CardPackage h-full relative flex flex-col overflow-hidden transition-transform duration-150 ease-in-out transform bg-white dark:bg-blueGray-700 rounded-md shadow hover:shadow-lg hover:-translate-y-1"
   >
     <div class="relative flex flex-1 flex-col space-y-2 px-6 py-8 group">
-      <a :href="props.homepage" :aria-label="props.homepage" target="_blank" rel="noopener" class="absolute inset-0" />
+      <a :href="props.homepage" :aria-label="'Home page of ' + name" target="_blank" rel="noopener" class="absolute inset-0" />
 
       <div
         class="transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-100 absolute top-4 right-6 cursor-pointer"

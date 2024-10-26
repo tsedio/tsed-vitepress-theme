@@ -69,27 +69,28 @@ describe("<GithubContributors>", () => {
               title="Romakita"
             >
               
-              <span
+              <figure
                 class="flex flex-col transition-all relative no-underline text-xxs"
                 data-testid="button-badge-content"
               >
-                <figure
+                <span
                   class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2 bg-gray-lighter shadow-none"
                   style="width: 45px; height: 45px;"
                 >
                   <img
+                    alt="Image: Romakita"
                     class="w-full opacity-0 transition-all no-shadow rounded-2xl"
                     data-url="https://avatars.githubusercontent.com/u/1763311?v=4"
                   />
-                </figure>
+                </span>
                 <!--v-if-->
-                <span
+                <figcaption
                   class="flex items-center justify-center whitespace-pre"
                   style="width: 45px;"
                 >
                   Romakita
-                </span>
-              </span>
+                </figcaption>
+              </figure>
               
             </a>
           </li>

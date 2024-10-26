@@ -3,6 +3,7 @@ import {beforeEach} from "vitest";
 import {useFetch} from "@vueuse/core";
 import ApiAnchorQuery from "./ApiAnchorQuery.vue";
 import {mount} from "@vue/test-utils";
+import {mapSymbol} from "../../composables/api/useApiContent";
 
 vi.mock("@vueuse/core");
 
@@ -22,7 +23,7 @@ describe("<ApiAnchorQuery>", () => {
             modules: {
               "@tsed/core": {
                 symbols: [
-                  {
+                  mapSymbol({
                     path: "/api/core/types/decorators/Configurable",
                     symbolName: "Configurable",
                     module: "@tsed/core",
@@ -30,7 +31,7 @@ describe("<ApiAnchorQuery>", () => {
                     symbolLabel: "Decorator",
                     symbolCode: "@",
                     status: ["stable"]
-                  }
+                  })
                 ]
               }
             }

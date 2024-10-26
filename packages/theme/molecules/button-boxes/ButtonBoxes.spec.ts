@@ -36,17 +36,17 @@ describe("ButtonBoxes", () => {
       }
     });
 
-    const officialButton = screen.getByRole("button", {name: "Official"});
-    const AllButton = screen.getByRole("button", {name: "All"});
+    const officialButton = screen.getByRole("checkbox", {name: "Official"});
+    const AllButton = screen.getByRole("checkbox", {name: "All"});
 
-    expect(screen.getAllByRole("button")).toHaveLength(3);
+    expect(screen.getAllByRole("checkbox")).toHaveLength(3);
     expect(AllButton).toBeInTheDocument();
     expect(AllButton).toHaveAttribute("aria-checked", "true");
     expect(officialButton).toBeInTheDocument();
     expect(officialButton).toHaveAttribute("aria-checked", "false");
-    expect(screen.getByRole("button", {name: "Community"})).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", {name: "Community"})).toBeInTheDocument();
 
-    await userEvent.click(screen.getByRole("button", {name: "Official"}));
+    await userEvent.click(screen.getByRole("checkbox", {name: "Official"}));
 
     expect(value).toEqual("official");
     expect(AllButton).toHaveAttribute("aria-checked", "false");

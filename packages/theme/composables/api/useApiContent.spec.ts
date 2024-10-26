@@ -29,6 +29,8 @@ describe("useApiContent", () => {
         }
       }
     });
-    expect(useFetch).toHaveBeenCalledWith("https://tsed.io/api.json");
+    expect(useFetch).toHaveBeenCalledWith("https://tsed.io/api.json",{
+      afterFetch: expect.any(Function)
+    });
   });
 });
