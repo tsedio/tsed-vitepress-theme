@@ -3,9 +3,9 @@ import {onMounted, ref} from "vue";
 import {useGithubContributors} from "../../composables/api/useGithubContributors";
 import ContributorItems from "../../molecules/contributors/ContributorItems.vue";
 import type {GitHubUser} from "../../composables/api/interfaces/GithubUser";
-import {useThemeConfig} from "../../composables/config/__mocks__/useThemeConfig";
 import type {ButtonBadgeProps} from "../../molecules/button-badge/ButtonBadge.vue";
 import {FONT_WEIGHT} from "../../atoms/tailwind.constants";
+import {useThemeConfig} from "../../composables/config/useThemeConfig";
 
 interface Props extends ButtonBadgeProps {
   users?: string[];
@@ -29,7 +29,6 @@ const props = withDefaults(defineProps<Props>(), {
 const contributors = ref<GitHubUser[]>([]);
 const theme = useThemeConfig();
 const {githubProxyUrl} = theme.value;
-
 const {fetchContributors} = useGithubContributors(githubProxyUrl);
 
 onMounted(async () => {

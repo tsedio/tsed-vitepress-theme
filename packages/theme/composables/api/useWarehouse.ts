@@ -24,6 +24,7 @@ export function useWarehouse(docsRepo: string) {
   const fetchPackages = async () => {
     isActive.value = true;
     const endpoint = `${docsRepo.split("/rest")[0]}/rest/warehouse`;
+
     try {
       const {data} = await axios.get<WarehousePackage[]>(endpoint);
 

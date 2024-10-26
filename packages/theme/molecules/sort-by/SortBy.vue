@@ -75,6 +75,7 @@ const currentLabel = computed(() => {
       <div class="flex items-stretch relative border border-l-0 rounded-r-md">
         <button
           type="button"
+          role="checkbox"
           data-testid="button-sort-order"
           :aria-label="modelValue.order === 'asc' ? 'sort ascending' : 'sort descending'"
           :aria-checked="modelValue.order === 'asc'"

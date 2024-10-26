@@ -29,6 +29,7 @@ const stats = [
 
 const theme = useThemeConfig();
 const {githubProxyUrl} = theme.value;
+
 const {isActive, packages, fetchPackages, tags} = useWarehouse(githubProxyUrl);
 
 const category = ref("");

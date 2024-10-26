@@ -3,7 +3,7 @@ import {computed, useSlots} from "vue";
 import {useApiContent} from "../../composables/api/useApiContent";
 import {useFilter} from "../../composables/filters/useFilter";
 import type {ApiSymbol} from "../../composables/api/interfaces/Api";
-import {mapSymbols, SymbolTypes} from "../../composables/api/mapSymbols";
+import {SymbolTypes} from "../../composables/api/SymbolTypes";
 import ApiAnchor from "./ApiAnchor.vue";
 
 interface Props {
@@ -44,7 +44,11 @@ const item = computed(() => {
     return {symbolName: name.value} as ApiSymbol;
   }
 
-  const value = filter(mapSymbols(data.value))[0];
+  const symbols = Object.values(data.value.modules).flatMap(item => {
+    return item.symbols
+  });
+
+  const value = filter(symbols)[0];
 
   if (value) {
     return value;
@@ -66,5 +70,5 @@ const item = computed(() => {
 defineExpose({name, code});
 </script>
 <template>
-  <ApiAnchor v-bind="item" />
+  <ApiAnchor v-bind="item"/>
 </template>

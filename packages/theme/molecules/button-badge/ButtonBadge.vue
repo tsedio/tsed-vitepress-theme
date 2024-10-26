@@ -10,22 +10,22 @@ export interface ButtonBadgeProps {
   blur?: keyof typeof FILTER_BLURS;
   textSize?: keyof typeof TEXT_SIZES;
   shadow?:
-    | "none"
-    | "sm"
-    | "md"
-    | "lg"
-    | "xl"
-    | "2xl"
-    | "inner"
-    | "outline"
-    | "dark-lg"
-    | "dark-xl"
-    | "dark-2xl"
-    | "dark-inner"
-    | "dark-outline"
-    | "dark-none"
-    | "dark-sm"
-    | "dark-md";
+      | "none"
+      | "sm"
+      | "md"
+      | "lg"
+      | "xl"
+      | "2xl"
+      | "inner"
+      | "outline"
+      | "dark-lg"
+      | "dark-xl"
+      | "dark-2xl"
+      | "dark-inner"
+      | "dark-outline"
+      | "dark-none"
+      | "dark-sm"
+      | "dark-md";
   padding?: number;
   fontWeight?: keyof typeof FONT_WEIGHT;
 }
@@ -63,9 +63,9 @@ const overlayStyle = computed(() => ({
 
 const initial = (text = "") => {
   return text
-    .split(" ")
-    .map((text) => text.slice(0, 1))
-    .join("");
+      .split(" ")
+      .map((text) => text.slice(0, 1))
+      .join("");
 };
 const overflow = (text = "") => {
   return text.slice(0, 12) + (text.length > 12 ? "..." : "");
@@ -74,46 +74,47 @@ const overflow = (text = "") => {
 
 <template>
   <Link :href="href" outbound="false" :title="title" class="button-badge block reset-link">
-    <span
-      data-testid="button-badge-content"
-      class="flex flex-col transition-all relative no-underline"
-      :class="[textSize && `text-${textSize}`]"
+    <figure
+        data-testid="button-badge-content"
+        class="flex flex-col transition-all relative no-underline"
+        :class="[textSize && `text-${textSize}`]"
     >
-      <figure
-        v-lazyload-observer
-        class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2"
-        :class="[bgColor && `bg-${bgColor}`, shadow && `shadow-${shadow}`, padding && `p-${padding}`]"
-        :style="imageContainerStyle"
+      <span
+          v-lazyload-observer
+          class="flex items-center justify-center relative z-2 rounded-2xl overflow-hidden mb-2"
+          :class="[bgColor && `bg-${bgColor}`, shadow && `shadow-${shadow}`, padding && `p-${padding}`]"
+          :style="imageContainerStyle"
       >
         <img
-          v-if="src"
-          :data-url="src"
-          class="w-full opacity-0 transition-all no-shadow"
-          :class="{'rounded-2xl': !padding}"
+            v-if="src"
+            :alt="'Image: ' + title"
+            :data-url="src"
+            class="w-full opacity-0 transition-all no-shadow"
+            :class="{'rounded-2xl': !padding}"
         />
         <span v-else class="flex items-center justify-center font-bold uppercase text-2xl h-full">{{
-          initial(title)
-        }}</span>
-      </figure>
-      <span
-        v-if="blur > 0 && src"
-        v-lazyload-observer
-        class="overflow-hidden z-1 rounded-2xl absolute left-0 opacity-50"
-        :class="FILTER_BLURS[blur]"
-        :style="overlayStyle"
-        data-testid="blurred-overlay"
-      >
-        <img :data-url="src" :alt="initial(title)" class="w-full opacity-0 transition-all" />
+            initial(title)
+          }}</span>
       </span>
       <span
-        v-show="showTitle"
-        class="flex items-center justify-center whitespace-pre"
-        :class="FONT_WEIGHT[fontWeight]"
-        :style="{width: `${width}px`}"
+          v-if="blur > 0 && src"
+          v-lazyload-observer
+          class="overflow-hidden z-1 rounded-2xl absolute left-0 opacity-50"
+          :class="FILTER_BLURS[blur]"
+          :style="overlayStyle"
+          data-testid="blurred-overlay"
+      >
+        <img :data-url="src" :alt="' ' + initial(title)" class="w-full opacity-0 transition-all"/>
+      </span>
+      <figcaption
+          v-show="showTitle"
+          class="flex items-center justify-center whitespace-pre"
+          :class="FONT_WEIGHT[fontWeight]"
+          :style="{width: `${width}px`}"
       >
         {{ overflow(title) }}
-      </span>
-    </span>
+      </figcaption>
+    </figure>
   </Link>
 </template>
 <style>
@@ -121,6 +122,7 @@ const overflow = (text = "") => {
   @apply transition-all scale-100 hover:scale-110 focus:scale-110;
   outline: none;
 }
+
 .vp-doc a.button-badge:focus-visible {
   outline: none !important;
 }

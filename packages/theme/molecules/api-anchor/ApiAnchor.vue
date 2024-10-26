@@ -29,7 +29,7 @@ const link = computed(() => {
     :is="link ? 'a' : 'span'"
     v-bind="link ? {href: link} : {}"
     data-name="ApiAnchor"
-    :class="`reset-link -${theme} ${deprecated ? 'opacity-50' : ''}`"
+    :class="`reset-link -${theme}`"
     :title="props.symbolName"
   >
     <span><ApiIcon :type="props.symbolType" /></span>

@@ -37,6 +37,7 @@ const choices = computed(() => {
       v-for="choice in choices"
       :key="choice.value"
       type="button"
+      role="checkbox"
       :aria-label="choice.label"
       :aria-checked="props.modelValue === choice.value"
       class="px-4 py-2 mb-2 text-sm rounded cursor-pointer focus:outline-none"

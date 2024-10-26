@@ -1,5 +1,6 @@
 export type ApiSymbolType = "interface" | "decorator" | "class" | "type" | "enum" | "const" | "function" | "service";
 export type ApiSymbolStatus = "stable" | "deprecated" | "experimental" | "private" | "public";
+
 export interface ApiSymbol {
   path?: string;
   symbolName: string;
@@ -11,6 +12,7 @@ export interface ApiSymbol {
 }
 
 export interface ApiResponse {
+  symbolTypes: { label: string; value: string; }[];
   modules: Record<
     string,
     {
