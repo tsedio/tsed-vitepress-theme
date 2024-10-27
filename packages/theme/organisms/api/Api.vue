@@ -1,25 +1,23 @@
 <script setup lang="ts">
 
-import {computed, ref, watch} from "vue";
-import {useApiContent} from "../../composables/api/useApiContent";
+import {computed, ref} from "vue";
 import ApiList from "../../molecules/api-list/ApiList.vue";
 import LightBanner from "../../molecules/banner/LightBanner.vue";
-import {LoaderCircle, Search} from "lucide-vue-next";
+import {Search} from "lucide-vue-next";
 import ButtonBoxes from "../../molecules/button-boxes/ButtonBoxes.vue";
-import type {ApiSymbol} from "../../composables/api/interfaces/Api";
+import type {ApiResponse, ApiSymbol} from "../../composables/api/interfaces/Api";
 
-const {data, isFetching, error} = useApiContent();
+interface Props extends ApiResponse {}
+
+const {symbolTypes, modules: initialModules} = withDefaults(defineProps<Props>(), {});
+
 const q = ref("");
 const category = ref("");
-const categoriesChoices = computed(() => [{label: "All", value: ""}].concat(data.value?.symbolTypes || []));
+const categoriesChoices = computed(() => [{label: "All", value: ""}].concat(symbolTypes || []));
 let timeout: NodeJS.Timeout | null = null;
 
 const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>>(() => {
-  if (isFetching.value || error.value || !data.value) {
-    return {};
-  }
-
-  return Object.entries(data.value.modules).reduce((acc, [key, value]) => {
+  return Object.entries(initialModules).reduce((acc, [key, value]) => {
     const symbols = value.symbols
         .filter((symbol) => {
           const qMatch = q.value ? symbol.symbolName.toLowerCase().includes(q.value.toLowerCase()) : true;
@@ -38,7 +36,6 @@ const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>
     };
   }, {});
 });
-
 
 </script>
 <template>
@@ -66,17 +63,12 @@ const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>
 
   <div class="flex flex-col space-y-3 max-w-site-xxl m-auto mx-5">
     <div>
-      <div v-if="isFetching" class="text-center text-4xl text-gray-darker mt-10 p-5 flex items-center justify-center">
-        <LoaderCircle class="animate-spin mr-5 text-blue-active" :size="32"/>
-        Loading...
-      </div>
-
-      <div v-else class="container px-4 mx-auto sm:px-0">
+      <div class="container px-4 mx-auto sm:px-0">
         <ButtonBoxes v-model="category" :choices="categoriesChoices"/>
       </div>
     </div>
 
-    <template v-if="!isFetching" v-for="(module, key) in modules" :key="key">
+    <template v-for="(module, key) in modules" :key="key">
       <div v-if="module.symbols?.length"
            v-lazyload-observer:focus.self="true"
            class="transition-opacity duration-500">

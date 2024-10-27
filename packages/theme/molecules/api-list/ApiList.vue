@@ -23,7 +23,7 @@ const symbols = computed(() => {
     return props.items;
   }
 
-  if (isFetching.value || error.value || !data.value) {
+  if (isFetching.value || error?.value || !data.value) {
     return [];
   }
 

@@ -7,4 +7,9 @@ meta:
     content: api reference model decorators ts.ed express typescript node.js javascript jsonschema json mapper serialization deserialization
 ---
 
-<Api />
+<script setup>
+import {data} from './api.data';
+</script>
+
+
+<Api v-bind="data" />

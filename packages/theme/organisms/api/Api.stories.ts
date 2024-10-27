@@ -1,6 +1,10 @@
 import type {Meta, StoryObj} from "@storybook/vue3";
 import {expect, userEvent, waitFor, within} from "@storybook/test";
 import Api from "./Api.vue";
+import api from "./__mock__/api.json";
+import {mapApiReferences} from "../../composables/api/mappers/mapApiReferences.js";
+
+const apiReferences = mapApiReferences(api);
 
 /**
  * Use to display api references.
@@ -19,7 +23,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: apiReferences,
   async play({canvasElement}) {
     const screen = within(canvasElement);
 
