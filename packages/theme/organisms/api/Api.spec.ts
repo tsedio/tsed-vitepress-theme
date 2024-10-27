@@ -1,10 +1,19 @@
 import {expect, userEvent, waitFor} from "@storybook/test";
 import Api from "./Api.vue";
 import {render, screen} from "@testing-library/vue";
+import api from "./__mock__/api.json";
+import {mapApiReferences} from "../../composables/api/mappers/mapApiReferences.js";
+
+const apiReferences = mapApiReferences(api);
 
 describe("<Api />", () => {
   it("should render Api component", async () => {
-    render(Api);
+    render(Api, {
+      props: {
+        modules: apiReferences.modules,
+        symbolTypes: apiReferences.symbolTypes
+      }
+    });
 
     await waitFor(() => expect(screen.getByText("@tsed/core")).toBeInTheDocument());
     await waitFor(() => expect(screen.getByText("@tsed/di")).toBeInTheDocument());

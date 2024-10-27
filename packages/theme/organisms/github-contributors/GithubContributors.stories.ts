@@ -17,11 +17,11 @@ const meta = {
       options: COLORS_LIST,
       default: "gray-lighter"
     },
-    color: {
-      control: "select",
-      options: COLORS_LIST,
-      default: "platinium"
-    },
+    // color: {
+    //   control: "select",
+    //   options: COLORS_LIST,
+    //   default: "platinium"
+    // },
     width: {
       control: "number",
       default: 80

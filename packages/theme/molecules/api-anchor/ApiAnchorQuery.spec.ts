@@ -3,7 +3,7 @@ import {beforeEach} from "vitest";
 import {useFetch} from "@vueuse/core";
 import ApiAnchorQuery from "./ApiAnchorQuery.vue";
 import {mount} from "@vue/test-utils";
-import {mapSymbol} from "../../composables/api/useApiContent";
+import {mapSymbol} from "../../composables/api/mappers/mapApiReferences";
 
 vi.mock("@vueuse/core");
 
