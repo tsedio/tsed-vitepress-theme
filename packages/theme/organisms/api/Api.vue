@@ -75,8 +75,8 @@ const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>
         <h2 class="font-bold text-xl">{{ module.name }}</h2>
 
         <div class="bg-gray-100 dark:bg-gray-900 pb-4 p-5 mt-4 mb-10 rounded-sm">
-          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div v-for="item in module.symbols" :key="item.symbolName">
+          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4" role="list">
+            <div v-for="item in module.symbols" :key="item.symbolName" role="listitem">
               <ApiAnchor class="w-full px-2 py-1" v-bind="item" theme="list"/>
             </div>
           </div>
