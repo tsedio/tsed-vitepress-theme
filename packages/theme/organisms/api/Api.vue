@@ -1,20 +1,20 @@
 <script setup lang="ts">
 
 import {computed, ref} from "vue";
-import ApiList from "../../molecules/api-list/ApiList.vue";
 import LightBanner from "../../molecules/banner/LightBanner.vue";
 import {Search} from "lucide-vue-next";
 import ButtonBoxes from "../../molecules/button-boxes/ButtonBoxes.vue";
 import type {ApiResponse, ApiSymbol} from "../../composables/api/interfaces/Api";
+import ApiAnchor from "../../molecules/api-anchor/ApiAnchor.vue";
 
-interface Props extends ApiResponse {}
+interface Props extends ApiResponse {
+}
 
 const {symbolTypes, modules: initialModules} = withDefaults(defineProps<Props>(), {});
 
 const q = ref("");
 const category = ref("");
 const categoriesChoices = computed(() => [{label: "All", value: ""}].concat(symbolTypes || []));
-let timeout: NodeJS.Timeout | null = null;
 
 const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>>(() => {
   return Object.entries(initialModules).reduce((acc, [key, value]) => {
@@ -74,7 +74,13 @@ const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>
            class="transition-opacity duration-500">
         <h2 class="font-bold text-xl">{{ module.name }}</h2>
 
-        <ApiList class="mt-4" :items="module.symbols"></ApiList>
+        <div class="bg-gray-100 dark:bg-gray-900 pb-4 p-5 mt-4 mb-10 rounded-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div v-for="item in module.symbols" :key="item.symbolName">
+              <ApiAnchor class="w-full px-2 py-1" v-bind="item" theme="list"/>
+            </div>
+          </div>
+        </div>
       </div>
     </template>
   </div>
