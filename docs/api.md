@@ -12,4 +12,4 @@ import {data} from './api.data';
 </script>
 
 
-<Api v-bind="data" />
+<Api :modules="data.modules" :symbol-types="data.symbolTypes"  />

@@ -76,3 +76,7 @@ export function useData() {
     theme: ref
   };
 }
+
+export function withBase(url: string) {
+  return url;
+}

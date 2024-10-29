@@ -7,7 +7,7 @@ let cache: UseFetchReturn<ApiResponse> | null = null;
 
 export function useApiContent() {
   const theme = useThemeConfig();
-  const apiUrl = theme.value.apiUrl;
+  let apiUrl = theme.value.apiUrl;
 
   return cache || (cache = useFetch<ApiResponse>(apiUrl, {
     afterFetch(ctx) {

@@ -11,3 +11,7 @@ export function useThemeConfig() {
 
   return ref;
 }
+
+export function withBase(value: string) {
+  return value;
+}
