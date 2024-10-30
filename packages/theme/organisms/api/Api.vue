@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts">
 
 import {computed, ref} from "vue";
 import LightBanner from "../../molecules/banner/LightBanner.vue";
@@ -6,37 +6,67 @@ import {Search} from "lucide-vue-next";
 import ButtonBoxes from "../../molecules/button-boxes/ButtonBoxes.vue";
 import type {ApiResponse, ApiSymbol} from "../../composables/api/interfaces/Api";
 import ApiAnchor from "../../molecules/api-anchor/ApiAnchor.vue";
+import lazyLoadObserver from "../../directives/lazyLoadObserver";
 
 interface Props extends ApiResponse {
 }
 
-const {symbolTypes, modules: initialModules} = withDefaults(defineProps<Props>(), {});
+export default {
+  components: {
+    Search,
+    LightBanner,
+    ButtonBoxes,
+    ApiAnchor
+  },
+  directives: {
+    "lazyload-observer": lazyLoadObserver
+  },
+  props: {
+    symbolTypes: {
+      type: Array,
+      default: () => []
+    },
+    modules: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  setup(props) {
+    const {symbolTypes, modules: initialModules} = props as Props;
 
-const q = ref("");
-const category = ref("");
-const categoriesChoices = computed(() => [{label: "All", value: ""}].concat(symbolTypes || []));
+    const q = ref("");
+    const category = ref("");
+    const categoriesChoices = computed(() => [{label: "All", value: ""}].concat(symbolTypes || []));
 
-const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>>(() => {
-  return Object.entries(initialModules).reduce((acc, [key, value]) => {
-    const symbols = value.symbols
-        .filter((symbol) => {
-          const qMatch = q.value ? symbol.symbolName.toLowerCase().includes(q.value.toLowerCase()) : true;
-          const categoryMatch = category.value ? symbol.symbolType.toLowerCase().includes(category.value.toLowerCase()) : true;
+    const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>>(() => {
+      return Object.entries(initialModules).reduce((acc, [key, value]) => {
+        const symbols = value.symbols
+            .filter((symbol) => {
+              const qMatch = q.value ? symbol.symbolName.toLowerCase().includes(q.value.toLowerCase()) : true;
+              const categoryMatch = category.value ? symbol.symbolType.toLowerCase().includes(category.value.toLowerCase()) : true;
 
-          return qMatch && categoryMatch;
-        })
-        .sort((a, b) => a.symbolName.localeCompare(b.symbolName));
+              return qMatch && categoryMatch;
+            })
+            .sort((a, b) => a.symbolName.localeCompare(b.symbolName));
+
+        return {
+          ...acc,
+          [key]: {
+            ...value,
+            symbols
+          }
+        };
+      }, {});
+    });
 
     return {
-      ...acc,
-      [key]: {
-        ...value,
-        symbols
-      }
+      q,
+      category,
+      categoriesChoices,
+      resolvedModules: modules
     };
-  }, {});
-});
-
+  }
+};
 </script>
 <template>
   <LightBanner title="Explore API references">
@@ -68,7 +98,7 @@ const modules = computed<Record<string, { name: string; symbols: ApiSymbol[]; }>
       </div>
     </div>
 
-    <template v-for="(module, key) in modules" :key="key">
+    <template v-for="(module, key) in resolvedModules" :key="key">
       <div v-if="module.symbols?.length"
            v-lazyload-observer:focus.self="true"
            class="transition-opacity duration-500">
