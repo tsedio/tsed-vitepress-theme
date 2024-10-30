@@ -41,13 +41,37 @@ yarn add @tsed/vitepress-theme
 In your config.mts file, you can import the theme and extend it:
 
 ```ts
-import "./style.css";
+// https://vitepress.dev/guide/custom-theme
 import {DefaultTheme} from "@tsed/vitepress-theme";
 import type {Theme} from "vitepress";
+import {h} from "vue";
+import HomeBanner from "@tsed/vitepress-theme/organisms/home/HomeBanner.vue";
+import HomePartners from "@tsed/vitepress-theme/organisms/home/HomePartners.vue";
+import HomeBody from "@tsed/vitepress-theme/organisms/home/HomeBody.vue";
+import HomeTabsTerminal from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabsTerminal.vue";
+import HomeTabTerminalNpm from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalNpm.vue";
+import HomeTabTerminalYarn from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalYarn.vue";
+import HomeTabTerminalPnpm from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalPnpm.vue";
+import HomeTabTerminalBun from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalBun.vue";
 
 export default {
   extends: DefaultTheme,
-  enhanceApp() {}
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      "home-hero-image": () =>
+        h(HomeBanner, null, { // you can override the default theme banner by your own component
+          default: () =>
+            h(HomeTabsTerminal, null, {
+              npm: () => h(HomeTabTerminalNpm), // Replace the default NPM terminal tab
+              yarn: () => h(HomeTabTerminalYarn), // Replace the default Yarn terminal tab
+              pnpm: () => h(HomeTabTerminalPnpm), // Replace the default Pnpm terminal tab
+              bun: () => h(HomeTabTerminalBun) // Replace the default Bun terminal tab
+            })
+        }),
+      "home-features-before": () => h(HomePartners),
+      "home-features-after": () => h(HomeBody)
+    });
+  }
 } satisfies Theme;
 ```
 
@@ -79,6 +103,60 @@ const config = {
 } satisfies Config;
 
 export default config;
+```
+
+## Implement your own Npm/Yarn/Pnpm/Bun terminal tab
+
+You can implement your own terminal tab by creating a new component as follows:
+
+```vue
+<template>
+  <pre
+      class="shiki shiki-themes github-light github-dark vp-code"
+      tabindex="0"
+  ><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">npx</span><span
+      style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -p</span><span
+      style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> @tsed/cli</span><span
+      style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> tsed</span><span
+      style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> init</span><span
+      style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> .</span></span></code></pre>
+</template>
+```
+
+Then, you can import it in your `config.mts` file:
+
+```ts
+import {DefaultTheme} from "@tsed/vitepress-theme";
+import type {Theme} from "vitepress";
+import {h} from "vue";
+import HomeBanner from "@tsed/vitepress-theme/organisms/home/HomeBanner.vue";
+import HomePartners from "@tsed/vitepress-theme/organisms/home/HomePartners.vue";
+import HomeBody from "@tsed/vitepress-theme/organisms/home/HomeBody.vue";
+import HomeTabsTerminal from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabsTerminal.vue";
+import HomeTabTerminalNpm from "./terminal/HomeTabTerminalNpm.vue";
+import HomeTabTerminalYarn from "./terminal/HomeTabTerminalYarn.vue";
+import HomeTabTerminalPnpm from "./terminal/HomeTabTerminalPnpm.vue";
+import HomeTabTerminalBun from "./terminal/HomeTabTerminalBun.vue";
+
+export default {
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      "home-hero-image": () =>
+        h(HomeBanner, null, {
+          default: () =>
+            h(HomeTabsTerminal, null, {
+              npm: () => h(HomeTabTerminalNpm), 
+              yarn: () => h(HomeTabTerminalYarn),
+              pnpm: () => h(HomeTabTerminalPnpm),
+              bun: () => h(HomeTabTerminalBun)
+            })
+        }),
+      "home-features-before": () => h(HomePartners),
+      "home-features-after": () => h(HomeBody)
+    });
+  }
+} satisfies Theme;
 ```
 
 ## Contributors
