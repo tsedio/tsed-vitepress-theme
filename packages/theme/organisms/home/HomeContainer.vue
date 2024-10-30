@@ -20,17 +20,19 @@ watch(targetIsVisible, () => {
 });
 </script>
 <template>
-  <div
-    ref="target"
-    class="VPContainer"
-    :class="{
+  <div class="w-full" :class="{'max-w-[100vw] overflow-x-hidden overflow-y-visible': animate}">
+    <div
+        ref="target"
+        class="VPContainer"
+        :class="{
       'opacity-0 scale-105 translate-y-6': !show,
       'opacity-1 scale-100 translate-y-0': show,
       'transition-all ease-in-out delay-200 duration-1000': props.animate
     }"
-  >
-    <div class="container">
-      <slot />
+    >
+      <div class="container">
+        <slot/>
+      </div>
     </div>
   </div>
 </template>
