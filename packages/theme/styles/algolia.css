@@ -23,6 +23,7 @@
   }
 
   .dark {
+    .VPNavBar.top.home .DocSearch-Button,
     .VPNavBar .DocSearch-Button {
       @apply transition-all ease-in-out duration-200 rounded-full;
       background: rgba(120, 131, 155, .2);

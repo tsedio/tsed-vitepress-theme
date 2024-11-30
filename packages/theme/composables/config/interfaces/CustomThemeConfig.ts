@@ -3,4 +3,7 @@ export interface CustomThemeConfig {
   apiRedirectUrl: string;
   repo: string;
   githubProxyUrl: string;
+  stargazerUrl?: string;
+  coveragePercentage?: string;
+  defaultStargazerValue?: number;
 }
