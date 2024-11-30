@@ -2,24 +2,32 @@
 import ButtonBanner from "./ButtonBanner.vue";
 import {useStargazers} from "../../composables/api/useStargazers";
 import {useThemeConfig} from "../../composables/config/useThemeConfig";
+import {formatNumber} from "../../utils/format";
 
 const theme = useThemeConfig();
-const {githubProxyUrl} = theme.value;
+const {
+  githubProxyUrl,
+  stargazerUrl,
+  defaultStargazerValue = 2800,
+  coveragePercentage = 98,
+  repo
+} = theme.value;
 
-const {formattedStargazers, fetchStargazers} = useStargazers(githubProxyUrl, 2800);
+const {data} = useStargazers(stargazerUrl || githubProxyUrl);
+const repoHref = `https://github.com/${repo}`;
 
-fetchStargazers();
 </script>
 <template>
   <div class="vp-doc m-auto w-[90%] sm:w-full lg:w-[75%] mt-10">
-    <slot />
+    <slot/>
 
     <div class="flex justify-between space-x-2 -mx-[24px] md:mx-0">
-      <ButtonBanner href="https://github.com/tsedio/tsed/stargazers" title="stars">{{
-        formattedStargazers
-      }}</ButtonBanner>
-      <ButtonBanner href="https://github.com/tsedio/tsed" title="Coverage">98%</ButtonBanner>
-      <ButtonBanner href="https://github.com/tsedio/tsed/blob/production/LICENSE" title="License">
+      <ButtonBanner :href="repoHref + '/stargazers'" title="stars">{{
+          data?.formattedStargazers || formatNumber(defaultStargazerValue)
+        }}
+      </ButtonBanner>
+      <ButtonBanner :href="repoHref" title="Coverage">{{coveragePercentage}}%</ButtonBanner>
+      <ButtonBanner :href="repoHref + '/blob/production/LICENSE'" title="License">
         <template #title>License</template>
         MIT
       </ButtonBanner>
