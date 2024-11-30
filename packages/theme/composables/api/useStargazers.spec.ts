@@ -1,30 +1,52 @@
-import axios from "axios";
-import {describe, expect, it, vi} from "vitest";
+import {beforeEach, describe, expect, it, vi} from "vitest";
+import {useFetch} from "@vueuse/core";
 import {useStargazers} from "./useStargazers";
+import {formatNumber} from "../../utils/format";
 
-vi.mock("axios");
+vi.mock("@vueuse/core");
 
 describe("useStargazers", () => {
-  it("should fetch the Github Stargazers successfully", async () => {
-    const mockData = {
-      id: "id",
-      stargazers_count: 100
-    };
-    vi.mocked(axios.get).mockResolvedValue({data: mockData});
+  beforeEach(() => {
 
-    const {stargazers, fetchStargazers} = useStargazers("tsedio/tsed");
-    await fetchStargazers();
-
-    expect(stargazers.value).toEqual(100);
-    expect(axios.get).toHaveBeenCalledWith("https://repos/api.github.com/tsedio/tsed");
   });
 
-  it("should handle errors when fetching Github Stargazers", async () => {
-    vi.mocked(axios.get).mockRejectedValue(new Error("Network Error"));
+  it("should fetch the Github Stargazers successfully", async () => {
+    const mock = {
+      get: vi.fn().mockReturnThis(),
+      json: vi.fn().mockReturnValue({
+        data: {
+          value: {
+            stargazers_count: 65,
+            formattedStargazers: formatNumber(65)
+          }
+        }
+      })
+    };
 
-    const {stargazers, fetchStargazers} = useStargazers("tsedio/tsed", 200);
-    await fetchStargazers();
+    vi.mocked(useFetch).mockReturnValue(mock as any);
 
-    expect(stargazers.value).toEqual(200);
+    const result = useStargazers("tsedio/tsed");
+
+    expect(result).toEqual({
+      "data": {
+        "value": {
+          "stargazers_count": 65,
+          "formattedStargazers": "65"
+        }
+      }
+    });
+
+    const mapped = (vi.mocked(useFetch).mock.calls[0][1] as any).afterFetch({
+      data: {
+        stargazers_count: 65
+      }
+    });
+
+    expect(mapped).toEqual({
+      data: {
+        stargazers: 65,
+        formattedStargazers: "65"
+      }
+    });
   });
 });
