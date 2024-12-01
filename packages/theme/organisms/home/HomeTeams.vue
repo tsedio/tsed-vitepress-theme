@@ -8,8 +8,8 @@ const theme = useThemeConfig();
 const members: any[] = ((theme.value.team || []) as Team[]).map((member) => {
   return {
     avatar: member.src,
-    name: member.title + " - " + member.job,
-    title: member.role,
+    name: member.title,
+    title: member.role + " - " + member.job,
     links: [
       {icon: "github", link: "https://github.com/" + member.github},
       member.twitter && {icon: "twitter", link: "https://x.com/" + member.twitter}
