@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<PartnerProps>(), {
         rel="noopener noreferrer"
         class="link external partner-logo flex items-center h-full justify-center"
       >
-        <img :src="partner.src" :style="partner.style" />
+        <img :src="partner.src" :style="partner.style" :alt="partner.title" />
       </a>
     </div>
   </div>
