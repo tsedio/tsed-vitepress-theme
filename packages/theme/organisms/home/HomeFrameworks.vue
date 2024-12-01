@@ -11,12 +11,12 @@ const frameworks = (frontmatter.value.frameworks as Framework[]).map((item, inde
 });
 </script>
 <template>
-  <div class="flex flex-col sm:flex-row pt-10 sm:pt-20 gap-10">
-    <div class="text-center sm:text-left text-2xl sm:text-5xl flex items-center">
-      <div>
+  <article class="flex flex-col sm:flex-row pt-10 sm:pt-20 gap-10">
+    <div class="text-center sm:text-left flex items-center">
+      <h3 class="text-2xl sm:text-5xl">
         <slot />
-      </div>
+      </h3>
     </div>
     <Frameworks :items="frameworks" />
-  </div>
+  </article>
 </template>

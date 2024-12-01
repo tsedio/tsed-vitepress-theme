@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import HomeFrameworks from "./HomeFrameworks.vue";
 import HomeContainer from "./HomeContainer.vue";
+import HomeTeams from "./HomeTeams.vue";
 import MessageCircleHeart from "../../atoms/svg/MessageCircleHeart.vue";
 import {computed} from "vue";
 import {useRoute} from "vitepress";
+
 const route = useRoute();
 const isHome = computed(() => {
   return route.path === "/" || route.path === "";
 });
+
 </script>
 <template>
   <HomeContainer v-if="isHome" animate>
@@ -35,5 +38,9 @@ const isHome = computed(() => {
         </div>
       </div>
     </div>
+  </HomeContainer>
+
+  <HomeContainer v-if="isHome" animate>
+    <HomeTeams />
   </HomeContainer>
 </template>
