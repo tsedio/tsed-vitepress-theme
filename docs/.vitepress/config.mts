@@ -1,6 +1,6 @@
 import {defineConfig} from "vitepress";
 import {apiAnchor} from "@tsed/vitepress-theme/markdown/api-anchor/api-anchor.js";
-
+import team from "../team.json";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Ts.ED",
@@ -33,6 +33,7 @@ export default defineConfig({
     apiUrl: "/api.json",
     apiRedirectUrl: "",
     repo: "tsedio/tsed",
+    team,
     githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
     editLink: {
       pattern: "https://github.com/tsedio/tsed-vitepress-theme/edit/main/docs/:path"

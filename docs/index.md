@@ -16,7 +16,9 @@ hero:
     - theme: alt
       text: Become sponsor
       link: https://github.com/sponsors/Romakita
-
+testimonial:
+  title: "What is Ts.ED?"
+  description: Ts.ED is a modern Node.js framework built with TypeScript. It offers a flexible structure with a fast learning curve, specifically designed to improve the developer experience. Ts.ED provides numerous decorators and guidelines to make your code more readable and less error-prone. It supports various platforms and tools, including Node.js/Bun.js, Express.js/Koa.js, CLI, and serverless architectures (e.g., AWS).
 features:
   - title: Rest API
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
@@ -189,5 +191,6 @@ partners:
     src: /partners/schnell.svg
     class: "max-w-[120px]"
 ---
+
 
 

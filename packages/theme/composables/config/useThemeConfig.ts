@@ -9,6 +9,5 @@ export function useThemeConfig() {
     theme.value.apiUrl = withBase(theme.value?.apiUrl);
   }
 
-
   return theme;
 }

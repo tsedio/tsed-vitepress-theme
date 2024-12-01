@@ -16,12 +16,15 @@ const frontmatter = useFrontMatter();
 const partners = computed(() => {
   return frontmatter.value.partners as Partner[];
 });
+
+
 </script>
 <template>
   <HomeContainer v-if="isHome" class="mb-16">
     <Partners :items="partners" />
   </HomeContainer>
 </template>
+
 <style scoped>
 .VPPartners {
   position: relative;

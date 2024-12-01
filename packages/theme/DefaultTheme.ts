@@ -14,6 +14,8 @@ import HomeFrameworks from "./organisms/home/HomeFrameworks.vue";
 import MessageCircleHeart from "./atoms/svg/MessageCircleHeart.vue";
 import Warehouse from "./organisms/warehouse/Warehouse.vue";
 import Api from "./organisms/api/Api.vue";
+import TeamMembers from "./molecules/teams/TeamMembers.vue";
+import TeamMembersItem from "./molecules/teams/TeamMembersItem.vue";
 
 export default {
   extends: DefaultTheme,
@@ -27,6 +29,8 @@ export default {
     app.component("Projects", Projects);
     app.component("HomeFrameworks", HomeFrameworks);
     app.component("MessageCircleHeart", MessageCircleHeart);
+    app.component("TeamMembers", TeamMembers);
+    app.component("TeamMembersItem", TeamMembersItem);
     // eslint-disable-next-line vue/no-reserved-component-names
     app.component("Button", Button);
     app.component("Banner", Banner);
