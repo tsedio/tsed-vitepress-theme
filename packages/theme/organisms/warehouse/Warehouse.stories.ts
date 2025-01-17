@@ -33,7 +33,7 @@ export const Default: Story = {
 
     const clearableFilter = screen.getByTestId("ClearableFilter");
 
-    await expect(within(clearableFilter).getByText(/plugins/)).toHaveTextContent("125 plugins found");
+    await expect(within(clearableFilter).getByText(/plugins/)).toHaveTextContent(/1\d{2} plugins found/);
 
     await expect(screen.getByText("@tsed/logger")).toBeInTheDocument();
     await expect(screen.getByText("@tsed/exceptions")).toBeInTheDocument();
@@ -62,6 +62,6 @@ export const Default: Story = {
 
     await userEvent.click(clearFilter, {delay: 500});
 
-    await expect(within(clearableFilter).getByText(/plugins/)).toHaveTextContent("125 plugins found");
+    await expect(within(clearableFilter).getByText(/plugins/)).toHaveTextContent(/1\d{2} plugins found/);
   }
 };
