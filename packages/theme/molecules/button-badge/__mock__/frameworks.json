@@ -2,27 +2,27 @@
   {
     "title": "TypeScript",
     "href": "https://www.typescriptlang.org/",
-    "src": "https://tsed.io/typescript.png"
+    "src": "https://tsed.dev/typescript.png"
   },
   {
     "title": "Express.js",
     "href": "https://expressjs.com/",
-    "src": "https://tsed.io/expressjs.svg"
+    "src": "https://tsed.dev/expressjs.svg"
   },
   {
     "title": "Koa.js",
     "href": "https://koajs.com/",
-    "src": "https://tsed.io/koa.svg"
+    "src": "https://tsed.dev/koa.svg"
   },
   {
     "title": "Jest",
     "href": "https://jestjs.io/",
-    "src": "https://tsed.io/jest.svg"
+    "src": "https://tsed.dev/jest.svg"
   },
   {
     "title": "Mocha",
     "href": "https://mochajs.org/",
-    "src": "https://tsed.io/mochajs.svg"
+    "src": "https://tsed.dev/mochajs.svg"
   },
   {
     "title": "AJV",
@@ -32,31 +32,31 @@
   {
     "title": "Swagger",
     "href": "/tutorials/swagger.html",
-    "src": "https://tsed.io/swagger.svg"
+    "src": "https://tsed.dev/swagger.svg"
   },
   {
     "title": "Passport",
     "href": "/tutorials/passport.html",
-    "src": "https://tsed.io/passportjs.png"
+    "src": "https://tsed.dev/passportjs.png"
   },
   {
     "title": "Mongoose",
     "href": "/tutorials/mongoose.html",
-    "src": "https://tsed.io/mongoose.png"
+    "src": "https://tsed.dev/mongoose.png"
   },
   {
     "title": "TypeORM",
     "href": "/tutorials/typeorm.html",
-    "src": "https://tsed.io/typeorm.png"
+    "src": "https://tsed.dev/typeorm.png"
   },
   {
     "title": "TypeGraphQL",
     "href": "/tutorials/graphql.html",
-    "src": "https://tsed.io/typegraphql.png"
+    "src": "https://tsed.dev/typegraphql.png"
   },
   {
     "title": "Socket.io",
     "href": "/tutorials/socketio.html",
-    "src": "https://tsed.io/socketio.svg"
+    "src": "https://tsed.dev/socketio.svg"
   }
 ]

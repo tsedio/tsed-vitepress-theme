@@ -1,5 +1,5 @@
 <p style="text-align: center" align="center">
- <a href="https://tsed.io" target="_blank"><img src="https://tsed.io/tsed-og.png" width="200" alt="Ts.ED logo"/></a>
+ <a href="https://tsed.dev" target="_blank"><img src="https://tsed.dev/tsed-og.png" width="200" alt="Ts.ED logo"/></a>
 </p>
 
 <div align="center">
@@ -17,11 +17,11 @@
 </div>
 
 <div align="center">
-  <a href="https://tsed.io/">Website</a>
+  <a href="https://tsed.dev/">Website</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://tsed.io/getting-started/">Getting started</a>
+  <a href="https://tsed.dev/getting-started/">Getting started</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://api.tsed.io/rest/slack/tsedio/tsed">Slack</a>
+  <a href="https://api.tsed.dev/rest/slack/tsedio/tsed">Slack</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://twitter.com/TsED_io">Twitter</a>
 </div>
@@ -32,7 +32,7 @@
 
 ## What it is
 
-This repository is the new website for Ts.ED. It replaces the old website [https://tsed.io](https://tsed.io) based on [VuePress 1.x](https://vuepress.vuejs.org/) by a new website based on [VitePress](https://vitepress.dev).
+This repository is the new website for Ts.ED. It replaces the old website [https://tsed.dev](https://tsed.dev) based on [VuePress 1.x](https://vuepress.vuejs.org/) by a new website based on [VitePress](https://vitepress.dev).
 
 ## Installation
 
