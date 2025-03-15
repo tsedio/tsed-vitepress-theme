@@ -1,7 +1,7 @@
 {
   "name": "@tsed/vitepress-theme",
   "description": "Shared components for vitepress",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "type": "module",
   "main": "./index.ts",
   "exports": {
