@@ -5,7 +5,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fexceptions",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/exceptions",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -27,7 +27,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fopenspec",
-    "icon": "https://tsed.io/swagger.svg",
+    "icon": "https://tsed.dev/swagger.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/openspec",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -51,7 +51,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/logger",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -73,7 +73,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-express",
-    "icon": "https://tsed.io/expressjs.svg",
+    "icon": "https://tsed.dev/expressjs.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-express",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -254,7 +254,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fswagger",
-    "icon": "https://tsed.io/swagger.svg",
+    "icon": "https://tsed.dev/swagger.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/specs/swagger",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -278,8 +278,8 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fengines",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
-    "homepage": "https://tsed.io/docs/templating.html#configuration",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
+    "homepage": "https://tsed.dev/docs/templating.html#configuration",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
       {
@@ -412,7 +412,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fsocketio",
-    "icon": "https://tsed.io/socketio.svg",
+    "icon": "https://tsed.dev/socketio.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/socketio",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -458,7 +458,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fpassport",
-    "icon": "https://tsed.io/passportjs.png",
+    "icon": "https://tsed.dev/passportjs.png",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/security/passport",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -482,7 +482,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Ftypeorm",
-    "icon": "https://tsed.io/typeorm.png",
+    "icon": "https://tsed.dev/typeorm.png",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/typeorm",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -506,7 +506,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fmongoose",
-    "icon": "https://tsed.io/mongoose.png",
+    "icon": "https://tsed.dev/mongoose.png",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/mongoose",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -530,7 +530,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Ftesting-mongoose",
-    "icon": "https://tsed.io/mongoose.png",
+    "icon": "https://tsed.dev/mongoose.png",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/testing-mongoose",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -602,7 +602,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fadapters",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/orm/adapters",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -648,7 +648,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fplatform-koa",
-    "icon": "https://tsed.io/koa.svg",
+    "icon": "https://tsed.dev/koa.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-koa",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -672,8 +672,8 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fprisma",
-    "icon": "https://tsed.io/prisma-2.svg",
-    "homepage": "https://tsed.io/tutorials/prisma.html",
+    "icon": "https://tsed.dev/prisma-2.svg",
+    "homepage": "https://tsed.dev/tutorials/prisma.html",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
       {
@@ -724,8 +724,8 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fapollo",
-    "icon": "https://tsed.io/apollo-graphql-1.svg",
-    "homepage": "https://tsed.io/tutorials/graphql.html",
+    "icon": "https://tsed.dev/apollo-graphql-1.svg",
+    "homepage": "https://tsed.dev/tutorials/graphql.html",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
       {
@@ -772,7 +772,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fstripe",
-    "icon": "https://tsed.io/stripe.svg",
+    "icon": "https://tsed.dev/stripe.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/stripe",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -797,8 +797,8 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Ftypegraphql",
-    "icon": "https://tsed.io/typegraphql.png",
-    "homepage": "https://tsed.io/tutorials/graphql.html",
+    "icon": "https://tsed.dev/typegraphql.png",
+    "homepage": "https://tsed.dev/tutorials/graphql.html",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
       {
@@ -889,7 +889,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fsocketio-testing",
-    "icon": "https://tsed.io/socketio.svg",
+    "icon": "https://tsed.dev/socketio.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/socketio-testing",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -913,8 +913,8 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fagenda",
-    "icon": "https://tsed.io/agenda.svg",
-    "homepage": "https://tsed.io/tutorials/agenda.html",
+    "icon": "https://tsed.dev/agenda.svg",
+    "homepage": "https://tsed.dev/tutorials/agenda.html",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
       {
@@ -1056,7 +1056,7 @@
     "version": "7.82.1",
     "repository": "https://github.com/tsedio/tsed",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fevent-emitter",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/tsed/tree/production/packages/third-parties/event-emitter",
     "bugs": "https://github.com/tsedio/tsed/issues",
     "maintainers": [
@@ -1110,7 +1110,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-eslint",
-    "icon": "https://cli.tsed.io/eslint.svg",
+    "icon": "https://cli.tsed.dev/eslint.svg",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-eslint",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1156,7 +1156,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-jest",
-    "icon": "https://tsed.io/jest.svg",
+    "icon": "https://tsed.dev/jest.svg",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-jest",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1202,7 +1202,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1224,7 +1224,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-passport",
-    "icon": "https://tsed.io/passportjs.png",
+    "icon": "https://tsed.dev/passportjs.png",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-passport",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1249,7 +1249,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-mongoose",
-    "icon": "https://tsed.io/mongoose.png",
+    "icon": "https://tsed.dev/mongoose.png",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-mongoose",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1296,7 +1296,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-typeorm",
-    "icon": "https://tsed.io/typeorm.png",
+    "icon": "https://tsed.dev/typeorm.png",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-typeorm",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1434,7 +1434,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-prisma",
-    "icon": "https://tsed.io/prisma-2.svg",
+    "icon": "https://tsed.dev/prisma-2.svg",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-prisma",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1458,7 +1458,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-plugin-mocha",
-    "icon": "https://tsed.io/mochajs.svg",
+    "icon": "https://tsed.dev/mochajs.svg",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-plugin-mocha",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1525,7 +1525,7 @@
     "version": "5.2.7",
     "repository": "https://github.com/tsedio/tsed-cli",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fcli-testing",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/tsed-cli/tree/master/packages/cli-testing",
     "bugs": "https://github.com/tsedio/tsed-cli/issues",
     "maintainers": [
@@ -1549,7 +1549,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-logstash-http",
-    "icon": "https://tsed.io/elastic-logstash.svg",
+    "icon": "https://tsed.dev/elastic-logstash.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/logstash-http",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -1649,7 +1649,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-loggly",
-    "icon": "https://tsed.io/loggly.svg",
+    "icon": "https://tsed.dev/loggly.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/loggly",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -1673,7 +1673,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-insight",
-    "icon": "https://tsed.io/rapid7.svg",
+    "icon": "https://tsed.dev/rapid7.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/insight",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -1745,7 +1745,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-rabbitmq",
-    "icon": "https://tsed.io/rabbitmq.svg",
+    "icon": "https://tsed.dev/rabbitmq.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/rabbitmq",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -1769,7 +1769,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-logentries",
-    "icon": "https://tsed.io/logentries.svg",
+    "icon": "https://tsed.dev/logentries.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/logentries",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -1789,7 +1789,7 @@
   },
   {
     "name": "serverless-tsed-plugin",
-    "description": "This plugin integrates [Ts.ED](https://tsed.io/) with the Serverless Framework, allowing you to automatically generate Serverless functions from your Ts.ED controllers.",
+    "description": "This plugin integrates [Ts.ED](https://tsed.dev/) with the Serverless Framework, allowing you to automatically generate Serverless functions from your Ts.ED controllers.",
     "version": "0.2.0",
     "repository": "https://github.com/mecanizou-eco/serverless-tsed-plugin",
     "npm": "https://www.npmjs.com/package/serverless-tsed-plugin",
@@ -1837,7 +1837,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-logstash-udp",
-    "icon": "https://tsed.io/elastic-logstash.svg",
+    "icon": "https://tsed.dev/elastic-logstash.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/logstash-udp",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -1861,7 +1861,7 @@
     "version": "6.7.5",
     "repository": "https://github.com/tsedio/logger",
     "npm": "https://www.npmjs.com/package/%40tsed%2Flogger-slack",
-    "icon": "https://tsed.io/slack.svg",
+    "icon": "https://tsed.dev/slack.svg",
     "homepage": "https://github.com/tsedio/logger/tree/production/packages/slack",
     "bugs": "https://github.com/tsedio/logger/issues",
     "maintainers": [
@@ -2038,7 +2038,7 @@
     "version": "1.24.1",
     "repository": "https://github.com/tsedio/tsed-monorepo-utils",
     "npm": "https://www.npmjs.com/package/%40tsed%2Fyarn-workspaces",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "homepage": "https://github.com/tsedio/tsed-monorepo-utils#readme",
     "maintainers": [
       {
@@ -2340,7 +2340,7 @@
   {
     "name": "@tsed/async-hook-context",
     "description": "Add Async Hook context support in Ts.ED",
-    "icon": "https://api.tsed.io/statics/warehouse/tsed.svg",
+    "icon": "https://api.tsed.dev/statics/warehouse/tsed.svg",
     "maintainers": [],
     "downloads": 0,
     "stars": 0,
@@ -2354,7 +2354,7 @@
   {
     "name": "@tsed/platform-aws",
     "description": "Module to support AWS function with Ts.ED",
-    "icon": "https://tsed.io/aws.png",
+    "icon": "https://tsed.dev/aws.png",
     "maintainers": [],
     "downloads": 0,
     "stars": 0,
@@ -2404,7 +2404,7 @@
   },
   {
     "name": "vuepress-theme-tsed",
-    "description": "Vuepress theme for tsed.io",
+    "description": "Vuepress theme for tsed.dev",
     "maintainers": [],
     "downloads": 0,
     "stars": 0,
@@ -2425,7 +2425,7 @@
   {
     "name": "@tsed/graphql",
     "description": "GraphQL package for Ts.ED framework, based on Apollo-server-express and Type-graphql",
-    "icon": "https://tsed.io/typegraphql.png",
+    "icon": "https://tsed.dev/typegraphql.png",
     "maintainers": [],
     "downloads": 0,
     "stars": 0,

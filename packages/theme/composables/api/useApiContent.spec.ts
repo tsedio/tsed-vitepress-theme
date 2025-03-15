@@ -11,8 +11,8 @@ describe("useApiContent", () => {
       json: vi.fn().mockReturnValue({
         data: {
           value: {
-            apiRedirectUrl: "https://api-docs.tsed.io",
-            apiUrl: "https://tsed.io/api.json"
+            apiRedirectUrl: "https://api-docs.tsed.dev",
+            apiUrl: "https://tsed.dev/api.json"
           }
         }
       })
@@ -24,12 +24,12 @@ describe("useApiContent", () => {
     expect(result).toEqual({
       data: {
         value: {
-          apiRedirectUrl: "https://api-docs.tsed.io",
-          apiUrl: "https://tsed.io/api.json"
+          apiRedirectUrl: "https://api-docs.tsed.dev",
+          apiUrl: "https://tsed.dev/api.json"
         }
       }
     });
-    expect(useFetch).toHaveBeenCalledWith("https://tsed.io/api.json",{
+    expect(useFetch).toHaveBeenCalledWith("https://tsed.dev/api.json",{
       afterFetch: expect.any(Function)
     });
   });

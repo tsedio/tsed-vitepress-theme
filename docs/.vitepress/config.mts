@@ -7,7 +7,7 @@ export default defineConfig({
   lastUpdated: true,
 
   sitemap: {
-    hostname: "https://tsed.io"
+    hostname: "https://tsed.dev"
   },
 
   head: [
@@ -34,7 +34,7 @@ export default defineConfig({
     apiRedirectUrl: "",
     repo: "tsedio/tsed",
     team,
-    githubProxyUrl: "https://api.tsed.io/rest/github/tsedio/tsed",
+    githubProxyUrl: "https://api.tsed.dev/rest/github/tsedio/tsed",
     editLink: {
       pattern: "https://github.com/tsedio/tsed-vitepress-theme/edit/main/docs/:path"
     },
@@ -530,7 +530,7 @@ export default defineConfig({
     },
     socialLinks: [
       {icon: "github", link: "https://github.com/tsedio/tsed"},
-      {icon: "slack", link: "https://slack.tsed.io"},
+      {icon: "slack", link: "https://slack.tsed.dev"},
       {icon: "twitter", link: "https://x.com/TsED_io"}
       // { icon: '', link: 'https://stackoverflow.com/search?q=tsed' },
     ],

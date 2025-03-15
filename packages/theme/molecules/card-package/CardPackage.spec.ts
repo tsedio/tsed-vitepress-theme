@@ -10,7 +10,7 @@ describe("<CardPackage />", () => {
           description: "A TypeScript Framework on top of Express",
           repository: "https://github.com/tsedio/tsed",
           npm: "https://www.npmjs.com/package/%40tsed%2Fplatform-express",
-          icon: "https://tsed.io/expressjs.svg",
+          icon: "https://tsed.dev/expressjs.svg",
           homepage: "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-express",
           maintainers: [
             {
@@ -46,7 +46,7 @@ describe("<CardPackage />", () => {
           description: "A TypeScript Framework on top of Express",
           repository: "https://github.com/tsedio/tsed",
           npm: "https://www.npmjs.com/package/%40tsed%2Fplatform-express",
-          icon: "https://tsed.io/expressjs.svg",
+          icon: "https://tsed.dev/expressjs.svg",
           homepage: "https://github.com/tsedio/tsed/tree/production/packages/platform/platform-express",
           maintainers: [
             {

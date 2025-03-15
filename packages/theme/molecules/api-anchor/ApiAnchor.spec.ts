@@ -17,7 +17,7 @@ describe("<ApiAnchor>", () => {
 
     expect(screen.getByText("Symbol name")).toBeTruthy();
     expect(screen.getByText("Symbol name")).not.toHaveClass();
-    expect(screen.getByRole("link")).toHaveAttribute("href", "https://api-docs.tsed.io/path.html");
+    expect(screen.getByRole("link")).toHaveAttribute("href", "https://api-docs.tsed.dev/path.html");
     expect(screen.getByRole("link")).toHaveAttribute("class", "reset-link -bubble");
     expect(screen.getByRole("link")).toHaveAttribute("title", "Symbol name");
   });
@@ -37,7 +37,7 @@ describe("<ApiAnchor>", () => {
 
     expect(screen.getByText("Symbol name")).toBeTruthy();
     expect(screen.getByText("Symbol name")).toHaveClass("line-through");
-    expect(screen.getByRole("link")).toHaveAttribute("href", "https://api-docs.tsed.io/path.html");
+    expect(screen.getByRole("link")).toHaveAttribute("href", "https://api-docs.tsed.dev/path.html");
     expect(screen.getByRole("link")).toHaveClass("reset-link -bubble");
   });
 });

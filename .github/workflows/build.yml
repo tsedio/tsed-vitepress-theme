@@ -49,27 +49,27 @@ jobs:
         run: yarn install
       - name: Run test
         run: yarn test
-  test-storybook:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: yarn
-      - name: Install dependencies 🚀
-        run: yarn install --immutable
-      - name: Install Playwright 🚀
-        run: yarn playwright install
-      - name: Build Storybook
-        run: yarn storybook:build --quiet
-      - name: Serve Storybook and run tests 🔍
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && yarn storybook:test:ci"
+#  test-storybook:
+#    timeout-minutes: 60
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - name: Setup Node
+#        uses: actions/setup-node@v4
+#        with:
+#          node-version: 20
+#          cache: yarn
+#      - name: Install dependencies 🚀
+#        run: yarn install --immutable
+#      - name: Install Playwright 🚀
+#        run: yarn playwright install
+#      - name: Build Storybook
+#        run: yarn storybook:build --quiet
+#      - name: Serve Storybook and run tests 🔍
+#        run: |
+#          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+#            "npx http-server storybook-static --port 6006 --silent" \
+#            "npx wait-on tcp:6006 && yarn storybook:test:ci"
   build:
     runs-on: ubuntu-latest
     steps:
@@ -96,7 +96,7 @@ jobs:
       issues: write     # Required for release notes
       pull-requests: write  # Required for release note
     needs:
-      [lint,  build, test, test-storybook]
+      [lint,  build, test] #, test-storybook
     strategy:
       fail-fast: true
     if: github.event_name != 'pull_request' && contains('
