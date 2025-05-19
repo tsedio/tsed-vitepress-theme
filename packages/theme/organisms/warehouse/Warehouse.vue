@@ -28,8 +28,12 @@ const categoriesChoices = computed(() =>
 );
 
 const q = ref("");
-const sort = ref({value: "downloads", order: "desc"});
+const sort = ref({value: "default", order: "desc"});
 const sortOptions = [
+  {
+    label: "Default",
+    value: "default"
+  },
   {
     label: "Downloads",
     value: "downloads"
@@ -89,7 +93,7 @@ const authors = computed(() => {
           value: maintainer
         };
       }));
-})
+});
 
 const filteredPackages = computed(() => {
   return packages.value
@@ -102,11 +106,16 @@ const filteredPackages = computed(() => {
         return qMatch && categoryMatch && typeMatch && authorMatch;
       })
       .sort((a, b) => {
-        if (sort.value.value === "downloads") {
-          return sort.value.order === "asc" ? a.downloads - b.downloads : b.downloads - a.downloads;
-        } else {
-          return sort.value.order === "asc" ? a.stars - b.stars : b.stars - a.stars;
+        // always
+        switch (sort.value.value) {
+          case "downloads":
+            return sort.value.order === "asc" ? a.downloads - b.downloads : b.downloads - a.downloads;
+
+          case "stars":
+            return sort.value.order === "asc" ? a.stars - b.stars : b.stars - a.stars;
         }
+
+        return 0;
       });
 });
 
@@ -125,7 +134,7 @@ fetchPackages();
 <template>
   <div class="pb-5">
     <LightBanner title="Explore plugins">
-      <slot />
+      <slot/>
     </LightBanner>
 
     <div class="-mt-[60px]">
