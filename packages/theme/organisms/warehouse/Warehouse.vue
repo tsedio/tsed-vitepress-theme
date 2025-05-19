@@ -12,25 +12,10 @@ import {useWarehouse} from "../../composables/api/useWarehouse.js";
 import {useThemeConfig} from "../../composables/config/useThemeConfig";
 import {upperFirst} from "../../utils/upperFirst.js";
 
-const stats = [
-  {
-    label: "plugins",
-    value: 100
-  },
-  {
-    label: "maintainers",
-    value: 7
-  },
-  {
-    label: "downloads last 30 days",
-    value: 20000
-  }
-];
-
 const theme = useThemeConfig();
 const {githubProxyUrl} = theme.value;
 
-const {isActive, packages, fetchPackages, tags} = useWarehouse(githubProxyUrl);
+const {isActive, packages, maintainers, downloads, fetchPackages, tags} = useWarehouse(githubProxyUrl);
 
 const category = ref("");
 const categoriesChoices = computed(() =>
@@ -74,14 +59,47 @@ const filterOptions = [
   }
 ];
 
+const stats = computed(() => {
+  return [
+    {
+      label: "plugins",
+      value: packages.value.length
+    },
+    {
+      label: "maintainers",
+      value: maintainers.value.size
+    },
+    {
+      label: "downloads last 30 days",
+      value: downloads.value
+    }
+  ];
+});
+
+
+const author = ref("");
+const authors = computed(() => {
+  return [{
+    label: "All",
+    value: ""
+  }].concat([...maintainers.value.values()]
+      .map((maintainer) => {
+        return {
+          label: maintainer,
+          value: maintainer
+        };
+      }));
+})
+
 const filteredPackages = computed(() => {
   return packages.value
       .filter((plugin) => {
         const qMatch = q.value ? plugin.name.toLowerCase().includes(q.value.toLowerCase()) : true;
         const categoryMatch = category.value ? plugin.tags.includes(category.value) : true;
         const typeMatch = filterType.value ? plugin.type === filterType.value : true;
+        const authorMatch = author.value ? plugin.maintainers.some((maintainer) => maintainer.username.toLowerCase() === author.value.toLowerCase()) : true;
 
-        return qMatch && categoryMatch && typeMatch;
+        return qMatch && categoryMatch && typeMatch && authorMatch;
       })
       .sort((a, b) => {
         if (sort.value.value === "downloads") {
@@ -101,18 +119,19 @@ function onClear() {
   category.value = "";
 }
 
+
 fetchPackages();
 </script>
 <template>
   <div class="pb-5">
     <LightBanner title="Explore plugins">
-      Discover our list of plugins to extend your Ts.ED project. Created by the Ts.ED team and community.
+      <slot />
     </LightBanner>
 
     <div class="-mt-[60px]">
       <div class="relative z-10 max-w-screen-xl mb-10 px-4 mx-auto sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
-          <CardStats :items="stats"/>
+          <CardStats :items="stats" :isActive="isActive"/>
         </div>
       </div>
     </div>
@@ -149,6 +168,7 @@ fetchPackages();
         <ClearableFilter :keywords="keywords" :count="filteredPackages.length" @clear="onClear()"/>
         <div class="flex gap-4">
           <FilterBy v-model="filterType" :choices="filterOptions" label="Package type"/>
+          <FilterBy v-model="author" :choices="authors" label="Author"/>
           <SortBy v-model="sort" :choices="sortOptions"/>
         </div>
       </div>

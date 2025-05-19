@@ -4,6 +4,7 @@ import {formatNumber} from "../../utils/format";
 
 export interface WarehouseStatsProps {
   items: {label: string; value: number}[];
+  isLoading?: boolean;
   id?: string;
 }
 
@@ -16,7 +17,7 @@ const items = computed(() => {
   return props.items.map((item) => {
     return {
       label: item.label,
-      value: item.value ? formatNumber(item.value) : "-"
+      value: item.value && !props.isLoading ? formatNumber(item.value) : "-"
     };
   });
 });
