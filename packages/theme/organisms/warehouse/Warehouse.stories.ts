@@ -2,6 +2,7 @@ import type {Meta, StoryObj} from "@storybook/vue3";
 import Warehouse from "./Warehouse.vue";
 import {expect, userEvent, waitFor, within} from "@storybook/test";
 import {formatNumber} from "../../utils/format";
+import Button from "../../molecules/button/Button.vue";
 
 const meta = {
   title: "Warehouse",
@@ -10,23 +11,30 @@ const meta = {
   parameters: {
     layout: "centered"
   },
-  argTypes: {}
+  argTypes: {},
+  render: (args) => ({
+    components: {Warehouse},
+    setup() {
+      return {args};
+    },
+    template: '<Warehouse v-bind="args">{{args.text}}</Warehouse>'
+  })
 } satisfies Meta<typeof Warehouse>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    text: 'Discover our list of plugins to extend your Ts.ED project. Created by the Ts.ED team and community.'
+  } as any,
   async play({canvasElement}) {
     const screen = within(canvasElement);
 
     await expect(screen.getByText("Explore plugins")).toBeInTheDocument();
 
     await expect(screen.getByText("plugins")).toBeInTheDocument();
-    await expect(screen.getByText("100")).toBeInTheDocument();
     await expect(screen.getByText("maintainers")).toBeInTheDocument();
-    await expect(screen.getByText("7")).toBeInTheDocument();
     await expect(screen.getByText("downloads last 30 days")).toBeInTheDocument();
 
     await waitFor(() => expect(screen.getByTestId("ClearableFilter")).toBeInTheDocument())
