@@ -52,7 +52,7 @@ export const Default: Story = {
 
     await userEvent.type(searchInput, "logger", {delay: 100});
 
-    await expect(within(clearableFilter).getByText(/plugins/)).toHaveTextContent("12 plugins found");
+    await expect(within(clearableFilter).getByText(/plugins/)).toHaveTextContent(/13 plugins found/);
 
     await expect(screen.queryByText("@tsed/exceptions")).not.toBeInTheDocument();
 
