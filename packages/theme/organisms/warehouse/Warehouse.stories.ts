@@ -1,8 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/vue3";
 import Warehouse from "./Warehouse.vue";
 import {expect, userEvent, waitFor, within} from "@storybook/test";
-import {formatNumber} from "../../utils/format";
-import Button from "../../molecules/button/Button.vue";
 
 const meta = {
   title: "Warehouse",

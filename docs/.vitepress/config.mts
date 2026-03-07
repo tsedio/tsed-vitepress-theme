@@ -34,7 +34,7 @@ export default defineConfig({
     apiRedirectUrl: "",
     repo: "tsedio/tsed",
     team,
-    githubProxyUrl: "https://api.tsed.dev/rest/github/tsedio/tsed",
+    githubProxyUrl: "https://tsed-api-staging.herokuapp.com/rest/github/tsedio/tsed",
     editLink: {
       pattern: "https://github.com/tsedio/tsed-vitepress-theme/edit/main/docs/:path"
     },
