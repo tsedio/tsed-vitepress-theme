@@ -1,7 +1,7 @@
 {
   "name": "@tsed/vitepress-theme",
   "description": "Shared components for vitepress",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "type": "module",
   "main": "./index.ts",
   "exports": {
@@ -26,7 +26,5 @@
     "@vueuse/core": "10.11.0",
     "axios": "1.7.7",
     "lucide-vue-next": "0.577.0"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }
