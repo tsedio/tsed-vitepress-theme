@@ -10,6 +10,7 @@ import HomeTabTerminalYarn from "@tsed/vitepress-theme/organisms/home/terminal/H
 import HomeTabTerminalPnpm from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalPnpm.vue";
 import HomeTabTerminalBun from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalBun.vue";
 import HomeBeforeFeatures from "@tsed/vitepress-theme/organisms/home/HomeBeforeFeatures.vue";
+import DocActions from "@tsed/vitepress-theme/molecules/ai-content/DocActions.vue";
 
 export default {
   extends: DefaultTheme,
@@ -26,7 +27,8 @@ export default {
             })
         }),
       "home-features-before": () => h(HomeBeforeFeatures),
-      "home-features-after": () => h(HomeBody)
+      "home-features-after": () => h(HomeBody),
+      "doc-before": () => h(DocActions)
     });
   }
 } satisfies Theme;

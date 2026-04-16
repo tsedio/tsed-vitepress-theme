@@ -53,6 +53,7 @@ import HomeTabTerminalYarn from "@tsed/vitepress-theme/organisms/home/terminal/H
 import HomeTabTerminalPnpm from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalPnpm.vue";
 import HomeTabTerminalBun from "@tsed/vitepress-theme/organisms/home/terminal/HomeTabTerminalBun.vue";
 import HomeBeforeFeatures from "@tsed/vitepress-theme/organisms/home/HomeBeforeFeatures.vue";
+import DocActions from "@tsed/vitepress-theme/molecules/ai-content/DocActions.vue";
 
 export default {
   extends: DefaultTheme,
@@ -69,15 +70,15 @@ export default {
             })
         }),
       "home-features-before": () => h(HomeBeforeFeatures),
-      "home-features-after": () => h(HomeBody)
+      "home-features-after": () => h(HomeBody),
+      "doc-before": () => h(DocActions)
     });
   }
 } satisfies Theme;
 ```
 
 > Important: keep using `DefaultTheme.Layout` in your custom layout.  
-The AI dropdown is wired inside this layout.  
-If you replace it with `vitepress/theme` layout directly, AI actions will not be rendered.
+To display AI actions, add `DocActions` in the `doc-before` slot.
 
 Then, create a `tailwind.config.ts` configuration file:
 
@@ -120,14 +121,15 @@ It appears on documentation pages and provides:
 - `Open in ChatGPT`
 - `Open in Claude`
 
-Enable it in your VitePress config:
+It is enabled by default when `DocActions` is mounted.
+You can disable it in your VitePress config:
 
 ```ts
 import {defineConfig} from "vitepress";
 
 export default defineConfig({
   themeConfig: {
-    enableAIContent: true
+    enableAIContent: false
   }
 });
 ```

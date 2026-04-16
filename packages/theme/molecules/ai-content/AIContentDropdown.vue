@@ -17,7 +17,7 @@ const markdownLink = useMarkdownLink();
 const {theme, frontmatter} = useData<VitePressDefaultTheme.Config & CustomThemeConfig>();
 
 const showMenu = computed(() => {
-  return Boolean(theme.value.enableAIContent && frontmatter.value.layout !== "home");
+  return Boolean(theme.value.enableAIContent !== false && frontmatter.value.layout !== "home");
 });
 const markdownUrl = computed(() => markdownLink.value.url);
 const chatGPTLink = useChatGPTLink(markdownUrl);
