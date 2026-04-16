@@ -4646,7 +4646,7 @@ __metadata:
   dependencies:
     "@vueuse/core": "npm:10.11.0"
     axios: "npm:1.7.7"
-    lucide-vue-next: "npm:^0.436.0"
+    lucide-vue-next: "npm:0.577.0"
   languageName: unknown
   linkType: soft
 
@@ -12303,16 +12303,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-vue-next@npm:^0.436.0":
-  version: 0.436.0
-  resolution: "lucide-vue-next@npm:0.436.0"
-  peerDependencies:
-    vue: ">=3.0.1"
-  checksum: 10c0/115bab4c37851566272cb75fbae43c56b29c7046f593a2f8afd310deda1fb759268eb84d2275d612b327c5121fd412e653a856fefe61d23a39422bcb59278b78
-  languageName: node
-  linkType: hard
-
-"lucide-vue-next@npm:^0.577.0":
+"lucide-vue-next@npm:0.577.0, lucide-vue-next@npm:^0.577.0":
   version: 0.577.0
   resolution: "lucide-vue-next@npm:0.577.0"
   peerDependencies:
