@@ -61,6 +61,7 @@ onBeforeUnmount(() => {
           <Copy :size="14" />
           {{ copyLabel }}
         </button>
+        <span />
         <button
           type="button"
           class="vp-ai-menu-trigger"
@@ -101,10 +102,6 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.vp-ai-content-actions {
-  margin: 0 0 12px;
-}
-
 .vp-ai-content-menu {
   position: relative;
   display: inline-block;
@@ -114,10 +111,8 @@ onBeforeUnmount(() => {
   list-style: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   background: var(--vp-c-bg-soft);
   border-radius: 8px;
-  padding: 7px 12px;
   color: var(--vp-c-text-1);
   font-size: 14px;
   line-height: 1;
@@ -126,32 +121,48 @@ onBeforeUnmount(() => {
 
 .vp-ai-content-menu > summary > span {
   border-right: 1px solid var(--vp-c-divider);
-  padding-right: 8px;
+  display: block;
+  height: 18px;
 }
 
-.vp-ai-copy-trigger {
-  border: 0;
-  border-right: 1px solid var(--vp-c-divider);
-  background: transparent;
-  color: inherit;
-  padding: 0 8px 0 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font: inherit;
-  line-height: inherit;
-  cursor: pointer;
-}
-
+.vp-ai-copy-trigger,
 .vp-ai-menu-trigger {
-  border: 0;
+  height: 28px;
+  border: 1px solid transparent;
+  border-radius: 8px;
   background: transparent;
-  color: inherit;
-  padding: 0;
+  color: var(--vp-c-text-1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+.vp-ai-copy-trigger {
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-flex;
+  gap: 5px;
+  border-radius: 0px 0px 0px 8px;
+}
+
+.vp-ai-menu-trigger {
+  width: 28px;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.vp-ai-copy-trigger:hover,
+.vp-ai-menu-trigger:hover,
+.vp-ai-copy-trigger:focus-visible,
+.vp-ai-menu-trigger:focus-visible {
+  background: var(--vp-c-bg);
+}
+
+.vp-ai-copy-trigger:active,
+.vp-ai-menu-trigger:active {
+  background: var(--vp-c-bg-soft);
 }
 
 .vp-ai-content-menu > summary::-webkit-details-marker {

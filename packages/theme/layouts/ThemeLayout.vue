@@ -2,6 +2,7 @@
 import DefaultTheme from "vitepress/theme";
 import {computed, useSlots} from "vue";
 import AIContentDropdown from "../molecules/ai-content/AIContentDropdown.vue";
+import PageNavigationButtons from "../molecules/ai-content/PageNavigationButtons.vue";
 
 const slots = useSlots();
 
@@ -21,6 +22,7 @@ const forwardedSlots = computed(() => {
       <div class="wrapper-vp-content-actions">
         <div class="vp-content-actions">
           <AIContentDropdown />
+          <PageNavigationButtons />
         </div>
       </div>
     </template>
@@ -37,6 +39,20 @@ const forwardedSlots = computed(() => {
   position: absolute;
   top: 5px;
   right: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vp-content-actions :deep(.vp-ai-content-actions) {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.vp-content-actions :deep(.vp-ai-content-menu > summary) {
+  min-height: 28px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 960px) {
