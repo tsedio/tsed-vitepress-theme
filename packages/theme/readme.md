@@ -122,14 +122,15 @@ It appears on documentation pages and provides:
 - `Open in Claude`
 
 It is enabled by default when `DocActions` is mounted.
-You can disable it in your VitePress config:
+`siteUrl` is required to generate `Open in ChatGPT` and `Open in Claude` links with an absolute markdown URL (usually the same value as `sitemap.hostname`):
 
 ```ts
 import {defineConfig} from "vitepress";
 
 export default defineConfig({
   themeConfig: {
-    enableAIContent: false
+    siteUrl: "https://your-docs-domain.com",
+    enableAIContent: true
   }
 });
 ```

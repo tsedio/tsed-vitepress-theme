@@ -30,6 +30,7 @@ export default defineConfig({
   themeConfig: {
     logo: "/tsed.svg",
     siteTitle: false,
+    siteUrl: "https://tsed.dev",
     apiUrl: "/api.json",
     apiRedirectUrl: "",
     repo: "tsedio/tsed",

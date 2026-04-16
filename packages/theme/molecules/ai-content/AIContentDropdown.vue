@@ -20,10 +20,13 @@ const showMenu = computed(() => {
   return Boolean(theme.value.enableAIContent !== false && frontmatter.value.layout !== "home");
 });
 const markdownUrl = computed(() => markdownLink.value.url);
-const chatGPTLink = useChatGPTLink(markdownUrl);
-const claudeLink = useClaudeLink(markdownUrl);
+const siteUrl = computed(() => theme.value.siteUrl || "");
+const hasSiteUrl = computed(() => Boolean(siteUrl.value));
+const chatGPTLink = useChatGPTLink(markdownUrl, siteUrl);
+const claudeLink = useClaudeLink(markdownUrl, siteUrl);
 const {copyLabel, copyPage} = useCopyPage(markdownUrl);
 const detailsRef = ref<HTMLDetailsElement | null>(null);
+const isClient = ref(false);
 
 function toggleMenu() {
   if (!detailsRef.value) {
@@ -45,6 +48,7 @@ function handleClickOutside(event: MouseEvent) {
 }
 
 onMounted(() => {
+  isClient.value = true;
   document.addEventListener("click", handleClickOutside);
 });
 
@@ -84,13 +88,13 @@ onBeforeUnmount(() => {
             <span>View as markdown</span>
           </a>
         </li>
-        <li v-if="markdownLink.url">
+        <li v-if="markdownLink.url && hasSiteUrl && isClient">
           <a :href="chatGPTLink" target="_blank" rel="noreferrer">
             <ChatGPTIcon class="vp-ai-brand-icon" />
             <span>Open in ChatGPT</span>
           </a>
         </li>
-        <li v-if="markdownLink.url">
+        <li v-if="markdownLink.url && hasSiteUrl && isClient">
           <a :href="claudeLink" target="_blank" rel="noreferrer">
             <ClaudeIcon class="vp-ai-brand-icon" />
             <span>Open in Claude</span>

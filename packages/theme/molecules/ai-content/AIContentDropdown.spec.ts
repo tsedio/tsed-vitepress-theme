@@ -4,7 +4,10 @@ import AIContentDropdown from "./AIContentDropdown.vue";
 
 const mocks = vi.hoisted(() => {
   return {
-    theme: {__v_isRef: true, value: {enableAIContent: true}},
+    theme: {
+      __v_isRef: true,
+      value: {enableAIContent: true, siteUrl: "https://tsed.dev"} as {enableAIContent?: boolean; siteUrl?: string}
+    },
     frontmatter: {__v_isRef: true, value: {} as Record<string, unknown>},
     editLink: {
       __v_isRef: true,
@@ -37,7 +40,7 @@ vi.mock("../../composables/config/useMarkdownLink", () => {
 
 describe("AIContentDropdown", () => {
   beforeEach(() => {
-    mocks.theme.value = {enableAIContent: true};
+    mocks.theme.value = {enableAIContent: true, siteUrl: "https://tsed.dev"};
     mocks.frontmatter.value = {};
     mocks.editLink.value = {url: "https://github.com/tsedio/tsed/edit/main/docs/controllers.md", text: "Edit this page"};
     mocks.markdownLink.value = {url: "/ai/docs/controllers.md", text: "View as markdown"};
@@ -103,7 +106,7 @@ describe("AIContentDropdown", () => {
     const menuButton = screen.getByRole("button", {name: "Toggle actions menu"});
     await fireEvent.click(menuButton);
 
-    const markdownAbsoluteUrl = `${window.location.origin}/ai/docs/controllers.md`;
+    const markdownAbsoluteUrl = "https://tsed.dev/ai/docs/controllers.md";
     const encodedPrompt = encodeURIComponent(`Please answer using this markdown source: ${markdownAbsoluteUrl}`);
 
     expect(screen.getByRole("link", {name: "Open in ChatGPT"})).toHaveAttribute(
@@ -111,5 +114,16 @@ describe("AIContentDropdown", () => {
       `https://chatgpt.com/?q=${encodedPrompt}`
     );
     expect(screen.getByRole("link", {name: "Open in Claude"})).toHaveAttribute("href", `https://claude.ai/new?q=${encodedPrompt}`);
+  });
+
+  it("should hide ChatGPT and Claude links when siteUrl is missing", async () => {
+    mocks.theme.value = {enableAIContent: true};
+    render(AIContentDropdown);
+
+    const menuButton = screen.getByRole("button", {name: "Toggle actions menu"});
+    await fireEvent.click(menuButton);
+
+    expect(screen.queryByRole("link", {name: "Open in ChatGPT"})).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", {name: "Open in Claude"})).not.toBeInTheDocument();
   });
 });
