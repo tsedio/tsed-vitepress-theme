@@ -10,6 +10,7 @@ export interface CustomThemeConfig {
   apiUrl: string;
   apiRedirectUrl: string;
   repo: string;
+  enableAIContent?: boolean;
   team: Team[];
   githubProxyUrl: string;
   stargazerUrl?: string;

@@ -33,6 +33,7 @@ export default defineConfig({
     apiUrl: "/api.json",
     apiRedirectUrl: "",
     repo: "tsedio/tsed",
+    enableAIContent: true,
     team,
     githubProxyUrl: "https://tsed-api-staging.herokuapp.com/rest/github/tsedio/tsed",
     editLink: {

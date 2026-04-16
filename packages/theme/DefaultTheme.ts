@@ -2,6 +2,7 @@
 import type {Theme} from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import "./styles/global.css";
+import ThemeLayout from "./layouts/ThemeLayout.vue";
 import ApiAnchorQuery from "./molecules/api-anchor/ApiAnchorQuery.vue";
 import ApiList from "./molecules/api-list/ApiList.vue";
 import GithubContributors from "./organisms/github-contributors/GithubContributors.vue";
@@ -19,7 +20,7 @@ import TeamMembersItem from "./molecules/teams/TeamMembersItem.vue";
 
 export default {
   extends: DefaultTheme,
-  Layout: DefaultTheme.Layout,
+  Layout: ThemeLayout,
   enhanceApp({app}) {
     app.component("Api", Api);
     app.component("ApiList", ApiList);
