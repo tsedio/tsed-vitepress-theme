@@ -75,6 +75,10 @@ export default {
 } satisfies Theme;
 ```
 
+> Important: keep using `DefaultTheme.Layout` in your custom layout.  
+The AI dropdown is wired inside this layout.  
+If you replace it with `vitepress/theme` layout directly, AI actions will not be rendered.
+
 Then, create a `tailwind.config.ts` configuration file:
 
 ```ts
@@ -104,6 +108,37 @@ const config = {
 
 export default config;
 ```
+
+## AI Content Dropdown
+
+The theme includes an AI actions dropdown in the `doc-before` slot.  
+It appears on documentation pages and provides:
+
+- `Copy Page`
+- `Edit content`
+- `View as markdown`
+- `Open in ChatGPT`
+- `Open in Claude`
+
+Enable it in your VitePress config:
+
+```ts
+import {defineConfig} from "vitepress";
+
+export default defineConfig({
+  themeConfig: {
+    enableAIContent: true
+  }
+});
+```
+
+Useful composables for this feature:
+
+- `@tsed/vitepress-theme/composables/config/useEditLink.ts`
+- `@tsed/vitepress-theme/composables/config/useMarkdownLink.ts`
+- `@tsed/vitepress-theme/composables/ai-content/useChatGPTLink.ts`
+- `@tsed/vitepress-theme/composables/ai-content/useClaudeLink.ts`
+- `@tsed/vitepress-theme/composables/ai-content/useCopyPage.ts`
 
 ## Implement your own Npm/Yarn/Pnpm/Bun terminal tab
 

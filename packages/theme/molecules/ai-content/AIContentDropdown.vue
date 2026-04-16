@@ -5,6 +5,9 @@ import {computed, onBeforeUnmount, onMounted, ref} from "vue";
 import {ChevronDown, Copy, FilePenLine, FileText} from "lucide-vue-next";
 import ChatGPTIcon from "../../atoms/svg/ChatGPTIcon.vue";
 import ClaudeIcon from "../../atoms/svg/ClaudeIcon.vue";
+import {useChatGPTLink} from "../../composables/ai-content/useChatGPTLink";
+import {useClaudeLink} from "../../composables/ai-content/useClaudeLink";
+import {useCopyPage} from "../../composables/ai-content/useCopyPage";
 import type {CustomThemeConfig} from "../../composables/config/interfaces/CustomThemeConfig";
 import {useEditLink} from "../../composables/config/useEditLink";
 import {useMarkdownLink} from "../../composables/config/useMarkdownLink";
@@ -16,67 +19,11 @@ const {theme, frontmatter} = useData<VitePressDefaultTheme.Config & CustomThemeC
 const showMenu = computed(() => {
   return Boolean(theme.value.enableAIContent && frontmatter.value.layout !== "home");
 });
-
-const chatGPTLink = computed(() => {
-  const markdownUrl = markdownLink.value.url;
-  const markdownAbsoluteUrl =
-    markdownUrl.startsWith("http") || typeof window === "undefined"
-      ? markdownUrl
-      : new URL(markdownUrl, window.location.origin).toString();
-  const prompt = `Please answer using this markdown source: ${markdownAbsoluteUrl}`;
-
-  return `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
-});
-
-const claudeLink = computed(() => {
-  const markdownUrl = markdownLink.value.url;
-  const markdownAbsoluteUrl =
-    markdownUrl.startsWith("http") || typeof window === "undefined"
-      ? markdownUrl
-      : new URL(markdownUrl, window.location.origin).toString();
-  const prompt = `Please answer using this markdown source: ${markdownAbsoluteUrl}`;
-
-  return `https://claude.ai/new?q=${encodeURIComponent(prompt)}`;
-});
-
-const copyStatus = ref<"idle" | "copying" | "copied" | "error">("idle");
+const markdownUrl = computed(() => markdownLink.value.url);
+const chatGPTLink = useChatGPTLink(markdownUrl);
+const claudeLink = useClaudeLink(markdownUrl);
+const {copyLabel, copyPage} = useCopyPage(markdownUrl);
 const detailsRef = ref<HTMLDetailsElement | null>(null);
-
-const copyLabel = computed(() => {
-  if (copyStatus.value === "copying") return "Copying...";
-  if (copyStatus.value === "copied") return "Copied";
-  if (copyStatus.value === "error") return "Copy failed";
-
-  return "Copy Page";
-});
-
-async function copyPage() {
-  const markdownUrl = markdownLink.value.url;
-  if (!markdownUrl) {
-    return;
-  }
-
-  copyStatus.value = "copying";
-
-  try {
-    const response = await fetch(markdownUrl);
-
-    if (!response.ok) {
-      throw new Error(`Unable to fetch markdown content from ${markdownUrl}`);
-    }
-
-    const markdownContent = await response.text();
-    await navigator.clipboard.writeText(markdownContent);
-    copyStatus.value = "copied";
-  } catch (er) {
-    copyStatus.value = "error";
-    console.error(er);
-  } finally {
-    window.setTimeout(() => {
-      copyStatus.value = "idle";
-    }, 1800);
-  }
-}
 
 function toggleMenu() {
   if (!detailsRef.value) {
