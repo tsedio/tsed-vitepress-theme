@@ -65,7 +65,7 @@ export const WithPlay: Story = {
     sandboxId: "rough-frost-6bi81",
     title: "Multer example"
   },
-  play: async ({canvasElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
 
     const button = canvas.getByRole("button");

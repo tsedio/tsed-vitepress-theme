@@ -71,7 +71,7 @@ export const Default: Story = {
     innerPadding: 0,
     shadow: "lg"
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const canvas = within(canvasElement);
     const items = canvas.getAllByRole("listitem");
 

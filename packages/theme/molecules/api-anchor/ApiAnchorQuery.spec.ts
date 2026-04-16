@@ -88,7 +88,7 @@ describe("<ApiAnchorQuery>", () => {
       }
     });
 
-    expect(wrapper.vm.code).toBe("");
+    expect((wrapper.vm as any).code).toBe("");
   });
 
   it("should compute code correctly from default slot", () => {
@@ -100,6 +100,6 @@ describe("<ApiAnchorQuery>", () => {
       slots
     });
 
-    expect(wrapper.vm.code).toBe("<span>John");
+    expect((wrapper.vm as any).code).toBe("<span>John");
   });
 });

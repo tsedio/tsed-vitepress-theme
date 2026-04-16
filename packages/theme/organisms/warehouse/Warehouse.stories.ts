@@ -26,7 +26,7 @@ export const Default: Story = {
   args: {
     text: 'Discover our list of plugins to extend your Ts.ED project. Created by the Ts.ED team and community.'
   } as any,
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const screen = within(canvasElement);
 
     await expect(screen.getByText("Explore plugins")).toBeInTheDocument();

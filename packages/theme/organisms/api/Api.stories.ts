@@ -23,8 +23,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: apiReferences,
-  async play({canvasElement}) {
+  args: apiReferences as any,
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const screen = within(canvasElement);
 
     await waitFor(() => expect(screen.getByText("@tsed/core")).toBeInTheDocument());

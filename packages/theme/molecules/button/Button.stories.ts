@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/vue3";
 import Button from "./Button.vue";
 
-const meta = {
+const meta: Meta<any> = {
   title: "Button",
   component: Button,
   tags: ["autodocs"],
@@ -10,17 +10,17 @@ const meta = {
   },
   argTypes: {
     size: {
-      control: "select",
+      control: {type: "select"},
       options: ["medium", "big"],
       default: "medium"
     },
     theme: {
-      control: "select",
+      control: {type: "select"},
       options: ["brand", "alt", "sponsor"],
       default: "brand"
     },
     text: {
-      control: "text",
+      control: {type: "text"},
       default: "Default"
     }
   },
@@ -31,10 +31,10 @@ const meta = {
     },
     template: '<Button v-bind="args">{{args.text}}</Button>'
   })
-} satisfies Meta<typeof Button> & {argTypes: {text: any}};
+};
 
 export default meta;
-type Story = StoryObj<typeof meta> & {args: {text: string}};
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {

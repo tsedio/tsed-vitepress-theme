@@ -16,7 +16,7 @@ const meta = {
 export default meta;
 
 export const Default: StoryObj<typeof CardStats> = {
-  play({canvasElement}) {
+  play({canvasElement}: {canvasElement: HTMLElement}) {
     const canvas = within(canvasElement);
 
     // THEN
@@ -47,7 +47,7 @@ export const Default: StoryObj<typeof CardStats> = {
 };
 
 export const WithEmptyStats: StoryObj<typeof CardStats> = {
-  play({canvasElement}) {
+  play({canvasElement}: {canvasElement: HTMLElement}) {
     const canvas = within(canvasElement);
 
     // THEN

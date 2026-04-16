@@ -36,7 +36,7 @@ export const Official: Story = {
     type: "official",
     category: "framework"
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const screen = within(canvasElement);
 
     await expect(screen.getByText("@tsed/platform-express")).toBeInTheDocument();
@@ -72,7 +72,7 @@ export const Premium: Story = {
     type: "premium",
     category: "framework"
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const screen = within(canvasElement);
 
     await expect(screen.getByText("@tsed/platform-express")).toBeInTheDocument();
@@ -108,7 +108,7 @@ export const Community: Story = {
     type: "community",
     category: "framework"
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const screen = within(canvasElement);
 
     await expect(screen.getByText("@tsed/platform-express")).toBeInTheDocument();

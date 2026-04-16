@@ -56,7 +56,7 @@ export const Default: Story = {
       }
     ]
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const canvas = within(canvasElement);
 
     const buttonFilter = canvas.getByRole("button", {name: /change filter/i});

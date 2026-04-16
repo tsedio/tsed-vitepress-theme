@@ -43,7 +43,7 @@ export const Default: Story = {
     count: 0,
     label: "plugin"
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const canvas = within(canvasElement);
 
     const resetButton = canvas.getByText("Reset");

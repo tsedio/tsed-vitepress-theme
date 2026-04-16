@@ -22,7 +22,7 @@ const meta = {
       "Created by the Ts.ED team and community." +
       "</LightBanner></div>"
   }),
-  play: ({canvasElement}) => {
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
 
     expect(canvas.getByText("Explore plugins")).toBeInTheDocument();

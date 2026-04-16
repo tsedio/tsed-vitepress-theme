@@ -25,8 +25,8 @@ const meta = {
       // Optional: Keeps v-model in sync with storybook args
       watch(
         () => args.modelValue,
-        (val: string) => {
-          model.value = val;
+        (val) => {
+          model.value = String(val ?? "");
         }
       );
 
@@ -57,7 +57,7 @@ export const Default: Story = {
       }
     ]
   },
-  async play({canvasElement}) {
+  async play({canvasElement}: {canvasElement: HTMLElement}) {
     const canvas = within(canvasElement);
 
     const officialButton = canvas.getByRole("checkbox", {name: "Official"});

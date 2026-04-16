@@ -1,10 +1,12 @@
 import {waitFor, screen, render} from "@testing-library/vue";
 import {userEvent} from "@testing-library/user-event";
-import SortBy, {type SortByProps} from "./SortBy.vue";
+import SortBy from "./SortBy.vue";
+
+type SortByModelValue = {value: string; order: "asc" | "desc"};
 
 describe("<SortBy />", () => {
   it("should render component", async () => {
-    let value: SortByProps["modelValue"] = {value: "downloads", order: "asc"};
+    let value: SortByModelValue = {value: "downloads", order: "asc"};
     const choices = [
       {
         label: "Downloads",

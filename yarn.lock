@@ -4621,7 +4621,7 @@ __metadata:
     is-ci: "npm:^3.0.1"
     jsdom: "npm:^24.1.0"
     lint-staged: "npm:^15.2.7"
-    lucide-vue-next: "npm:^0.436.0"
+    lucide-vue-next: "npm:^0.577.0"
     playwright: "npm:1.45.1"
     postcss: "npm:^8.4.39"
     prettier: "npm:3.3.3"
@@ -12309,6 +12309,15 @@ __metadata:
   peerDependencies:
     vue: ">=3.0.1"
   checksum: 10c0/115bab4c37851566272cb75fbae43c56b29c7046f593a2f8afd310deda1fb759268eb84d2275d612b327c5121fd412e653a856fefe61d23a39422bcb59278b78
+  languageName: node
+  linkType: hard
+
+"lucide-vue-next@npm:^0.577.0":
+  version: 0.577.0
+  resolution: "lucide-vue-next@npm:0.577.0"
+  peerDependencies:
+    vue: ">=3.0.1"
+  checksum: 10c0/0a1b5e7e390546ebc1f3f5ab15bc6a73eade96305727f5583f878faa52755680a0d63035828ee55b28839cebe7cf71600ee41a9da74dec9e469e5b3b50363984
   languageName: node
   linkType: hard
 

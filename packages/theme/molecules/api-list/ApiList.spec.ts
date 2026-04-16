@@ -93,7 +93,7 @@ describe("<ApiList>", () => {
         }
       });
 
-      expect(wrapper.vm.symbols).toStrictEqual([
+      expect((wrapper.vm as any).symbols).toStrictEqual([
         {
           path: "/api/core/types/decorators/ITEM",
           symbolName: "ITEM",
@@ -171,7 +171,7 @@ describe("<ApiList>", () => {
         }
       });
 
-      expect(wrapper.vm.symbols).toStrictEqual([]);
+      expect((wrapper.vm as any).symbols).toStrictEqual([]);
     });
     it("should compute symbols as an empty array when error occurs or data is not available", () => {
       vi.mocked(useFetch).mockReturnValue({
@@ -191,7 +191,7 @@ describe("<ApiList>", () => {
 
       const wrapper = mount(ApiList);
 
-      expect(wrapper.vm.symbols).toStrictEqual([]);
+      expect((wrapper.vm as any).symbols).toStrictEqual([]);
     });
   });
 });
