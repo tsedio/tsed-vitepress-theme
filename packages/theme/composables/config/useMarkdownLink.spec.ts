@@ -25,10 +25,10 @@ describe("useMarkdownLink", () => {
     };
 
     expect(useMarkdownLink().value).toEqual({
-      url: "/base/ai/docs/controllers.md",
+      url: "/base/docs/controllers.md",
       text: "View as markdown"
     });
-    expect(mocks.withBase).toHaveBeenCalledWith("/ai/docs/controllers.md");
+    expect(mocks.withBase).toHaveBeenCalledWith("/docs/controllers.md");
   });
 
   it("should fallback to page.path and convert .html to .md", () => {
@@ -38,10 +38,10 @@ describe("useMarkdownLink", () => {
     };
 
     expect(useMarkdownLink().value).toEqual({
-      url: "/base/ai/docs/controllers.md",
+      url: "/base/docs/controllers.md",
       text: "View as markdown"
     });
-    expect(mocks.withBase).toHaveBeenCalledWith("/ai/docs/controllers.md");
+    expect(mocks.withBase).toHaveBeenCalledWith("/docs/controllers.md");
   });
 
   it("should convert index.html to index.md in fallback mode", () => {
@@ -51,9 +51,9 @@ describe("useMarkdownLink", () => {
     };
 
     expect(useMarkdownLink().value).toEqual({
-      url: "/base/ai/docs/index.md",
+      url: "/base/docs/index.md",
       text: "View as markdown"
     });
-    expect(mocks.withBase).toHaveBeenCalledWith("/ai/docs/index.md");
+    expect(mocks.withBase).toHaveBeenCalledWith("/docs/index.md");
   });
 });

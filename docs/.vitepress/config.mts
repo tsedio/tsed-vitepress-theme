@@ -1,8 +1,12 @@
 import {defineConfig} from "vitepress";
 import {apiAnchor} from "@tsed/vitepress-theme/markdown/api-anchor/api-anchor.js";
 import team from "../team.json";
+import llmstxt from "vitepress-plugin-llms";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    plugins: [llmstxt()]
+  },
   title: "Ts.ED",
   lastUpdated: true,
 

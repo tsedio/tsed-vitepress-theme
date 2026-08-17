@@ -10,7 +10,7 @@ export function useMarkdownLink() {
 
     if (relativePath) {
       return {
-        url: withBase(`/ai/${relativePath}`),
+        url: withBase(`/${relativePath}`),
         text
       };
     }
@@ -23,7 +23,7 @@ export function useMarkdownLink() {
     const normalizedMarkdownPath = markdownPath || fallbackPath;
 
     return {
-      url: withBase(`/ai/${normalizedMarkdownPath}`),
+      url: withBase(`/${normalizedMarkdownPath}`),
       text
     };
   });
