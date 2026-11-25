@@ -70,7 +70,7 @@ export default {
 </script>
 <template>
   <LightBanner title="Explore API references">
-    <div class="flex flex-col space-y-10 -mb-16">
+    <div class="flex flex-col gap-y-10 -mb-16">
 
       <div>Discover our API references (class, decorators, utils) and learn how to use them.</div>
 
@@ -83,7 +83,7 @@ export default {
               v-model="q"
               type="search"
               aria-label="Search"
-              class="bg-white dark:bg-[#444e60] rounded-full w-full p-3 pl-12 text-base leading-6 placeholder-gray-700 transition duration-150 ease-in-out ring-3 ring-blue-300 focus:outline-none focus:placeholder-gray-500 sm:flex-1"
+              class="bg-white dark:bg-[#444e60] rounded-full w-full p-3 pl-12 text-base leading-6 placeholder-gray-700 transition duration-150 ease-in-out focus:outline-hidden focus:placeholder-gray-500 sm:flex-1"
               placeholder="Search a reference"
           />
         </label>
@@ -91,7 +91,7 @@ export default {
     </div>
   </LightBanner>
 
-  <div class="flex flex-col space-y-3 max-w-site-xxl m-auto mx-5">
+  <div class="flex flex-col gap-y-3 max-w-site-xxl m-auto mx-5">
     <div>
       <div class="container px-4 mx-auto sm:px-0">
         <ButtonBoxes v-model="category" :choices="categoriesChoices"/>
@@ -104,7 +104,7 @@ export default {
            class="transition-opacity duration-500">
         <h2 class="font-bold text-xl">{{ module.name }}</h2>
 
-        <div class="bg-gray-100 dark:bg-gray-900 pb-4 p-5 mt-4 mb-10 rounded-sm">
+        <div class="bg-gray-100 dark:bg-gray-900 pb-4 p-5 mt-4 mb-10 rounded-[0.125rem]">
           <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4" role="list">
             <div v-for="item in module.symbols" :key="item.symbolName" role="listitem">
               <ApiAnchor class="w-full px-2 py-1" v-bind="item" theme="list"/>

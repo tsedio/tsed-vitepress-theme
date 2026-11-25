@@ -42,7 +42,7 @@ const items = computed(() => {
       <dd
         :aria-describedby="`${props.id}-${index}`"
         :data-testid="`${props.id}-${index}`"
-        class="order-1 text-2xl font-extrabold leading-none text-blue-active dark:text-primary sm:text-4xl"
+        class="order-1 text-2xl font-extrabold leading-none sm:leading-10 text-blue-active dark:text-primary sm:text-4xl"
       >
         {{ item.value }}
       </dd>

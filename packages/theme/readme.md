@@ -80,35 +80,40 @@ export default {
 > Important: keep using `DefaultTheme.Layout` in your custom layout.  
 To display AI actions, add `DocActions` in the `doc-before` slot.
 
-Then, create a `tailwind.config.ts` configuration file:
+Then, configure Tailwind CSS v4 through PostCSS. Install the dependencies:
 
-```ts
-import type {Config} from "tailwindcss";
-import {tailwindPreset} from "@tsed/vitepress-theme/tailwind.preset";
-
-const config = {
-  presets: [tailwindPreset as unknown as Config],
-  darkMode: "class",
-  content: [
-    "./docs/.vitepress/**/*.{js,ts,vue}",
-    "./docs/.vitepress/themes/**/*.{js,ts,vue}",
-    "./packages/theme/**/*.{js,ts,vue}",
-    "./docs/**/*.md"
-  ],
-  safelist: [
-    {pattern: /^bg-/},
-    {pattern: /^text-/},
-    {pattern: /^m-/},
-    {pattern: /^mx-/},
-    {pattern: /^p-/},
-    {pattern: /^px-/},
-    {pattern: /^gap-/},
-    {pattern: /^shadow-/}
-  ]
-} satisfies Config;
-
-export default config;
+```sh
+npm install -D tailwindcss @tailwindcss/postcss postcss
 ```
+
+And create a `postcss.config.js` file:
+
+```js
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {}
+  }
+};
+```
+
+That's all: the theme stylesheet (`@tsed/vitepress-theme/styles/tailwind.css`, loaded by `DefaultTheme`) already
+imports Tailwind, the Ts.ED design tokens (`styles/tailwind.theme.css`), the class-based dark mode and the safelist.
+Your project files are detected automatically (`.gitignore` is respected).
+
+To use `@apply` in a component `<style>` block, reference the theme stylesheet first:
+
+```vue
+<style>
+@reference "@tsed/vitepress-theme/styles/tailwind.css";
+
+.my-class {
+  @apply text-blue-600 dark:text-blue-200;
+}
+</style>
+```
+
+> Migrating from Tailwind v3: remove your `tailwind.config.ts` (the `tailwindPreset` export is deprecated),
+> `autoprefixer` and `tailwindcss/nesting` from your PostCSS configuration.
 
 ## AI Content Dropdown
 

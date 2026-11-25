@@ -3,6 +3,10 @@ import colors from "tailwindcss/colors";
 
 const primary = "var(--vp-button-brand-bg)";
 
+/**
+ * @deprecated Tailwind CSS v4 is configured in CSS. The tokens live in `styles/tailwind.theme.css`, which is already
+ * imported by `styles/tailwind.css`. This preset is only kept for projects loading a legacy config with `@config`.
+ */
 export const tailwindPreset: Partial<Config> = {
   theme: {
     colors: {

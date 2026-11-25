@@ -47,7 +47,7 @@ const currentLabel = computed(() => {
         <button
           type="button"
           aria-label="change sort"
-          class="flex items-center justify-center h-full w-full p-1 px-2 hover:bg-blueGray-300 focus:bg-blueGray-300 rounded-l-md"
+          class="flex items-center justify-center h-full w-full p-1 px-2 hover:bg-slate-300 focus:bg-slate-300 rounded-l-md"
           @click="toggle()"
         >
           {{ currentLabel }}
@@ -63,7 +63,7 @@ const currentLabel = computed(() => {
               type="button"
               :aria-label="`sort by ${option.label}`"
               :class="{'rounded-bl-none border-b-grey-light': show}"
-              class="flex items-center justify-center p-1 px-2 border-0 shadow-xs w-28 hover:bg-blueGray-300 focus:text-gray-700 text-blue-900 focus:outline-none"
+              class="flex items-center justify-center p-1 px-2 border-0 w-28 hover:bg-slate-300 focus:text-gray-700 text-blue-900 focus:outline-hidden"
               @click="onClickOption(option.value)"
             >
               {{ option.label }}
@@ -79,7 +79,7 @@ const currentLabel = computed(() => {
           data-testid="button-sort-order"
           :aria-label="modelValue.order === 'asc' ? 'sort ascending' : 'sort descending'"
           :aria-checked="modelValue.order === 'asc'"
-          class="flex items-center justify-center h-full w-full p-1 px-2 hover:bg-blueGray-300 focus:bg-blueGray-300 focus:outline-none rounded-r-md"
+          class="flex items-center justify-center h-full w-full p-1 px-2 hover:bg-slate-300 focus:bg-slate-300 focus:outline-hidden rounded-r-md"
           @click="toggleOrder"
         >
           <SortAsc v-if="modelValue.order === 'asc'" class="fill-current" :size="18" />

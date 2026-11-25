@@ -27,6 +27,8 @@ import Tabs from "../../../molecules/tabs/Tabs.vue";
   </Tabs>
 </template>
 <style>
+@reference "../../../styles/tailwind.css";
+
 
 @media (max-width: 960px) {
   .VPHero .main {

@@ -35,11 +35,11 @@ const currentLabel = computed(() => {
     <label for="filter-options-menu" class="mr-3" @click="toggle()">{{ label }}</label>
 
     <div class="flex items-stretch">
-      <div class="relative w-28 border rounded">
+      <div class="relative w-28 border rounded-sm">
         <button
             type="button"
             aria-label="change filter"
-            class="flex items-center justify-center h-full w-full p-1 px-2 hover:bg-blueGray-300 focus:bg-blueGray-300 rounded"
+            class="flex items-center justify-center h-full w-full p-1 px-2 hover:bg-slate-300 focus:bg-slate-300 rounded-sm"
             @click="toggle()"
         >
           {{ currentLabel || " - " }}
@@ -55,7 +55,7 @@ const currentLabel = computed(() => {
                 type="button"
                 :aria-label="`sort by ${option.label}`"
                 :class="{'rounded-bl-none border-b-grey-light': show}"
-                class="flex items-center justify-center p-1 px-2 border-0 shadow-xs w-28 hover:bg-blueGray-300 focus:text-gray-700 text-blue-900 focus:outline-none"
+                class="flex items-center justify-center p-1 px-2 border-0 w-28 hover:bg-slate-300 focus:text-gray-700 text-blue-900 focus:outline-hidden"
                 @click="onClickOption(option.value)"
             >
               {{ option.label }}

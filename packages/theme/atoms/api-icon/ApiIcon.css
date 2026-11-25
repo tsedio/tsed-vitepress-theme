@@ -1,3 +1,5 @@
+@reference "../../styles/tailwind.css";
+
 [data-name="ApiIcon"] {
   @apply hidden font-source rounded-xs text-white text-xxs text-center mr-2;
   width: 1rem;

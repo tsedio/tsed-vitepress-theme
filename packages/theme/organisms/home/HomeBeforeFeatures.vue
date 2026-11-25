@@ -22,7 +22,7 @@ const testimonial = computed(() => {
   <HomePartners class="mb-20" />
 
   <HomeContainer v-if="testimonial && isHome">
-    <main class="flex flex-col items-center space-y-8 mt-4 mb-8">
+    <main class="flex flex-col items-center gap-y-8 mt-4 mb-8">
       <h1 class="font-bold clip text-xl sm:text-3xl" v-html="testimonial.title">
       </h1>
       <blockquote class="text-center w-[70%] text-gray-600 dark:text-gray-400 italic -top-16 relative">

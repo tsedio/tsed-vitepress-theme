@@ -34,9 +34,9 @@ const icon = computed(() => {
 </script>
 <template>
   <div
-    class="CardPackage h-full relative flex flex-col overflow-hidden transition-transform duration-150 ease-in-out transform bg-white dark:bg-blueGray-700 rounded-md shadow hover:shadow-lg hover:-translate-y-1"
+    class="CardPackage h-full relative flex flex-col overflow-hidden transition-transform duration-150 ease-in-out transform bg-white dark:bg-slate-700 rounded-md shadow-sm hover:shadow-lg hover:-translate-y-1"
   >
-    <div class="relative flex flex-1 flex-col space-y-2 px-6 py-8 group">
+    <div class="relative flex flex-1 flex-col gap-y-2 px-6 py-8 group">
       <a :href="props.homepage" :aria-label="'Home page of ' + name" target="_blank" rel="noopener" class="absolute inset-0" />
 
       <div
@@ -68,13 +68,13 @@ const icon = computed(() => {
       </div>
     </div>
 
-    <div class="border-t border-gray-200 dark:border-gray-700 bg-blueGray-100 dark:bg-blueGray-600 grid grid-cols-3">
+    <div class="border-t border-gray-200 dark:border-gray-700 bg-slate-100 dark:bg-slate-600 grid grid-cols-3">
       <a
         :href="npm"
         aria-label="npm"
         target=" _blank"
         rel="noopener"
-        class="stats-block group flex items-center space-x-2 border-r border-gray-200 dark:border-gray-700 hover:bg-gray-200 hover:bg-opacity-50 py-3 px-4 pl-6"
+        class="stats-block group flex items-center gap-x-2 border-r border-gray-200 dark:border-gray-700 hover:bg-gray-200/50 py-3 px-4 pl-6"
       >
         <img alt="npm" src="./icons/npm.svg" width="32" height="32" class="icon" />
 
@@ -91,7 +91,7 @@ const icon = computed(() => {
         aria-label="stars"
         target=" _blank"
         rel="noopener"
-        class="no-underline stats-block group flex items-center space-x-1 py-3 px-4 border-r border-gray-200 dark:border-gray-700 hover:bg-gray-200 hover:bg-opacity-50"
+        class="no-underline stats-block group flex items-center gap-x-1 py-3 px-4 border-r border-gray-200 dark:border-gray-700 hover:bg-gray-200/50"
       >
         <Star :size="20" class="text-gray-600 dark:text-gray-300 group-hover:text-yellow-600 mr-1" />
         <div
@@ -104,7 +104,7 @@ const icon = computed(() => {
       </a>
 
       <div
-        class="stats-block group flex items-center space-x-1 py-3 px-4 z-0 overflow-hidden hover:bg-gray-200 hover:bg-opacity-50"
+        class="stats-block group flex items-center gap-x-1 py-3 px-4 z-0 overflow-hidden hover:bg-gray-200/50"
       >
         <CodeXml :size="20" class="mr-1 text-gray-600 dark:text-gray-300 group-hover:text-blue-600" />
         <a
@@ -132,6 +132,8 @@ const icon = computed(() => {
 </template>
 
 <style scoped>
+@reference "../../styles/tailwind.css";
+
 .CardPackage {
   a {
     @apply no-underline;

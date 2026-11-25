@@ -32,7 +32,7 @@ const choices = computed(() => {
 });
 </script>
 <template>
-  <div class="flex pt-6 space-x-2 overflow-x-auto sm:flex-wrap sm:justify-center">
+  <div class="flex pt-6 gap-x-2 overflow-x-auto sm:flex-wrap sm:justify-center">
     <button
       v-for="choice in choices"
       :key="choice.value"
@@ -40,11 +40,11 @@ const choices = computed(() => {
       role="checkbox"
       :aria-label="choice.label"
       :aria-checked="props.modelValue === choice.value"
-      class="px-4 py-2 mb-2 text-sm rounded cursor-pointer focus:outline-none"
+      class="px-4 py-2 mb-2 text-sm rounded-sm cursor-pointer focus:outline-hidden"
       :class="[
         props.modelValue === choice.value
           ? 'bg-blue-active text-white'
-          : 'text-blue-900 bg-blueGray-300 hover:bg-gray-300 focus:bg-gray-300'
+          : 'text-blue-900 bg-slate-300 hover:bg-gray-300 focus:bg-gray-300'
       ]"
       @click="toggle(choice)"
     >

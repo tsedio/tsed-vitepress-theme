@@ -26,7 +26,7 @@ watch(targetIsVisible, () => {
         class="VPContainer"
         :class="{
       'opacity-0 scale-102 translate-y-4': !show,
-      'opacity-1 scale-100 translate-y-0': show,
+      'opacity-100 scale-100 translate-y-0': show,
       'transition-all ease-in-out delay-200 duration-1000 enter-active-class leave-active-class': props.animate
     }"
     >
@@ -37,6 +37,8 @@ watch(targetIsVisible, () => {
   </div>
 </template>
 <style scoped>
+@reference "../../styles/tailwind.css";
+
 .VPContainer {
   position: relative;
   padding: 0 24px;

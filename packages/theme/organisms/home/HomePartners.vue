@@ -26,6 +26,8 @@ const partners = computed(() => {
 </template>
 
 <style scoped>
+@reference "../../styles/tailwind.css";
+
 .VPPartners {
   position: relative;
   padding: 0 24px;

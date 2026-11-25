@@ -145,7 +145,7 @@ fetchPackages();
       </div>
     </div>
 
-    <div class="flex flex-col space-y-3 mx-5">
+    <div class="flex flex-col gap-y-3 mx-5">
       <div class="max-w-site-xxl m-auto">
         <div v-if="isActive" class="text-center text-4xl text-gray-darker p-5 flex items-center justify-center">
           <LoaderCircle class="animate-spin mr-5 text-blue-active" :size="32"/>
@@ -163,7 +163,7 @@ fetchPackages();
                   v-model="q"
                   type="search"
                   aria-label="Search"
-                  class="bg-[#F6F6F7] dark:bg-[#444e60] rounded-full w-full p-3 pl-12 text-base leading-6 placeholder-gray-700 transition duration-150 ease-in-out ring-3 ring-blue-300 focus:outline-none focus:placeholder-gray-500 sm:flex-1"
+                  class="bg-[#F6F6F7] dark:bg-[#444e60] rounded-full w-full p-3 pl-12 text-base leading-6 placeholder-gray-700 transition duration-150 ease-in-out focus:outline-hidden focus:placeholder-gray-500 sm:flex-1"
                   placeholder="Search a module (name, category, username, etc.)"
               />
             </label>

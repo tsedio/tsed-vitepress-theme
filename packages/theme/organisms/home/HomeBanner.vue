@@ -21,7 +21,7 @@ const repoHref = `https://github.com/${repo}`;
   <div class="vp-doc m-auto w-[90%] sm:w-full lg:w-[75%] mt-10">
     <slot/>
 
-    <div class="flex justify-between space-x-2 -mx-[24px] md:mx-0">
+    <div class="flex justify-between gap-x-2 -mx-[24px] md:mx-0">
       <ButtonBanner :href="repoHref + '/stargazers'" title="stars">{{
           data?.formattedStargazers || formatNumber(defaultStargazerValue)
         }}

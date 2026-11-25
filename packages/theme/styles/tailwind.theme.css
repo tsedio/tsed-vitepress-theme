@@ -1,0 +1,38 @@
+/*
+ * Ts.ED design tokens for Tailwind CSS v4 (replaces the v3 `tailwind.preset.ts`).
+ * Import it after `tailwindcss` in your stylesheet, or `@reference` it from a component <style> block.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand blue, bound to the VitePress brand variables */
+  --color-blue: var(--vp-button-brand-bg);
+  --color-blue-default: var(--vp-button-brand-bg);
+  --color-blue-50: hsla(226, 54.3%, 91%, 1);
+  --color-blue-100: hsla(226, 54.3%, 83%, 1);
+  --color-blue-200: hsla(226, 54.3%, 75%, 1);
+  --color-blue-300: hsla(226, 54.3%, 67%, 1);
+  --color-blue-400: hsla(226, 54.3%, 59%, 1);
+  --color-blue-500: hsla(226, 54.3%, 61%, 1);
+  --color-blue-600: var(--vp-button-brand-bg);
+  --color-blue-700: hsla(226, 54.3%, 31%, 1);
+  --color-blue-800: hsla(226, 54.3%, 25%, 1);
+  --color-blue-900: hsla(226, 54.3%, 14%, 1);
+  --color-blue-950: initial;
+  --color-blue-active: var(--vp-button-brand-hover-bg);
+
+  --color-algoliaSearch-white: rgb(243 244 246 / 1);
+  --color-algoliaSearch-dark: rgb(28 30 33 / 1);
+  --color-api-default: #507192;
+
+  --text-micro: 0.5rem; /* 8px */
+  --text-xxs: 0.625rem; /* 10px */
+
+  --radius-xs: 0.15rem;
+
+  --font-brand: "Source Sans Pro", sans-serif;
+  --font-sans: "Source Sans Pro", sans-serif;
+  --font-serif: "Source Sans Pro", sans-serif;
+  --font-inconsolata: Inconsolata;
+  --font-source: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

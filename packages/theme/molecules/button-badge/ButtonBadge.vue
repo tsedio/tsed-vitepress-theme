@@ -118,6 +118,8 @@ const overflow = (text = "") => {
   </Link>
 </template>
 <style>
+@reference "../../styles/tailwind.css";
+
 .vp-doc a.button-badge {
   @apply transition-all scale-100 hover:scale-110 focus:scale-110;
   outline: none;

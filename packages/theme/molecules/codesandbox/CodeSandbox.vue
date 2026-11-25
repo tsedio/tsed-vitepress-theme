@@ -72,7 +72,7 @@ const toggle = () => {
 <style>
 .sandbox-logo-bg {
   svg {
-    fill: theme("colors.gray.400");
+    fill: var(--color-gray-400);
   }
 }
 </style>
