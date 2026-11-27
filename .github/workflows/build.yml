@@ -92,6 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write    # Required for creating releases
+      id-token: write    # Required for npm trusted publishing (OIDC)
       packages: write    # Required for publishing packages
       issues: write     # Required for release notes
       pull-requests: write  # Required for release note
@@ -111,7 +112,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24 # npm >= 11.5.1 is required for trusted publishing
           cache: yarn
       - name: Install dependencies
         run: yarn install --network-timeout 500000
@@ -119,6 +120,5 @@ jobs:
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn release

@@ -20,6 +20,8 @@ export default {
       {
         preset: "angular",
         releaseRules: [
+          // Custom rules take precedence over the preset defaults: declare breaking changes first
+          {breaking: true, release: "major"},
           {type: "feat", release: "minor"},
           {type: "fix", release: "patch"},
           {type: "docs", release: "patch"},

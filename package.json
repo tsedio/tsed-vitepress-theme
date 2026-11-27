@@ -63,7 +63,7 @@
     "@tailwindcss/postcss": "4.3.5",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/vue": "8.1.0",
-    "@tsed/monorepo-utils": "2.3.9",
+    "@tsed/monorepo-utils": "3.3.4",
     "@typescript-eslint/eslint-plugin": "7.16.0",
     "@typescript-eslint/parser": "7.16.0",
     "@vitejs/plugin-vue": "5.0.5",
@@ -122,6 +122,7 @@
     "productionBranch": "main",
     "developBranch": "main",
     "npmAccess": "public",
+    "trustedPublishing": true,
     "ignoreSyncDependencies": []
   },
   "packageManager": "yarn@4.1.1",

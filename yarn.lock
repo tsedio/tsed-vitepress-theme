@@ -4771,15 +4771,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsed/monorepo-utils@npm:2.3.9":
-  version: 2.3.9
-  resolution: "@tsed/monorepo-utils@npm:2.3.9"
+"@tsed/monorepo-utils@npm:3.3.4":
+  version: 3.3.4
+  resolution: "@tsed/monorepo-utils@npm:3.3.4"
   dependencies:
     "@samverschueren/stream-to-observable": "npm:>=0.3.1"
     "@typescript-eslint/typescript-estree": "npm:>=6.20.0"
-    any-observable: "npm:>=0.5.1"
+    any-observable: "npm:^0.6.0"
     axios: "npm:>=1.6.7"
     chalk: "npm:>=5.3.0"
+    cli-table3: "npm:^0.6.5"
     commander: "npm:>=12.0.0"
     execa: "npm:>=8.0.1"
     fancy-log: "npm:>=1.3.3"
@@ -4800,7 +4801,7 @@ __metadata:
     semantic-release: ">=19"
   bin:
     monorepo: bin/monorepo.js
-  checksum: 10c0/1313f0655bcbbfaab22195e41ad82bc892514c394701843050b9116c3a0b1564580befadc29c66f1aa5f714b6d45f4ef024fd9e9ea1e98abe127cf3577273245
+  checksum: 10c0/62095a1bcf43bfecc7cc4940e0a60d28c9750ff8204ba8eacee24cb7d1b703240d561e921b9c0e9804e519a8f90d6592de7016432c51699713d2d761def20404
   languageName: node
   linkType: hard
 
@@ -4829,7 +4830,7 @@ __metadata:
     "@tailwindcss/postcss": "npm:4.3.5"
     "@testing-library/jest-dom": "npm:6.4.6"
     "@testing-library/vue": "npm:8.1.0"
-    "@tsed/monorepo-utils": "npm:2.3.9"
+    "@tsed/monorepo-utils": "npm:3.3.4"
     "@typescript-eslint/eslint-plugin": "npm:7.16.0"
     "@typescript-eslint/parser": "npm:7.16.0"
     "@vitejs/plugin-vue": "npm:5.0.5"
@@ -6567,22 +6568,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"any-observable@npm:>=0.5.1":
-  version: 0.5.1
-  resolution: "any-observable@npm:0.5.1"
+"any-observable@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "any-observable@npm:0.3.0"
+  checksum: 10c0/104c2b79c2ac7e6c75b35f8fd62babf73015668f22bd25336c6f848350d91f9e7daf2fddbf1c1b76fe795e89fbc91b49f70a2aec5c69f1acf0562c344f36042b
+  languageName: node
+  linkType: hard
+
+"any-observable@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "any-observable@npm:0.6.0"
   peerDependenciesMeta:
     rxjs:
       optional: true
     zen-observable:
       optional: true
-  checksum: 10c0/df51c63854819fc7b69e7ba22d37f63bd2aa116aef944aa45469476f5182f1489a56a3072f8eaaac78d7077b7343fbf6ae7d37a3759913d9c10e00256089706d
-  languageName: node
-  linkType: hard
-
-"any-observable@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "any-observable@npm:0.3.0"
-  checksum: 10c0/104c2b79c2ac7e6c75b35f8fd62babf73015668f22bd25336c6f848350d91f9e7daf2fddbf1c1b76fe795e89fbc91b49f70a2aec5c69f1acf0562c344f36042b
+  checksum: 10c0/4fc352ae15bc61da5e98d8b706004394f07b2ee9ef719848ea5320d1f71ebfc259668749bda15417696b1245bbd9f332024dd62ecca16b24d549d4c7c438f33a
   languageName: node
   linkType: hard
 
