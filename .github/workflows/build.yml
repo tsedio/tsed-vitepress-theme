@@ -119,6 +119,9 @@ jobs:
       - name: Release packages
         env:
           CI: true
+          # Push the release commit back to the branch being released (main, rc, beta…), not always to main
+          PRODUCTION_BRANCH: ${{ github.ref_name }}
+          DEVELOP_BRANCH: ${{ github.ref_name }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn release
